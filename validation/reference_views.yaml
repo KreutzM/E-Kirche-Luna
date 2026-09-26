@@ -10,14 +10,19 @@ views:
     evidence: [M05]
     status: inferred_target_fit_gps_and_focal_supported
     note: "M05 supplies GPS, 30 mm full-frame-equivalent focal length and a 2:3 portrait image. GPS-derived camera position is retained; target [0, -10, 18] m is inferred because heading is absent and best jointly places the turret, conch roof peak and facade base among tested target heights. The render supports only a partial gross south-side fit; plain wall masses and roof forms still differ. M04's separate GPS camera candidate remains unresolved."
+  M18:
+    camera: VAL_M18
+    evidence: [M18, M21]
+    status: gps_cardinal_heading_focal_supported_target_inferred
+    note: "M18 provides a wide view and 24 mm EXIF focal length; M18 and M21 Commons pages give the same camera coordinates and cardinal NW direction. The numeric 315-degree direction is only the cardinal center. M18's 330-degree bearing, 32 m aim distance and z=32 m target are visual-fit inferences. The broad tower/conch/turret order improves, but the simplified wall/roof silhouette remains partial."
   M21:
     camera: VAL_M21
     evidence: [M21]
     status: gps_heading_focal_supported_target_inferred
-    note: "The Commons page provides the camera coordinates and 315° heading; the image metadata provides 29 mm focal length and Canon EOS 550D. Local camera height, cropped active sensor width and target pitch/distance are inferred. The exact-heading view leaves the south-conch roof too far right; a diagnostic +15° yaw aligns the broad roof/turret order better but conflicts with the recorded heading. G01's plan/asymmetry cross-check places the crossing candidate within 0.85 m of the current anchor, but generalized roof geometry cannot resolve the remaining photo difference. No camera fit is accepted."
+    note: "The Commons page provides camera coordinates and cardinal NW, while the image metadata provides a 29 mm focal length and Canon EOS 550D. 315° is only the nominal center of NW, not an exact azimuth. Local camera height, cropped active sensor width and target pitch/distance are inferred. M18 supplies a wide same-location comparison; M21's narrow framing still leaves relative turret height and roof silhouette unresolved. G01's plan/asymmetry cross-check places the crossing candidate within 0.85 m of the current anchor, but generalized roof geometry cannot resolve the remaining photo difference."
   SE:
     camera: VAL_SE
-    evidence: [M02, M03, M19, M20, M21]
+    evidence: [M02, M03, M18, M19, M20, M21]
     status: inferred_target_fit_gps_and_focal_supported
     note: "M02 supplies GPS, 27 mm full-frame-equivalent focal length and a 1.21:1 cropped image. The active sensor width is modelled as 28.3 mm equivalent for the saved crop; GPS-derived camera position is retained. The iteration-6 aim [-15, 0, 29] m shifts the image west/down based on test renders. M20 supplies an independent full southeast composition and 28 mm focal length but no camera position; M21 cross-checks south-choir roof shape from a close view. Neither replaces M02's camera solve. This remains a documented visual-fit candidate, not a solved camera; silhouette comparison still fails."
   N:

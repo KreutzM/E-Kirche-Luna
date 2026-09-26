@@ -40,7 +40,7 @@
     "sacristy_y_min": 7.5,
     "sacristy_eave_height": 14.0,
     "dachreiter_width": 3.5,
-    "dachreiter_height_above_ridge": 12.0,
+    "dachreiter_height_above_ridge": 20.0,
     "west_gable_peak_height": 30.0,
     "west_gable_half_width_min": 3.0,
     "roof_shell_thickness": 0.55,

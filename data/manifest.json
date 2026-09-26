@@ -174,9 +174,9 @@
     "group": "modern",
     "title": "Marburg Elisabethkirche Südchor Dach von SO (1).jpg",
     "view": "SE south choir roof",
-    "role": "roof_detail",
-    "priority": 2,
-    "metric_use": "detail_reference",
+    "role": "south_choir_roof_and_turret_geometry",
+    "priority": 1,
+    "metric_use": "camera_solve_candidate",
     "commons_page": "https://commons.wikimedia.org/wiki/File%3AMarburg%20Elisabethkirche%20S%C3%BCdchor%20Dach%20von%20SO%20(1).jpg"
   },
   {

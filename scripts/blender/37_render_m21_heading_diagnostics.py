@@ -1,4 +1,4 @@
-"""Test small M21 heading offsets while holding source location and framing fixed."""
+"""Test M21 bearings within the Commons cardinal NW sector."""
 from pathlib import Path
 import math
 

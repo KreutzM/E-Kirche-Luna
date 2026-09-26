@@ -28,6 +28,15 @@ views:
         expected: "Six-bay hall length is legible in the side elevation."
         observed: "The M05 view captures the south elevation, but the current wall is a continuous blank mass and bay divisions have not been modeled at the massing stage."
         status: unresolved
+  M18:
+    camera: VAL_M18
+    evidence_ids: [M18, M21]
+    comparison: gps_cardinal_heading_focal_supported_inferred_target
+    landmarks:
+      - id: south_conch_roof_turret_and_west_tower_order
+        expected: "From the elevated southeast/south view, the south conch and high crossing roof-turret are in the foreground/right of the west-tower pair; the nave roof continues to the right."
+        observed: "The Commons source records a cardinal NW camera direction; 330 degrees is an inferred visual-fit candidate within that sector. The M18 24 mm landscape candidate places the conch, turret, tower fragments and nave roof in a closer broad order than the nominal 315-degree candidate, but simplified massing remains visibly different."
+        status: partial
   M21:
     camera: VAL_M21
     evidence_ids: [M21]
@@ -35,7 +44,7 @@ views:
     landmarks:
       - id: south_choir_roof_profile
         expected: "The south-choir roof rises from a polygonal wall/eaves line to a steep roof profile; the crossing turret is visible behind it."
-        observed: "The dedicated camera retains Commons GPS, 315-degree heading and 29 mm focal length. Target-height tests z=20–32 m do not repair horizontal registration. A separate +15-degree yaw diagnostic aligns the broad roof/turret order better, but conflicts with the recorded 315-degree heading and is not accepted. The G01 footprint plus P01 asymmetry gives a crossing candidate within 0.85 m of the current OSM-derived anchor, so a gross origin shift is not supported as the explanation. A temporary G01 wire overlay confirms broad plan registration but its generalized roof edges cannot decide the remaining image difference. The south-east mass arrangement or heading precision still needs resolution; no pose or geometry change is accepted."
+        observed: "The dedicated camera retains Commons GPS and 29 mm focal length; the source direction is cardinal NW, with 315 degrees only its nominal center. A 325-degree M21 visual-fit candidate aligns the conch peak and roof-turret order more closely, but the turret's relative image height and coarse roof/wall silhouette remain unresolved. M18, photographed from the same Commons-mapped point with 24 mm focal length, gives a complementary wider framing check. The G01 footprint plus P01 asymmetry places a crossing candidate within 0.85 m of the current anchor, so a large origin offset is not supported. Keep the gate open pending joint silhouette validation."
         status: unresolved
   N:
     camera: VAL_N
@@ -48,12 +57,12 @@ views:
         status: partial
   SE:
     camera: VAL_SE
-    evidence_ids: [M02, M03, M19, M20, M21, G01]
+    evidence_ids: [M02, M03, M18, M19, M20, M21, G01]
     comparison: approximate_gps_and_focal_view
     landmarks:
       - id: triconch_and_roof_turret
         expected: "Three conches surround the crossing and the current roof turret rises from the roofscape."
-        observed: "Iteration 6 uses a 28.3 mm active equivalent sensor width derived from M02's saved 3696x3053 crop and shifts the visual-fit target west/down to [-15, 0, 29] m based on candidate renders. M20 independently confirms the southeast ordering and adds a full current exterior composition. M21 shows the south-choir roof profile in close detail and now has its own Commons-location/heading-based camera candidate. The model's polygonal conches and broad angular roof masses still diverge from these references. M02 has no heading, while M21's target distance and pitch remain inferred; neither camera framing alone proves geometric fit."
+        observed: "Iteration 18 raises the low-confidence roof-turret rise from 12 to 20 m after fixed-camera height diagnostics in M02 and M18/M21; the standard M02-derived render now places the spire closer to the source's relative roof/tower scale. The wider M18 and close M21 renders still show coarse wall and roof silhouettes, while M02's camera target and M18/M21's local aim remain inferred. M20 independently confirms the southeast ordering. This height change improves one massing landmark but does not establish an overall fit; polygonal conches, roof connections and other view residuals remain unresolved."
         status: unresolved
       - id: sacristy
         expected: "Two-storey sacristy adjoins the north-east choir with a pyramidal roof."
@@ -61,4 +70,4 @@ views:
         status: partial
 acceptance:
   massing_gate_passed: false
-  reason: "Iteration 10 refines M05's inferred aim to [0, -10, 18] m using the turret, conch roof peak and facade base as landmarks. M05 remains a partial comparison. A 32 m conch-roof test was too high; 29 m remains the low-confidence geometry value after the 30 m test did not improve M02 and M05 together. M20 adds an independent southeast view; M21 now has a separate camera using Commons location/heading and recorded focal length, with target and crop still inferred. M02 still diverges in roof/conch silhouette, M05's blank wall masses and simplified roof forms remain partial, and M04 remains unresolved. Keep the gate closed until the dimensional and silhouette checks pass."
+  reason: "Iteration 18 raises the inferred roof-turret rise to 20 m after fixed-camera diagnostics in M02 and M18/M21 improved that landmark; the rise remains low-confidence, and the M18/M21 images share one camera location. The broad silhouettes still fail: conch and roof connections are simplified, M05 has blank wall masses, M04 remains unresolved, and the M18/M21 camera aims are inferred. The footprint cross-check against G01 is only generalized. Keep the gate closed until dimensional and multi-view silhouette checks pass."

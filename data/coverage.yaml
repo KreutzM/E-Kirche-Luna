@@ -9,7 +9,7 @@ north:
   notes: "Several modern and historic views plus sacristy."
 southeast_triconch:
   status: strong
-  notes: "Multiple modern views including M20's full southeast composition and M21's high-resolution south-choir roof detail. Commons records a camera location, 315° heading and 29 mm focal length for M21; its local height and pitch remain unknown. M20 provides a 28 mm focal length but no usable camera position."
+  notes: "Multiple modern views including M20's full southeast composition, M18's wide south-choir roof view and M21's high-resolution portrait roof detail. M18/M21 Commons pages record the same camera coordinates and cardinal NW direction; 315° is only the nominal center, not a degree-level bearing. Their local height/aim are inferred. M20 provides a 28 mm focal length but no usable camera position."
 east:
   status: medium
   notes: "Historic east view useful; modern direct east coverage remains a gap."
@@ -20,8 +20,8 @@ roof:
   status: partial
   notes: "Aerial/raised and local roof views exist; M21 adds a close south-choir roof profile, but full roof coverage remains limited."
 dataset:
-  manifest_records: 34
-  downloaded_records: 34
+  manifest_records: 35
+  downloaded_records: 35
   contact_sheets: [overview, west, south, north, plans]
   provenance_file: sources/commons_download_metadata.jsonl
-  notes: "All selected Commons images passed the licence filter. M20 is a high-resolution southeast exterior comparison (28 mm; no camera position); M21 documents south-choir roof geometry and Commons camera location/heading metadata (315°; 29 mm). G01 is the open Hessian LoD2 building geometry for the whole church and is used as a generalized reference, not a replacement for dimensional records or current photographs. The official church virtual tour exposes four named exterior panorama stations, but its reuse licence is not stated, so it remains visual-only and is not stored. Modern direct-east photography remains unavailable."
+  notes: "All selected Commons images passed the licence filter. M20 is a high-resolution southeast exterior comparison (28 mm; no camera position); M18/M21 document south-choir roof geometry and share Commons camera coordinates/cardinal NW direction, with 24 mm and 29 mm focal lengths. M22 adds a distant southwest skyline view for tower silhouette only. G01 is the open Hessian LoD2 building geometry for the whole church and is used as a generalized reference, not a replacement for dimensional records or current photographs. The official church virtual tour exposes four named exterior panorama stations, but its reuse licence is not stated, so it remains visual-only and is not stored. Modern direct-east photography remains unavailable."

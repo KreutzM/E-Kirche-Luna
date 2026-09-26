@@ -1,25 +1,59 @@
 {
-  "view_origin_wgs84_approximate": {"latitude": 50.814923, "longitude": 8.770172},
+  "view_origin_wgs84_approximate": {
+    "latitude": 50.814923,
+    "longitude": 8.770172
+  },
   "views": {
     "W": {
       "projection": "ORTHO",
-      "location": [-130.0, 0.0, 40.0],
-      "target": [-14.0, 0.0, 40.0],
+      "location": [
+        -130.0,
+        0.0,
+        40.0
+      ],
+      "target": [
+        -14.0,
+        0.0,
+        40.0
+      ],
       "ortho_scale": 92.0,
-      "resolution": [1000, 1600],
-      "evidence_ids": ["M10", "M11", "P07"],
+      "resolution": [
+        1000,
+        1600
+      ],
+      "evidence_ids": [
+        "M10",
+        "M11",
+        "P07"
+      ],
       "calibration": "Frontal west-elevation proxy. Modern west photographs have no usable camera position in the downloaded metadata; elevation fit is approximate, not an exact photo solve."
     },
     "S": {
       "projection": "PERSP",
-      "location": [-35.1, -36.3, 1.7],
-      "target": [0.0, -10.0, 18.0],
+      "location": [
+        -35.1,
+        -36.3,
+        1.7
+      ],
+      "target": [
+        0.0,
+        -10.0,
+        18.0
+      ],
       "lens_35mm_equivalent": 30.0,
       "sensor_fit": "HORIZONTAL",
       "sensor_width": 23.4,
-      "resolution": [780, 1170],
-      "source_image_size_px": [2464, 3696],
-      "evidence_ids": ["M05"],
+      "resolution": [
+        780,
+        1170
+      ],
+      "source_image_size_px": [
+        2464,
+        3696
+      ],
+      "evidence_ids": [
+        "M05"
+      ],
       "gps_image_id": "M05",
       "gps_latitude": 50.8145966667,
       "gps_longitude": 8.7696716667,
@@ -29,35 +63,70 @@
     },
     "M21": {
       "projection": "PERSP",
-      "location": [17.96, -42.15, 1.7],
-      "target": [-4.67, -19.52, 17.0],
-      "heading_degrees_true": 315.0,
-      "heading_basis": "Commons file page structured data records camera location 50.814544, 8.770428 and heading 315 degrees.",
+      "location": [
+        17.96,
+        -42.15,
+        1.7
+      ],
+      "target": [
+        -4.67,
+        -19.52,
+        17.0
+      ],
+      "heading_basis": "Commons file-page Location template records cardinal NW; 315 degrees is only the nominal center, not a degree-level camera bearing.",
       "lens": 29.0,
       "sensor_fit": "HORIZONTAL",
       "sensor_width": 14.42,
-      "resolution": [836, 1192],
-      "source_image_size_px": [3344, 4770],
+      "resolution": [
+        836,
+        1192
+      ],
+      "source_image_size_px": [
+        3344,
+        4770
+      ],
       "gps_image_id": "M21",
       "gps_latitude": 50.814544,
       "gps_longitude": 8.770428,
       "camera_height_basis": "1.7 m above nominal project grade is an eye-level approximation; Commons does not provide camera altitude usable as project Z.",
       "sensor_width_basis": "The Commons image is 3344x4770 from a Canon EOS 550D with 29 mm recorded focal length. Canon specifies a 22.3x14.9 mm sensor; the portrait image's short sensor dimension adjusted by 3344/3456 gives an approximate 14.42 mm active width. The crop/sensor fit is inferred.",
-      "local_position_basis": "Commons camera coordinates converted into local east/north using the approximate crossing anchor in data/coordinate_system.yaml. The 315-degree true heading is retained. The target lies 32 m along that heading with z=17 m; distance, height and pitch are visual-fit inferences, not supplied metadata.",
+      "local_position_basis": "Commons camera coordinates converted into local east/north using the approximate crossing anchor in data/coordinate_system.yaml. The source records cardinal NW (315 degrees nominal only). The saved target uses a 32 m inferred horizontal distance with z=17 m; local camera height, target distance, height and pitch are visual-fit inferences, not supplied metadata.",
       "source_page": "https://commons.wikimedia.org/wiki/File:Marburg_Elisabethkirche_S%C3%BCdchor_Dach_von_SO_(2).jpg",
       "sensor_spec_source": "https://files.canon-europe.com/files/soft38013/manual/EOS%20550D_HG_EN_Flat.pdf",
-      "evidence_ids": ["M21"]
+      "evidence_ids": [
+        "M21"
+      ],
+      "heading_cardinal": "NW",
+      "heading_degrees_nominal_true": 315.0
     },
     "SE": {
       "projection": "PERSP",
-      "location": [58.7, -46.5, 1.7],
-      "target": [-15.0, 0.0, 29.0],
+      "location": [
+        58.7,
+        -46.5,
+        1.7
+      ],
+      "target": [
+        -15.0,
+        0.0,
+        29.0
+      ],
       "lens_35mm_equivalent": 27.0,
       "sensor_fit": "HORIZONTAL",
       "sensor_width": 28.3,
-      "resolution": [1200, 991],
-      "source_image_size_px": [3696, 3053],
-      "evidence_ids": ["M02", "M03", "M19"],
+      "resolution": [
+        1200,
+        991
+      ],
+      "source_image_size_px": [
+        3696,
+        3053
+      ],
+      "evidence_ids": [
+        "M02",
+        "M03",
+        "M19"
+      ],
       "gps_image_id": "M02",
       "gps_latitude": 50.8145016667,
       "gps_longitude": 8.77101,
@@ -67,40 +136,140 @@
     },
     "N": {
       "projection": "ORTHO",
-      "location": [-14.0, 130.0, 40.0],
-      "target": [-14.0, 0.0, 40.0],
+      "location": [
+        -14.0,
+        130.0,
+        40.0
+      ],
+      "target": [
+        -14.0,
+        0.0,
+        40.0
+      ],
       "ortho_scale": 104.0,
-      "resolution": [1600, 1600],
-      "evidence_ids": ["M06", "M07", "M15", "M16"],
+      "resolution": [
+        1600,
+        1600
+      ],
+      "evidence_ids": [
+        "M06",
+        "M07",
+        "M15",
+        "M16"
+      ],
       "calibration": "Orthographic north-elevation proxy from the modern north views; exact camera pose is unavailable."
     },
     "E": {
       "projection": "ORTHO",
-      "location": [130.0, 0.0, 38.0],
-      "target": [-14.0, 0.0, 38.0],
+      "location": [
+        130.0,
+        0.0,
+        38.0
+      ],
+      "target": [
+        -14.0,
+        0.0,
+        38.0
+      ],
       "ortho_scale": 92.0,
-      "resolution": [1000, 1600],
-      "evidence_ids": ["H01", "P08"],
+      "resolution": [
+        1000,
+        1600
+      ],
+      "evidence_ids": [
+        "H01",
+        "P08"
+      ],
       "calibration": "Orthographic historic east-elevation proxy. No modern direct-east photograph is present in the curated dataset."
     },
     "NE": {
       "projection": "PERSP",
-      "location": [48.0, 58.0, 16.0],
-      "target": [2.0, 3.0, 22.0],
+      "location": [
+        48.0,
+        58.0,
+        16.0
+      ],
+      "target": [
+        2.0,
+        3.0,
+        22.0
+      ],
       "lens": 42.0,
       "sensor_width": 36.0,
-      "resolution": [1200, 1000],
-      "evidence_ids": ["M01", "M16", "M17", "H03"],
+      "resolution": [
+        1200,
+        1000
+      ],
+      "evidence_ids": [
+        "M01",
+        "M16",
+        "M17",
+        "H03"
+      ],
       "calibration": "Raised northeast geometry-reference view only; camera pose is approximate because the source set has no matching solved-camera metadata."
     },
     "TOP": {
       "projection": "ORTHO",
-      "location": [-8.0, 0.0, 150.0],
-      "target": [-8.0, 0.0, 20.0],
+      "location": [
+        -8.0,
+        0.0,
+        150.0
+      ],
+      "target": [
+        -8.0,
+        0.0,
+        20.0
+      ],
       "ortho_scale": 82.0,
-      "resolution": [1600, 1600],
-      "evidence_ids": ["M01", "P01"],
+      "resolution": [
+        1600,
+        1600
+      ],
+      "evidence_ids": [
+        "M01",
+        "P01"
+      ],
       "calibration": "Top-down plan check; M01 is an oblique aerial and is used for roof geometry only, not as a camera solve."
+    },
+    "M18": {
+      "projection": "PERSP",
+      "location": [
+        17.96,
+        -42.15,
+        1.7
+      ],
+      "target": [
+        1.96,
+        -14.44,
+        32.0
+      ],
+      "target_bearing_degrees_inferred": 330.0,
+      "target_distance_m_inferred": 32.0,
+      "heading_cardinal_source": "NW",
+      "heading_nominal_degrees_true": 315.0,
+      "lens": 24.0,
+      "sensor_fit": "HORIZONTAL",
+      "sensor_width": 22.3,
+      "resolution": [
+        1600,
+        1034
+      ],
+      "source_image_size_px": [
+        5209,
+        3367
+      ],
+      "gps_image_id": "M18",
+      "gps_latitude": 50.81454357354051,
+      "gps_longitude": 8.770428190960079,
+      "camera_height_basis": "1.7 m above nominal project grade is an eye-level approximation; Commons provides no camera altitude usable as project Z.",
+      "sensor_width_basis": "M18 EXIF records a Canon EOS 550D and a 24 mm focal length. The camera manual gives a 22.3 x 14.9 mm sensor; the source image aspect is 5209/3367. A 22.3 mm active horizontal sensor width is used, while any crop history remains unknown.",
+      "local_position_basis": "Commons file-page Location template coordinates are used as the image camera position and converted to local east/north using the approximate crossing anchor. The same coordinates occur on M21, photographed at the same session. The page stores only cardinal NW; its 315-degree center is not an exact heading. A 330-degree bearing, 32 m aim distance, camera height and target z=32 m are inferred from M18 landmark ordering and candidate renders, not source measurements.",
+      "source_page": "https://commons.wikimedia.org/wiki/File:Marburg_Elisabethkirche_S%C3%BCdchor_Dach_von_SO_(1).jpg",
+      "sensor_spec_source": "https://files.canon-europe.com/files/soft38013/manual/EOS%20550D_HG_EN_Flat.pdf",
+      "evidence_ids": [
+        "M18",
+        "M21"
+      ]
     }
   }
 }

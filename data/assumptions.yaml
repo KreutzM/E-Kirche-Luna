@@ -168,12 +168,12 @@ assumptions:
     evidence_ids: [M01, M02, M18]
     iteration: 1
   dachreiter_height_above_ridge:
-    value: 12.0
+    value: 20.0
     unit: m
-    reason: "Roof-turret height above the main ridge estimated from M02/M18; no direct dimension is documented."
+    reason: "Raised from 12 m after fixed-camera in-memory height comparisons in M02 (independent southeast view) and M18/M21 (same mapped location, different framing) showed that the earlier silhouette was too short. A 20 m rise is a conservative visual-fit candidate; camera aims remain inferred and no direct dimension is documented."
     confidence: low
-    evidence_ids: [M01, M02, M18]
-    iteration: 1
+    evidence_ids: [M01, M02, M18, M21]
+    iteration: 2
   tower_midshaft_top_height:
     value: 39.0
     unit: m

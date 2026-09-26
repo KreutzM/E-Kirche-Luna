@@ -14,7 +14,8 @@ if camera is None:
     raise RuntimeError("VAL_M21 is missing; rebuild the validation cameras first")
 
 # The Commons camera location, heading and focal length stay fixed. Each candidate
-# changes only inferred target height; horizontal aim remains 32 m along heading 315°.
+# changes only inferred target height; horizontal aim remains 32 m along the
+# nominal center (315 degrees) of the Commons cardinal NW direction.
 target_x, target_y = -4.67, -19.52
 for target_z in (20.0, 24.0, 28.0, 32.0):
     direction = Vector((target_x, target_y, target_z)) - camera.location

@@ -30,8 +30,11 @@ minimum rectangle, long-axis orientation and total elevation range recorded in
 `data/geospatial_sources.yaml`. This comparison does not promote LoD2 geometry to a measured
 architectural dimension. `35_render_lod2_diagnostic.py` can render G01 alone from the SE, S and TOP
 validation cameras; `36_render_m21_target_diagnostics.py` compares inferred M21 target heights,
-`37_render_m21_heading_diagnostics.py` compares yaw candidates without altering its recorded
-heading, and `38_render_lod2_overlay_diagnostic.py` overlays G01 `terrainIntersection` ground lines
+`37_render_m21_heading_diagnostics.py` compares bearings inside the recorded cardinal NW sector,
+`39_render_m18_registration_diagnostics.py` renders M18 bearing candidates, and
+`41_render_m21_nw_aim_candidate.py` renders the M21 visual-fit candidate. `42_render_dachreiter_height_diagnostics.py`
+and `43_render_dachreiter_m02_diagnostics.py` test temporary in-memory turret heights from M21 and M02 views.
+The selected 20 m rise remains a low-confidence inferred candidate. `38_render_lod2_overlay_diagnostic.py` overlays G01 `terrainIntersection` ground lines
 on the model from TOP, M21 and SE. TOP is the useful footprint comparison; M21/SE show the same
 ground lines near the image base and do not validate roof silhouettes. The lines are separate
 reference curves, not roof-surface wireframes or project geometry. These temporary diagnostic renders
