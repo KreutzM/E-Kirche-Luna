@@ -40,24 +40,29 @@ def minimum_rectangle(points: list[tuple[float, float]]):
     for start, end in zip(hull, hull[1:] + hull[:1]):
         angle = math.atan2(end[1] - start[1], end[0] - start[0])
         cosine, sine = math.cos(angle), math.sin(angle)
-        rotated = [(cosine * x + sine * y, -sine * x + cosine * y)
-                   for x, y in hull]
-        width = max(point[0] for point in rotated) - min(point[0] for point in rotated)
-        height = max(point[1] for point in rotated) - min(point[1] for point in rotated)
-        if width >= height:
-            long_axis_angle = angle
-            long_axis, short_axis = width, height
-        else:
-            long_axis_angle = angle + math.pi / 2
-            long_axis, short_axis = height, width
+        edge_frame = [(cosine * x + sine * y, -sine * x + cosine * y)
+                      for x, y in hull]
+        width = max(point[0] for point in edge_frame) - min(point[0] for point in edge_frame)
+        height = max(point[1] for point in edge_frame) - min(point[1] for point in edge_frame)
+        long_axis_angle = angle if width >= height else angle + math.pi / 2
         while long_axis_angle < -math.pi / 2:
             long_axis_angle += math.pi
         while long_axis_angle >= math.pi / 2:
             long_axis_angle -= math.pi
+        long_u = (math.cos(long_axis_angle), math.sin(long_axis_angle))
+        short_u = (-long_u[1], long_u[0])
+        along = [x * long_u[0] + y * long_u[1] for x, y in hull]
+        across = [x * short_u[0] + y * short_u[1] for x, y in hull]
+        long_axis = max(along) - min(along)
+        short_axis = max(across) - min(across)
+        centre_along = (max(along) + min(along)) / 2
+        centre_across = (max(across) + min(across)) / 2
+        centre = (centre_along * long_u[0] + centre_across * short_u[0],
+                  centre_along * long_u[1] + centre_across * short_u[1])
         candidates.append((long_axis * short_axis, long_axis, short_axis,
-                           math.degrees(long_axis_angle)))
-    _, long_axis, short_axis, angle_degrees = min(candidates)
-    return long_axis, short_axis, angle_degrees
+                           math.degrees(long_axis_angle), centre))
+    _, long_axis, short_axis, angle_degrees, centre = min(candidates)
+    return long_axis, short_axis, angle_degrees, centre
 
 
 def read_points():
@@ -89,7 +94,15 @@ def main():
          earth_radius * (math.radians(lat) - lat0))
         for lat, lon, _ in positions
     ]
-    long_axis, short_axis, angle = minimum_rectangle(projected)
+    long_axis, short_axis, angle, centre_en = minimum_rectangle(projected)
+    current_crossing = (float(anchor["latitude"]), float(anchor["longitude"]))
+    centre_lat = math.degrees(lat0 + centre_en[1] / earth_radius)
+    centre_lon = math.degrees(lon0 + centre_en[0] / (earth_radius * math.cos(lat0)))
+    angle_rad = math.radians(angle)
+    crossing_east = centre_en[0] + 14.75 * math.cos(angle_rad)
+    crossing_north = centre_en[1] + 14.75 * math.sin(angle_rad)
+    crossing_lat = math.degrees(lat0 + crossing_north / earth_radius)
+    crossing_lon = math.degrees(lon0 + crossing_east / (earth_radius * math.cos(lat0)))
     elevations = [point[2] for point in positions]
     summary = {
         "source": "G01",
@@ -98,6 +111,19 @@ def main():
             "long_axis": round(long_axis, 3),
             "short_axis": round(short_axis, 3),
             "long_axis_degrees_from_east": round(angle, 3),
+        },
+        "minimum_rectangle_center_wgs84": {
+            "latitude": round(centre_lat, 8),
+            "longitude": round(centre_lon, 8),
+        },
+        "plan_asymmetry_crossing_candidate_wgs84": {
+            "latitude": round(crossing_lat, 8),
+            "longitude": round(crossing_lon, 8),
+            "assumed_eastward_offset_from_rectangle_center_m": 14.75,
+        },
+        "candidate_offset_from_current_anchor_m": {
+            "east": round(crossing_east, 3),
+            "north": round(crossing_north, 3),
         },
         "vertical_extent_m": round(max(elevations) - min(elevations), 3),
         "absolute_elevation_bounds_m": [round(min(elevations), 3), round(max(elevations), 3)],

@@ -35,7 +35,7 @@ views:
     landmarks:
       - id: south_choir_roof_profile
         expected: "The south-choir roof rises from a polygonal wall/eaves line to a steep roof profile; the crossing turret is visible behind it."
-        observed: "The dedicated camera retains Commons GPS, 315-degree heading and 29 mm focal length. Target-height tests z=20–32 m do not repair horizontal registration. A separate +15-degree yaw diagnostic aligns the broad roof/turret order better, but conflicts with the recorded 315-degree heading and is not accepted. The approximate crossing georeference and gross massing both remain candidates for the discrepancy; no pose or geometry change is accepted."
+        observed: "The dedicated camera retains Commons GPS, 315-degree heading and 29 mm focal length. Target-height tests z=20–32 m do not repair horizontal registration. A separate +15-degree yaw diagnostic aligns the broad roof/turret order better, but conflicts with the recorded 315-degree heading and is not accepted. The G01 footprint plus P01 asymmetry gives a crossing candidate within 0.85 m of the current OSM-derived anchor, so a gross origin shift is not supported as the explanation. A temporary G01 wire overlay confirms broad plan registration but its generalized roof edges cannot decide the remaining image difference. The south-east mass arrangement or heading precision still needs resolution; no pose or geometry change is accepted."
         status: unresolved
   N:
     camera: VAL_N

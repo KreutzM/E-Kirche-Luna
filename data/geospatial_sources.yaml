@@ -23,7 +23,13 @@ sources:
       long_axis_m: 70.359
       short_axis_m: 44.378
       long_axis_degrees_from_east: 7.406
+      rectangle_center_wgs84: [50.81490888, 8.76997514]
       method: "Convex hull of all G01 surface coordinates projected to a local tangent plane at the approximate crossing anchor; minimum-area rectangle over hull edge orientations. Reproducible with scripts/analyze_lod2_reference.py."
+    crossing_anchor_crosscheck:
+      method: "Shift the G01 rectangle center 14.75 m eastward along its long axis using the P01 west/east asymmetry."
+      candidate_wgs84: [50.81492596, 8.77018310]
+      offset_from_project_crossing_anchor_m: { east: 0.781, north: 0.329 }
+      interpretation: "The candidate is within 0.85 m of the existing approximate OSM-derived project anchor. This checks the anchor at coarse geodata level; it is not a survey accuracy statement."
     derived_total_vertical_extent_m: 80.118
     published_accuracy:
       horizontal_m: 0.5

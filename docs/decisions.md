@@ -47,3 +47,9 @@ Decision: keep the M21 camera's Commons location, 315° heading and recorded 29 
 
 ## 2026-09-26 — Probe M21 horizontal registration without accepting a camera offset
 Decision: with the Commons camera location, 29 mm focal length and 32 m inferred aim distance fixed, compare horizontal aim bearings 315°, 320°, 325° and 330°. The +15° candidate better places the coarse south-conch roof/turret order in M21, but it contradicts the source's 315° heading and is not adopted. The residual points to the approximate crossing georeference or gross model alignment as unresolved; use the G01 geospatial footprint to test those independently before changing the project anchor or masses.
+
+## 2026-09-26 — Cross-check the crossing anchor from G01
+Decision: derive the centre of G01's horizontal minimum-area rectangle, then apply the existing P01 14.75 m eastward crossing offset along the geodata long axis. This candidate lies 0.85 m from the existing OSM-derived crossing anchor. Record it as a coarse cross-check, not as a surveyed coordinate or accuracy estimate. Keep the project anchor and M21 camera unchanged; the small difference does not explain the +15° heading diagnostic, so continue investigating the south-east mass layout and source-heading precision.
+
+## 2026-09-26 — Compare G01 surfaces without promoting them to model geometry
+Decision: generate temporary wireframe overlays of G01 and the current reconstruction from TOP, M21 and SE. The overall footprint/anchor aligns broadly; the conch outlines and roof connections still differ. Keep G01 hidden from final renders and do not copy its generalized complex roof surfaces over modern photographs or the historical plan. Use the overlay to localize follow-up checks against P08, M19, M20 and M21; the massing gate remains open.

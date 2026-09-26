@@ -35,6 +35,10 @@ Iteration 12 rendert M21 mit fixierter Commons-Position, 315° Blickrichtung und
 
 Iteration 13 testet zusätzlich reine Zielrichtungsdiagnostik bei 315°, 320°, 325° und 330° mit unverändertem Standort, 32-m-Zielabstand, z=24 m und Brennweite. +15° bringt die grobe Reihenfolge von Konchendach und Dachreiter im Bild näher an M21, widerspricht aber der auf Commons erfassten 315°-Richtung und wird nicht übernommen. Das stärkt den Verdacht auf einen Versatz in der nur näherungsweisen Kreuzungs-Georeferenz oder auf Fehler in den groben Massen; es belegt keinen der beiden. Nächster Schritt ist die unabhängige Zuordnung des G01-Grundrisses zum lokalen Vierungsursprung.
 
+Iteration 14 vergleicht den G01-Mindestflächenrechteckmittelpunkt mit dem aus P01 abgeleiteten Vierungsversatz. Der so berechnete Kandidat liegt nur 0,85 m vom bestehenden OSM-abgeleiteten Projektanker entfernt. Das ist eine grobe unabhängige Gegenprüfung, keine Vermessungsgenauigkeit; sie spricht gegen einen großen Ursprungsversatz als Erklärung des M21-Winkelresiduums. Kamera und Geometrie bleiben unverändert; der M21-Rest wird weiter gegen Südost-Massierung und Richtungsevidenz geprüft.
+
+Iteration 15 rendert G01 als temporäre Drahtüberlagerung über dem Modell aus TOP-, M21- und SE-Kamera. Die Grundrisslage stimmt im Groben mit dem unabhängig bestätigten Anker überein; an Konchenumrissen und Dachanschlüssen bleiben sichtbare Unterschiede. Da Hessens LoD2 komplexe Dächer ausdrücklich generalisiert, wird daraus keine Dachgeometrie kopiert. Es bleibt ein Hinweis, welche Teilbereiche anhand P08 und aktueller Südostfotos genauer geprüft werden müssen.
+
 ## Durchführung und Prüftore
 
 ### 0. Reproduzierbare Ausgangsbasis

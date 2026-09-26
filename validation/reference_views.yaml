@@ -14,7 +14,7 @@ views:
     camera: VAL_M21
     evidence: [M21]
     status: gps_heading_focal_supported_target_inferred
-    note: "The Commons page provides the camera coordinates and 315° heading; the image metadata provides 29 mm focal length and Canon EOS 550D. Local camera height, cropped active sensor width and target pitch/distance are inferred. The exact-heading view leaves the south-conch roof too far right; a diagnostic +15° yaw aligns the broad roof/turret order better but conflicts with the recorded heading. No camera fit is accepted. Verify the approximate crossing georeference independently; this remains an unresolved diagnostic."
+    note: "The Commons page provides the camera coordinates and 315° heading; the image metadata provides 29 mm focal length and Canon EOS 550D. Local camera height, cropped active sensor width and target pitch/distance are inferred. The exact-heading view leaves the south-conch roof too far right; a diagnostic +15° yaw aligns the broad roof/turret order better but conflicts with the recorded heading. G01's plan/asymmetry cross-check places the crossing candidate within 0.85 m of the current anchor, but generalized roof geometry cannot resolve the remaining photo difference. No camera fit is accepted."
   SE:
     camera: VAL_SE
     evidence: [M02, M03, M19, M20, M21]
