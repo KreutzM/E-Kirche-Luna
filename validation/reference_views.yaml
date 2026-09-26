@@ -19,7 +19,7 @@ views:
     camera: VAL_M21
     evidence: [M21]
     status: gps_heading_focal_supported_target_inferred
-    note: "The Commons page provides camera coordinates and cardinal NW, while the image metadata provides a 29 mm focal length and Canon EOS 550D. 315° is only the nominal center of NW, not an exact azimuth. Local camera height, cropped active sensor width and target pitch/distance are inferred. M18 supplies a wide same-location comparison; M21's narrow framing still leaves relative turret height and roof silhouette unresolved. G01's plan/asymmetry cross-check places the crossing candidate within 0.85 m of the current anchor, but generalized roof geometry cannot resolve the remaining photo difference."
+    note: "The Commons page provides camera coordinates and cardinal NW, while the image metadata provides a 29 mm focal length and Canon EOS 550D. 315° is only the nominal center of NW, not an exact azimuth. Local camera height, cropped active sensor width and target pitch/distance are inferred. The selected 20 m low-confidence turret rise and 325° visual-fit candidate bring the broad conch/turret order closer in the photo overlay; wall, roof-edge and conch silhouettes still diverge. M18 is a wider framing from the same mapped location, not independent camera geometry. G01's plan/asymmetry cross-check places the crossing candidate within 0.85 m of the current anchor, but generalized roof geometry cannot resolve the remaining photo difference."
   SE:
     camera: VAL_SE
     evidence: [M02, M03, M18, M19, M20, M21]

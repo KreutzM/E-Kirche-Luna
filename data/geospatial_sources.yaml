@@ -36,3 +36,19 @@ sources:
       vertical_m: 1.0
     use: "reference_geometry_only"
     limitations: "Generalized LoD2 building geometry, not the detailed 3 mm conservation survey. Roof shapes for complex monuments may be simplified; do not override documented dimensions or conflicting modern photographs. The minimum rectangle is a geospatial cross-check, not a surveyed architectural dimension. The vertical datum-to-project-floor shift is approximate and used only for the comparison object."
+  G02:
+    title: "Potential detailed 3D survey and official virtual-tour evidence"
+    source_records:
+      official_church: "https://www.elisabethkirche.de/kirchenraum/sehenswuerdiges/allgemeines/rundgang"
+      survey_provider_reference: "https://www.vermessung-arhelger.de/referenzen/"
+      exterior_tour: "https://flyingimpressions.de/360%C2%B0/elisabethkirche/index.htm"
+    published_claims:
+      official_church: "The church's official page says a professional 3D recording was commissioned before the interior renovation and links an exterior virtual tour."
+      survey_provider: "The provider's Elisabethkirche reference describes a full 3D scan/model and a 3 mm required accuracy for restoration documentation, including plans, sections and surfaces."
+    relationship_between_records: "Not confirmed; do not assume the tour and the provider's scan deliverable are the same dataset."
+    raw_point_cloud_or_mesh_publicly_linked: false
+    reuse_license: "Not stated for the virtual tour or detailed survey deliverables."
+    retrieved_at: "2026-09-26"
+    use: "visual_evidence_lead_only"
+    action: "Do not download/embed or derive stored imagery from the tour until reuse terms are confirmed. Seek permission or an export from the rights holder if the project needs this higher-accuracy geometry."
+    limitations: "The tour may support visual inspection but is not a published point cloud or metrically calibrated photo set. The provider's project page documents service scope and required accuracy, not access to the underlying deliverables."

@@ -45,6 +45,8 @@ Iteration 18 erhöht den inferierten Dachreiteranstieg über dem Hauptfirst von 
 
 Iteration 19 erzeugt reproduzierbare, unveränderte Quellbild-Render-Überlagerungen für M02, M05, M18 und M21. Die vollständigen Bildfelder bleiben erhalten; bei Formatabweichung wird der Bereich eingerahmt statt beschnitten. M18/M21 zeigen die Dachreiterhöhe und die grobe Turm-/Dachfolge näher an der Quelle; M02 stützt die Höhenkorrektur, M05 bleibt mit seinem nur visuellen Zielpunkt schlecht registriert. Die Überlagerungen belegen keine Kamerakalibrierung und liefern keine neue Maßangabe. Als Nächstes die Dachanschlüsse gezielt mit P01/P08 und der allgemeinen Draufsicht abgleichen, bevor weitere Höhenwerte geändert werden.
 
+Iterationsnotiz: Die offizielle Kirchenseite verlinkt einen Außenrundgang und bestätigt eine beauftragte professionelle 3D-Aufnahme. Ein Vermessungsanbieter führt separat einen vollständigen Kirchenscan/-modellierungsauftrag mit geforderter 3-mm-Genauigkeit für Sanierungsunterlagen auf. Ob beide Referenzen dasselbe Projekt bezeichnen, ist nicht belegt; Rohpunktwolke oder Mesh sind öffentlich nicht verlinkt und Nutzungsrechte für Tour/Scan sind nicht angegeben. Als potenziell entscheidende Evidenzquelle registriert, aber nicht heruntergeladen oder zur Geometrieableitung verwendet. Ein hochauflösender Export wäre der stärkste nächste Abgleich, wenn Rechteinhaber ihn freigeben.
+
 ## Durchführung und Prüftore
 
 ### 0. Reproduzierbare Ausgangsbasis
