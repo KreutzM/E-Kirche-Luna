@@ -44,7 +44,7 @@ views:
     landmarks:
       - id: south_choir_roof_profile
         expected: "The south-choir roof rises from a polygonal wall/eaves line to a steep roof profile; the crossing turret is visible behind it."
-        observed: "The dedicated camera retains Commons GPS and 29 mm focal length; the source direction is cardinal NW, with 315 degrees only its nominal center. A 325-degree M21 visual-fit candidate aligns the conch peak and roof-turret order more closely, but the turret's relative image height and coarse roof/wall silhouette remain unresolved. M18, photographed from the same Commons-mapped point with 24 mm focal length, gives a complementary wider framing check. The G01 footprint plus P01 asymmetry places a crossing candidate within 0.85 m of the current anchor, so a large origin offset is not supported. Keep the gate open pending joint silhouette validation."
+        observed: "The dedicated camera retains Commons GPS and 29 mm focal length; the source direction is cardinal NW, with 315 degrees only its nominal center. The 325-degree visual-fit candidate and 20 m low-confidence roof-turret rise bring the broad conch/turret order closer in the full-frame overlay. M18, photographed from the same mapped point at 24 mm, confirms the wider order but not independent camera geometry. Roof edges and coarse wall/conch silhouettes still diverge, and the target remains inferred. The G01 footprint plus P01 asymmetry places a crossing candidate within 0.85 m of the current anchor, so a large origin offset is not supported. Keep the gate open pending joint silhouette validation."
         status: unresolved
   N:
     camera: VAL_N

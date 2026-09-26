@@ -43,6 +43,8 @@ Iteration 17 korrigiert die Richtungspräzision der Commons-Angabe: M18/M21 spei
 
 Iteration 18 erhöht den inferierten Dachreiteranstieg über dem Hauptfirst von 12 auf 20 m. Fixierte M02-Kameradiagnosen sowie M18/M21-Dachvergleiche stützen die Korrektur; 20 m bleibt wegen unsicherer Zielpunkte und Kameraneigungen ein niedrig sicherer Kandidat, keine dokumentierte Messung. Die Standardansichten werden neu aufgebaut und geprüft. Die Korrektur gibt das Massing-Prüftor nicht frei; Dachanschlüsse und übrige Silhouettenabweichungen sind weiterhin zu bewerten.
 
+Iteration 19 erzeugt reproduzierbare, unveränderte Quellbild-Render-Überlagerungen für M02, M05, M18 und M21. Die vollständigen Bildfelder bleiben erhalten; bei Formatabweichung wird der Bereich eingerahmt statt beschnitten. M18/M21 zeigen die Dachreiterhöhe und die grobe Turm-/Dachfolge näher an der Quelle; M02 stützt die Höhenkorrektur, M05 bleibt mit seinem nur visuellen Zielpunkt schlecht registriert. Die Überlagerungen belegen keine Kamerakalibrierung und liefern keine neue Maßangabe. Als Nächstes die Dachanschlüsse gezielt mit P01/P08 und der allgemeinen Draufsicht abgleichen, bevor weitere Höhenwerte geändert werden.
+
 ## Durchführung und Prüftore
 
 ### 0. Reproduzierbare Ausgangsbasis

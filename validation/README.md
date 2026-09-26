@@ -38,6 +38,9 @@ The selected 20 m rise remains a low-confidence inferred candidate. `38_render_l
 on the model from TOP, M21 and SE. TOP is the useful footprint comparison; M21/SE show the same
 ground lines near the image base and do not validate roof silhouettes. The lines are separate
 reference curves, not roof-surface wireframes or project geometry. These temporary diagnostic renders
-are ignored local files and do not change the saved camera or geometry.
+are ignored local files and do not change the saved camera or geometry. `44_create_evidence_overlays.py`
+creates photo/render blends for M02, M05, M18 and M21; it preserves each full image and letterboxes
+aspect-ratio mismatches. These blends support visual diagnosis only and are not pass/fail metrics or
+calibrated camera solutions.
 
 Do not create visually convenient cameras and then claim agreement. Camera changes should be motivated by image evidence or documented calibration assumptions.
