@@ -28,6 +28,15 @@ views:
         expected: "Six-bay hall length is legible in the side elevation."
         observed: "The M05 view captures the south elevation, but the current wall is a continuous blank mass and bay divisions have not been modeled at the massing stage."
         status: unresolved
+  M21:
+    camera: VAL_M21
+    evidence_ids: [M21]
+    comparison: gps_heading_focal_supported_target_inferred
+    landmarks:
+      - id: south_choir_roof_profile
+        expected: "The south-choir roof rises from a polygonal wall/eaves line to a steep roof profile; the crossing turret is visible behind it."
+        observed: "The dedicated camera retains Commons GPS, 315-degree heading and 29 mm focal length. Target-height tests z=20–32 m do not repair horizontal registration. A separate +15-degree yaw diagnostic aligns the broad roof/turret order better, but conflicts with the recorded 315-degree heading and is not accepted. The approximate crossing georeference and gross massing both remain candidates for the discrepancy; no pose or geometry change is accepted."
+        status: unresolved
   N:
     camera: VAL_N
     evidence_ids: [M06, M07, M15, M16]
@@ -39,12 +48,12 @@ views:
         status: partial
   SE:
     camera: VAL_SE
-    evidence_ids: [M02, M03, M19]
+    evidence_ids: [M02, M03, M19, M20, M21, G01]
     comparison: approximate_gps_and_focal_view
     landmarks:
       - id: triconch_and_roof_turret
         expected: "Three conches surround the crossing and the current roof turret rises from the roofscape."
-        observed: "Iteration 6 uses a 28.3 mm active equivalent sensor width derived from M02's saved 3696x3053 crop and shifts the visual-fit target west/down to [-15, 0, 29] m based on candidate renders. The tower pair, roof turret and eastern conch now occupy approximately the same horizontal bands as the source, and overall frame width is close. The tower pair remains slightly left; more importantly, coarse polygonal conches and broad, angular roof masses diverge from the visible steep roof and stepped facade silhouette. Camera pose is still an inferred fit because M02 has no heading; do not count framing as proof of geometric fit."
+        observed: "Iteration 6 uses a 28.3 mm active equivalent sensor width derived from M02's saved 3696x3053 crop and shifts the visual-fit target west/down to [-15, 0, 29] m based on candidate renders. M20 independently confirms the southeast ordering and adds a full current exterior composition. M21 shows the south-choir roof profile in close detail and now has its own Commons-location/heading-based camera candidate. The model's polygonal conches and broad angular roof masses still diverge from these references. M02 has no heading, while M21's target distance and pitch remain inferred; neither camera framing alone proves geometric fit."
         status: unresolved
       - id: sacristy
         expected: "Two-storey sacristy adjoins the north-east choir with a pyramidal roof."
@@ -52,4 +61,4 @@ views:
         status: partial
 acceptance:
   massing_gate_passed: false
-  reason: "Iteration 10 refines M05's inferred aim to [0, -10, 18] m using the turret, conch roof peak and facade base as landmarks. M05 remains a partial comparison. A 32 m conch-roof test was too high; 29 m remains the low-confidence geometry value after the 30 m test did not improve M02 and M05 together. M02 still diverges in roof/conch silhouette, M05's blank wall masses and simplified roof forms remain partial, and M04 remains unresolved. Do not start buttresses or decorative modeling until dimensional and silhouette checks pass."
+  reason: "Iteration 10 refines M05's inferred aim to [0, -10, 18] m using the turret, conch roof peak and facade base as landmarks. M05 remains a partial comparison. A 32 m conch-roof test was too high; 29 m remains the low-confidence geometry value after the 30 m test did not improve M02 and M05 together. M20 adds an independent southeast view; M21 now has a separate camera using Commons location/heading and recorded focal length, with target and crop still inferred. M02 still diverges in roof/conch silhouette, M05's blank wall masses and simplified roof forms remain partial, and M04 remains unresolved. Keep the gate closed until the dimensional and silhouette checks pass."

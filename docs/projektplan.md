@@ -9,15 +9,15 @@ Die festgelegte Orientierung bleibt unverändert: Meter, X nach Osten, Y nach No
 ## Ausgangslage
 
 - Repository auf `main`, Ausgangscommit `397ee64`.
-- `python scripts/validate_dataset.py` besteht: 32 Referenzeinträge und 6 dokumentierte Maße.
-- Der Manifest enthält 19 moderne Fotos, 5 historische Fotos und 8 historische Pläne/Ansichten. Die Bilddateien und Kontaktbögen liegen noch nicht im Arbeitsverzeichnis.
-- `data/assumptions.yaml` ist leer. Das ist konsistent damit, dass noch keine abgeleitete Architektur modelliert wurde.
-- `scripts/blender/10_massing.py` erzeugt nur drei ausgeblendete Maßstabs-Hilfskörper in `REFERENCE`, keine Gebäudemassen. Ein gespeichertes `.blend`, Validierungskameras, Landmarken und Render fehlen.
-- Die sechs Maße umfassen auch Innenmaße und dürfen nicht als Außenabmessungen übernommen werden.
+- `python scripts/validate_dataset.py` besteht derzeit mit 34 Referenzeinträgen, 6 dokumentierten Maßen und 41 protokollierten Geometrieannahmen.
+- Das Manifest führt 21 moderne Fotos, 5 historische Fotos und 8 historische Pläne/Ansichten. Bilddateien und Kontaktbögen sind lokal vorhanden; Bildbinärdateien bleiben gemäß Repository-Regeln unveröffentlicht.
+- `data/assumptions.yaml` enthält die Außenmaß-Inferenzen samt Gründen, Konfidenzen, Evidenz-IDs und Iterationen.
+- Die Blender-Szene, parametrischen Hauptmassen, Türme, Dächer, Evidenzkameras, Landmarken und Prüfrenders sind angelegt. Der Szenenaufbau ist reproduzierbar; die Massing-Silhouette besteht die Evidenzprüfung jedoch noch nicht.
+- Die sechs dokumentierten Maße umfassen auch Innenmaße und dürfen nicht als Außenabmessungen übernommen werden.
 
 ## Umsetzungsstand
 
-Seit diesem Plan wurden alle 32 Referenzen mit Provenienz gesichert. Der Validator besteht aktuell mit 41 protokollierten Geometrieannahmen. Die parametrische Blender-Szene, Hauptmassen, zwei Westtürme, Dachmassen, Evidenzkameras und sieben Renderansichten sind angelegt. Die Arbeitspakete Referenzen, Evidenz und Grundszene sind abgeschlossen.
+Seit diesem Plan wurden alle 34 Referenzen mit Provenienz gesichert. Der Validator besteht aktuell mit 41 protokollierten Geometrieannahmen. Die parametrische Blender-Szene, Hauptmassen, zwei Westtürme, Dachmassen, Evidenzkameras und sieben Renderansichten sind angelegt. Die Arbeitspakete Referenzen, Evidenz und Grundszene sind abgeschlossen.
 
 Iteration 4 richtet die planbasierten Massen mit 7,13° zur geografischen Ostachse aus; der Vierungsursprung und die Weltachsen X=Ost, Y=Nord, Z=Oben bleiben unverändert. Iteration 5 vergrößert die inferierte Außenlänge und Querhausspanne anhand der minimalen OSM-Umrisshülle auf 70,4 × 44,6 m. Iteration 6 kalibriert die horizontale Sensorbreite von M02 anhand seines 3696×3053-Crops auf 28,3 mm äquivalent und verschiebt den dokumentierten Zielpunkt auf [-15, 0, 29] m. Iteration 7 verwendet M05 als separate Südsicht mit dessen GPS, 30-mm-Äquivalentbrennweite und Portraitformat; nur der Blickzielpunkt ist inferiert. Ein Test mit 32 m Konchendachhöhe wurde in M02/M05 zu hoch und auf 29 m zurückgesetzt. Das sind Karten-/Kamerableitungen, keine Vermessungsmaße. Validator und vollständiger Szenenaufbau bestehen; die Prüfrenders lassen sich reproduzieren.
 
@@ -29,6 +29,12 @@ Iteration 10 vergleicht M05-Blickzielhöhen z=16, 18, 20 und 23 m bei unverände
 
 Das Massing-Prüftor bleibt offen: M02s Landmarken und Gesamtbreite liegen nach Iteration 6 ungefähr an den Quellpositionen, die blockige Dach-/Konchensilhouette weicht aber weiterhin ab. M05 bestätigt die grobe Südseitenfolge von Langhausdach, Dachreiter und Ostchor, jedoch keinen vollständigen Silhouettenpass; getestete Offsetposen lösen die Ausrichtung nicht. M04 bleibt ungelöst: GPS-Projektion und verfügbare Testposen liefern keine passende Fotokomposition. Keine Folgephase vor Beseitigung dieser Abweichungen beginnen.
 
+Iteration 11 ergänzt M20 (moderne Südostansicht) und M21 (Dachdetail am Südchor) samt Commons-Provenienz. Die Commons-Dateiseite von M21 führt Kamerakoordinaten und 315° Blickrichtung; diese strukturierten Angaben fehlten im zunächst gespeicherten EXIF-Export und sind nun mit Herkunft erfasst. Ein eigener M21-Kamerakandidat behält Position, Richtung und 29-mm-Brennweite bei; Augenhöhe, aktive Sensorbreite/Ausschnitt und Zielneigung sind ausdrücklich inferiert. Außerdem wurde der aktuelle Hessische LoD2-Datensatz der Kirche als G01 gesichert und als render-ausgeblendete Referenz in `REFERENCE` importiert. Ein reproduzierbarer Auswerter berechnet aus 5.233 Quellkoordinaten eine orientierte Hülle von 70,359 × 44,378 m mit 7,406° Längsachse; das unabhängige geodätische Modell bestätigt damit näherungsweise die bisherigen OSM-Inferenzen 70,4 × 44,6 m und 7,13°. Die Quellhöhe von 80,118 m ist nur ein grober Plausibilitätsabgleich zur dokumentierten Turmhöhe. LoD2 generalisiert Dächer und kann bei komplexen Dachformen grob abweichen; es bestätigt daher weder die aktuelle Konchendachform noch die Foto-Silhouette. M02/M04 und das Massing-Gate bleiben offen.
+
+Iteration 12 rendert M21 mit fixierter Commons-Position, 315° Blickrichtung und 29 mm Brennweite sowie inferierten Zielhöhen z=20, 24, 28 und 32 m. Die Zielhöhen verschieben die vertikale Bildlage, beheben aber nicht, dass der modellierte Konchenfirst im Vergleich rechts liegt und die westlichen Türme im Foto nicht erscheinen. Keine Kamera oder Geometrie wurde angepasst. Als Nächstes die lokale Kreuzungs-Georeferenz und den G01-zu-Projekt-Abgleich prüfen, bevor eine geometrische Änderung aus diesem Einzelbild abgeleitet wird.
+
+Iteration 13 testet zusätzlich reine Zielrichtungsdiagnostik bei 315°, 320°, 325° und 330° mit unverändertem Standort, 32-m-Zielabstand, z=24 m und Brennweite. +15° bringt die grobe Reihenfolge von Konchendach und Dachreiter im Bild näher an M21, widerspricht aber der auf Commons erfassten 315°-Richtung und wird nicht übernommen. Das stärkt den Verdacht auf einen Versatz in der nur näherungsweisen Kreuzungs-Georeferenz oder auf Fehler in den groben Massen; es belegt keinen der beiden. Nächster Schritt ist die unabhängige Zuordnung des G01-Grundrisses zum lokalen Vierungsursprung.
+
 ## Durchführung und Prüftore
 
 ### 0. Reproduzierbare Ausgangsbasis
@@ -38,7 +44,7 @@ Das Massing-Prüftor bleibt offen: M02s Landmarken und Gesamtbreite liegen nach 
 3. Lizenzgeprüfte Referenzen laden; für jede Datei Provenienz, Lizenz, Abmessungen und Downloadstatus erhalten. Nicht verfügbare oder nicht akzeptierte Lizenzen dokumentieren, nicht umgehen.
 4. Kontaktbögen erzeugen und die Referenzen nach Ansicht, Sichtbarkeit, Perspektive, Restaurierungszustand und Eignung für Geometrie/Kamerakalibrierung sichten.
 
-**Prüftor:** Manifest bleibt valide; jeder der 32 Einträge hat einen nachvollziehbaren Status; heruntergeladene Dateien sind den IDs zugeordnet; Kontaktbögen zeigen die tatsächlich verfügbaren Bilder. Keine Bildmetadaten ergänzen, die nicht vorliegen.
+**Prüftor:** Manifest bleibt valide; jeder der 34 Einträge hat einen nachvollziehbaren Status; heruntergeladene Dateien sind den IDs zugeordnet; Kontaktbögen zeigen die tatsächlich verfügbaren Bilder. Keine Bildmetadaten ergänzen, die nicht vorliegen.
 
 ### 1. Evidenz und Maßgrundlage
 
@@ -115,4 +121,4 @@ Objekte getrennt in `OPENINGS`, `TRACERY` und `DETAIL` organisieren. Nach jedem 
 
 ## Nächster konkreter Arbeitsschritt
 
-Die M02-Projektion und den Grundriss anhand von P01, den modernen Ansichten und der OSM-Außenkontur gemeinsam prüfen: Kamerastandort und Brennweite aus Metadaten beibehalten, unbekannte Blickrichtung explizit fitten, anschließend westliche und östliche Extrempunkte sowie Querhausbreite am Foto- und Planmaßstab messen. Für M04 die GPS-/Georeferenz-Diskrepanz gesondert prüfen. Jede weitere Maßänderung als Inferenz protokollieren und alle betroffenen Ansichten neu vergleichen; Massing-Gate erst nach bestandenem Silhouettenvergleich freigeben.
+Die drei Konchen- und Dachanschlüsse aus M02, M05, M20 und M21 gegen P01/P08 und den G01-Referenzkörper einzeln vergleichen. Für M04 die GPS-/Georeferenz-Diskrepanz gesondert prüfen. Kamerastandort und Brennweite vorhandener Metadaten beibehalten; unbekannte Blickrichtung explizit als Inferenz behandeln. Geometrieänderungen erst nach lokalisierter Abweichung vornehmen, jede neue Maßinferenz protokollieren und betroffene Ansichten neu rendern. Das Massing-Gate erst nach bestandenem Silhouettenvergleich freigeben.

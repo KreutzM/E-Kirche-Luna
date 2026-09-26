@@ -10,6 +10,7 @@ $BuildScripts = @(
     "00_scene_setup.py",
     "10_massing.py",
     "20_towers_roofs.py",
+    "30_import_lod2_reference.py",
     "40_validation_cameras.py",
     "90_validation.py"
 )

@@ -38,6 +38,9 @@ if coords.get("axes",{}).get("z_positive") != "up":
     fail("Z axis must be up")
 
 assumptions = yaml.safe_load((ROOT/"data"/"assumptions.yaml").read_text(encoding="utf-8"))
+geospatial_path = ROOT/"data"/"geospatial_sources.yaml"
+geospatial = yaml.safe_load(geospatial_path.read_text(encoding="utf-8")) if geospatial_path.exists() else {"sources": {}}
+evidence_ids = set(ids) | set((geospatial or {}).get("sources", {}))
 if "assumptions" not in assumptions:
     fail("data/assumptions.yaml must contain top-level 'assumptions'")
 else:
@@ -53,7 +56,7 @@ else:
             fail(f"assumption {name}: invalid confidence")
         if not isinstance(item.get("evidence_ids"), list) or not item["evidence_ids"]:
             fail(f"assumption {name}: evidence_ids must be a non-empty list")
-        elif any(evidence_id not in set(ids) for evidence_id in item["evidence_ids"]):
+        elif any(evidence_id not in evidence_ids for evidence_id in item["evidence_ids"]):
             fail(f"assumption {name}: unknown evidence ID")
         if not isinstance(item.get("iteration"), int) or item["iteration"] < 1:
             fail(f"assumption {name}: iteration must be a positive integer")

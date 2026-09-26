@@ -1,0 +1,32 @@
+sources:
+  G01:
+    title: "3D-Gebäudemodell Hessen LoD2 — Elisabethkirche"
+    provider: "Hessisches Landesamt für Bodenmanagement und Geoinformation"
+    product: "INSPIRE-WFS HE Gebäude — 3D LoD2"
+    feature_type: "bu-core3d:Building"
+    feature_id: "Building_DEHE06210000EgxB"
+    source_url: "https://inspire-hessen.de/ows/services/org.2.ef07833e-78a6-4c2c-a895-e31de788aac3_wfs"
+    catalog_url: "https://www.geoportal.hessen.de/spatial-objects/831"
+    license: "Datenlizenz Deutschland — Zero — Version 2.0"
+    license_url: "https://www.govdata.de/dl-de/zero-2-0"
+    retrieved_at: "2026-09-26"
+    source_record_date: "2020-03-09"
+    raw_file: "sources/geodata/G01_Building_DEHE06210000EgxB.gml"
+    source_crs: "WGS84 latitude, longitude with DHHN2016-NH elevation ordinates"
+    part_count: 44
+    position_count: 5233
+    bounds_wgs84:
+      latitude: [50.814724, 50.815124]
+      longitude: [8.769454, 8.770473]
+      elevation_m: [183.435, 263.553]
+    derived_horizontal_minimum_rectangle:
+      long_axis_m: 70.359
+      short_axis_m: 44.378
+      long_axis_degrees_from_east: 7.406
+      method: "Convex hull of all G01 surface coordinates projected to a local tangent plane at the approximate crossing anchor; minimum-area rectangle over hull edge orientations. Reproducible with scripts/analyze_lod2_reference.py."
+    derived_total_vertical_extent_m: 80.118
+    published_accuracy:
+      horizontal_m: 0.5
+      vertical_m: 1.0
+    use: "reference_geometry_only"
+    limitations: "Generalized LoD2 building geometry, not the detailed 3 mm conservation survey. Roof shapes for complex monuments may be simplified; do not override documented dimensions or conflicting modern photographs. The minimum rectangle is a geospatial cross-check, not a surveyed architectural dimension. The vertical datum-to-project-floor shift is approximate and used only for the comparison object."

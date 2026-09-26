@@ -318,5 +318,25 @@
     "priority": 1,
     "metric_use": "primary_orthographic_reference",
     "commons_page": "https://commons.wikimedia.org/wiki/File%3AMoller%20Denkm%C3%A4hler%20Marburg%20Elisabethkirche%2025.png"
+  },
+  {
+    "id": "M20",
+    "group": "modern",
+    "title": "Elisabethkirche, von Südosten Marburg 20200902 005.jpg",
+    "view": "SE elevated exterior",
+    "role": "primary_geometry",
+    "priority": 1,
+    "metric_use": "camera_solve_candidate",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Elisabethkirche,_von_S%C3%BCdosten_Marburg_20200902_005.jpg"
+  },
+  {
+    "id": "M21",
+    "group": "modern",
+    "title": "Marburg Elisabethkirche Südchor Dach von SO (2).jpg",
+    "view": "SE south choir roof",
+    "role": "roof_geometry",
+    "priority": 1,
+    "metric_use": "camera_solve_candidate_and_roof_geometry",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Marburg_Elisabethkirche_S%C3%BCdchor_Dach_von_SO_(2).jpg"
   }
 ]

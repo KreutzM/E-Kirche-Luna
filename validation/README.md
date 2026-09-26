@@ -8,7 +8,7 @@ From the repository root, run:
 ./scripts/blender/build_scene.ps1 -BlenderExe "C:\Program Files\Blender Foundation\Blender 5.2\blender.exe"
 ```
 
-The wrapper initializes the scene once, then opens the saved `.blend` for every geometry, camera, and render script. The ordered scripts are `00_scene_setup.py`, `10_massing.py`, `20_towers_roofs.py`, `40_validation_cameras.py`, and `90_validation.py`. The resulting render files are written to the ignored local `validation/renders/` folder.
+The wrapper initializes the scene once, then opens the saved `.blend` for every geometry, camera, and render script. The ordered scripts are `00_scene_setup.py`, `10_massing.py`, `20_towers_roofs.py`, `30_import_lod2_reference.py`, `40_validation_cameras.py`, and `90_validation.py`. The resulting render files are written to the ignored local `validation/renders/` folder.
 
 Validation cameras should be named `VAL_*` in Blender and tied to entries in `reference_views.yaml`.
 Executable camera positions, projection types, image framing and the evidence/calibration notes are
@@ -18,5 +18,17 @@ Plan-aligned architectural points are transformed into true east/north world coo
 shared `scripts/blender/geometry_transform.py` helper. The current mapped axis estimate is recorded
 in `data/coordinate_system.yaml` and mirrored in `data/model_parameters.json`; it rotates around
 the crossing origin without changing the project axes.
+
+The open Hessian LoD2 reference feature `G01` is imported from
+`sources/geodata/G01_Building_DEHE06210000EgxB.gml` by `30_import_lod2_reference.py` into the
+`REFERENCE` collection. It is mapped from WGS84/DHHN2016 to the project using the approximate
+crossing coordinate and the dataset's minimum ground elevation. Its objects are wireframe guides
+hidden from final renders; this vertical alignment is for visual comparison only.
+
+Run `python scripts/analyze_lod2_reference.py` to reproduce the source coordinate count, horizontal
+minimum rectangle, long-axis orientation and total elevation range recorded in
+`data/geospatial_sources.yaml`. This comparison does not promote LoD2 geometry to a measured
+architectural dimension. `35_render_lod2_diagnostic.py` can render G01 alone from the SE, S and TOP
+validation cameras; those temporary source-only previews are ignored local files.
 
 Do not create visually convenient cameras and then claim agreement. Camera changes should be motivated by image evidence or documented calibration assumptions.

@@ -2,10 +2,10 @@ assumptions:
   overall_exterior_length:
     value: 70.4
     unit: m
-    reason: "Outer west-tower-face to east-conch-tip length estimated from the 70.43 m long side of the minimum-area rectangle of current OSM way 34333680, cross-checked against P01 proportions and modern overview photographs. The mapped outline is approximate, not a surveyed dimension."
+    reason: "Outer west-tower-face to east-conch-tip length estimated from the 70.43 m long side of the minimum-area rectangle of current OSM way 34333680, cross-checked against P01 proportions, modern overview photographs, and G01's independently derived 70.359 m LoD2 minimum-rectangle axis. The geospatial outline is approximate, not a surveyed dimension."
     confidence: medium
-    evidence_ids: [P01, M01, M02, M03]
-    iteration: 5
+    evidence_ids: [P01, M01, M02, M03, G01]
+    iteration: 11
   west_extent_from_crossing:
     value: 50.0
     unit: m
@@ -30,10 +30,10 @@ assumptions:
   exterior_transept_span:
     value: 44.6
     unit: m
-    reason: "Outside north/south span fitted to the 44.62 m short side of the minimum-area rectangle of current OSM way 34333680 and cross-checked against P01 and modern views. The mapped outline is approximate, not a surveyed dimension; Dehio's 39 m figure remains a separate non-direct cross-check."
+    reason: "Outside north/south span fitted to the 44.62 m short side of the minimum-area rectangle of current OSM way 34333680 and cross-checked against P01, modern views, and G01's independently derived 44.378 m LoD2 minimum-rectangle axis. The geospatial outline is approximate, not a surveyed dimension; Dehio's 39 m figure remains a separate non-direct cross-check."
     confidence: medium
-    evidence_ids: [P01, M01, M02, M03, M19]
-    iteration: 5
+    evidence_ids: [P01, M01, M02, M03, M19, G01]
+    iteration: 11
   nave_hall_length:
     value: 32.0
     unit: m
@@ -88,7 +88,7 @@ assumptions:
     unit: m
     reason: "Choir and side-conch roof peak estimated from P08, raised roof views and modern southeast/south photographs. A 32 m test in iteration 7 made the roof peak too high in M02 and M05 comparisons, so the earlier 29 m inferred value is retained; it remains low-confidence and is not measured."
     confidence: low
-    evidence_ids: [P02, P08, M01, M02, M05, M18, M19]
+    evidence_ids: [P02, P08, M01, M02, M05, M18, M19, M21]
     iteration: 1
   tower_belfry_start_height:
     value: 46.0
