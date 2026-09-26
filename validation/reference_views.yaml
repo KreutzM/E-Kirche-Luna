@@ -8,13 +8,13 @@ views:
   S:
     camera: VAL_S
     evidence: [M04, M05]
-    status: gps_and_focal_supported_approximation
-    note: "M04 supplies GPS and 24 mm full-frame-equivalent focal length. Local camera height/ground elevation and target point remain inferred."
+    status: inferred_pose_fit_gps_and_focal_supported
+    note: "M04 supplies GPS and 24 mm full-frame-equivalent focal length. Its raw GPS conversion falls inside the coarse south-conch mass, so the current test camera uses an explicitly inferred 6.3 m south offset and visually fitted target; this removes the wall-only render but the photo framing and complete south-side silhouette remain unresolved."
   SE:
     camera: VAL_SE
     evidence: [M02, M03, M19]
-    status: gps_and_focal_supported_approximation
-    note: "M02 supplies GPS and 27 mm full-frame-equivalent focal length. Local camera height/ground elevation and aim point remain inferred."
+    status: inferred_target_fit_gps_and_focal_supported
+    note: "M02 supplies GPS and 27 mm full-frame-equivalent focal length. GPS-derived camera position is retained; the aim point was changed to increase projected spread. Tower/conch order is visible, but the model remains too small in frame and is not an accepted camera solve."
   N:
     camera: VAL_N
     evidence: [M06, M07, M15, M16]

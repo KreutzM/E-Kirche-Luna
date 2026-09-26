@@ -1,6 +1,7 @@
 {
   "model_version": 1,
   "units": "m",
+  "building_axis_orientation_degrees_from_east": 7.13,
   "documented_anchors": {
     "tower_height": 80.0,
     "crossing_square_side": 10.0,

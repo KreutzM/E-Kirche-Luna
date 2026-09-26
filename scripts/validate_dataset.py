@@ -61,6 +61,12 @@ else:
 params_path = ROOT/"data"/"model_parameters.json"
 if params_path.exists():
     params = json.loads(params_path.read_text(encoding="utf-8"))
+    coordinate_angle = coords.get("building_alignment", {}).get("longitudinal_axis_degrees_from_true_east")
+    parameter_angle = params.get("building_axis_orientation_degrees_from_east")
+    if coordinate_angle is None or parameter_angle is None or not math.isclose(
+        float(coordinate_angle), float(parameter_angle), rel_tol=0.0, abs_tol=1e-9
+    ):
+        fail("building orientation must agree between coordinate_system.yaml and model_parameters.json")
     recorded = assumptions.get("assumptions", {})
     for name, value in params.get("inferred", {}).items():
         item = recorded.get(name)

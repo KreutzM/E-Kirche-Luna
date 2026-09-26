@@ -6,9 +6,18 @@ axes:
   x_positive: east
   y_positive: north
   z_positive: up
+building_alignment:
+  longitudinal_axis_degrees_from_true_east: 7.13
+  confidence: medium
+  reason: "The minimum-area rectangle of the current OSM building outline (way 34333680) has a long axis 7.13 degrees north of east. Architectural plan coordinates are rotated into the mandated east/north world axes around the crossing origin. This is an approximate mapped alignment, not a survey measurement."
+  source: "https://www.openstreetmap.org/way/34333680 (outline queried from OSM API, 2026-09-26)"
 geographic_reference:
-  status: approximate_only
-  building_center_wgs84:
-    lat: 50.8150
-    lon: 8.76972
-  note: "Project reference only; prefer verified per-image GPS."
+  status: inferred_approximate
+  crossing_center_wgs84:
+    lat: 50.814923
+    lon: 8.770172
+  derivation: "OSM way 34333680 footprint bounding-box centre (50.8149230, 8.7699615), shifted 14.75 m east to the model crossing using the P01-derived longitudinal extents (-46.0 m west, +16.5 m east). The result is cross-checked against the M02 Commons depicted-place coordinate (50.814889, 8.770136)."
+  sources:
+    - "https://www.openstreetmap.org/way/34333680 (footprint, accessed 2026-09-26)"
+    - "https://commons.wikimedia.org/wiki/File:Elisabethkirche_Marburg_von_SO.jpg (depicted-place coordinate, M02)"
+  note: "This approximate geographic reference anchors cameras only. The local origin remains the centre of the crossing at nominal floor level; the X/Y/Z convention is unchanged. Use the per-image GPS coordinates as recorded and do not treat camera altitude as local Z."

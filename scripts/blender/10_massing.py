@@ -1,8 +1,11 @@
 """Generate the parametrically inferred church footprint and coarse exterior bodies."""
 from pathlib import Path
+import sys
 import json
 import bpy
 import bmesh
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from geometry_transform import rotate_building_vertices, rotate_building_object
 
 ROOT = Path.cwd()
 PARAMS = json.loads((ROOT / "data" / "model_parameters.json").read_text(encoding="utf-8"))
@@ -39,6 +42,7 @@ GUIDE = material("Reference guides", (0.05, 0.35, 0.8))
 
 
 def mesh_object(name, vertices, faces, collection_name, mat=STONE, status="inferred exterior mass"):
+    vertices = rotate_building_vertices(vertices)
     mesh = bpy.data.meshes.new(name + "Mesh")
     mesh.from_pydata(vertices, [], faces)
     mesh.validate(clean_customdata=True)
@@ -107,6 +111,7 @@ def guide_cube(name, size_xyz, location):
     obj.name = name
     obj.dimensions = size_xyz
     bpy.ops.object.transform_apply(location=False, rotation=False, scale=True)
+    rotate_building_object(obj)
     for owner in list(obj.users_collection):
         owner.objects.unlink(obj)
     col("REFERENCE").objects.link(obj)
@@ -184,7 +189,7 @@ scene = bpy.context.scene
 scene.unit_settings.system = "METRIC"
 scene.unit_settings.length_unit = "METERS"
 scene.unit_settings.scale_length = 1.0
-scene["massing_iteration"] = 2
+scene["massing_iteration"] = 3
 scene["massing_evidence"] = "P01,P02,P06,P07,P08,M01,M02,M04,M05,M06,M07,M09,M10,M11,M15,M16,M17,M18,M19"
 scene_path = ROOT / "blender" / "scene" / "elisabethkirche.blend"
 scene_path.parent.mkdir(parents=True, exist_ok=True)

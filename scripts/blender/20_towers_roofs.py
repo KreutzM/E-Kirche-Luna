@@ -1,9 +1,12 @@
 """Generate the west tower masses and roof masses from the evidence-linked parameters."""
 from pathlib import Path
+import sys
 import json
 import math
 import bpy
 import bmesh
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+from geometry_transform import rotate_building_vertices
 
 ROOT = Path.cwd()
 PARAMS = json.loads((ROOT / "data" / "model_parameters.json").read_text(encoding="utf-8"))
@@ -39,6 +42,7 @@ SLATE = material("Slate roofing", (0.12, 0.16, 0.19), 0.78)
 
 
 def add_mesh(name, vertices, faces, collection_name, mat, evidence, status):
+    vertices = rotate_building_vertices(vertices)
     mesh = bpy.data.meshes.new(name + "Mesh")
     mesh.from_pydata(vertices, [], faces)
     mesh.validate(clean_customdata=True)

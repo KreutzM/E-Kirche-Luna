@@ -19,9 +19,9 @@ try {
     foreach ($ScriptName in $BuildScripts) {
         $ScriptPath = Join-Path $PSScriptRoot $ScriptName
         if ($ScriptName -eq "00_scene_setup.py") {
-            & $BlenderExe -b --python $ScriptPath
+            & $BlenderExe -b --python-exit-code 1 --python $ScriptPath
         } else {
-            & $BlenderExe -b $SceneFile --python $ScriptPath
+            & $BlenderExe -b $SceneFile --python-exit-code 1 --python $ScriptPath
         }
         if ($LASTEXITCODE -ne 0) {
             throw "Blender failed with exit code $LASTEXITCODE while running $ScriptName"

@@ -1,4 +1,4 @@
-iteration: 2
+iteration: 4
 model: blender/scene/elisabethkirche.blend
 evidence_order: documented_dimensions_then_modern_photographs_then_historical_plans
 views:
@@ -9,7 +9,7 @@ views:
     landmarks:
       - id: west_tower_pair
         expected: "Two towers flank a lower central west-front mass; the documented tower height is approximately 80 m."
-        observed: "The pair reads and reaches the documented approximate 80 m height; shafts and belfry remain plain blocks. Pinnacles were removed until the massing gate passes."
+        observed: "The pair reads and reaches the documented approximate 80 m height after applying the mapped 7.13 degree building alignment; shafts and belfry remain plain blocks. Pinnacles were removed until the massing gate passes."
         status: partial
       - id: central_west_gable
         expected: "Central gable remains below the tower shafts and meets the nave roof."
@@ -22,11 +22,11 @@ views:
     landmarks:
       - id: hall_roof_and_south_conch
         expected: "High nave roof continues into the transept and polygonal south choir arm."
-        observed: "The close low-angle render shows a tower, hall roof and conch masses like M04; the east end is clipped and the full roof join cannot be checked in this crop."
+        observed: "After applying the mapped 7.13 degree building alignment, the raw M04 GPS conversion still lies inside the coarse south-conch mass. The explicitly offset/fitted test camera escapes the wall-only view and shows two tower points, but the near conch/wall still dominates; the complete roof join and long south-side silhouette do not match M04."
         status: unresolved
       - id: six_bay_hall_rhythm
         expected: "Six-bay hall length is legible in the side elevation."
-        observed: "The current wall is a continuous blank mass; bay divisions have not been modeled at the massing stage."
+        observed: "The current wall is a continuous blank mass; bay divisions have not been modeled at the massing stage, and the test view does not yet show the full hall length."
         status: unresolved
   N:
     camera: VAL_N
@@ -44,7 +44,7 @@ views:
     landmarks:
       - id: triconch_and_roof_turret
         expected: "Three conches surround the crossing and the current roof turret rises from the roofscape."
-        observed: "The roof intersections are more continuous after aligning wall tops and roof springs. The current render is substantially smaller in frame than M02 and does not yet reproduce its visible west-tower pair; GPS position and 27 mm equivalent focal length remain unchanged pending calibration review."
+        observed: "The candidate aim point shows the west-tower pair, roof turret and east conch in the same left-to-right order as M02 after applying the mapped 7.13 degree building alignment. The rendered building remains substantially smaller in frame and its coarse conch/roof silhouette is too block-like; GPS position and 27 mm equivalent focal length are unchanged, while aim remains an inferred candidate."
         status: unresolved
       - id: sacristy
         expected: "Two-storey sacristy adjoins the north-east choir with a pyramidal roof."
@@ -52,4 +52,4 @@ views:
         status: partial
 acceptance:
   massing_gate_passed: false
-  reason: "Iteration 2 improves wall-to-roof continuity, but the southeast photo-scale/tower registration and several side/elevation landmarks remain unresolved. Do not start buttresses or decorative modeling until these checks are resolved."
+  reason: "Iteration 4 applies the OSM-derived 7.13 degree building alignment without changing the east/north/up world convention. It confirms the southeast landmark order but not image scale or silhouette. The south GPS pose falls inside the coarse mass and its offset test view still fails the side silhouette. West/east and side-elevation landmarks are also partial. Do not start buttresses or decorative modeling until dimensional and silhouette checks pass."

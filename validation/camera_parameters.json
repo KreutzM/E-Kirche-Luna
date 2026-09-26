@@ -1,5 +1,5 @@
 {
-  "view_origin_wgs84_approximate": {"latitude": 50.815, "longitude": 8.76972},
+  "view_origin_wgs84_approximate": {"latitude": 50.814923, "longitude": 8.770172},
   "views": {
     "W": {
       "projection": "ORTHO",
@@ -12,8 +12,8 @@
     },
     "S": {
       "projection": "PERSP",
-      "location": [33.2, -25.6, 1.7],
-      "target": [-20.0, -10.0, 26.0],
+      "location": [1.4, -23.0, 1.7],
+      "target": [-15.0, 0.0, 10.0],
       "lens_35mm_equivalent": 24.0,
       "sensor_width": 36.0,
       "resolution": [780, 1170],
@@ -21,12 +21,13 @@
       "gps_image_id": "M04",
       "gps_latitude": 50.81477,
       "gps_longitude": 8.7701916667,
-      "camera_height_basis": "1.7 m above nominal project grade is an eye-level approximation; absolute EXIF altitude cannot be transferred without a verified church-ground elevation."
+      "camera_height_basis": "1.7 m above nominal project grade is an eye-level approximation; absolute EXIF altitude cannot be transferred without a verified church-ground elevation.",
+      "local_position_basis": "GPS converts to [1.4, -16.7, 1.7] m using the inferred approximate crossing coordinate. That raw candidate falls inside the coarse south-conch mass and produces an unusable wall-only render. Current test view offsets the camera 6.3 m south to [1.4, -23.0, 1.7] m and aims at [-15, 0, 10] m to fit M04's low-angle west-tower/long-south-side composition. This fitted local pose is inferred, not GPS metadata; retain the raw GPS fields."
     },
     "SE": {
       "projection": "PERSP",
-      "location": [90.9, -55.4, 1.7],
-      "target": [-10.0, 0.0, 25.0],
+      "location": [58.7, -46.5, 1.7],
+      "target": [15.0, 0.0, 25.0],
       "lens_35mm_equivalent": 27.0,
       "sensor_width": 36.0,
       "resolution": [1200, 991],
@@ -34,7 +35,8 @@
       "gps_image_id": "M02",
       "gps_latitude": 50.8145016667,
       "gps_longitude": 8.77101,
-      "camera_height_basis": "1.7 m above nominal project grade is an eye-level approximation; absolute EXIF altitude cannot be transferred without a verified church-ground elevation."
+      "camera_height_basis": "1.7 m above nominal project grade is an eye-level approximation; absolute EXIF altitude cannot be transferred without a verified church-ground elevation.",
+      "local_position_basis": "GPS converted using the inferred approximate crossing coordinate in data/coordinate_system.yaml. M02 has no heading; target [15, 0, 25] m is a documented visual-fit candidate that increases the projected spread of the west towers, roof turret and east choir. GPS location and 27 mm equivalent focal length remain unchanged; image scale is still unresolved."
     },
     "N": {
       "projection": "ORTHO",
