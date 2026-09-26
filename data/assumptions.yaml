@@ -86,9 +86,9 @@ assumptions:
   conch_roof_peak_height:
     value: 29.0
     unit: m
-    reason: "Choir and side-conch roof peak estimated from P08, raised roof views and modern southeast photographs."
+    reason: "Choir and side-conch roof peak estimated from P08, raised roof views and modern southeast/south photographs. A 32 m test in iteration 7 made the roof peak too high in M02 and M05 comparisons, so the earlier 29 m inferred value is retained; it remains low-confidence and is not measured."
     confidence: low
-    evidence_ids: [P08, M01, M02, M18, M19]
+    evidence_ids: [P02, P08, M01, M02, M05, M18, M19]
     iteration: 1
   tower_belfry_start_height:
     value: 46.0

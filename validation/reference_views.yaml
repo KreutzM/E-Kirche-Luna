@@ -7,9 +7,9 @@ views:
     note: "Modern west photographs support the silhouette, but downloaded metadata has no usable camera position; this is not an exact photo solve."
   S:
     camera: VAL_S
-    evidence: [M04, M05]
-    status: inferred_pose_fit_gps_and_focal_supported
-    note: "M04 supplies GPS, 24 mm full-frame-equivalent focal length and a 2:3 portrait image. The active sensor width is modelled as 23.4 mm equivalent for that format; its raw GPS conversion falls inside the coarse south-conch mass, so the current test camera uses an explicitly inferred 6.3 m south offset. The near conch wall still dominates and the full south-side silhouette remains unresolved."
+    evidence: [M05]
+    status: inferred_target_fit_gps_and_focal_supported
+    note: "M05 supplies GPS, 30 mm full-frame-equivalent focal length and a 2:3 portrait image. GPS-derived camera position is retained; the target [0, -10, 23] m is an inferred visual fit because heading is absent. The render supports the gross south-side roof/conch profile, but the plain wall masses and shallow roof silhouette still differ. M04's separate GPS camera candidate remains unresolved."
   SE:
     camera: VAL_SE
     evidence: [M02, M03, M19]

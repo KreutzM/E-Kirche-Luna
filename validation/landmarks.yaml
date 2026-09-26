@@ -17,16 +17,16 @@ views:
         status: partial
   S:
     camera: VAL_S
-    evidence_ids: [M04, M05]
+    evidence_ids: [M05]
     comparison: approximate_gps_and_focal_view
     landmarks:
       - id: hall_roof_and_south_conch
         expected: "High nave roof continues into the transept and polygonal south choir arm."
-        observed: "With the corrected portrait sensor fit the official M04 view is almost entirely a near wall. The raw GPS conversion lies within the revised south-conch outline; the earlier 6.3 m south offset and four west/south diagnostic poses near the modeled west tower do not recover the source composition and are occluded by the coarse masses. No M04 camera fit is accepted; roof joins and the long south-side silhouette remain unvalidated."
-        status: unresolved
+        observed: "Iteration 7 uses M05's GPS and recorded 30 mm equivalent lens with a documented inferred aim. The south nave roof, roof turret and east choir/conch occupy the expected left-to-right bands, but the render's blank wall masses and low, angular conch roof still diverge from the reference. M04 remains unresolved: its raw GPS pose falls inside the conch mass and its offset tests fail."
+        status: partial
       - id: six_bay_hall_rhythm
         expected: "Six-bay hall length is legible in the side elevation."
-        observed: "The current wall is a continuous blank mass; bay divisions have not been modeled at the massing stage, and no tested M04 view shows the full hall length."
+        observed: "The M05 view captures the south elevation, but the current wall is a continuous blank mass and bay divisions have not been modeled at the massing stage."
         status: unresolved
   N:
     camera: VAL_N
@@ -52,4 +52,4 @@ views:
         status: partial
 acceptance:
   massing_gate_passed: false
-  reason: "Iteration 6 corrects the M02 active sensor width from its saved crop and documents a west/down visual-fit target. The overall frame scale and landmark ordering improve, but camera pose is inferred and the tower/turret placement and roof/conch silhouette still visibly diverge. The M04 south-side validation also fails: raw GPS lies inside the revised footprint, while the offset camera remains dominated by the near wall. Do not start buttresses or decorative modeling until dimensional and silhouette checks pass."
+  reason: "Iteration 7 adds a separate M05 south view using its own GPS and recorded 30 mm equivalent lens; the inferred aim recovers the gross nave-to-conch composition. A 32 m conch-roof test was too high in M02/M05 and was reverted to 29 m. M02 still diverges in roof/conch silhouette, M05's blank wall masses and angular roof forms remain only a partial fit, and M04 remains unresolved. Do not start buttresses or decorative modeling until dimensional and silhouette checks pass."
