@@ -6,7 +6,6 @@ venv/
 references/images/modern/*
 references/images/historic/*
 references/plans/downloaded/*
-sources/commons_download_metadata.jsonl
 sources/download_report.csv
 references/contact_sheets/*.jpg
 references/contact_sheets/*.png
