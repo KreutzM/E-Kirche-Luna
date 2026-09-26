@@ -35,3 +35,6 @@ Decision: keep the official M05 GPS-derived camera location and [0, -10, 23] m t
 
 ## 2026-09-26 — Keep the conch roof at the 29 m candidate
 Decision: render an intermediate 30 m roof-peak candidate with the same saved cameras and render settings as 29 m. It raises the conch peaks slightly but does not improve the M02 and M05 silhouette comparisons together; the residuals are larger than this one-metre adjustment can explain. Retain 29 m, keep it marked low-confidence, and investigate roof form and camera fit separately rather than treating the height as measured.
+
+## 2026-09-26 — Refine the M05 visual-fit aim
+Decision: retain M05's GPS-derived camera position, 30 mm equivalent focal length and portrait framing. Compare target heights z=16, 18, 20 and 23 m at fixed horizontal target [0, -10]. The z=18 m aim best places the roof turret, conch roof peak and facade base together against M05; record it as an inferred aim, not a solved heading. The view remains partial, and M04 remains unresolved.

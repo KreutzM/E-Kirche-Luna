@@ -22,7 +22,7 @@ views:
     landmarks:
       - id: hall_roof_and_south_conch
         expected: "High nave roof continues into the transept and polygonal south choir arm."
-        observed: "Iteration 7 uses M05's GPS and recorded 30 mm equivalent lens with a documented inferred aim. The south nave roof, roof turret and east choir/conch occupy the expected left-to-right bands, but the render's blank wall masses and low, angular conch roof still diverge from the reference. M04 remains unresolved: its raw GPS pose falls inside the conch mass and its offset tests fail."
+        observed: "Iteration 10 uses M05's GPS and recorded 30 mm equivalent lens with inferred target [0, -10, 18] m. Target-height diagnostics place the roof turret, conch roof peak and facade base closer together to their source image positions than the previous z=23 m aim; the render's blank wall masses and simplified roof surfaces still diverge. M04 remains unresolved: its raw GPS pose falls inside the conch mass and its offset tests fail."
         status: partial
       - id: six_bay_hall_rhythm
         expected: "Six-bay hall length is legible in the side elevation."
@@ -52,4 +52,4 @@ views:
         status: partial
 acceptance:
   massing_gate_passed: false
-  reason: "Iteration 7 adds a separate M05 south view using its own GPS and recorded 30 mm equivalent lens; the inferred aim recovers the gross nave-to-conch composition. A 32 m conch-roof test was too high in M02/M05 and was reverted to 29 m. M02 still diverges in roof/conch silhouette, M05's blank wall masses and angular roof forms remain only a partial fit, and M04 remains unresolved. Do not start buttresses or decorative modeling until dimensional and silhouette checks pass."
+  reason: "Iteration 10 refines M05's inferred aim to [0, -10, 18] m using the turret, conch roof peak and facade base as landmarks. M05 remains a partial comparison. A 32 m conch-roof test was too high; 29 m remains the low-confidence geometry value after the 30 m test did not improve M02 and M05 together. M02 still diverges in roof/conch silhouette, M05's blank wall masses and simplified roof forms remain partial, and M04 remains unresolved. Do not start buttresses or decorative modeling until dimensional and silhouette checks pass."

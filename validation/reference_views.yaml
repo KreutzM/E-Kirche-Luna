@@ -9,7 +9,7 @@ views:
     camera: VAL_S
     evidence: [M05]
     status: inferred_target_fit_gps_and_focal_supported
-    note: "M05 supplies GPS, 30 mm full-frame-equivalent focal length and a 2:3 portrait image. GPS-derived camera position is retained; the target [0, -10, 23] m is an inferred visual fit because heading is absent. The render supports the gross south-side roof/conch profile, but the plain wall masses and shallow roof silhouette still differ. M04's separate GPS camera candidate remains unresolved."
+    note: "M05 supplies GPS, 30 mm full-frame-equivalent focal length and a 2:3 portrait image. GPS-derived camera position is retained; target [0, -10, 18] m is inferred because heading is absent and best jointly places the turret, conch roof peak and facade base among tested target heights. The render supports only a partial gross south-side fit; plain wall masses and roof forms still differ. M04's separate GPS camera candidate remains unresolved."
   SE:
     camera: VAL_SE
     evidence: [M02, M03, M19]
