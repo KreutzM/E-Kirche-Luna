@@ -1,0 +1,39 @@
+{
+  "model_version": 1,
+  "units": "m",
+  "documented_anchors": {
+    "tower_height": 80.0,
+    "crossing_square_side": 10.0,
+    "vault_height": 20.2,
+    "hall_total_width": 21.55,
+    "transept_width_cross_check": 39.0,
+    "inner_length_without_west_hall": 56.0
+  },
+  "inferred": {
+    "overall_exterior_length": 62.5,
+    "west_extent_from_crossing": 46.0,
+    "east_extent_from_crossing": 16.5,
+    "exterior_hall_width": 23.8,
+    "exterior_transept_span": 39.5,
+    "nave_hall_length": 32.0,
+    "transept_body_depth": 12.0,
+    "choir_exterior_width": 15.0,
+    "west_tower_width": 9.5,
+    "west_tower_depth": 11.0,
+    "main_wall_top_height": 24.0,
+    "main_roof_ridge_height": 34.0,
+    "conch_roof_peak_height": 29.0,
+    "tower_belfry_start_height": 46.0,
+    "tower_spire_start_height": 55.0,
+    "sacristy_footprint_width": 7.5,
+    "sacristy_roof_peak_height": 20.0,
+    "exterior_crossing_width": 12.0,
+    "side_arm_straight_length": 6.0,
+    "tower_belfry_width": 8.5,
+    "sacristy_x_min": 2.5,
+    "sacristy_y_min": 7.5,
+    "sacristy_eave_height": 14.0,
+    "dachreiter_width": 3.5,
+    "dachreiter_height_above_ridge": 12.0
+  }
+}

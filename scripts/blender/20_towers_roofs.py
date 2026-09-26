@@ -1,0 +1,238 @@
+"""Generate the west tower masses and roof masses from the evidence-linked parameters."""
+from pathlib import Path
+import json
+import math
+import bpy
+import bmesh
+
+ROOT = Path.cwd()
+PARAMS = json.loads((ROOT / "data" / "model_parameters.json").read_text(encoding="utf-8"))
+I = PARAMS["inferred"]
+
+
+def col(name):
+    collection = bpy.data.collections.get(name)
+    if collection is None:
+        collection = bpy.data.collections.new(name)
+        bpy.context.scene.collection.children.link(collection)
+    return collection
+
+
+def clear_collection(name):
+    for obj in list(col(name).objects):
+        bpy.data.objects.remove(obj, do_unlink=True)
+
+
+def material(name, color, roughness=0.9):
+    mat = bpy.data.materials.get(name) or bpy.data.materials.new(name)
+    mat.diffuse_color = (*color, 1.0)
+    mat.use_nodes = True
+    shader = mat.node_tree.nodes.get("Principled BSDF")
+    if shader:
+        shader.inputs["Base Color"].default_value = (*color, 1.0)
+        shader.inputs["Roughness"].default_value = roughness
+    return mat
+
+
+STONE = material("Sandstone - pale Marburg", (0.55, 0.40, 0.28))
+SLATE = material("Slate roofing", (0.12, 0.16, 0.19), 0.78)
+
+
+def add_mesh(name, vertices, faces, collection_name, mat, evidence, status):
+    mesh = bpy.data.meshes.new(name + "Mesh")
+    mesh.from_pydata(vertices, [], faces)
+    mesh.validate(clean_customdata=True)
+    bm = bmesh.new()
+    bm.from_mesh(mesh)
+    bmesh.ops.recalc_face_normals(bm, faces=bm.faces)
+    bm.to_mesh(mesh)
+    bm.free()
+    mesh.update()
+    obj = bpy.data.objects.new(name, mesh)
+    col(collection_name).objects.link(obj)
+    obj.data.materials.append(mat)
+    obj["evidence_status"] = status
+    obj["source_ids"] = evidence
+    return obj
+
+
+def box(name, cx, cy, dx, dy, z0, z1, collection_name, mat, evidence):
+    x0, x1 = cx - dx / 2, cx + dx / 2
+    y0, y1 = cy - dy / 2, cy + dy / 2
+    points = [(x0, y0), (x1, y0), (x1, y1), (x0, y1)]
+    n = len(points)
+    vertices = [(x, y, z0) for x, y in points] + [(x, y, z1) for x, y in points]
+    faces = [tuple(reversed(range(n))), tuple(range(n, 2 * n))]
+    faces.extend((j, (j + 1) % n, (j + 1) % n + n, j + n) for j in range(n))
+    return add_mesh(name, vertices, faces, collection_name, mat, evidence, "inferred exterior mass")
+
+
+def taper(name, cx, cy, rx, ry, z0, z1, collection_name, mat, evidence, sides=8, top_ratio=0.03):
+    vertices = []
+    for z, ratio in ((z0, 1.0), (z1, top_ratio)):
+        for i in range(sides):
+            angle = math.pi / sides + 2 * math.pi * i / sides
+            vertices.append((cx + rx * ratio * math.cos(angle),
+                             cy + ry * ratio * math.sin(angle), z))
+    faces = [tuple(reversed(range(sides))), tuple(range(sides, 2 * sides))]
+    faces.extend((i, (i + 1) % sides, (i + 1) % sides + sides, i + sides)
+                 for i in range(sides))
+    return add_mesh(name, vertices, faces, collection_name, mat, evidence, "inferred exterior mass")
+
+
+def extruded_profile(name, start, end, profile, axis, collection_name, mat, evidence):
+    # profile pairs are (cross-axis coordinate, height); axis is X or Y.
+    n = len(profile)
+    if axis == "X":
+        vertices = [(start, u, z) for u, z in profile] + [(end, u, z) for u, z in profile]
+    else:
+        vertices = [(u, start, z) for u, z in profile] + [(u, end, z) for u, z in profile]
+    faces = [tuple(reversed(range(n))), tuple(range(n, 2 * n))]
+    faces.extend((i, (i + 1) % n, (i + 1) % n + n, i + n) for i in range(n))
+    return add_mesh(name, vertices, faces, collection_name, mat, evidence, "inferred roof mass")
+
+
+def gable_x(name, x0, x1, half_width, eave, ridge, collection_name="ROOFS", evidence="P02,P06,M01,M02,M04,M05"):
+    thickness = 0.55
+    profile = [(-half_width, eave), (0.0, ridge), (half_width, eave),
+               (half_width, eave - thickness), (0.0, ridge - thickness), (-half_width, eave - thickness)]
+    return extruded_profile(name, x0, x1, profile, "X", collection_name, SLATE, evidence)
+
+
+def gable_y(name, y0, y1, half_width, eave, ridge, collection_name="ROOFS", evidence="P01,P08,M01,M02"):
+    thickness = 0.55
+    profile = [(-half_width, eave), (0.0, ridge), (half_width, eave),
+               (half_width, eave - thickness), (0.0, ridge - thickness), (-half_width, eave - thickness)]
+    return extruded_profile(name, y0, y1, profile, "Y", collection_name, SLATE, evidence)
+
+
+def fan_roof(name, boundary_xy, apex_xyz, eave_z, evidence):
+    n = len(boundary_xy)
+    vertices = [(x, y, eave_z) for x, y in boundary_xy] + [apex_xyz]
+    faces = [tuple(reversed(range(n)))]
+    faces.extend((i, (i + 1) % n, n) for i in range(n))
+    return add_mesh(name, vertices, faces, "ROOFS", SLATE, evidence, "inferred polygonal roof mass")
+
+
+clear_collection("TOWERS")
+clear_collection("ROOFS")
+
+# Two matching west towers: massive two-level bases, upper belfry tier and stone spires.
+west_extent = I["west_extent_from_crossing"]
+tower_depth = I["west_tower_depth"]
+tower_width = I["west_tower_width"]
+hall_half = I["exterior_hall_width"] / 2
+tower_cx = -west_extent + tower_depth / 2
+tower_offset = hall_half - tower_width / 2
+belfry_start = I["tower_belfry_start_height"]
+spire_start = I["tower_spire_start_height"]
+total_height = PARAMS["documented_anchors"]["tower_height"]
+
+for sign, label in ((1, "North"), (-1, "South")):
+    cy = sign * tower_offset
+    box("TOWER_" + label + "_Lower", tower_cx, cy, tower_depth, tower_width,
+        0.0, 24.0, "TOWERS", STONE, "P01,P07,M09,M10,M11")
+    box("TOWER_" + label + "_UpperShaft", tower_cx, cy, tower_depth - 0.9, tower_width - 0.8,
+        24.0, 39.0, "TOWERS", STONE, "P07,M09,M10,M11")
+    box("TOWER_" + label + "_Setback", tower_cx, cy, tower_depth - 1.8, tower_width - 1.5,
+        39.0, belfry_start, "TOWERS", STONE, "P07,M09,M10,M11")
+    belfry_w = I["tower_belfry_width"]
+    box("TOWER_" + label + "_BelfryMass", tower_cx, cy, belfry_w, belfry_w,
+        belfry_start, spire_start, "TOWERS", STONE, "P07,M09,M10,M11")
+    taper("TOWER_" + label + "_OctagonalSpire", tower_cx, cy, belfry_w * 0.48, belfry_w * 0.48,
+          spire_start, total_height, "ROOFS", SLATE, "P07,M09,M10,M11", sides=8, top_ratio=0.012)
+
+# Four corner pinnacles at the spire spring are visible in the west-front views.
+    pin_offset = belfry_w * 0.39
+    for sx in (-1, 1):
+        for sy in (-1, 1):
+            px = tower_cx + sx * pin_offset
+            py = cy + sy * pin_offset
+            box(f"TOWER_{label}_PinnacleBase_{sx}_{sy}", px, py, 0.9, 0.9,
+                spire_start - 2.6, spire_start + 0.5, "TOWERS", STONE, "P07,M09,M10,M11")
+            taper(f"TOWER_{label}_Pinnacle_{sx}_{sy}", px, py, 0.72, 0.72,
+                  spire_start + 0.5, spire_start + 5.5, "TOWERS", STONE,
+                  "P07,M09,M10,M11", sides=4, top_ratio=0.01)
+
+# Primary hall roof and intersecting transept roof.
+nave_west = -I["exterior_crossing_width"] / 2 - I["nave_hall_length"]
+nave_east = -I["exterior_crossing_width"] / 2
+gable_x("ROOF_MainHall", nave_west, nave_east + 0.8,
+        I["exterior_hall_width"] / 2 + 0.25,
+        I["main_wall_top_height"], I["main_roof_ridge_height"])
+gable_y("ROOF_TranseptCross", -I["side_arm_straight_length"] - I["exterior_crossing_width"] / 2,
+        I["side_arm_straight_length"] + I["exterior_crossing_width"] / 2,
+        I["transept_body_depth"] / 2 + 0.25,
+        I["main_wall_top_height"], I["main_roof_ridge_height"] - 1.0)
+
+# Three conch roofs read as polygonal hip roofs in the present-day raised views.
+choir_half = I["choir_exterior_width"] / 2
+choir_base = I["east_extent_from_crossing"] - choir_half
+gable_x("ROOF_EastChoirBay", I["exterior_crossing_width"] / 2 - 0.2, choir_base,
+        choir_half + 0.2, I["main_wall_top_height"] - 1.0,
+        I["conch_roof_peak_height"])
+east_boundary = [
+    (choir_base, -choir_half), (choir_base + 2.1, -choir_half * 0.92),
+    (choir_base + 4.5, -choir_half * 0.70), (choir_base + 6.5, -choir_half * 0.38),
+    (I["east_extent_from_crossing"], 0.0),
+    (choir_base + 6.5, choir_half * 0.38), (choir_base + 4.5, choir_half * 0.70),
+    (choir_base + 2.1, choir_half * 0.92), (choir_base, choir_half)
+]
+fan_roof("ROOF_EastConch", east_boundary,
+         (choir_base + (I["east_extent_from_crossing"] - choir_base) * 0.52, 0.0,
+          I["conch_roof_peak_height"]), I["main_wall_top_height"] - 2.0,
+         "P08,M01,M02,M18,M19")
+
+arm_xhalf = I["transept_body_depth"] / 2
+arm_spring = I["exterior_crossing_width"] / 2 + I["side_arm_straight_length"]
+arm_tip = I["exterior_transept_span"] / 2
+for sign, label in ((1, "North"), (-1, "South")):
+    gable_y(f"ROOF_{label}Arm", sign * (I["exterior_crossing_width"] / 2),
+            sign * arm_spring, arm_xhalf + 0.25,
+            I["main_wall_top_height"] - 1.0, I["conch_roof_peak_height"])
+    projection = arm_tip - arm_spring
+    boundary = [
+        (-arm_xhalf, sign * arm_spring), (-arm_xhalf * 0.92, sign * (arm_spring + projection * 0.28)),
+        (-arm_xhalf * 0.70, sign * (arm_spring + projection * 0.60)),
+        (-arm_xhalf * 0.38, sign * (arm_spring + projection * 0.87)),
+        (0.0, sign * arm_tip),
+        (arm_xhalf * 0.38, sign * (arm_spring + projection * 0.87)),
+        (arm_xhalf * 0.70, sign * (arm_spring + projection * 0.60)),
+        (arm_xhalf * 0.92, sign * (arm_spring + projection * 0.28)),
+        (arm_xhalf, sign * arm_spring)
+    ]
+    fan_roof(f"ROOF_{label}Conch", boundary,
+             (0.0, sign * (arm_spring + projection * 0.52), I["conch_roof_peak_height"]),
+             I["main_wall_top_height"] - 2.0, "P01,P08,M01,M02,M03,M19")
+
+# Two-storey north-east sacristy with a steep pyramidal roof (Dehio, M15-M17).
+sac = I["sacristy_footprint_width"]
+sx0 = I["sacristy_x_min"]
+sy0 = I["sacristy_y_min"]
+eave = I["sacristy_eave_height"]
+apex = I["sacristy_roof_peak_height"]
+roof_vertices = [(sx0, sy0, eave), (sx0 + sac, sy0, eave),
+                 (sx0 + sac, sy0 + sac, eave), (sx0, sy0 + sac, eave),
+                 (sx0 + sac / 2, sy0 + sac / 2, apex)]
+roof_faces = [(3, 2, 1, 0), (0, 1, 4), (1, 2, 4), (2, 3, 4), (3, 0, 4)]
+add_mesh("ROOF_SacristyPyramid", roof_vertices, roof_faces, "ROOFS", SLATE,
+         "P01,P02,M15,M16,M17", "inferred pyramidal roof mass")
+
+# Current crossing roof turret (Dachreiter), documented as replaced in 1931.
+turret_width = I["dachreiter_width"]
+turret_base = I["main_roof_ridge_height"] - 0.4
+turret_top = I["main_roof_ridge_height"] + I["dachreiter_height_above_ridge"]
+body_height = I["dachreiter_height_above_ridge"] * 0.42
+taper("ROOF_DachreiterBody", 0.0, 0.0, turret_width / 2, turret_width / 2,
+      turret_base, turret_base + body_height, "ROOFS", STONE,
+      "M01,M02,M18", sides=8, top_ratio=0.86)
+taper("ROOF_DachreiterSpire", 0.0, 0.0, turret_width * 0.42, turret_width * 0.42,
+      turret_base + body_height, turret_top, "ROOFS", SLATE,
+      "M01,M02,M18", sides=8, top_ratio=0.008)
+
+scene = bpy.context.scene
+scene["tower_height_anchor_m"] = total_height
+scene["roof_model_evidence"] = "P01,P02,P06,P07,P08,M01,M02,M03,M04,M05,M09,M10,M11,M15,M16,M17,M18,M19"
+scene_path = ROOT / "blender" / "scene" / "elisabethkirche.blend"
+bpy.ops.wm.save_as_mainfile(filepath=str(scene_path))
+print("Generated west towers, roofs, three conches, sacristy roof and crossing turret.")

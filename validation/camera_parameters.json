@@ -1,0 +1,77 @@
+{
+  "view_origin_wgs84_approximate": {"latitude": 50.815, "longitude": 8.76972},
+  "views": {
+    "W": {
+      "projection": "ORTHO",
+      "location": [-130.0, 0.0, 40.0],
+      "target": [-14.0, 0.0, 40.0],
+      "ortho_scale": 92.0,
+      "resolution": [1000, 1600],
+      "evidence_ids": ["M10", "M11", "P07"],
+      "calibration": "Frontal west-elevation proxy. Modern west photographs have no usable camera position in the downloaded metadata; elevation fit is approximate, not an exact photo solve."
+    },
+    "S": {
+      "projection": "PERSP",
+      "location": [33.2, -25.6, 1.7],
+      "target": [-20.0, -10.0, 26.0],
+      "lens_35mm_equivalent": 24.0,
+      "sensor_width": 36.0,
+      "resolution": [780, 1170],
+      "evidence_ids": ["M04", "M05"],
+      "gps_image_id": "M04",
+      "gps_latitude": 50.81477,
+      "gps_longitude": 8.7701916667,
+      "camera_height_basis": "1.7 m above nominal project grade is an eye-level approximation; absolute EXIF altitude cannot be transferred without a verified church-ground elevation."
+    },
+    "SE": {
+      "projection": "PERSP",
+      "location": [90.9, -55.4, 1.7],
+      "target": [-10.0, 0.0, 25.0],
+      "lens_35mm_equivalent": 27.0,
+      "sensor_width": 36.0,
+      "resolution": [1200, 991],
+      "evidence_ids": ["M02", "M03", "M19"],
+      "gps_image_id": "M02",
+      "gps_latitude": 50.8145016667,
+      "gps_longitude": 8.77101,
+      "camera_height_basis": "1.7 m above nominal project grade is an eye-level approximation; absolute EXIF altitude cannot be transferred without a verified church-ground elevation."
+    },
+    "N": {
+      "projection": "ORTHO",
+      "location": [-14.0, 130.0, 40.0],
+      "target": [-14.0, 0.0, 40.0],
+      "ortho_scale": 104.0,
+      "resolution": [1600, 1600],
+      "evidence_ids": ["M06", "M07", "M15", "M16"],
+      "calibration": "Orthographic north-elevation proxy from the modern north views; exact camera pose is unavailable."
+    },
+    "E": {
+      "projection": "ORTHO",
+      "location": [130.0, 0.0, 38.0],
+      "target": [-14.0, 0.0, 38.0],
+      "ortho_scale": 92.0,
+      "resolution": [1000, 1600],
+      "evidence_ids": ["H01", "P08"],
+      "calibration": "Orthographic historic east-elevation proxy. No modern direct-east photograph is present in the curated dataset."
+    },
+    "NE": {
+      "projection": "PERSP",
+      "location": [48.0, 58.0, 16.0],
+      "target": [2.0, 3.0, 22.0],
+      "lens": 42.0,
+      "sensor_width": 36.0,
+      "resolution": [1200, 1000],
+      "evidence_ids": ["M01", "M16", "M17", "H03"],
+      "calibration": "Raised northeast geometry-reference view only; camera pose is approximate because the source set has no matching solved-camera metadata."
+    },
+    "TOP": {
+      "projection": "ORTHO",
+      "location": [-8.0, 0.0, 150.0],
+      "target": [-8.0, 0.0, 20.0],
+      "ortho_scale": 82.0,
+      "resolution": [1600, 1600],
+      "evidence_ids": ["M01", "P01"],
+      "calibration": "Top-down plan check; M01 is an oblique aerial and is used for roof geometry only, not as a camera solve."
+    }
+  }
+}

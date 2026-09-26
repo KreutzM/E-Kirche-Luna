@@ -1,1 +1,55 @@
-landmarks: {}
+iteration: 1
+model: blender/scene/elisabethkirche.blend
+evidence_order: documented_dimensions_then_modern_photographs_then_historical_plans
+views:
+  W:
+    camera: VAL_W
+    evidence_ids: [M10, M11, P07]
+    comparison: approximate_frontal_elevation
+    landmarks:
+      - id: west_tower_pair
+        expected: "Two towers flank a lower central west-front mass; the documented tower height is approximately 80 m."
+        observed: "The pair and central lower mass read in the render; the belfry and shafts remain plain rectangular blocks."
+        status: partial
+      - id: central_west_gable
+        expected: "Central gable remains below the tower shafts and meets the nave roof."
+        observed: "A low central roof/mass is present; join and exact profile need a closer comparison against P07 and M10."
+        status: unresolved
+  S:
+    camera: VAL_S
+    evidence_ids: [M04, M05]
+    comparison: approximate_gps_and_focal_view
+    landmarks:
+      - id: hall_roof_and_south_conch
+        expected: "High nave roof continues into the transept and polygonal south choir arm."
+        observed: "Large roof and conch masses are visible, but M04 framing and viewpoint do not yet support a reliable silhouette comparison."
+        status: unresolved
+      - id: six_bay_hall_rhythm
+        expected: "Six-bay hall length is legible in the side elevation."
+        observed: "The current wall is a continuous blank mass; bay divisions have not been modeled at the massing stage."
+        status: unresolved
+  N:
+    camera: VAL_N
+    evidence_ids: [M06, M07, M15, M16]
+    comparison: approximate_orthographic_elevation
+    landmarks:
+      - id: north_side_profile
+        expected: "Long hall, crossing/transept, east choir and two-tower west end form a coherent stepped profile."
+        observed: "The gross profile is present; uninterrupted wall blocks obscure bay and buttress articulation."
+        status: partial
+  SE:
+    camera: VAL_SE
+    evidence_ids: [M02, M03, M19]
+    comparison: approximate_gps_and_focal_view
+    landmarks:
+      - id: triconch_and_roof_turret
+        expected: "Three conches surround the crossing and the current roof turret rises from the roofscape."
+        observed: "East and side conch roof masses and turret are present; source framing, roof intersections and eastern mass proportions need another review."
+        status: unresolved
+      - id: sacristy
+        expected: "Two-storey sacristy adjoins the north-east choir with a pyramidal roof."
+        observed: "A separate sacristy body and pyramid roof are present; attachment and footprint need refinement against M15-M17."
+        status: partial
+acceptance:
+  massing_gate_passed: false
+  reason: "The first renders expose unresolved roof joins, side-profile proportions and photo framing. Do not start buttresses or decorative modeling until these checks are resolved."

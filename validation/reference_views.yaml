@@ -1,19 +1,42 @@
+camera_parameters: camera_parameters.json
 views:
   W:
-    evidence: [M10, M11]
-    status: camera_to_be_solved
-  SW:
-    evidence: [M09]
-    status: camera_to_be_solved
+    camera: VAL_W
+    evidence: [M10, M11, P07]
+    status: approximate_frontal_elevation
+    note: "Modern west photographs support the silhouette, but downloaded metadata has no usable camera position; this is not an exact photo solve."
   S:
+    camera: VAL_S
     evidence: [M04, M05]
-    status: camera_to_be_solved
+    status: gps_and_focal_supported_approximation
+    note: "M04 supplies GPS and 24 mm full-frame-equivalent focal length. Local camera height/ground elevation and target point remain inferred."
   SE:
+    camera: VAL_SE
     evidence: [M02, M03, M19]
-    status: camera_to_be_solved
-  NE:
-    evidence: [M16, H03]
-    status: mixed_modern_historic
+    status: gps_and_focal_supported_approximation
+    note: "M02 supplies GPS and 27 mm full-frame-equivalent focal length. Local camera height/ground elevation and aim point remain inferred."
   N:
-    evidence: [M06, M07]
-    status: camera_to_be_solved
+    camera: VAL_N
+    evidence: [M06, M07, M15, M16]
+    status: approximate_orthographic_elevation
+    note: "Useful modern north coverage; exact camera pose is unavailable."
+  E:
+    camera: VAL_E
+    evidence: [H01, P08]
+    status: historical_only_approximate_elevation
+    note: "No modern direct-east photograph is available in the curated set."
+  NE:
+    camera: VAL_NE
+    evidence: [M01, M16, M17, H03]
+    status: geometry_reference_approximate_camera
+    note: "Geometry check only; camera pose is not solved from the aerial/sacristy references."
+  TOP:
+    camera: VAL_TOP
+    evidence: [M01, P01]
+    status: orthographic_plan_check
+    note: "Top-down footprint/roof check; M01 is oblique and is not treated as a pinhole camera solve."
+  SW:
+    camera: null
+    evidence: [M08, M09]
+    status: geometry_reference_only
+    note: "M08 is explicitly marked do_not_camera_solve; M09 is a steep tower detail and has no solved pose."

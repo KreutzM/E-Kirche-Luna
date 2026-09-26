@@ -1,1 +1,176 @@
-assumptions: {}
+assumptions:
+  overall_exterior_length:
+    value: 62.5
+    unit: m
+    reason: "Outer west-tower-face to east-conch-tip length estimated from P01 proportions, using the documented 39 m transept dimension as a scale cross-check; that source is not treated as a direct exterior measurement."
+    confidence: medium
+    evidence_ids: [P01, M01, M02, M03]
+    iteration: 1
+  west_extent_from_crossing:
+    value: 46.0
+    unit: m
+    reason: "P01 plan ratio from crossing centre to outer west tower face, scaled with the 39 m Dehio transept dimension as a non-direct cross-check."
+    confidence: medium
+    evidence_ids: [P01, P02, M10, M11]
+    iteration: 1
+  east_extent_from_crossing:
+    value: 16.5
+    unit: m
+    reason: "P01 plan ratio from crossing centre to east conch tip, scaled with the 39 m Dehio transept dimension as a non-direct cross-check."
+    confidence: medium
+    evidence_ids: [P01, P02, M02, M19]
+    iteration: 1
+  exterior_hall_width:
+    value: 23.8
+    unit: m
+    reason: "Exterior wall-to-wall fit from P01 proportions; 21.55 m published hall width is retained as a separate scale anchor and is not silently converted to an outside dimension."
+    confidence: medium
+    evidence_ids: [P01, P02, M04, M05, M06, M07]
+    iteration: 1
+  exterior_transept_span:
+    value: 39.5
+    unit: m
+    reason: "Approximate outside span fitted to P01. Dehio's 39 m transept figure is used only as a scale cross-check and is not asserted as a measured exterior extent."
+    confidence: medium
+    evidence_ids: [P01, M01, M02, M03, M19]
+    iteration: 1
+  nave_hall_length:
+    value: 32.0
+    unit: m
+    reason: "West nave wall to west transept wall estimated from the six-bay rhythm in P01/P02 and corroborated by M04-M07."
+    confidence: medium
+    evidence_ids: [P01, P02, P06, M04, M05, M06, M07]
+    iteration: 1
+  transept_body_depth:
+    value: 12.0
+    unit: m
+    reason: "East-west depth of the north/south arms estimated from the orthographic plan proportions; not a published dimension."
+    confidence: medium
+    evidence_ids: [P01, P02, P08, M01, M02]
+    iteration: 1
+  choir_exterior_width:
+    value: 15.0
+    unit: m
+    reason: "Outside width of the east conch estimated from P01 relative to the documented hall width and checked against modern southeast views."
+    confidence: medium
+    evidence_ids: [P01, P08, M02, M03, M19]
+    iteration: 1
+  west_tower_width:
+    value: 9.5
+    unit: m
+    reason: "Tower footprint width estimated from P01 and P07 proportions and the frontal modern west-facade views."
+    confidence: medium
+    evidence_ids: [P01, P07, M09, M10, M11]
+    iteration: 1
+  west_tower_depth:
+    value: 11.0
+    unit: m
+    reason: "Tower footprint depth estimated from the plan and tower section; no direct exterior dimension is documented."
+    confidence: medium
+    evidence_ids: [P01, P07, M09, M10, M11]
+    iteration: 1
+  main_wall_top_height:
+    value: 24.0
+    unit: m
+    reason: "Exterior wall top estimated from P06/P08 sections, the documented 20.20 m interior vault height, and modern side elevations; the vault figure is only a vertical cross-check."
+    confidence: medium
+    evidence_ids: [P06, P08, M02, M04, M05, M06, M07]
+    iteration: 1
+  main_roof_ridge_height:
+    value: 34.0
+    unit: m
+    reason: "Main hall ridge height estimated from P02/P06 and modern side/aerial views, using the 20.20 m vault height as a scale cross-check only."
+    confidence: medium
+    evidence_ids: [P02, P06, M01, M02, M04, M05]
+    iteration: 1
+  conch_roof_peak_height:
+    value: 29.0
+    unit: m
+    reason: "Choir and side-conch roof peak estimated from P08, raised roof views and modern southeast photographs."
+    confidence: low
+    evidence_ids: [P08, M01, M02, M18, M19]
+    iteration: 1
+  tower_belfry_start_height:
+    value: 46.0
+    unit: m
+    reason: "Elevation proportional to the documented 80 m tower height from P07 and checked against modern west/tower views; interpreted as an approximate belfry-zone start."
+    confidence: medium
+    evidence_ids: [P07, M09, M10, M11]
+    iteration: 1
+  tower_spire_start_height:
+    value: 55.0
+    unit: m
+    reason: "Spire spring height estimated by scaling P07's tower-section proportions to the documented approximate 80 m total tower height."
+    confidence: medium
+    evidence_ids: [P07, M09, M10, M11]
+    iteration: 1
+  sacristy_footprint_width:
+    value: 7.5
+    unit: m
+    reason: "Two-bay sacristy exterior footprint estimated from P01 and M15/M16; its present roof form is checked against M17."
+    confidence: low
+    evidence_ids: [P01, M15, M16, M17]
+    iteration: 1
+  sacristy_roof_peak_height:
+    value: 20.0
+    unit: m
+    reason: "Pyramidal sacristy roof peak estimated from P01/P02 section proportions and M15-M17."
+    confidence: low
+    evidence_ids: [P01, P02, M15, M16, M17]
+    iteration: 1
+  exterior_crossing_width:
+    value: 12.0
+    unit: m
+    reason: "Outside crossing block estimated from the 10 m crossing scale square plus visible wall/pier allowance in P01 and P08."
+    confidence: low
+    evidence_ids: [P01, P08]
+    iteration: 1
+  side_arm_straight_length:
+    value: 6.0
+    unit: m
+    reason: "Straight portion from the crossing to the north/south conch spring estimated from P01 proportions."
+    confidence: low
+    evidence_ids: [P01, P08, M01]
+    iteration: 1
+  tower_belfry_width:
+    value: 8.5
+    unit: m
+    reason: "Upper tower tier width estimated from P07 section proportions and M09-M11."
+    confidence: low
+    evidence_ids: [P07, M09, M10, M11]
+    iteration: 1
+  sacristy_x_min:
+    value: 2.5
+    unit: m
+    reason: "Sacristy position east of the crossing estimated from P01 and present-day views M15-M17."
+    confidence: low
+    evidence_ids: [P01, M15, M16, M17]
+    iteration: 1
+  sacristy_y_min:
+    value: 7.5
+    unit: m
+    reason: "Sacristy position north of the crossing estimated from P01 and present-day views M15-M17."
+    confidence: low
+    evidence_ids: [P01, M15, M16, M17]
+    iteration: 1
+  sacristy_eave_height:
+    value: 14.0
+    unit: m
+    reason: "Top of the two-storey sacristy wall estimated from P01/P02 and the modern exterior elevations M15/M16."
+    confidence: low
+    evidence_ids: [P01, P02, M15, M16]
+    iteration: 1
+  dachreiter_width:
+    value: 3.5
+    unit: m
+    reason: "Crossing roof-turret width estimated from the raised roof detail in M18 and the southeast aerial views."
+    confidence: low
+    evidence_ids: [M01, M02, M18]
+    iteration: 1
+  dachreiter_height_above_ridge:
+    value: 12.0
+    unit: m
+    reason: "Roof-turret height above the main ridge estimated from M02/M18; no direct dimension is documented."
+    confidence: low
+    evidence_ids: [M01, M02, M18]
+    iteration: 1

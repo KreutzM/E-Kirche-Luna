@@ -19,3 +19,9 @@ northeast:
 roof:
   status: partial
   notes: "Aerial/raised and local roof views exist; full roof coverage remains limited."
+dataset:
+  manifest_records: 32
+  downloaded_records: 32
+  contact_sheets: [overview, west, south, north, plans]
+  provenance_file: sources/commons_download_metadata.jsonl
+  notes: "All selected images passed the Commons licence filter. Modern direct-east coverage remains unavailable. Use only camera metadata actually present per image; M02 and M04 contain GPS and focal-length fields."
