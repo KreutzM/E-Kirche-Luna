@@ -89,12 +89,27 @@ def source_parts():
                 continue
             faces.append(ring)
             absolute_elevations.extend(point[2] for point in ring)
+        terrain = next((element for element in part.iter()
+                        if local_name(element.tag) == "terrainIntersection"), None)
+        ground_lines = []
+        if terrain is not None:
+            for pos_list in terrain.iter(f"{{{GML}}}posList"):
+                if not pos_list.text:
+                    continue
+                values = [float(value) for value in pos_list.text.split()]
+                dimension = int(pos_list.get("srsDimension", "3"))
+                if dimension != 3 or len(values) % dimension:
+                    raise ValueError(f"Unexpected GML terrain coordinate dimension in {SOURCE_FILE}")
+                ground_lines.append([
+                    values[index:index + 3]
+                    for index in range(0, len(values), dimension)
+                ])
         if faces:
             part_id = next((element.text.strip() for element in part.iter()
                             if local_name(element.tag) == "identifier" and element.text),
                            next((value for key, value in part.attrib.items()
                                  if key.endswith("}id")), "part"))
-            parsed.append((part_id, faces))
+            parsed.append((part_id, faces, ground_lines))
     if not parsed or not absolute_elevations:
         raise RuntimeError(f"No 3D LoD2 polygon surfaces found in {SOURCE_FILE}")
     return parsed, min(absolute_elevations)
@@ -102,7 +117,7 @@ def source_parts():
 
 def remove_prior_imports():
     for obj in list(bpy.data.objects):
-        if obj.get("geodata_source_id") == SOURCE_ID:
+        if obj.get("geodata_source_id") in {SOURCE_ID, "G01_FOOTPRINT"}:
             bpy.data.objects.remove(obj, do_unlink=True)
 
 
@@ -116,7 +131,8 @@ material.node_tree.nodes.get("Principled BSDF").inputs["Base Color"].default_val
 
 total_faces = 0
 total_vertices = 0
-for part_index, (part_id, rings) in enumerate(parts, 1):
+total_ground_lines = 0
+for part_index, (part_id, rings, ground_lines) in enumerate(parts, 1):
     vertex_map = {}
     vertices = []
     faces = []
@@ -162,12 +178,38 @@ for part_index, (part_id, rings) in enumerate(parts, 1):
     total_faces += len(faces)
     total_vertices += len(vertices)
 
+    if ground_lines:
+        curve_data = bpy.data.curves.new(f"REF_G01_Footprint_{part_index:02d}_Curve", "CURVE")
+        curve_data.dimensions = "3D"
+        curve_data.resolution_u = 1
+        curve_data.bevel_depth = 0.045
+        curve_data.bevel_resolution = 0
+        for ground_line in ground_lines:
+            points = [project_to_scene(latitude, longitude, elevation, vertical_zero)
+                      for latitude, longitude, elevation in ground_line]
+            spline = curve_data.splines.new("POLY")
+            spline.points.add(len(points) - 1)
+            for point, coordinate in zip(spline.points, points):
+                point.co = (*coordinate, 1.0)
+            total_ground_lines += 1
+        footprint = bpy.data.objects.new(f"REF_G01_Footprint_{part_index:02d}", curve_data)
+        collection.objects.link(footprint)
+        footprint.data.materials.append(material)
+        footprint.display_type = "WIRE"
+        footprint.hide_render = True
+        footprint["geodata_source_id"] = "G01_FOOTPRINT"
+        footprint["source_part_id"] = part_id
+        footprint["evidence_status"] = "terrainIntersection ground-line reference; not project geometry"
+        footprint["vertical_datum_origin_m"] = vertical_zero
+
 scene = bpy.context.scene
 scene["geodata_reference_id"] = SOURCE_ID
 scene["geodata_source_file"] = str(SOURCE_FILE.relative_to(ROOT))
 scene["geodata_parts"] = len(parts)
+scene["geodata_ground_line_count"] = total_ground_lines
 scene["geodata_vertical_zero_dhhn2016_m"] = vertical_zero
 scene_path = ROOT / "blender" / "scene" / "elisabethkirche.blend"
 bpy.ops.wm.save_as_mainfile(filepath=str(scene_path))
 print(f"Imported {SOURCE_ID}: {len(parts)} parts, {total_vertices} vertices, "
-      f"{total_faces} polygons; DHHN2016 comparison zero={vertical_zero:.3f} m")
+      f"{total_faces} polygons and {total_ground_lines} terrain lines; "
+      f"DHHN2016 comparison zero={vertical_zero:.3f} m")

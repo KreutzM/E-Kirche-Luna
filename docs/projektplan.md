@@ -8,9 +8,9 @@ Die festgelegte Orientierung bleibt unverändert: Meter, X nach Osten, Y nach No
 
 ## Ausgangslage
 
-- Repository auf `main`, Ausgangscommit `397ee64`.
-- `python scripts/validate_dataset.py` besteht derzeit mit 34 Referenzeinträgen, 6 dokumentierten Maßen und 41 protokollierten Geometrieannahmen.
-- Das Manifest führt 21 moderne Fotos, 5 historische Fotos und 8 historische Pläne/Ansichten. Bilddateien und Kontaktbögen sind lokal vorhanden; Bildbinärdateien bleiben gemäß Repository-Regeln unveröffentlicht.
+- Repository auf `main`, letzter gemeinsamer Stand `4d35b3f`.
+- `python scripts/validate_dataset.py` besteht mit 35 Referenzeinträgen, 6 dokumentierten Maßen und 41 protokollierten Geometrieannahmen.
+- Das Manifest führt 22 moderne Fotos, 5 historische Fotos und 8 historische Pläne/Ansichten. M22 ergänzt eine moderne erhöhte Südwestansicht vom Marburger Schlossberg; Bilddateien und Kontaktbögen bleiben gemäß Repository-Regeln lokal und Bildbinärdateien unveröffentlicht.
 - `data/assumptions.yaml` enthält die Außenmaß-Inferenzen samt Gründen, Konfidenzen, Evidenz-IDs und Iterationen.
 - Die Blender-Szene, parametrischen Hauptmassen, Türme, Dächer, Evidenzkameras, Landmarken und Prüfrenders sind angelegt. Der Szenenaufbau ist reproduzierbar; die Massing-Silhouette besteht die Evidenzprüfung jedoch noch nicht.
 - Die sechs dokumentierten Maße umfassen auch Innenmaße und dürfen nicht als Außenabmessungen übernommen werden.

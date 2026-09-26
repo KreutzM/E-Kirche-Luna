@@ -31,8 +31,10 @@ minimum rectangle, long-axis orientation and total elevation range recorded in
 architectural dimension. `35_render_lod2_diagnostic.py` can render G01 alone from the SE, S and TOP
 validation cameras; `36_render_m21_target_diagnostics.py` compares inferred M21 target heights,
 `37_render_m21_heading_diagnostics.py` compares yaw candidates without altering its recorded
-heading, and `38_render_lod2_overlay_diagnostic.py` overlays a temporary G01 wireframe on the model
-from TOP, M21 and SE. These temporary diagnostic renders are ignored local files and do not change
-the saved camera or geometry.
+heading, and `38_render_lod2_overlay_diagnostic.py` overlays G01 `terrainIntersection` ground lines
+on the model from TOP, M21 and SE. TOP is the useful footprint comparison; M21/SE show the same
+ground lines near the image base and do not validate roof silhouettes. The lines are separate
+reference curves, not roof-surface wireframes or project geometry. These temporary diagnostic renders
+are ignored local files and do not change the saved camera or geometry.
 
 Do not create visually convenient cameras and then claim agreement. Camera changes should be motivated by image evidence or documented calibration assumptions.

@@ -42,6 +42,6 @@ views:
     note: "Top-down footprint/roof check; M01 is oblique and is not treated as a pinhole camera solve."
   SW:
     camera: null
-    evidence: [M08, M09]
+    evidence: [M08, M09, M22]
     status: geometry_reference_only
-    note: "M08 is explicitly marked do_not_camera_solve; M09 is a steep tower detail and has no solved pose."
+    note: "M08 is explicitly marked do_not_camera_solve; M09 is a steep tower detail; M22 adds an elevated southwest skyline view for tower and overall mass silhouette only. Its 86 mm focal length and camera coordinates are recorded, but no heading or local camera height is provided, so it is not used for a camera solve."

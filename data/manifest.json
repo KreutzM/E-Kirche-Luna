@@ -338,5 +338,15 @@
     "priority": 1,
     "metric_use": "camera_solve_candidate_and_roof_geometry",
     "commons_page": "https://commons.wikimedia.org/wiki/File:Marburg_Elisabethkirche_S%C3%BCdchor_Dach_von_SO_(2).jpg"
+  },
+  {
+    "id": "M22",
+    "group": "modern",
+    "title": "Marburg asv2022-02 img14 Elisabethkirche.jpg",
+    "view": "SW elevated silhouette",
+    "role": "west_tower_silhouette_and_overall_mass",
+    "priority": 1,
+    "metric_use": "geometry_reference_only",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Marburg_asv2022-02_img14_Elisabethkirche.jpg"
   }
 ]
