@@ -1,4 +1,4 @@
-iteration: 5
+iteration: 6
 model: blender/scene/elisabethkirche.blend
 evidence_order: documented_dimensions_then_modern_photographs_then_historical_plans
 views:
@@ -22,11 +22,11 @@ views:
     landmarks:
       - id: hall_roof_and_south_conch
         expected: "High nave roof continues into the transept and polygonal south choir arm."
-        observed: "The raw M04 GPS conversion lies within the revised south-conch outline. The explicitly offset/fitted test camera escapes the wall-only view and shows two tower points, but the near conch/wall still dominates; the complete roof join and long south-side silhouette do not match M04."
+        observed: "With the corrected portrait sensor fit the official M04 view is almost entirely a near wall. The raw GPS conversion lies within the revised south-conch outline; the earlier 6.3 m south offset and four west/south diagnostic poses near the modeled west tower do not recover the source composition and are occluded by the coarse masses. No M04 camera fit is accepted; roof joins and the long south-side silhouette remain unvalidated."
         status: unresolved
       - id: six_bay_hall_rhythm
         expected: "Six-bay hall length is legible in the side elevation."
-        observed: "The current wall is a continuous blank mass; bay divisions have not been modeled at the massing stage, and the test view does not yet show the full hall length."
+        observed: "The current wall is a continuous blank mass; bay divisions have not been modeled at the massing stage, and no tested M04 view shows the full hall length."
         status: unresolved
   N:
     camera: VAL_N
@@ -44,7 +44,7 @@ views:
     landmarks:
       - id: triconch_and_roof_turret
         expected: "Three conches surround the crossing and the current roof turret rises from the roofscape."
-        observed: "After revising the extents to the approximate OSM footprint envelope and centring the candidate aim, the west-tower pair, roof turret and east conch appear in M02's left-to-right order. The rendered building remains too narrow in frame and its coarse conch/roof silhouette is too block-like; GPS position and 27 mm equivalent focal length are unchanged, while aim remains an inferred candidate."
+        observed: "Iteration 6 uses a 28.3 mm active equivalent sensor width derived from M02's saved 3696x3053 crop and shifts the visual-fit target west/down to [-15, 0, 29] m based on candidate renders. The tower pair, roof turret and eastern conch now occupy approximately the same horizontal bands as the source, and overall frame width is close. The tower pair remains slightly left; more importantly, coarse polygonal conches and broad, angular roof masses diverge from the visible steep roof and stepped facade silhouette. Camera pose is still an inferred fit because M02 has no heading; do not count framing as proof of geometric fit."
         status: unresolved
       - id: sacristy
         expected: "Two-storey sacristy adjoins the north-east choir with a pyramidal roof."
@@ -52,4 +52,4 @@ views:
         status: partial
 acceptance:
   massing_gate_passed: false
-  reason: "Iteration 5 applies the OSM-derived building alignment and approximate footprint envelope without changing the east/north/up world convention. It confirms the southeast landmark order but not image scale or silhouette. The south GPS pose falls within the revised footprint and its offset test view still fails the side silhouette. West/east and side-elevation landmarks are also partial. Do not start buttresses or decorative modeling until dimensional and silhouette checks pass."
+  reason: "Iteration 6 corrects the M02 active sensor width from its saved crop and documents a west/down visual-fit target. The overall frame scale and landmark ordering improve, but camera pose is inferred and the tower/turret placement and roof/conch silhouette still visibly diverge. The M04 south-side validation also fails: raw GPS lies inside the revised footprint, while the offset camera remains dominated by the near wall. Do not start buttresses or decorative modeling until dimensional and silhouette checks pass."

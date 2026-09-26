@@ -23,3 +23,6 @@ Decision: rotate plan-derived building geometry 7.13 degrees north of true east 
 
 ## 2026-09-26 — Revise plan extents against the mapped outline
 Decision: update the inferred outer length and transept span to 70.4 m and 44.6 m from the long and short sides of the OSM minimum-area rectangle, with the crossing offsets retained from P01 asymmetry. These are map-derived approximations cross-checked against plans and modern photos, not surveyed dimensions. Iteration 5 improves M02 framing, but the view remains too narrow and block-like; M04 remains obstructed by the near south conch. Keep the gate closed.
+
+## 2026-09-26 — Recalibrate cropped-photo cameras from active image dimensions
+Decision: model M02's saved 3696×3053 crop with a 28.3 mm horizontal full-frame-equivalent sensor width at the recorded 27 mm equivalent focal length. Iteration 6 candidate renders show improved M02 framing when the aim is shifted west/down to [-15, 0, 29] m; this remains an inferred pose because heading is absent. The updated M02 render is still geometrically too blocky at the conches and roofs. Correct portrait framing makes the current M04 camera nearly wall-only; four additional west/south pose tests are occluded by coarse masses. No camera fit is accepted for M04. Keep the massing gate closed and resolve geometry/pose against independent views before detail work.

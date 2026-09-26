@@ -39,9 +39,9 @@ for key, spec in CONFIG["views"].items():
     if data.type == "ORTHO":
         data.ortho_scale = spec["ortho_scale"]
     else:
+        data.sensor_fit = spec.get("sensor_fit", "HORIZONTAL")
         data.sensor_width = spec.get("sensor_width", 36.0)
         data.lens = spec.get("lens_35mm_equivalent", spec.get("lens", 50.0))
-        data.sensor_fit = "HORIZONTAL"
     obj["view_id"] = key
     obj["evidence_ids"] = ",".join(spec["evidence_ids"])
     obj["render_resolution_x"] = spec["resolution"][0]
