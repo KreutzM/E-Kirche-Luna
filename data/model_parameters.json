@@ -24,7 +24,12 @@
     "main_roof_ridge_height": 34.0,
     "conch_roof_peak_height": 29.0,
     "tower_belfry_start_height": 46.0,
+    "tower_midshaft_top_height": 39.0,
     "tower_spire_start_height": 55.0,
+    "tower_upper_shaft_depth_reduction": 0.9,
+    "tower_upper_shaft_width_reduction": 0.8,
+    "tower_setback_depth_reduction": 1.8,
+    "tower_setback_width_reduction": 1.5,
     "sacristy_footprint_width": 7.5,
     "sacristy_roof_peak_height": 20.0,
     "exterior_crossing_width": 12.0,
@@ -34,6 +39,17 @@
     "sacristy_y_min": 7.5,
     "sacristy_eave_height": 14.0,
     "dachreiter_width": 3.5,
-    "dachreiter_height_above_ridge": 12.0
+    "dachreiter_height_above_ridge": 12.0,
+    "west_gable_peak_height": 30.0,
+    "west_gable_half_width_min": 3.0,
+    "roof_shell_thickness": 0.55,
+    "roof_overhang": 0.25,
+    "transept_ridge_reduction": 1.0,
+    "roof_joint_overlap": 0.2,
+    "side_conch_body_top_height": 23.0,
+    "east_choir_bay_top_height": 23.0,
+    "east_conch_body_top_height": 22.0,
+    "dachreiter_roof_embed": 0.4,
+    "dachreiter_body_height": 5.0
   }
 }

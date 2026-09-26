@@ -15,6 +15,12 @@ Die festgelegte Orientierung bleibt unverändert: Meter, X nach Osten, Y nach No
 - `scripts/blender/10_massing.py` erzeugt nur drei ausgeblendete Maßstabs-Hilfskörper in `REFERENCE`, keine Gebäudemassen. Ein gespeichertes `.blend`, Validierungskameras, Landmarken und Render fehlen.
 - Die sechs Maße umfassen auch Innenmaße und dürfen nicht als Außenabmessungen übernommen werden.
 
+## Umsetzungsstand
+
+Seit diesem Plan wurden alle 32 Referenzen mit Provenienz gesichert. Der Validator besteht aktuell mit 41 protokollierten Geometrieannahmen. Die parametrische Blender-Szene, Hauptmassen, zwei Westtürme, Dachmassen, Evidenzkameras und sieben Renderansichten sind angelegt. Die Arbeitspakete Referenzen, Evidenz und Grundszene sind abgeschlossen.
+
+Die aktuelle Massing-Iteration richtet Giebel- und Konchenanschlüsse neu aus; kleine Turmspitzen bleiben bis nach dem Massing-Prüftor aus. Das Prüftor bleibt offen: Die Registrierung der Südostansicht gegen M02 stimmt in Bildmaßstab und sichtbarer Turmkonstellation noch nicht. Dieser Vergleich muss vor dem Beginn von Strebewerk und Fassadendetails geklärt werden.
+
 ## Durchführung und Prüftore
 
 ### 0. Reproduzierbare Ausgangsbasis
@@ -101,4 +107,4 @@ Objekte getrennt in `OPENINGS`, `TRACERY` und `DETAIL` organisieren. Nach jedem 
 
 ## Nächster konkreter Arbeitsschritt
 
-Den Asset-Workflow für einen vollständigen, provenance-sicheren Abruf vorbereiten, dann die Manifest-Referenzen herunterladen und Kontaktbögen erzeugen. Erst nach Sichtung der tatsächlichen Belege den parametrischen Grundriss und die dafür nötigen Annahmen festlegen.
+Die Südostkamera gegen M02 kalibrieren, ohne GPS- und Brennweitenmetadaten zu überschreiben oder die Abweichung durch willkürliche Kamerabewegung zu verdecken. Danach West-, Süd-, Nord- und Südostlandmarken erneut prüfen und das Massing-Gate erst bei gelösten Anschluss-/Silhouettendiskrepanzen freigeben.

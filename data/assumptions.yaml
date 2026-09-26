@@ -174,3 +174,115 @@ assumptions:
     confidence: low
     evidence_ids: [M01, M02, M18]
     iteration: 1
+  tower_midshaft_top_height:
+    value: 39.0
+    unit: m
+    reason: "Intermediate west-tower shaft transition estimated from P07 proportions and checked against M09-M11; only the total approximate tower height is documented."
+    confidence: medium
+    evidence_ids: [P07, M09, M10, M11]
+    iteration: 2
+  tower_upper_shaft_depth_reduction:
+    value: 0.9
+    unit: m
+    reason: "West-tower depth reduction at the first shaft setback estimated from P07 and modern west/tower photographs."
+    confidence: low
+    evidence_ids: [P07, M09, M10, M11]
+    iteration: 2
+  tower_upper_shaft_width_reduction:
+    value: 0.8
+    unit: m
+    reason: "West-tower width reduction at the first shaft setback estimated from P07 and modern west/tower photographs."
+    confidence: low
+    evidence_ids: [P07, M09, M10, M11]
+    iteration: 2
+  tower_setback_depth_reduction:
+    value: 1.8
+    unit: m
+    reason: "West-tower depth reduction at the second transition estimated from P07 and modern west/tower photographs."
+    confidence: low
+    evidence_ids: [P07, M09, M10, M11]
+    iteration: 2
+  tower_setback_width_reduction:
+    value: 1.5
+    unit: m
+    reason: "West-tower width reduction at the second transition estimated from P07 and modern west/tower photographs."
+    confidence: low
+    evidence_ids: [P07, M09, M10, M11]
+    iteration: 2
+  west_gable_peak_height:
+    value: 30.0
+    unit: m
+    reason: "Central west-front gable peak estimated between the main wall top and main ridge from the west elevation proportions in P04/P07 and M10/M11."
+    confidence: low
+    evidence_ids: [P04, P07, M10, M11]
+    iteration: 2
+  west_gable_half_width_min:
+    value: 3.0
+    unit: m
+    reason: "Minimum half-width of the central west-front gable estimated from the spacing between the west towers."
+    confidence: low
+    evidence_ids: [P04, P07, M10, M11]
+    iteration: 2
+  roof_shell_thickness:
+    value: 0.55
+    unit: m
+    reason: "Simplified visible thickness of roof masses chosen to avoid zero-thickness solids in the coarse exterior model; it is a modeling allowance, not a measured construction thickness."
+    confidence: low
+    evidence_ids: [P02, P06, P08, M01, M02, M04]
+    iteration: 2
+  roof_overhang:
+    value: 0.25
+    unit: m
+    reason: "Simplified eave overhang used for roof-to-wall silhouette continuity, estimated from modern roof-edge photographs."
+    confidence: low
+    evidence_ids: [M01, M02, M04, M05, M06, M07]
+    iteration: 2
+  transept_ridge_reduction:
+    value: 1.0
+    unit: m
+    reason: "Querhaus ridge set slightly below the nave ridge to represent the intersecting roof hierarchy visible in P02/P06 and modern oblique views."
+    confidence: low
+    evidence_ids: [P02, P06, M01, M02, M04]
+    iteration: 2
+  roof_joint_overlap:
+    value: 0.2
+    unit: m
+    reason: "Small overlap at the east choir roof joint is a mesh-assembly allowance used to avoid a visible gap; not a measured building dimension."
+    confidence: low
+    evidence_ids: [P02, P08, M01, M02, M19]
+    iteration: 2
+  side_conch_body_top_height:
+    value: 23.0
+    unit: m
+    reason: "North/south conch wall top estimated one metre below the main wall top to align the simplified conch roof spring with the coarse wall mass."
+    confidence: low
+    evidence_ids: [P08, M01, M02, M03, M19]
+    iteration: 2
+  east_choir_bay_top_height:
+    value: 23.0
+    unit: m
+    reason: "East choir straight-bay wall top estimated just below the main wall top and aligned with its roof spring."
+    confidence: low
+    evidence_ids: [P08, M01, M02, M19]
+    iteration: 2
+  east_conch_body_top_height:
+    value: 22.0
+    unit: m
+    reason: "East polygonal conch wall top estimated below the choir-bay wall top to align with the conch roof spring."
+    confidence: low
+    evidence_ids: [P08, M01, M02, M18, M19]
+    iteration: 2
+  dachreiter_roof_embed:
+    value: 0.4
+    unit: m
+    reason: "Depth by which the crossing turret mass enters the main roof ridge estimated from raised roof views to ensure a continuous connection in the coarse model."
+    confidence: low
+    evidence_ids: [M01, M02, M18]
+    iteration: 2
+  dachreiter_body_height:
+    value: 5.0
+    unit: m
+    reason: "Stone body height of the crossing turret estimated from M02/M18; no direct dimension is documented."
+    confidence: low
+    evidence_ids: [M01, M02, M18]
+    iteration: 2

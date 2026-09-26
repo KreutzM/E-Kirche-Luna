@@ -93,14 +93,14 @@ def extruded_profile(name, start, end, profile, axis, collection_name, mat, evid
 
 
 def gable_x(name, x0, x1, half_width, eave, ridge, collection_name="ROOFS", evidence="P02,P06,M01,M02,M04,M05"):
-    thickness = 0.55
+    thickness = I["roof_shell_thickness"]
     profile = [(-half_width, eave), (0.0, ridge), (half_width, eave),
                (half_width, eave - thickness), (0.0, ridge - thickness), (-half_width, eave - thickness)]
     return extruded_profile(name, x0, x1, profile, "X", collection_name, SLATE, evidence)
 
 
 def gable_y(name, y0, y1, half_width, eave, ridge, collection_name="ROOFS", evidence="P01,P08,M01,M02"):
-    thickness = 0.55
+    thickness = I["roof_shell_thickness"]
     profile = [(-half_width, eave), (0.0, ridge), (half_width, eave),
                (half_width, eave - thickness), (0.0, ridge - thickness), (-half_width, eave - thickness)]
     return extruded_profile(name, y0, y1, profile, "Y", collection_name, SLATE, evidence)
@@ -131,45 +131,37 @@ total_height = PARAMS["documented_anchors"]["tower_height"]
 for sign, label in ((1, "North"), (-1, "South")):
     cy = sign * tower_offset
     box("TOWER_" + label + "_Lower", tower_cx, cy, tower_depth, tower_width,
-        0.0, 24.0, "TOWERS", STONE, "P01,P07,M09,M10,M11")
-    box("TOWER_" + label + "_UpperShaft", tower_cx, cy, tower_depth - 0.9, tower_width - 0.8,
-        24.0, 39.0, "TOWERS", STONE, "P07,M09,M10,M11")
-    box("TOWER_" + label + "_Setback", tower_cx, cy, tower_depth - 1.8, tower_width - 1.5,
-        39.0, belfry_start, "TOWERS", STONE, "P07,M09,M10,M11")
+        0.0, I["main_wall_top_height"], "TOWERS", STONE, "P01,P07,M09,M10,M11")
+    box("TOWER_" + label + "_UpperShaft", tower_cx, cy,
+        tower_depth - I["tower_upper_shaft_depth_reduction"],
+        tower_width - I["tower_upper_shaft_width_reduction"],
+        I["main_wall_top_height"], I["tower_midshaft_top_height"], "TOWERS", STONE, "P07,M09,M10,M11")
+    box("TOWER_" + label + "_Setback", tower_cx, cy,
+        tower_depth - I["tower_setback_depth_reduction"],
+        tower_width - I["tower_setback_width_reduction"],
+        I["tower_midshaft_top_height"], belfry_start, "TOWERS", STONE, "P07,M09,M10,M11")
     belfry_w = I["tower_belfry_width"]
     box("TOWER_" + label + "_BelfryMass", tower_cx, cy, belfry_w, belfry_w,
         belfry_start, spire_start, "TOWERS", STONE, "P07,M09,M10,M11")
     taper("TOWER_" + label + "_OctagonalSpire", tower_cx, cy, belfry_w * 0.48, belfry_w * 0.48,
           spire_start, total_height, "ROOFS", SLATE, "P07,M09,M10,M11", sides=8, top_ratio=0.012)
 
-# Four corner pinnacles at the spire spring are visible in the west-front views.
-    pin_offset = belfry_w * 0.39
-    for sx in (-1, 1):
-        for sy in (-1, 1):
-            px = tower_cx + sx * pin_offset
-            py = cy + sy * pin_offset
-            box(f"TOWER_{label}_PinnacleBase_{sx}_{sy}", px, py, 0.9, 0.9,
-                spire_start - 2.6, spire_start + 0.5, "TOWERS", STONE, "P07,M09,M10,M11")
-            taper(f"TOWER_{label}_Pinnacle_{sx}_{sy}", px, py, 0.72, 0.72,
-                  spire_start + 0.5, spire_start + 5.5, "TOWERS", STONE,
-                  "P07,M09,M10,M11", sides=4, top_ratio=0.01)
-
 # Primary hall roof and intersecting transept roof.
 nave_west = -I["exterior_crossing_width"] / 2 - I["nave_hall_length"]
 nave_east = -I["exterior_crossing_width"] / 2
-gable_x("ROOF_MainHall", nave_west, nave_east + 0.8,
-        I["exterior_hall_width"] / 2 + 0.25,
+gable_x("ROOF_MainHall", nave_west, nave_east,
+        I["exterior_hall_width"] / 2 + I["roof_overhang"],
         I["main_wall_top_height"], I["main_roof_ridge_height"])
 gable_y("ROOF_TranseptCross", -I["side_arm_straight_length"] - I["exterior_crossing_width"] / 2,
         I["side_arm_straight_length"] + I["exterior_crossing_width"] / 2,
-        I["transept_body_depth"] / 2 + 0.25,
-        I["main_wall_top_height"], I["main_roof_ridge_height"] - 1.0)
+        I["transept_body_depth"] / 2 + I["roof_overhang"],
+        I["main_wall_top_height"], I["main_roof_ridge_height"] - I["transept_ridge_reduction"])
 
 # Three conch roofs read as polygonal hip roofs in the present-day raised views.
 choir_half = I["choir_exterior_width"] / 2
 choir_base = I["east_extent_from_crossing"] - choir_half
-gable_x("ROOF_EastChoirBay", I["exterior_crossing_width"] / 2 - 0.2, choir_base,
-        choir_half + 0.2, I["main_wall_top_height"] - 1.0,
+gable_x("ROOF_EastChoirBay", I["exterior_crossing_width"] / 2 - I["roof_joint_overlap"], choir_base,
+        choir_half + I["roof_overhang"], I["east_choir_bay_top_height"],
         I["conch_roof_peak_height"])
 east_boundary = [
     (choir_base, -choir_half), (choir_base + 2.1, -choir_half * 0.92),
@@ -179,8 +171,8 @@ east_boundary = [
     (choir_base + 2.1, choir_half * 0.92), (choir_base, choir_half)
 ]
 fan_roof("ROOF_EastConch", east_boundary,
-         (choir_base + (I["east_extent_from_crossing"] - choir_base) * 0.52, 0.0,
-          I["conch_roof_peak_height"]), I["main_wall_top_height"] - 2.0,
+         ((choir_base + I["east_extent_from_crossing"]) / 2.0, 0.0,
+          I["conch_roof_peak_height"]), I["east_conch_body_top_height"],
          "P08,M01,M02,M18,M19")
 
 arm_xhalf = I["transept_body_depth"] / 2
@@ -188,8 +180,8 @@ arm_spring = I["exterior_crossing_width"] / 2 + I["side_arm_straight_length"]
 arm_tip = I["exterior_transept_span"] / 2
 for sign, label in ((1, "North"), (-1, "South")):
     gable_y(f"ROOF_{label}Arm", sign * (I["exterior_crossing_width"] / 2),
-            sign * arm_spring, arm_xhalf + 0.25,
-            I["main_wall_top_height"] - 1.0, I["conch_roof_peak_height"])
+            sign * arm_spring, arm_xhalf + I["roof_overhang"],
+            I["main_wall_top_height"], I["conch_roof_peak_height"])
     projection = arm_tip - arm_spring
     boundary = [
         (-arm_xhalf, sign * arm_spring), (-arm_xhalf * 0.92, sign * (arm_spring + projection * 0.28)),
@@ -203,7 +195,7 @@ for sign, label in ((1, "North"), (-1, "South")):
     ]
     fan_roof(f"ROOF_{label}Conch", boundary,
              (0.0, sign * (arm_spring + projection * 0.52), I["conch_roof_peak_height"]),
-             I["main_wall_top_height"] - 2.0, "P01,P08,M01,M02,M03,M19")
+             I["side_conch_body_top_height"], "P01,P08,M01,M02,M03,M19")
 
 # Two-storey north-east sacristy with a steep pyramidal roof (Dehio, M15-M17).
 sac = I["sacristy_footprint_width"]
@@ -220,9 +212,9 @@ add_mesh("ROOF_SacristyPyramid", roof_vertices, roof_faces, "ROOFS", SLATE,
 
 # Current crossing roof turret (Dachreiter), documented as replaced in 1931.
 turret_width = I["dachreiter_width"]
-turret_base = I["main_roof_ridge_height"] - 0.4
+turret_base = I["main_roof_ridge_height"] - I["dachreiter_roof_embed"]
 turret_top = I["main_roof_ridge_height"] + I["dachreiter_height_above_ridge"]
-body_height = I["dachreiter_height_above_ridge"] * 0.42
+body_height = I["dachreiter_body_height"]
 taper("ROOF_DachreiterBody", 0.0, 0.0, turret_width / 2, turret_width / 2,
       turret_base, turret_base + body_height, "ROOFS", STONE,
       "M01,M02,M18", sides=8, top_ratio=0.86)

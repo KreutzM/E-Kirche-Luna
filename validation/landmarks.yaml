@@ -1,4 +1,4 @@
-iteration: 1
+iteration: 2
 model: blender/scene/elisabethkirche.blend
 evidence_order: documented_dimensions_then_modern_photographs_then_historical_plans
 views:
@@ -9,12 +9,12 @@ views:
     landmarks:
       - id: west_tower_pair
         expected: "Two towers flank a lower central west-front mass; the documented tower height is approximately 80 m."
-        observed: "The pair and central lower mass read in the render; the belfry and shafts remain plain rectangular blocks."
+        observed: "The pair reads and reaches the documented approximate 80 m height; shafts and belfry remain plain blocks. Pinnacles were removed until the massing gate passes."
         status: partial
       - id: central_west_gable
         expected: "Central gable remains below the tower shafts and meets the nave roof."
-        observed: "A low central roof/mass is present; join and exact profile need a closer comparison against P07 and M10."
-        status: unresolved
+        observed: "The west gable now spans the tower-front plane and joins the nave roof; the central gable profile still needs a closer comparison against P07 and M10."
+        status: partial
   S:
     camera: VAL_S
     evidence_ids: [M04, M05]
@@ -22,7 +22,7 @@ views:
     landmarks:
       - id: hall_roof_and_south_conch
         expected: "High nave roof continues into the transept and polygonal south choir arm."
-        observed: "Large roof and conch masses are visible, but M04 framing and viewpoint do not yet support a reliable silhouette comparison."
+        observed: "The close low-angle render shows a tower, hall roof and conch masses like M04; the east end is clipped and the full roof join cannot be checked in this crop."
         status: unresolved
       - id: six_bay_hall_rhythm
         expected: "Six-bay hall length is legible in the side elevation."
@@ -35,7 +35,7 @@ views:
     landmarks:
       - id: north_side_profile
         expected: "Long hall, crossing/transept, east choir and two-tower west end form a coherent stepped profile."
-        observed: "The gross profile is present; uninterrupted wall blocks obscure bay and buttress articulation."
+        observed: "The long hall, crossing, east end and west tower form a gross profile. The wall is continuous and blank; bay rhythm is deferred to openings."
         status: partial
   SE:
     camera: VAL_SE
@@ -44,7 +44,7 @@ views:
     landmarks:
       - id: triconch_and_roof_turret
         expected: "Three conches surround the crossing and the current roof turret rises from the roofscape."
-        observed: "East and side conch roof masses and turret are present; source framing, roof intersections and eastern mass proportions need another review."
+        observed: "The roof intersections are more continuous after aligning wall tops and roof springs. The current render is substantially smaller in frame than M02 and does not yet reproduce its visible west-tower pair; GPS position and 27 mm equivalent focal length remain unchanged pending calibration review."
         status: unresolved
       - id: sacristy
         expected: "Two-storey sacristy adjoins the north-east choir with a pyramidal roof."
@@ -52,4 +52,4 @@ views:
         status: partial
 acceptance:
   massing_gate_passed: false
-  reason: "The first renders expose unresolved roof joins, side-profile proportions and photo framing. Do not start buttresses or decorative modeling until these checks are resolved."
+  reason: "Iteration 2 improves wall-to-roof continuity, but the southeast photo-scale/tower registration and several side/elevation landmarks remain unresolved. Do not start buttresses or decorative modeling until these checks are resolved."
