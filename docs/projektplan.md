@@ -23,6 +23,8 @@ Iteration 4 richtet die planbasierten Massen mit 7,13° zur geografischen Ostach
 
 Iteration 8 testet für M05 zwei zusätzliche Blickposen 4 m und 8 m näher am Modell sowie ein niedrigeres Blickziel. Beide schärfen den Ausschnitt der nahen Südfassade; Turmspitze, Dachlinie und Ostchor lassen sich damit nicht zugleich an die Fotokomposition anpassen. Die offizielle GPS-basierte Kameraposition und die bestehende Zielhypothese bleiben deshalb erhalten. Es wurde keine Geometrie geändert.
 
+Iteration 9 vergleicht einen 30-m-Konchendachfirst mit dem gespeicherten 29-m-Stand in den gleichen sieben Kameras. Der Zwischenwert hebt die Firste geringfügig an, beseitigt die gegensätzlichen M02-/M05-Restabweichungen aber nicht. Der gespeicherte Wert bleibt 29 m; als Nächstes sind Dachform und Kamerafit getrennt zu prüfen.
+
 Das Massing-Prüftor bleibt offen: M02s Landmarken und Gesamtbreite liegen nach Iteration 6 ungefähr an den Quellpositionen, die blockige Dach-/Konchensilhouette weicht aber weiterhin ab. M05 bestätigt die grobe Südseitenfolge von Langhausdach, Dachreiter und Ostchor, jedoch keinen vollständigen Silhouettenpass; getestete Offsetposen lösen die Ausrichtung nicht. M04 bleibt ungelöst: GPS-Projektion und verfügbare Testposen liefern keine passende Fotokomposition. Keine Folgephase vor Beseitigung dieser Abweichungen beginnen.
 
 ## Durchführung und Prüftore

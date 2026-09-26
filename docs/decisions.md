@@ -32,3 +32,6 @@ Decision: render the south validation view from M05's own GPS, 30 mm full-frame-
 
 ## 2026-09-26 — Reject additional M05 camera offsets
 Decision: keep the official M05 GPS-derived camera location and [0, -10, 23] m target. Diagnostic poses shifted 4 m and 8 m toward the model, with the target lowered to z=15 m, enlarge/crop the near south elevation and do not align the turret, roof and conch simultaneously. The lower aim raises the turret in frame but shifts the roof/conch profile and lower facade inconsistently; no tested pose is accepted as a calibration. This leaves M05 as a partial gross-massing check and keeps the massing gate closed. The diagnostics do not alter the GPS evidence or model geometry.
+
+## 2026-09-26 — Keep the conch roof at the 29 m candidate
+Decision: render an intermediate 30 m roof-peak candidate with the same saved cameras and render settings as 29 m. It raises the conch peaks slightly but does not improve the M02 and M05 silhouette comparisons together; the residuals are larger than this one-metre adjustment can explain. Retain 29 m, keep it marked low-confidence, and investigate roof form and camera fit separately rather than treating the height as measured.
