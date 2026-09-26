@@ -11,11 +11,11 @@
     "inner_length_without_west_hall": 56.0
   },
   "inferred": {
-    "overall_exterior_length": 62.5,
-    "west_extent_from_crossing": 46.0,
-    "east_extent_from_crossing": 16.5,
+    "overall_exterior_length": 70.4,
+    "west_extent_from_crossing": 50.0,
+    "east_extent_from_crossing": 20.4,
     "exterior_hall_width": 23.8,
-    "exterior_transept_span": 39.5,
+    "exterior_transept_span": 44.6,
     "nave_hall_length": 32.0,
     "transept_body_depth": 12.0,
     "choir_exterior_width": 15.0,

@@ -1,25 +1,25 @@
 assumptions:
   overall_exterior_length:
-    value: 62.5
+    value: 70.4
     unit: m
-    reason: "Outer west-tower-face to east-conch-tip length estimated from P01 proportions, using the documented 39 m transept dimension as a scale cross-check; that source is not treated as a direct exterior measurement."
+    reason: "Outer west-tower-face to east-conch-tip length estimated from the 70.43 m long side of the minimum-area rectangle of current OSM way 34333680, cross-checked against P01 proportions and modern overview photographs. The mapped outline is approximate, not a surveyed dimension."
     confidence: medium
     evidence_ids: [P01, M01, M02, M03]
-    iteration: 1
+    iteration: 5
   west_extent_from_crossing:
-    value: 46.0
+    value: 50.0
     unit: m
-    reason: "P01 plan ratio from crossing centre to outer west tower face, scaled with the 39 m Dehio transept dimension as a non-direct cross-check."
+    reason: "P01 west/east asymmetry places the crossing 14.75 m east of the footprint centre; applying that offset to the approximate 70.43 m mapped OSM outline gives a 50.0 m west extent."
     confidence: medium
-    evidence_ids: [P01, P02, M10, M11]
-    iteration: 1
+    evidence_ids: [P01, P02, M02, M10, M11]
+    iteration: 5
   east_extent_from_crossing:
-    value: 16.5
+    value: 20.4
     unit: m
-    reason: "P01 plan ratio from crossing centre to east conch tip, scaled with the 39 m Dehio transept dimension as a non-direct cross-check."
+    reason: "P01 west/east asymmetry places the crossing 14.75 m east of the footprint centre; applying that offset to the approximate 70.43 m mapped OSM outline gives a 20.4 m east extent."
     confidence: medium
     evidence_ids: [P01, P02, M02, M19]
-    iteration: 1
+    iteration: 5
   exterior_hall_width:
     value: 23.8
     unit: m
@@ -28,12 +28,12 @@ assumptions:
     evidence_ids: [P01, P02, M04, M05, M06, M07]
     iteration: 1
   exterior_transept_span:
-    value: 39.5
+    value: 44.6
     unit: m
-    reason: "Approximate outside span fitted to P01. Dehio's 39 m transept figure is used only as a scale cross-check and is not asserted as a measured exterior extent."
+    reason: "Outside north/south span fitted to the 44.62 m short side of the minimum-area rectangle of current OSM way 34333680 and cross-checked against P01 and modern views. The mapped outline is approximate, not a surveyed dimension; Dehio's 39 m figure remains a separate non-direct cross-check."
     confidence: medium
     evidence_ids: [P01, M01, M02, M03, M19]
-    iteration: 1
+    iteration: 5
   nave_hall_length:
     value: 32.0
     unit: m

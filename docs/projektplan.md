@@ -19,7 +19,9 @@ Die festgelegte Orientierung bleibt unverändert: Meter, X nach Osten, Y nach No
 
 Seit diesem Plan wurden alle 32 Referenzen mit Provenienz gesichert. Der Validator besteht aktuell mit 41 protokollierten Geometrieannahmen. Die parametrische Blender-Szene, Hauptmassen, zwei Westtürme, Dachmassen, Evidenzkameras und sieben Renderansichten sind angelegt. Die Arbeitspakete Referenzen, Evidenz und Grundszene sind abgeschlossen.
 
-Die aktuelle Massing-Iteration richtet Giebel- und Konchenanschlüsse neu aus; kleine Turmspitzen bleiben bis nach dem Massing-Prüftor aus. Das Prüftor bleibt offen: Die Registrierung der Südostansicht gegen M02 stimmt in Bildmaßstab und sichtbarer Turmkonstellation noch nicht. Dieser Vergleich muss vor dem Beginn von Strebewerk und Fassadendetails geklärt werden.
+Iteration 4 richtet die planbasierten Massen mit 7,13° zur geografischen Ostachse aus; der Vierungsursprung und die Weltachsen X=Ost, Y=Nord, Z=Oben bleiben unverändert. Iteration 5 vergrößert die inferierte Außenlänge und Querhausspanne anhand der minimalen OSM-Umrisshülle auf 70,4 × 44,6 m. Das sind Kartenableitungen, keine Vermessungsmaße. Validator und vollständiger Szenenaufbau bestehen; die Prüfrenders sind pixelgleich reproduzierbar.
+
+Das Massing-Prüftor bleibt offen: M02 zeigt die Landmarken in richtiger Reihenfolge, aber das Modell bleibt im Bild zu schmal und die Konchen-/Dachform zu grob. Bei M04 liegt der GPS-Kandidat innerhalb der Südchor-Masse; ein dokumentierter 6,3-m-Versatz liefert weiterhin keine passende Südseiten-Silhouette. Keine Folgephase vor Beseitigung dieser Abweichungen beginnen.
 
 ## Durchführung und Prüftore
 
@@ -107,4 +109,4 @@ Objekte getrennt in `OPENINGS`, `TRACERY` und `DETAIL` organisieren. Nach jedem 
 
 ## Nächster konkreter Arbeitsschritt
 
-Die Südostkamera gegen M02 kalibrieren, ohne GPS- und Brennweitenmetadaten zu überschreiben oder die Abweichung durch willkürliche Kamerabewegung zu verdecken. Danach West-, Süd-, Nord- und Südostlandmarken erneut prüfen und das Massing-Gate erst bei gelösten Anschluss-/Silhouettendiskrepanzen freigeben.
+Die M02-Projektion und den Grundriss anhand von P01, den modernen Ansichten und der OSM-Außenkontur gemeinsam prüfen: Kamerastandort und Brennweite aus Metadaten beibehalten, unbekannte Blickrichtung explizit fitten, anschließend westliche und östliche Extrempunkte sowie Querhausbreite am Foto- und Planmaßstab messen. Für M04 die GPS-/Georeferenz-Diskrepanz gesondert prüfen. Jede weitere Maßänderung als Inferenz protokollieren und alle betroffenen Ansichten neu vergleichen; Massing-Gate erst nach bestandenem Silhouettenvergleich freigeben.
