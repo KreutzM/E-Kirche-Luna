@@ -34,9 +34,9 @@
     "group": "modern",
     "title": "Elisabethkirche Marburg Südseite.jpg",
     "view": "S",
-    "role": "primary_geometry",
-    "priority": 1,
-    "metric_use": "camera_solve_candidate",
+    "role": "south_facade_and_west_tower_detail",
+    "priority": 2,
+    "metric_use": "qualitative_geometry_reference",
     "commons_page": "https://commons.wikimedia.org/wiki/File%3AElisabethkirche%20Marburg%20S%C3%BCdseite.jpg"
   },
   {
