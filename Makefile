@@ -1,10 +1,13 @@
 PYTHON ?= python
 BLENDER ?= blender
 
-.PHONY: setup validate validate-data validate-model fetch fetch-priority1 contacts scene camera-fit
+.PHONY: setup test validate validate-data validate-model fetch fetch-priority1 contacts scene camera-fit
 
 setup:
 	$(PYTHON) -m pip install -r requirements.txt
+
+test:
+	$(PYTHON) -m unittest discover -s tests -p 'test_*.py'
 
 validate: validate-data validate-model
 
