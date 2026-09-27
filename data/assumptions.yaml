@@ -252,12 +252,12 @@ assumptions:
     evidence_ids: [P02, P08, M01, M02, M19]
     iteration: 2
   side_conch_body_top_height:
-    value: 23.0
+    value: 24.0
     unit: m
-    reason: "North/south conch wall top estimated one metre below the main wall top to align the simplified conch roof spring with the coarse wall mass."
+    reason: "Raised from 23 m to align the side-conch wall/eave level with the 24 m main wall and the transverse-arm gable roof. The earlier one-metre step left a visible gap at the roof spring; M01 and M18/M19 show a continuous present-day roof/wall transition, with P08 as the section cross-check. This remains inferred and low-confidence."
     confidence: low
-    evidence_ids: [P08, M01, M02, M03, M19]
-    iteration: 2
+    evidence_ids: [P08, M01, M02, M03, M18, M19]
+    iteration: 26
   east_choir_bay_top_height:
     value: 23.0
     unit: m
@@ -266,12 +266,12 @@ assumptions:
     evidence_ids: [P08, M01, M02, M19]
     iteration: 2
   east_conch_body_top_height:
-    value: 22.0
+    value: 23.0
     unit: m
-    reason: "East polygonal conch wall top estimated below the choir-bay wall top to align with the conch roof spring."
+    reason: "Raised from 22 m to align the east-conch wall/eave level with the 23 m east-choir bay and its gable roof. The earlier one-metre step left an unsupported roof seam; M01/M02/M19 and the historic east-side shape view H06 show the roof continuing around the apse, with P08 as the section cross-check. This remains inferred and low-confidence."
     confidence: low
-    evidence_ids: [P08, M01, M02, M18, M19]
-    iteration: 2
+    evidence_ids: [P08, M01, M02, M18, M19, H06]
+    iteration: 26
   conch_end_chord_width:
     value: 4.5
     unit: m

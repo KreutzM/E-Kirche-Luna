@@ -110,11 +110,32 @@ def gable_y(name, y0, y1, half_width, eave, ridge, collection_name="ROOFS", evid
     return extruded_profile(name, y0, y1, profile, "Y", collection_name, SLATE, evidence)
 
 
-def fan_roof(name, boundary_xy, apex_xyz, eave_z, evidence):
-    n = len(boundary_xy)
-    vertices = [(x, y, eave_z) for x, y in boundary_xy] + [apex_xyz]
-    faces = [tuple(reversed(range(n)))]
-    faces.extend((i, (i + 1) % n, n) for i in range(n))
+def longitudinal_hip_roof(name, negative_eaves, positive_eaves, eave_z, ridge_z, evidence):
+    """Create faceted conch roof slopes that meet along a longitudinal ridge."""
+    if len(negative_eaves) != len(positive_eaves) or len(negative_eaves) < 3:
+        raise ValueError(f"{name}: paired eave paths must have equal length >= 3")
+    station_count = len(negative_eaves)
+    ridge_line = [((left[0] + right[0]) / 2,
+                   (left[1] + right[1]) / 2,
+                   ridge_z)
+                  for left, right in zip(negative_eaves, positive_eaves)]
+    vertices = ([(x, y, eave_z) for x, y in negative_eaves]
+                + [(x, y, eave_z) for x, y in positive_eaves]
+                + ridge_line)
+    ridge_offset = station_count * 2
+    faces = []
+    for i in range(station_count - 1):
+        faces.append((i, i + 1, ridge_offset + i + 1, ridge_offset + i))
+        faces.append((station_count + i, ridge_offset + i,
+                      ridge_offset + i + 1, station_count + i + 1))
+    # Close the spring end and the concealed underside so the roof is a solid.
+    faces.append((0, station_count, ridge_offset))
+    # The final hip slopes from the longitudinal ridge to the flat end chord.
+    faces.append((station_count - 1, station_count * 2 - 1,
+                  ridge_offset + station_count - 1))
+    eave_ring = list(range(station_count)) + list(
+        range(station_count * 2 - 1, station_count - 1, -1))
+    faces.append(tuple(reversed(eave_ring)))
     return add_mesh(name, vertices, faces, "ROOFS", SLATE, evidence, "inferred polygonal roof mass")
 
 
@@ -167,18 +188,18 @@ choir_base = I["east_extent_from_crossing"] - choir_half
 gable_x("ROOF_EastChoirBay", I["exterior_crossing_width"] / 2 - I["roof_joint_overlap"], choir_base,
         choir_half + I["roof_overhang"], I["east_choir_bay_top_height"],
         I["conch_roof_peak_height"])
-east_boundary = [
-    (choir_base, -choir_half), (choir_base + 2.1, -choir_half * 0.92),
-    (choir_base + 4.5, -choir_half * 0.70), (choir_base + 6.5, -choir_half * 0.38),
-    (I["east_extent_from_crossing"], -I["conch_end_chord_width"] / 2),
-    (I["east_extent_from_crossing"], I["conch_end_chord_width"] / 2),
-    (choir_base + 6.5, choir_half * 0.38), (choir_base + 4.5, choir_half * 0.70),
-    (choir_base + 2.1, choir_half * 0.92), (choir_base, choir_half)
-]
-fan_roof("ROOF_EastConch", east_boundary,
-         ((choir_base + I["east_extent_from_crossing"]) / 2.0, 0.0,
-          I["conch_roof_peak_height"]), I["east_conch_body_top_height"],
-         "P08,M01,M02,M18,M19")
+east_tip = I["east_extent_from_crossing"]
+east_projection = east_tip + I["roof_overhang"] - choir_base
+east_stations = (0.0, 0.28, 0.60, 0.87, 1.0)
+east_half_widths = (choir_half + I["roof_overhang"], choir_half * 0.92 + I["roof_overhang"],
+                    choir_half * 0.70 + I["roof_overhang"], choir_half * 0.38 + I["roof_overhang"],
+                    I["conch_end_chord_width"] / 2 + I["roof_overhang"])
+east_negative_eaves = [(choir_base + east_projection * station, -half_width)
+                       for station, half_width in zip(east_stations, east_half_widths)]
+east_positive_eaves = [(x, -y) for x, y in east_negative_eaves]
+longitudinal_hip_roof("ROOF_EastConch", east_negative_eaves, east_positive_eaves,
+                      I["east_conch_body_top_height"], I["conch_roof_peak_height"],
+                      "P08,M01,M02,M18,M19,H06")
 
 arm_xhalf = I["transept_body_depth"] / 2
 arm_spring = I["exterior_crossing_width"] / 2 + I["side_arm_straight_length"]
@@ -187,22 +208,18 @@ for sign, label in ((1, "North"), (-1, "South")):
     gable_y(f"ROOF_{label}Arm", sign * (I["exterior_crossing_width"] / 2),
             sign * arm_spring, arm_xhalf + I["roof_overhang"],
             I["main_wall_top_height"], I["conch_roof_peak_height"])
-    projection = arm_tip - arm_spring
-    end_half_width = I["conch_end_chord_width"] / 2
-    boundary = [
-        (-arm_xhalf, sign * arm_spring), (-arm_xhalf * 0.92, sign * (arm_spring + projection * 0.28)),
-        (-arm_xhalf * 0.70, sign * (arm_spring + projection * 0.60)),
-        (-arm_xhalf * 0.38, sign * (arm_spring + projection * 0.87)),
-        (-end_half_width, sign * arm_tip),
-        (end_half_width, sign * arm_tip),
-        (arm_xhalf * 0.38, sign * (arm_spring + projection * 0.87)),
-        (arm_xhalf * 0.70, sign * (arm_spring + projection * 0.60)),
-        (arm_xhalf * 0.92, sign * (arm_spring + projection * 0.28)),
-        (arm_xhalf, sign * arm_spring)
-    ]
-    fan_roof(f"ROOF_{label}Conch", boundary,
-             (0.0, sign * (arm_spring + projection * 0.52), I["conch_roof_peak_height"]),
-             I["side_conch_body_top_height"], "P01,P08,M01,M02,M03,M19")
+    projection = arm_tip + I["roof_overhang"] - arm_spring
+    end_half_width = I["conch_end_chord_width"] / 2 + I["roof_overhang"]
+    stations = (0.0, 0.28, 0.60, 0.87, 1.0)
+    half_widths = (arm_xhalf + I["roof_overhang"], arm_xhalf * 0.92 + I["roof_overhang"],
+                   arm_xhalf * 0.70 + I["roof_overhang"], arm_xhalf * 0.38 + I["roof_overhang"],
+                   end_half_width)
+    negative_eaves = [(-width, sign * (arm_spring + projection * station))
+                      for width, station in zip(half_widths, stations)]
+    positive_eaves = [(width, y) for (x, y), width in zip(negative_eaves, half_widths)]
+    longitudinal_hip_roof(f"ROOF_{label}Conch", negative_eaves, positive_eaves,
+                          I["side_conch_body_top_height"], I["conch_roof_peak_height"],
+                          "P01,P08,M01,M02,M03,M19,M20,H06")
 
 # Two-storey north-east sacristy with a steep pyramidal roof (Dehio, M15-M17).
 sac = I["sacristy_footprint_width"]

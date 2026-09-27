@@ -62,7 +62,7 @@ views:
     landmarks:
       - id: triconch_and_roof_turret
         expected: "Three conches surround the crossing and the current roof turret rises from the roofscape."
-        observed: "Iteration 25 changes all three conch body and roof outlines from a pointed tip to a flat terminal facet, using an inferred 4.5 m chord estimated from P01 and visually cross-checked against M01/M18/M19 and generalized G01. The updated TOP and oblique renders show the faceted plan end, but the conch roofs still converge into overly simple single-point fans and their joints with the crossing/choir roofs remain visibly crude. The roof-turret height candidate from iteration 18 remains low-confidence; M02's target and M18/M21's local aim remain inferred. M20 independently confirms southeast ordering. This improves one footprint detail but does not establish an overall fit; keep the gate closed."
+        observed: "Iteration 26 replaces the three single-point conch fans with longitudinal hip roofs whose raised center ridges reach the terminal chord. Side-conch wall tops rise to 24 m and the east-conch wall top to 23 m so their eaves align with the adjoining arm/choir gable roofs; both heights remain low-confidence inferences. Updated M18, M21 and SE renders read as continuous faceted roof masses, but their broad silhouettes and crossing/choir joints remain visibly simplified against M01/M02/M18-M20. The roof-turret height remains low-confidence; M02's target and M18/M21's local aim remain inferred. This improves the conch roof system but does not establish an overall fit; keep the gate closed."
         status: unresolved
       - id: sacristy
         expected: "Two-storey sacristy adjoins the north-east choir with a pyramidal roof."
@@ -70,7 +70,7 @@ views:
         status: partial
 acceptance:
   massing_gate_passed: false
-  reason: "Iteration 25 adds a low-confidence 4.5 m terminal chord to each conch from the faceted P01 plan, with broad shape support from modern M01/M18/M19 and generalized G01. TOP now shows cut polygonal ends; oblique views still show simplified single-point conch roofs and crude connections. The roof-turret rise remains low-confidence; M21 bearing/target diagnostics are framing-sensitive, M05 has blank wall masses, M04 remains unresolved, and the M18/M21 camera aims are inferred. G01 is generalized and cannot provide architectural metrology. Keep the gate closed until joint dimensional and multi-view silhouette checks pass."
+  reason: "Iteration 26 adds continuous longitudinal hips to the three conch roofs and aligns conch eaves with adjoining gable roofs; the TOP footprint retains its low-confidence 4.5 m terminal facets. The conch body heights are still inferred and oblique silhouettes/roof intersections remain simplified against modern photos. The roof-turret rise remains low-confidence; M21 bearing/target diagnostics are framing-sensitive, M05 has blank wall masses, M04 remains unresolved, and M18/M21 camera aims are inferred. G01 is generalized and cannot provide architectural metrology. Keep the gate closed until joint dimensional and multi-view silhouette checks pass."
 auxiliary_evidence_checks:
   top_down_plan_extent:
     evidence_ids: [P01, M01, T01, T02, T03, T04]
@@ -92,3 +92,8 @@ auxiliary_evidence_checks:
     observed: "H06 adds a low-resolution historical view from the east that shows the east and north conches together with the sacristy. It helps check broad overlap and component order against the existing east historic view and modern sacristy details, but its small preview, unknown capture date and uncalibrated perspective do not validate dimensions or present-day roof form. The current VAL_E orthographic proxy remains qualitative."
     status: qualitative_partial
     geometry_change: false
+  conch_roof_ridges_and_eave_joints:
+    evidence_ids: [P08, M01, M02, M18, M19, M20, H06]
+    observed: "Iteration 26 changes the conch roofs to paired faceted slopes meeting at a centerline ridge from spring to the terminal hip chord. The side-conch eaves now meet the transverse-arm gable at z=24 m; the east-conch eaves meet the choir gable at z=23 m. East/SE source views support a continuous ridge and hipped facets, but the exact crest length and height are not metrically calibrated. Blender mesh inspection reports 11 faces per conch roof, zero boundary/non-manifold edges and zero zero-area faces after adding concealed closure faces. The updated oblique renders improve continuity but still diverge in roof proportions and crossing connections."
+    status: partial
+    geometry_change: true
