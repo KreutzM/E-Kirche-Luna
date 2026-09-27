@@ -13,15 +13,20 @@ ids = [r.get("id") for r in rows]
 if len(ids) != len(set(ids)):
     fail("duplicate IDs in data/manifest.json")
 
-required = {"id","group","title","view","role","priority","metric_use","commons_page"}
+required = {"id","group","title","view","role","priority","metric_use"}
 for i, row in enumerate(rows):
     missing = required - set(row)
     if missing:
         fail(f"manifest row {i} missing {sorted(missing)}")
     if row.get("priority") not in (1,2,3):
         fail(f'{row.get("id")}: priority must be 1..3')
-    if not str(row.get("commons_page","")).startswith("https://commons.wikimedia.org/wiki/"):
-        fail(f'{row.get("id")}: invalid Commons page')
+    page = row.get("commons_page") or row.get("source_page")
+    if not str(page or "").startswith("https://"):
+        fail(f'{row.get("id")}: an HTTPS source page is required')
+    if row.get("group") == "virtual_tour":
+        for key in ("source_page", "local_file", "provenance_record"):
+            if not row.get(key):
+                fail(f'{row.get("id")}: virtual-tour record missing {key}')
 
 dims = yaml.safe_load((ROOT/"data"/"dimensions.yaml").read_text(encoding="utf-8"))
 for name, d in dims.items():

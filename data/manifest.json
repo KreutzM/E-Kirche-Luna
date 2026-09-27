@@ -348,5 +348,53 @@
     "priority": 1,
     "metric_use": "geometry_reference_only",
     "commons_page": "https://commons.wikimedia.org/wiki/File:Marburg_asv2022-02_img14_Elisabethkirche.jpg"
+  },
+  {
+    "id": "T01",
+    "group": "virtual_tour",
+    "title": "Elisabethkirche Marburg 360° tour — Ostansicht cube face",
+    "view": "elevated oblique, tour label East",
+    "role": "east_choir_and_roof_geometry",
+    "priority": 2,
+    "metric_use": "geometry_reference_only",
+    "source_page": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/index.htm",
+    "local_file": "references/images/virtual_tour/T01_Ostansicht_front_L2.jpg",
+    "provenance_record": "sources/virtual_tour_metadata.json"
+  },
+  {
+    "id": "T02",
+    "group": "virtual_tour",
+    "title": "Elisabethkirche Marburg 360° tour — Elisabethkirche panorama",
+    "view": "elevated oblique, general tour panorama",
+    "role": "overall_exterior_roof_geometry",
+    "priority": 2,
+    "metric_use": "geometry_reference_only",
+    "source_page": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/index.htm",
+    "local_file": "references/images/virtual_tour/T02_Elisabethkirche_front_L2.jpg",
+    "provenance_record": "sources/virtual_tour_metadata.json"
+  },
+  {
+    "id": "T03",
+    "group": "virtual_tour",
+    "title": "Elisabethkirche Marburg 360° tour — Westansicht cube face",
+    "view": "elevated oblique, tour label West",
+    "role": "west_tower_and_roof_geometry",
+    "priority": 2,
+    "metric_use": "geometry_reference_only",
+    "source_page": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/index.htm",
+    "local_file": "references/images/virtual_tour/T03_Westansicht_front_L2.jpg",
+    "provenance_record": "sources/virtual_tour_metadata.json"
+  },
+  {
+    "id": "T04",
+    "group": "virtual_tour",
+    "title": "Elisabethkirche Marburg 360° tour — Südansicht cube face",
+    "view": "elevated oblique, tour label South",
+    "role": "triconch_and_south_roof_geometry",
+    "priority": 2,
+    "metric_use": "geometry_reference_only",
+    "source_page": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/index.htm",
+    "local_file": "references/images/virtual_tour/T04_Südansicht_front_L2.jpg",
+    "provenance_record": "sources/virtual_tour_metadata.json"
   }
 ]

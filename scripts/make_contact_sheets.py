@@ -9,6 +9,8 @@ OUT = ROOT/"references"/"contact_sheets"
 OUT.mkdir(parents=True, exist_ok=True)
 
 def path_for(r):
+    if r.get("local_file"):
+        return ROOT/r["local_file"]
     if r["group"] == "modern":
         base = ROOT/"references"/"images"/"modern"
     elif r["group"] == "historic_pd":
@@ -40,3 +42,4 @@ sheet("west",[r for r in MANIFEST if r["view"].startswith(("W","SW"))])
 sheet("south",[r for r in MANIFEST if r["view"].startswith(("S","SE"))])
 sheet("north",[r for r in MANIFEST if r["view"].startswith(("N","NE"))])
 sheet("plans",[r for r in MANIFEST if r["group"]=="plans"])
+sheet("virtual_tour",[r for r in MANIFEST if r["group"]=="virtual_tour"],cols=2,tile=(700,500))

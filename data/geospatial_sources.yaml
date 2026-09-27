@@ -47,8 +47,8 @@ sources:
       survey_provider: "The provider's Elisabethkirche reference describes a full 3D scan/model and a 3 mm required accuracy for restoration documentation, including plans, sections and surfaces."
     relationship_between_records: "Not confirmed; do not assume the tour and the provider's scan deliverable are the same dataset."
     raw_point_cloud_or_mesh_publicly_linked: false
-    reuse_license: "Not stated for the virtual tour or detailed survey deliverables."
-    retrieved_at: "2026-09-26"
-    use: "visual_evidence_lead_only"
-    action: "Do not download/embed or derive stored imagery from the tour until reuse terms are confirmed. Seek permission or an export from the rights holder if the project needs this higher-accuracy geometry."
-    limitations: "The tour may support visual inspection but is not a published point cloud or metrically calibrated photo set. The provider's project page documents service scope and required accuracy, not access to the underlying deliverables."
+    reuse_license: "Not stated for the virtual tour or detailed survey deliverables. User authorized local experimental use of tour imagery; review before redistribution."
+    retrieved_at: "2026-09-27"
+    use: "visual_exterior_geometry_reference_only"
+    action: "Use the four published tour panorama front faces locally for visual roof and mass checks as instructed by the user. Keep source page, panorama IDs and tile hashes in sources/virtual_tour_metadata.json; resolve reuse terms before distributing the imagery."
+    limitations: "The public tour exposes four partial-frame cube panoramas, but no world camera positions or survey export. They are not metrically calibrated photo sets. The provider's project page documents service scope and required accuracy, not access to detailed survey deliverables. The relation between the tour and the separately described 3 mm scan is unconfirmed."

@@ -1,0 +1,948 @@
+{
+  "title": "Elisabethkirche Marburg exterior virtual tour",
+  "provider": "Flying Impressions",
+  "tour_page": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/index.htm",
+  "records": [
+    {
+      "id": "T01",
+      "label": "Ostansicht",
+      "panorama_id": "BAE34FE8_B791_BE81_41E4_688035001EA3",
+      "source_page": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/index.htm",
+      "downloaded_to": "references/images/virtual_tour/T01_Ostansicht_front_L2.jpg",
+      "assembled_size_px": [
+        3072,
+        3072
+      ],
+      "projection": "single rectilinear cube face; do not treat as calibrated pinhole view",
+      "tile_level": 2,
+      "tile_count": 36,
+      "tile_records": [
+        {
+          "row": 0,
+          "column": 0,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/0_0.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 0,
+          "column": 1,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/0_1.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 0,
+          "column": 2,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/0_2.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 0,
+          "column": 3,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/0_3.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 0,
+          "column": 4,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/0_4.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 0,
+          "column": 5,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/0_5.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 1,
+          "column": 0,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/1_0.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 1,
+          "column": 1,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/1_1.jpg?v=1651494864515",
+          "sha256": "e835207055720b6406dfed7043ba32461a9c55901420798213fbaaba7fc1d674"
+        },
+        {
+          "row": 1,
+          "column": 2,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/1_2.jpg?v=1651494864515",
+          "sha256": "73d17029cfb0f532cacaf0e58b51f13111bd4e766d69d2ff5110878ee0f66104"
+        },
+        {
+          "row": 1,
+          "column": 3,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/1_3.jpg?v=1651494864515",
+          "sha256": "f8a03e465e6c3d4cdbe32905935f027b46efc104e72cc53fb9fb7faed509b1e2"
+        },
+        {
+          "row": 1,
+          "column": 4,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/1_4.jpg?v=1651494864515",
+          "sha256": "07e9155b8a8ef9048fa188d0f6aba456e9a7d6d7083aa74bdc7110ddc788ff01"
+        },
+        {
+          "row": 1,
+          "column": 5,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/1_5.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 2,
+          "column": 0,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/2_0.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 2,
+          "column": 1,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/2_1.jpg?v=1651494864515",
+          "sha256": "9f8c694b4fed26fed398d8c4d9231083543e3082a4dd609a8bd4d7a13b8d66de"
+        },
+        {
+          "row": 2,
+          "column": 2,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/2_2.jpg?v=1651494864515",
+          "sha256": "331cf3490ef82a5aba5e2e19f642234a4ab18f601a4c70f0ac76c384c040fac0"
+        },
+        {
+          "row": 2,
+          "column": 3,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/2_3.jpg?v=1651494864515",
+          "sha256": "934801b5f0f8bf21489ea11913c977629359b7a132836d73848d67e1834a7a7e"
+        },
+        {
+          "row": 2,
+          "column": 4,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/2_4.jpg?v=1651494864515",
+          "sha256": "3f8309fccafebbac86083ec0155c09463af858ae3fe949517680e236eec5d497"
+        },
+        {
+          "row": 2,
+          "column": 5,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/2_5.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 3,
+          "column": 0,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/3_0.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 3,
+          "column": 1,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/3_1.jpg?v=1651494864515",
+          "sha256": "63e1cbb69d9b368d3333293aa4ee178d33c718d7e02ce3c15213de7c25f2f580"
+        },
+        {
+          "row": 3,
+          "column": 2,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/3_2.jpg?v=1651494864515",
+          "sha256": "43da87c0a3c07466b096c3d46f69bfbe4ea15512138faf47c260b70b49448726"
+        },
+        {
+          "row": 3,
+          "column": 3,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/3_3.jpg?v=1651494864515",
+          "sha256": "cc7e4e15a668330f49008b97beb3deadb43390da01d226d7ad19528a8ce1f357"
+        },
+        {
+          "row": 3,
+          "column": 4,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/3_4.jpg?v=1651494864515",
+          "sha256": "5a54a745350b76913a2f213eba5d012faae4bffb89a87f4508edf84cb78301cb"
+        },
+        {
+          "row": 3,
+          "column": 5,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/3_5.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 4,
+          "column": 0,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/4_0.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 4,
+          "column": 1,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/4_1.jpg?v=1651494864515",
+          "sha256": "e10f4a6b90149fdb198366056731df1f0925c4f3a9d979c1f9adce40e587eb2a"
+        },
+        {
+          "row": 4,
+          "column": 2,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/4_2.jpg?v=1651494864515",
+          "sha256": "f3ea4b8acfd5a91870d1a9aee91ef5a0dd4402fed63d767f82937790e47e9975"
+        },
+        {
+          "row": 4,
+          "column": 3,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/4_3.jpg?v=1651494864515",
+          "sha256": "8e27d91f631ecc345ab965eafc8c94be6ecd6ddb0882cfe07d63a8b2a3bcd09f"
+        },
+        {
+          "row": 4,
+          "column": 4,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/4_4.jpg?v=1651494864515",
+          "sha256": "883fee9ba2b1445c4a1abf8627b406863fd889d07718da95e6d042d5c35f2a46"
+        },
+        {
+          "row": 4,
+          "column": 5,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/4_5.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 5,
+          "column": 0,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/5_0.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 5,
+          "column": 1,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/5_1.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 5,
+          "column": 2,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/5_2.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 5,
+          "column": 3,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/5_3.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 5,
+          "column": 4,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/5_4.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 5,
+          "column": 5,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE34FE8_B791_BE81_41E4_688035001EA3_0/f/2/5_5.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        }
+      ],
+      "reuse_license": "not stated on tour; local experimental use authorized by user; review before redistribution",
+      "retrieved_at": "2026-09-27"
+    },
+    {
+      "id": "T02",
+      "label": "Elisabethkirche",
+      "panorama_id": "BAE03A6E_B792_4181_41E0_B932DE3ADD2B",
+      "source_page": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/index.htm",
+      "downloaded_to": "references/images/virtual_tour/T02_Elisabethkirche_front_L2.jpg",
+      "assembled_size_px": [
+        3072,
+        3072
+      ],
+      "projection": "single rectilinear cube face; do not treat as calibrated pinhole view",
+      "tile_level": 2,
+      "tile_count": 36,
+      "tile_records": [
+        {
+          "row": 0,
+          "column": 0,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/0_0.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 0,
+          "column": 1,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/0_1.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 0,
+          "column": 2,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/0_2.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 0,
+          "column": 3,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/0_3.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 0,
+          "column": 4,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/0_4.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 0,
+          "column": 5,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/0_5.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 1,
+          "column": 0,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/1_0.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 1,
+          "column": 1,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/1_1.jpg?v=1651494864515",
+          "sha256": "567544f0ca77103f0477cd97ff5a61aafe3ea878b5a4cff6130c3cc60e533735"
+        },
+        {
+          "row": 1,
+          "column": 2,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/1_2.jpg?v=1651494864515",
+          "sha256": "f4b9171e951d7b4e3d4360efd6170b3a382b0e76bb9af09c419cd536eecb4edf"
+        },
+        {
+          "row": 1,
+          "column": 3,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/1_3.jpg?v=1651494864515",
+          "sha256": "7a90fa9d936fcb8ad5c59c4ef669cb37b1a9b302df9c1143522a0ec7c40c76fe"
+        },
+        {
+          "row": 1,
+          "column": 4,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/1_4.jpg?v=1651494864515",
+          "sha256": "7d1589280f4c76f197320e51fd5e52c336e50f598304d97e884b5866208e2eaf"
+        },
+        {
+          "row": 1,
+          "column": 5,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/1_5.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 2,
+          "column": 0,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/2_0.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 2,
+          "column": 1,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/2_1.jpg?v=1651494864515",
+          "sha256": "bb0bb397064f3124e09aa802b99a69bc840796696fd08401a2e4bcb51d74ae9f"
+        },
+        {
+          "row": 2,
+          "column": 2,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/2_2.jpg?v=1651494864515",
+          "sha256": "f574bc233ed3869d3498817d928114e400c0668b12ff1f6739041e9c2dcd5546"
+        },
+        {
+          "row": 2,
+          "column": 3,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/2_3.jpg?v=1651494864515",
+          "sha256": "648b800d0fcd1b9739cb901188a5f0cae90e8e6ec9db33048eedbe70503736a6"
+        },
+        {
+          "row": 2,
+          "column": 4,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/2_4.jpg?v=1651494864515",
+          "sha256": "01384c08ddccbe2d6954882a83158e64e0e8cc236b6f1d4623f7f0dd16ffe768"
+        },
+        {
+          "row": 2,
+          "column": 5,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/2_5.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 3,
+          "column": 0,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/3_0.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 3,
+          "column": 1,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/3_1.jpg?v=1651494864515",
+          "sha256": "772fb7ab3a53b62b10b6f35e7342e2e87dbe5c67a1342b0d9562c7975fd116b2"
+        },
+        {
+          "row": 3,
+          "column": 2,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/3_2.jpg?v=1651494864515",
+          "sha256": "a2bddad23a36532adc2453ddb03d1fc061d13701ce8ea43a7090e679b5b16693"
+        },
+        {
+          "row": 3,
+          "column": 3,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/3_3.jpg?v=1651494864515",
+          "sha256": "b3f712a57eb9bb3d0e59381883e51b44621cb1fecd7a96bcdd350bb5b4e29d1f"
+        },
+        {
+          "row": 3,
+          "column": 4,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/3_4.jpg?v=1651494864515",
+          "sha256": "f636666dd6fa7d93af18e1a9c7d1ba6d215e58a17390d0c4ad71679c8c15d01c"
+        },
+        {
+          "row": 3,
+          "column": 5,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/3_5.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 4,
+          "column": 0,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/4_0.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 4,
+          "column": 1,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/4_1.jpg?v=1651494864515",
+          "sha256": "50c7227e87eef82d0b2161fcf011da849a9f3ce80f0103dac2a566ca5cd2e995"
+        },
+        {
+          "row": 4,
+          "column": 2,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/4_2.jpg?v=1651494864515",
+          "sha256": "8e04d823e8f9f5fa3d3413fb6d8e74a536159835b85f76d876b320c724f0c383"
+        },
+        {
+          "row": 4,
+          "column": 3,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/4_3.jpg?v=1651494864515",
+          "sha256": "b5ce8db2fc43832a345ea73eb0253c2339a1be846af162b8b342eebd11175ae3"
+        },
+        {
+          "row": 4,
+          "column": 4,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/4_4.jpg?v=1651494864515",
+          "sha256": "5cc2580d07b5aa3928f19fd189d80103c4c6e6ab2fc3413b0f7945f9caf8a7b7"
+        },
+        {
+          "row": 4,
+          "column": 5,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/4_5.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 5,
+          "column": 0,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/5_0.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 5,
+          "column": 1,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/5_1.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 5,
+          "column": 2,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/5_2.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 5,
+          "column": 3,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/5_3.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 5,
+          "column": 4,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/5_4.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 5,
+          "column": 5,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BAE03A6E_B792_4181_41E0_B932DE3ADD2B_0/f/2/5_5.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        }
+      ],
+      "reuse_license": "not stated on tour; local experimental use authorized by user; review before redistribution",
+      "retrieved_at": "2026-09-27"
+    },
+    {
+      "id": "T03",
+      "label": "Westansicht",
+      "panorama_id": "BA7C5427_B791_C18F_41DA_F175C86BB5F5",
+      "source_page": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/index.htm",
+      "downloaded_to": "references/images/virtual_tour/T03_Westansicht_front_L2.jpg",
+      "assembled_size_px": [
+        3072,
+        3072
+      ],
+      "projection": "single rectilinear cube face; do not treat as calibrated pinhole view",
+      "tile_level": 2,
+      "tile_count": 36,
+      "tile_records": [
+        {
+          "row": 0,
+          "column": 0,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/0_0.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 0,
+          "column": 1,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/0_1.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 0,
+          "column": 2,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/0_2.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 0,
+          "column": 3,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/0_3.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 0,
+          "column": 4,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/0_4.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 0,
+          "column": 5,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/0_5.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 1,
+          "column": 0,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/1_0.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 1,
+          "column": 1,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/1_1.jpg?v=1651494864515",
+          "sha256": "e212a5d57c3b04af41f84a3a838ef2adb27d50e98fe9aa3171113bedf274e608"
+        },
+        {
+          "row": 1,
+          "column": 2,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/1_2.jpg?v=1651494864515",
+          "sha256": "1797fbd533673a057937c27b8573418ee9d030d0d28694e47e15586e9526c637"
+        },
+        {
+          "row": 1,
+          "column": 3,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/1_3.jpg?v=1651494864515",
+          "sha256": "7b1e685a819b24e00c5b5dfa64b33c72e26b8feb6b05ac9ff4820402b147eb15"
+        },
+        {
+          "row": 1,
+          "column": 4,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/1_4.jpg?v=1651494864515",
+          "sha256": "f70e9a354eec73cd7110ff72ee29bfed4330b66c9c47290849326c1a31aa8c6a"
+        },
+        {
+          "row": 1,
+          "column": 5,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/1_5.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 2,
+          "column": 0,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/2_0.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 2,
+          "column": 1,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/2_1.jpg?v=1651494864515",
+          "sha256": "87d65c69a228f08a14af80a94c159bf6ae38578bb741bca3270e49bc61896b32"
+        },
+        {
+          "row": 2,
+          "column": 2,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/2_2.jpg?v=1651494864515",
+          "sha256": "c1a283e5afe2ce215d65be65a1a19abcc2b88835457ee79936a4e410cadabb15"
+        },
+        {
+          "row": 2,
+          "column": 3,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/2_3.jpg?v=1651494864515",
+          "sha256": "29a2945a3555eb664ebee7e98422e5ba6bbbe9ecfaea38698e282689551d00a3"
+        },
+        {
+          "row": 2,
+          "column": 4,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/2_4.jpg?v=1651494864515",
+          "sha256": "a6b4b7b22aab42f18f08201aec959b98ebdb804527d0fc94b892eb11767ee7b0"
+        },
+        {
+          "row": 2,
+          "column": 5,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/2_5.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 3,
+          "column": 0,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/3_0.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 3,
+          "column": 1,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/3_1.jpg?v=1651494864515",
+          "sha256": "e1bb8fd5aa4e88af304edd1053a55d081663a9aec1d614c1c67fcdf71fad3dde"
+        },
+        {
+          "row": 3,
+          "column": 2,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/3_2.jpg?v=1651494864515",
+          "sha256": "23fa67f24065cd2870dc1c76cb68b30f14dddc01d2748e19d442ba23d304d620"
+        },
+        {
+          "row": 3,
+          "column": 3,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/3_3.jpg?v=1651494864515",
+          "sha256": "8bf2f07e0daa4a7e07abb3b72db1f27b171220aa1d83b46f544af9e5963ab636"
+        },
+        {
+          "row": 3,
+          "column": 4,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/3_4.jpg?v=1651494864515",
+          "sha256": "27d0bd63cbbb4ea32d47965fe9cafc2302a6a0541dd615a8c80dd454020b19f5"
+        },
+        {
+          "row": 3,
+          "column": 5,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/3_5.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 4,
+          "column": 0,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/4_0.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 4,
+          "column": 1,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/4_1.jpg?v=1651494864515",
+          "sha256": "7b8183fc66df68070c0a28ee49110d99785b6df540f3b83891e65c34f92a3588"
+        },
+        {
+          "row": 4,
+          "column": 2,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/4_2.jpg?v=1651494864515",
+          "sha256": "9e7585df602502f29a24113cb3ba3df70645580dec5ca919e96ef5ffb02bbc80"
+        },
+        {
+          "row": 4,
+          "column": 3,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/4_3.jpg?v=1651494864515",
+          "sha256": "da765c490416811278afc27d0305b7382e073dfa4e514a04f88cf705039f070f"
+        },
+        {
+          "row": 4,
+          "column": 4,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/4_4.jpg?v=1651494864515",
+          "sha256": "2a6fcb31c3ec5c9a06985180cd942e5a75500bc612bd95b47c6c7168b3b7e0f7"
+        },
+        {
+          "row": 4,
+          "column": 5,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/4_5.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 5,
+          "column": 0,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/5_0.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 5,
+          "column": 1,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/5_1.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 5,
+          "column": 2,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/5_2.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 5,
+          "column": 3,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/5_3.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 5,
+          "column": 4,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/5_4.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        },
+        {
+          "row": 5,
+          "column": 5,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA7C5427_B791_C18F_41DA_F175C86BB5F5_0/f/2/5_5.jpg?v=1651494864515",
+          "sha256": "360fb66a0a4ba52853a014496d291e2211e897ff25945e3a87503adbcf6b1b8c"
+        }
+      ],
+      "reuse_license": "not stated on tour; local experimental use authorized by user; review before redistribution",
+      "retrieved_at": "2026-09-27"
+    },
+    {
+      "id": "T04",
+      "label": "Südansicht",
+      "panorama_id": "BA20E0CB_B796_4287_41C5_D3D8107D8158",
+      "source_page": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/index.htm",
+      "downloaded_to": "references/images/virtual_tour/T04_Südansicht_front_L2.jpg",
+      "assembled_size_px": [
+        3072,
+        3072
+      ],
+      "projection": "single rectilinear cube face; do not treat as calibrated pinhole view",
+      "tile_level": 2,
+      "tile_count": 36,
+      "tile_records": [
+        {
+          "row": 0,
+          "column": 0,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/0_0.jpg?v=1651494864515",
+          "sha256": "6722d8317889deb25aeed9654909edec0ab3366de501045564abcdd7597a679a"
+        },
+        {
+          "row": 0,
+          "column": 1,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/0_1.jpg?v=1651494864515",
+          "sha256": "6722d8317889deb25aeed9654909edec0ab3366de501045564abcdd7597a679a"
+        },
+        {
+          "row": 0,
+          "column": 2,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/0_2.jpg?v=1651494864515",
+          "sha256": "6722d8317889deb25aeed9654909edec0ab3366de501045564abcdd7597a679a"
+        },
+        {
+          "row": 0,
+          "column": 3,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/0_3.jpg?v=1651494864515",
+          "sha256": "6722d8317889deb25aeed9654909edec0ab3366de501045564abcdd7597a679a"
+        },
+        {
+          "row": 0,
+          "column": 4,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/0_4.jpg?v=1651494864515",
+          "sha256": "6722d8317889deb25aeed9654909edec0ab3366de501045564abcdd7597a679a"
+        },
+        {
+          "row": 0,
+          "column": 5,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/0_5.jpg?v=1651494864515",
+          "sha256": "6722d8317889deb25aeed9654909edec0ab3366de501045564abcdd7597a679a"
+        },
+        {
+          "row": 1,
+          "column": 0,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/1_0.jpg?v=1651494864515",
+          "sha256": "6722d8317889deb25aeed9654909edec0ab3366de501045564abcdd7597a679a"
+        },
+        {
+          "row": 1,
+          "column": 1,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/1_1.jpg?v=1651494864515",
+          "sha256": "744db41f52b56df92649a30d673a14fd3c290c44b74673c6b8584fcfa04b2bd3"
+        },
+        {
+          "row": 1,
+          "column": 2,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/1_2.jpg?v=1651494864515",
+          "sha256": "e81c38cee4cdc93406c3f2147e03b2657038d84fa2287fd5a8043f196c87f98f"
+        },
+        {
+          "row": 1,
+          "column": 3,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/1_3.jpg?v=1651494864515",
+          "sha256": "b767598ca76db523a51a7106dc2fac315d25e839afec60dd02312874bc78f227"
+        },
+        {
+          "row": 1,
+          "column": 4,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/1_4.jpg?v=1651494864515",
+          "sha256": "4b93109145ea4ddede3182c13c5752886881d8b9ef9e32a37b6493ada2a33fba"
+        },
+        {
+          "row": 1,
+          "column": 5,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/1_5.jpg?v=1651494864515",
+          "sha256": "6722d8317889deb25aeed9654909edec0ab3366de501045564abcdd7597a679a"
+        },
+        {
+          "row": 2,
+          "column": 0,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/2_0.jpg?v=1651494864515",
+          "sha256": "6722d8317889deb25aeed9654909edec0ab3366de501045564abcdd7597a679a"
+        },
+        {
+          "row": 2,
+          "column": 1,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/2_1.jpg?v=1651494864515",
+          "sha256": "2961942edb75d01b1e8b876bec2ed87e381e0a1f0c969758d2a6b246a370b8a4"
+        },
+        {
+          "row": 2,
+          "column": 2,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/2_2.jpg?v=1651494864515",
+          "sha256": "6b5907dc86f9d2d3b75cdeb1c80bd5a973fbd63d8848a8fb10327276638841b2"
+        },
+        {
+          "row": 2,
+          "column": 3,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/2_3.jpg?v=1651494864515",
+          "sha256": "b120011f291f737a341c1e13db06b7696cad37be220ffde30a460d3449b53bb4"
+        },
+        {
+          "row": 2,
+          "column": 4,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/2_4.jpg?v=1651494864515",
+          "sha256": "c8d0854398d6d5ab9953f866a66ae3691c00579a184b220239d06c0329085e72"
+        },
+        {
+          "row": 2,
+          "column": 5,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/2_5.jpg?v=1651494864515",
+          "sha256": "6722d8317889deb25aeed9654909edec0ab3366de501045564abcdd7597a679a"
+        },
+        {
+          "row": 3,
+          "column": 0,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/3_0.jpg?v=1651494864515",
+          "sha256": "6722d8317889deb25aeed9654909edec0ab3366de501045564abcdd7597a679a"
+        },
+        {
+          "row": 3,
+          "column": 1,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/3_1.jpg?v=1651494864515",
+          "sha256": "92442299e9561ee7c976973b2302669b056ff0804728152556262cc5e91868d4"
+        },
+        {
+          "row": 3,
+          "column": 2,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/3_2.jpg?v=1651494864515",
+          "sha256": "555a128cf27ec046f4ed433eaa974f7bc21a5e62301c5fcaf1519416b16c94b9"
+        },
+        {
+          "row": 3,
+          "column": 3,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/3_3.jpg?v=1651494864515",
+          "sha256": "3a9806685bbe3b80e13a3fc1966717ef82c185aa42afdf0500f224dceb8695d5"
+        },
+        {
+          "row": 3,
+          "column": 4,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/3_4.jpg?v=1651494864515",
+          "sha256": "486ce34486177eaff7611f79e0f669c1dd7478a84d56e33700b955f780e49f49"
+        },
+        {
+          "row": 3,
+          "column": 5,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/3_5.jpg?v=1651494864515",
+          "sha256": "6722d8317889deb25aeed9654909edec0ab3366de501045564abcdd7597a679a"
+        },
+        {
+          "row": 4,
+          "column": 0,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/4_0.jpg?v=1651494864515",
+          "sha256": "6722d8317889deb25aeed9654909edec0ab3366de501045564abcdd7597a679a"
+        },
+        {
+          "row": 4,
+          "column": 1,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/4_1.jpg?v=1651494864515",
+          "sha256": "fe70694a98d9251fe945c251227ef7e2f2b1c1882f6eb88a1b25906eac9837f5"
+        },
+        {
+          "row": 4,
+          "column": 2,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/4_2.jpg?v=1651494864515",
+          "sha256": "723053e050b69f183cbe5371e5c0c1941eec1f2d51d7206da935341c1647b2d6"
+        },
+        {
+          "row": 4,
+          "column": 3,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/4_3.jpg?v=1651494864515",
+          "sha256": "259d74dce1789e52e0980774e136df5856ddb33c876e151c34ba7269c3d60dd3"
+        },
+        {
+          "row": 4,
+          "column": 4,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/4_4.jpg?v=1651494864515",
+          "sha256": "720b04726c28627639b8a192415188ab47ed543cd310a6f091ad90480f4c4032"
+        },
+        {
+          "row": 4,
+          "column": 5,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/4_5.jpg?v=1651494864515",
+          "sha256": "6722d8317889deb25aeed9654909edec0ab3366de501045564abcdd7597a679a"
+        },
+        {
+          "row": 5,
+          "column": 0,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/5_0.jpg?v=1651494864515",
+          "sha256": "6722d8317889deb25aeed9654909edec0ab3366de501045564abcdd7597a679a"
+        },
+        {
+          "row": 5,
+          "column": 1,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/5_1.jpg?v=1651494864515",
+          "sha256": "6722d8317889deb25aeed9654909edec0ab3366de501045564abcdd7597a679a"
+        },
+        {
+          "row": 5,
+          "column": 2,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/5_2.jpg?v=1651494864515",
+          "sha256": "6722d8317889deb25aeed9654909edec0ab3366de501045564abcdd7597a679a"
+        },
+        {
+          "row": 5,
+          "column": 3,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/5_3.jpg?v=1651494864515",
+          "sha256": "6722d8317889deb25aeed9654909edec0ab3366de501045564abcdd7597a679a"
+        },
+        {
+          "row": 5,
+          "column": 4,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/5_4.jpg?v=1651494864515",
+          "sha256": "6722d8317889deb25aeed9654909edec0ab3366de501045564abcdd7597a679a"
+        },
+        {
+          "row": 5,
+          "column": 5,
+          "url": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/media/panorama_BA20E0CB_B796_4287_41C5_D3D8107D8158_0/f/2/5_5.jpg?v=1651494864515",
+          "sha256": "6722d8317889deb25aeed9654909edec0ab3366de501045564abcdd7597a679a"
+        }
+      ],
+      "reuse_license": "not stated on tour; local experimental use authorized by user; review before redistribution",
+      "retrieved_at": "2026-09-27"
+    }
+  ],
+  "limitations": [
+    "The tour labels four panoramas, but does not publish world camera positions or a survey export.",
+    "Only the front cube face at level 2 is assembled; each source is partial-frame imagery.",
+    "Use for visual exterior geometry checks only; no metric camera solve or dimensions are derived."
+  ]
+}

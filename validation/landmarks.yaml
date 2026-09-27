@@ -71,3 +71,14 @@ views:
 acceptance:
   massing_gate_passed: false
   reason: "Iteration 18 raises the inferred roof-turret rise to 20 m after fixed-camera diagnostics in M02 and M18/M21 improved that landmark; the rise remains low-confidence, and the M18/M21 images share one camera location. M21 bearing/target diagnostics show strong framing sensitivity and do not establish a unique camera fit. The broad silhouettes still fail: conch and roof connections are simplified, M05 has blank wall masses, M04 remains unresolved, and the M18/M21 camera aims are inferred. The footprint cross-check against G01 is only generalized. Keep the gate closed until dimensional and multi-view silhouette checks pass."
+auxiliary_evidence_checks:
+  top_down_plan_extent:
+    evidence_ids: [P01, M01, T01, T02, T03, T04]
+    observed: "Iteration 24 reframes VAL_TOP around x=-15 m and widens it to 100 m; the complete current model extent is now visible. The render reads as the expected west-tower pair, long hall, crossing/transept arms and eastern choir/conch sequence. P01 supplies plan topology and proportions, while the elevated tour views give oblique roof context. The views do not establish a metric scale match or resolve conch facet dimensions."
+    status: qualitative_partial
+    geometry_change: false
+  tour_overall_roof_order:
+    evidence_ids: [T01, T02, T03, T04]
+    observed: "The four elevated tour cube faces show the paired west towers, long hall roof, transept/choir roofs and east end together from broad oblique viewpoints. This independently confirms that the tour is useful for checking overall component ordering and the east-choir roof footprint. Because the panorama stations and image pose are unpublished, apparent scales cannot identify a metric geometry residual."
+    status: qualitative_only
+    geometry_change: false

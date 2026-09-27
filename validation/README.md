@@ -50,3 +50,5 @@ metrics or calibrated camera solutions. Cyan model-envelope outlines use zero-al
 so aspect-ratio padding is not mistaken for a silhouette edge.
 
 Do not create visually convenient cameras and then claim agreement. Camera changes should be motivated by image evidence or documented calibration assumptions.
+
+The official exterior tour exposes four named panoramas. `scripts/download_virtual_tour_faces.py` reconstructs each front cube face at 3072 × 3072 from its tiled source and records tile URLs/hashes in `sources/virtual_tour_metadata.json`; the assembled images are cached locally under the ignored `references/images/virtual_tour/` path. Their camera positions are not published. Use T01–T04 only to compare broad exterior/roof geometry, never as metric images or solved cameras. The tour reuse licence is not stated; local experimental use is user-authorized and redistribution still requires a licence review.

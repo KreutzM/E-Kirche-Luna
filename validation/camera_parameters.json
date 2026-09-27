@@ -211,16 +211,16 @@
     "TOP": {
       "projection": "ORTHO",
       "location": [
-        -8.0,
+        -15.0,
         0.0,
         150.0
       ],
       "target": [
-        -8.0,
+        -15.0,
         0.0,
         20.0
       ],
-      "ortho_scale": 82.0,
+      "ortho_scale": 100.0,
       "resolution": [
         1600,
         1600
@@ -229,7 +229,7 @@
         "M01",
         "P01"
       ],
-      "calibration": "Top-down plan check; M01 is an oblique aerial and is used for roof geometry only, not as a camera solve."
+      "calibration": "Top-down plan check recentered on the midpoint of the inferred -50.0 m west and +20.4 m east extents; 100 m scale frames the full rotated footprint with margin. The earlier -8 m/82 m framing clipped the west towers, so it was inadequate for plan validation. M01 remains oblique and is not a camera solve."
     },
     "M18": {
       "projection": "PERSP",

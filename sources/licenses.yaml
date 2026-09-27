@@ -1,8 +1,9 @@
 policy:
-  - "Only free/open or public-domain assets may be downloaded into this project."
+  - "Only free/open or public-domain assets may be downloaded into this project unless an explicit project authorization exception is recorded."
   - "The downloader queries Wikimedia Commons metadata at download time."
   - "Unexpected or missing licence metadata causes a skip/error."
   - "Keep commons_download_metadata.jsonl with redistributed reference sets."
+  - "User-authorized experiment exception: virtual-tour panorama tiles may be cached locally for visual geometry checks while licence review is deferred; do not redistribute them until reuse terms are resolved."
 
 accepted_families:
   - CC0

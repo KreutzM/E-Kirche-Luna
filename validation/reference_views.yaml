@@ -44,9 +44,15 @@ views:
     camera: VAL_TOP
     evidence: [M01, P01]
     status: orthographic_plan_check
-    note: "Top-down footprint/roof check; M01 is oblique and is not treated as a pinhole camera solve."
+    note: "Top-down footprint/roof check is recentered at the midpoint of the inferred west/east extents and widened to 100 m because the previous 82 m frame clipped the west tower edge. M01 is oblique and is not treated as a pinhole camera solve. T01-T04 provide extra elevated visual roof context but have no solved camera poses."
   SW:
     camera: null
     evidence: [M08, M09, M22]
     status: geometry_reference_only
     note: "M08 is explicitly marked do_not_camera_solve; M09 is a steep tower detail; M22 adds an elevated southwest skyline view for tower and overall mass silhouette only. Its 86 mm focal length and camera coordinates are recorded, but no heading or local camera height is provided, so it is not used for a camera solve."
+auxiliary_panorama_sources:
+  T01-T04:
+    source: "Official Flying Impressions exterior tour; four named aerial/raised cube panoramas."
+    camera: null
+    status: qualitative_geometry_reference_only
+    note: "Front cube faces assembled locally at 3072x3072. World camera positions are not published; use for overall roof/choir ordering only, not metric comparison. Tile provenance and hashes are in sources/virtual_tour_metadata.json."
