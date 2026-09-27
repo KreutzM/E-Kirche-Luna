@@ -53,11 +53,24 @@ Do not begin decorative modeling until massing passes dimensional and silhouette
 Use: MASSING, TOWERS, ROOFS, BUTTRESSES, OPENINGS, TRACERY, DETAIL, CAMERAS, REFERENCE.
 
 ## Validation
-After a material geometry change:
-1. run `python scripts/validate_dataset.py`;
-2. generate/update relevant validation renders;
-3. compare silhouette, vanishing structure and architectural landmarks;
-4. record unresolved discrepancies;
-5. update assumptions if new inferred dimensions were introduced.
+Dataset consistency and model/photo validation are separate.
 
-Do not hide a discrepancy by changing a validation camera without documenting why.
+Before using a photographic mismatch to change massing:
+1. read `docs/camera_calibration.md`;
+2. annotate distributed 2D<->3D landmarks in `validation/camera_landmarks.yaml`;
+3. run `make camera-fit VIEW=<ID>`;
+4. require an accepted numerical fit and inspect per-landmark reprojection residuals;
+5. only then classify persistent residuals as possible geometry errors.
+
+Manual heading / target-height grids are diagnostic initialization tools only. Do not keep expanding them as the primary calibration method. A visually improved overlay is not a solved camera.
+
+After a material geometry change:
+1. update affected 3D landmark coordinates;
+2. refit all affected evidence cameras;
+3. run `python scripts/validate_dataset.py` and `python scripts/validate_model.py`;
+4. generate/update relevant validation renders;
+5. compare silhouette, vanishing structure and architectural landmarks;
+6. record unresolved discrepancies;
+7. update assumptions if new inferred dimensions were introduced.
+
+Do not hide a discrepancy by changing a validation camera without documenting why. Do not pass the massing gate from a green dataset validator alone.
