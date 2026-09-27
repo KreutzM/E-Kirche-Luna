@@ -438,5 +438,35 @@
     "source_page": "https://www.lagis-hessen.de/de/subjects/lookup/sn/cvmahessen/id/321-1",
     "local_file": "references/images/historic/H06_LAGIS_Ost_und_Nordkonche_Sakristei.jpg",
     "provenance_record": "sources/lagis_reference_metadata.yaml"
+  },
+  {
+    "id": "M26",
+    "group": "modern",
+    "title": "Elisabeth-Kirche-Marburg.jpg",
+    "view": "WSW broad exterior",
+    "role": "sfm_bridge_west_to_south",
+    "priority": 1,
+    "metric_use": "sfm_bridge_candidate",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Elisabeth-Kirche-Marburg.jpg"
+  },
+  {
+    "id": "M27",
+    "group": "modern",
+    "title": "Elisabethkirche (Marburg) 01.jpg",
+    "view": "NW oblique exterior",
+    "role": "sfm_bridge_west_to_north",
+    "priority": 1,
+    "metric_use": "sfm_bridge_candidate",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Elisabethkirche_(Marburg)_01.jpg"
+  },
+  {
+    "id": "M28",
+    "group": "modern",
+    "title": "Marburg Stadtansicht Elisabethkirche und Bahnhof von S.jpg",
+    "view": "S broad exterior",
+    "role": "sfm_bridge_west_to_southeast",
+    "priority": 1,
+    "metric_use": "sfm_bridge_candidate",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Marburg_Stadtansicht_Elisabethkirche_und_Bahnhof_von_S.jpg"
   }
 ]
