@@ -177,8 +177,8 @@ nave_east = -I["exterior_crossing_width"] / 2
 gable_x("ROOF_MainHall", nave_west, nave_east,
         I["exterior_hall_width"] / 2 + I["roof_overhang"],
         I["main_wall_top_height"], I["main_roof_ridge_height"])
-gable_y("ROOF_TranseptCross", -I["side_arm_straight_length"] - I["exterior_crossing_width"] / 2,
-        I["side_arm_straight_length"] + I["exterior_crossing_width"] / 2,
+gable_y("ROOF_TranseptCross", -I["exterior_crossing_width"] / 2,
+        I["exterior_crossing_width"] / 2,
         I["transept_body_depth"] / 2 + I["roof_overhang"],
         I["main_wall_top_height"], I["main_roof_ridge_height"] - I["transept_ridge_reduction"])
 

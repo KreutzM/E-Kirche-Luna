@@ -8,16 +8,16 @@ Die festgelegte Orientierung bleibt unverändert: Meter, X nach Osten, Y nach No
 
 ## Ausgangslage
 
-- Repository auf `main`, aktueller Stand `75797e1` (27.09.2026).
-- `python scripts/validate_dataset.py` besteht mit 35 Referenzeinträgen, 6 dokumentierten Maßen und 41 protokollierten Geometrieannahmen.
-- Das Manifest führt 22 moderne Fotos, 5 historische Fotos und 8 historische Pläne/Ansichten. M22 ergänzt eine moderne erhöhte Südwestansicht vom Marburger Schlossberg; Bilddateien und Kontaktbögen bleiben gemäß Repository-Regeln lokal und Bildbinärdateien unveröffentlicht.
+- Repository auf `main`, letzter Commit `27784d0` (27.09.2026); Iteration 28 ist gerendert und visuell geprüft, der Commit folgt nach der Abschlusskontrolle.
+- `python scripts/validate_dataset.py` besteht mit 40 Referenzeinträgen, 6 dokumentierten Maßen und 43 protokollierten Geometrieannahmen.
+- Das Manifest führt 22 moderne Fotos, 6 historische Fotos, 8 historische Pläne/Ansichten und 4 virtuelle Touransichten. Der Nutzer hat lokale experimentelle Nutzung gefundener Aufnahmen freigegeben; Lizenzprüfung vor einer Weitergabe bleibt vorgesehen.
 - `data/assumptions.yaml` enthält die Außenmaß-Inferenzen samt Gründen, Konfidenzen, Evidenz-IDs und Iterationen.
 - Die Blender-Szene, parametrischen Hauptmassen, Türme, Dächer, Evidenzkameras, Landmarken und Prüfrenders sind angelegt. Der Szenenaufbau ist reproduzierbar; die Massing-Silhouette besteht die Evidenzprüfung jedoch noch nicht.
 - Die sechs dokumentierten Maße umfassen auch Innenmaße und dürfen nicht als Außenabmessungen übernommen werden.
 
 ## Umsetzungsstand
 
-Seit diesem Plan wurden alle 35 Referenzen mit Provenienz gesichert. Der Validator besteht aktuell mit 41 protokollierten Geometrieannahmen. Die parametrische Blender-Szene, Hauptmassen, zwei Westtürme, Dachmassen, Evidenzkameras und Haupt-Prüfansichten sind angelegt. Die Arbeitspakete Referenzen, Evidenz und Grundszene sind abgeschlossen.
+Seit der ersten Planfassung wurden 40 Referenzen mit Provenienz erfasst. Der Validator besteht aktuell mit 43 protokollierten Geometrieannahmen. Die parametrische Blender-Szene, Hauptmassen, zwei Westtürme, Dachmassen, Evidenzkameras und Haupt-Prüfansichten sind angelegt. Die Arbeitspakete Referenzen, Evidenz und Grundszene sind abgeschlossen; das Massing-Prüftor bleibt offen.
 
 Iteration 4 richtet die planbasierten Massen mit 7,13° zur geografischen Ostachse aus; der Vierungsursprung und die Weltachsen X=Ost, Y=Nord, Z=Oben bleiben unverändert. Iteration 5 vergrößert die inferierte Außenlänge und Querhausspanne anhand der minimalen OSM-Umrisshülle auf 70,4 × 44,6 m. Iteration 6 kalibriert die horizontale Sensorbreite von M02 anhand seines 3696×3053-Crops auf 28,3 mm äquivalent und verschiebt den dokumentierten Zielpunkt auf [-15, 0, 29] m. Iteration 7 verwendet M05 als separate Südsicht mit dessen GPS, 30-mm-Äquivalentbrennweite und Portraitformat; nur der Blickzielpunkt ist inferiert. Ein Test mit 32 m Konchendachhöhe wurde in M02/M05 zu hoch und auf 29 m zurückgesetzt. Das sind Karten-/Kamerableitungen, keine Vermessungsmaße. Validator und vollständiger Szenenaufbau bestehen; die Prüfrenders lassen sich reproduzieren.
 
@@ -143,4 +143,4 @@ Objekte getrennt in `OPENINGS`, `TRACERY` und `DETAIL` organisieren. Nach jedem 
 
 ## Nächster konkreter Arbeitsschritt
 
-Iteration 27 verschiebt die Sakristei an die Nordseite des Ostchors und bildet ihre aus P01 sowie M15–M17 inferierte Zweibay-Länge getrennt von der Breite ab (10,0 × 7,5 m); die generalisierte G01-Grundlinie dient nur als Lagequerscheck. TOP- und NE-Render zeigen den neuen Anschluss. Die genaue Dachform und Fassadenanschlüsse sind weiter offen. M04 bleibt qualitative Fassaden-/Turmreferenz: sein Commons-GPS-Punkt liegt in der groben Südkonche, und der enge, steil aufwärts gerichtete Bildausschnitt zeigt keine vollständige Silhouette. Standort nicht verschieben; die Anker-/Fußabdruckabweichung bleibt ungelöst. Als Nächstes die Dachverbindungen an Vierung, Ostchor und Sakristei in M01, M02, M05, M18–M21 sowie T01–T04 gegen P08 und den generalisierten G01-Körper prüfen. Kamerastandorte und belegte Brennweiten beibehalten; jede neue Höhen-/Längeninferenz protokollieren und betroffene Ansichten neu rendern. Das Massing-Gate bleibt bis zum gemeinsamen Silhouettenvergleich geschlossen.
+Iteration 27 verschiebt die Sakristei an die Nordseite des Ostchors und bildet ihre aus P01 sowie M15–M17 inferierte Zweibay-Länge getrennt von der Breite ab (10,0 × 7,5 m); die generalisierte G01-Grundlinie dient nur als Lagequerscheck. TOP- und NE-Render zeigen den neuen Anschluss. Iteration 28 begrenzt das hohe Querhausdach auf das Vierungsquadrat; die geraden Seitenarme bekommen keine überlagerten zweiten Dachkörper mehr. Die aktualisierten TOP-, NE-, SE- und M18-Ansichten zeigen weiterhin vereinfachte Firststufen und Dachanschlüsse, daher bleibt das Massing-Gate geschlossen. M04 ist eine qualitative Fassaden-/Turmreferenz ohne vollständige Silhouette; seine GPS-/Fußabdruckabweichung bleibt offen, ist aber kein Ganzmassen-Kameraprüfpunkt. Als Nächstes die Firststufen und Dachanschlüsse an Vierung, Ostchor und Sakristei anhand P08, M01/M02/M05/M18–M21 und T01–T04 weiter vergleichen. Kamerastandorte und belegte Brennweiten beibehalten; jede neue Höhen-/Längeninferenz protokollieren und betroffene Ansichten neu rendern.

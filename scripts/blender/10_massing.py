@@ -194,7 +194,7 @@ scene = bpy.context.scene
 scene.unit_settings.system = "METRIC"
 scene.unit_settings.length_unit = "METERS"
 scene.unit_settings.scale_length = 1.0
-scene["massing_iteration"] = 27
+scene["massing_iteration"] = 28
 scene["massing_evidence"] = "P01,P02,P06,P07,P08,M01,M02,M04,M05,M06,M07,M09,M10,M11,M15,M16,M17,M18,M19"
 scene_path = ROOT / "blender" / "scene" / "elisabethkirche.blend"
 scene_path.parent.mkdir(parents=True, exist_ok=True)

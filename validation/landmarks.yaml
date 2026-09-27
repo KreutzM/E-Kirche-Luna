@@ -1,4 +1,4 @@
-iteration: 6
+iteration: 28
 model: blender/scene/elisabethkirche.blend
 evidence_order: documented_dimensions_then_modern_photographs_then_historical_plans
 views:
@@ -22,7 +22,7 @@ views:
     landmarks:
       - id: hall_roof_and_south_conch
         expected: "High nave roof continues into the transept and polygonal south choir arm."
-        observed: "Iteration 10 uses M05's GPS and recorded 30 mm equivalent lens with inferred target [0, -10, 18] m. Target-height diagnostics place the roof turret, conch roof peak and facade base closer together to their source image positions than the previous z=23 m aim; the render's blank wall masses and simplified roof surfaces still diverge. M04 remains unresolved: its raw GPS pose falls inside the conch mass and its offset tests fail."
+        observed: "Iteration 10 uses M05's GPS and recorded 30 mm equivalent lens with inferred target [0, -10, 18] m. Target-height diagnostics place the roof turret, conch roof peak and facade base closer together to their source image positions than the previous z=23 m aim; the render's blank wall masses and simplified roof surfaces still diverge. M04's GPS point falls inside the coarse conch mass, but the close, upward-looking crop does not show a full silhouette and is retained only as qualitative facade/tower evidence; no M04 offset is accepted."
         status: partial
       - id: six_bay_hall_rhythm
         expected: "Six-bay hall length is legible in the side elevation."
@@ -62,7 +62,7 @@ views:
     landmarks:
       - id: triconch_and_roof_turret
         expected: "Three conches surround the crossing and the current roof turret rises from the roofscape."
-        observed: "Iteration 26 replaces the three single-point conch fans with longitudinal hip roofs whose raised center ridges reach the terminal chord. Side-conch wall tops rise to 24 m and the east-conch wall top to 23 m so their eaves align with the adjoining arm/choir gable roofs; both heights remain low-confidence inferences. Updated M18, M21 and SE renders read as continuous faceted roof masses, but their broad silhouettes and crossing/choir joints remain visibly simplified against M01/M02/M18-M20. The roof-turret height remains low-confidence; M02's target and M18/M21's local aim remain inferred. This improves the conch roof system but does not establish an overall fit; keep the gate closed."
+        observed: "Iteration 26 replaces the three single-point conch fans with longitudinal hip roofs whose raised center ridges reach the terminal chord. Iteration 28 limits the high transept-cross roof to the crossing square; the north and south arm roofs now occupy their own straight reaches to the conches instead of overlapping the high roof across those spans. Updated M18, M21, SE and NE renders show the revised transitions, but roof proportions, crossing/choir joints and overall silhouettes remain visibly simplified against M01/M02/M18-M20. The roof-turret rise remains low-confidence; M02's target and M18/M21's local aims remain inferred. This improves roof topology but does not establish an overall fit; keep the gate closed."
         status: unresolved
       - id: sacristy
         expected: "Two-storey sacristy adjoins the north-east choir with a pyramidal roof."
@@ -70,7 +70,7 @@ views:
         status: partial
 acceptance:
   massing_gate_passed: false
-  reason: "Iteration 27 repositions the north-east sacristy against the east choir and separates its inferred 10.0 m east-west length from its 7.5 m north-south width, using the plan/photos with G01 only as a broad check. Iteration 26 adds continuous longitudinal hips to the three conch roofs and aligns conch eaves with adjoining gable roofs; the TOP footprint retains its low-confidence 4.5 m terminal facets. Conch body heights remain inferred and oblique silhouettes/roof intersections remain simplified against modern photos. The roof-turret rise remains low-confidence; M21 bearing/target diagnostics are framing-sensitive, M05 has blank wall masses, and M18/M21 camera aims are inferred. G01 is generalized and cannot provide architectural metrology. Keep the gate closed until joint dimensional and multi-view silhouette checks pass."
+  reason: "Iteration 28 limits the high transept-cross roof to the crossing square so it no longer duplicates the lower straight-arm roofs. Iteration 27 repositions the north-east sacristy against the east choir and separates its inferred 10.0 m east-west length from its 7.5 m north-south width, using the plan/photos with G01 only as a broad check. Iteration 26 adds continuous longitudinal hips to the three conch roofs and aligns conch eaves with adjoining gable roofs; the TOP footprint retains its low-confidence 4.5 m terminal facets. Conch body heights remain inferred and oblique silhouettes/roof intersections remain simplified against modern photos. The roof-turret rise remains low-confidence; M21 bearing/target diagnostics are framing-sensitive, M05 has blank wall masses, and M18/M21 camera aims are inferred. M04 is a close facade/tower view without a full silhouette and is not a massing gate camera. G01 is generalized and cannot provide architectural metrology. Keep the gate closed until joint dimensional and multi-view silhouette checks pass."
 auxiliary_evidence_checks:
   top_down_plan_extent:
     evidence_ids: [P01, M01, T01, T02, T03, T04]
@@ -84,7 +84,7 @@ auxiliary_evidence_checks:
     geometry_change: false
   conch_terminal_facets:
     evidence_ids: [P01, M01, M18, M19, G01]
-    observed: "Iteration 25 estimates a 4.5 m flat terminal chord from P01's three faceted apse outlines and applies it parametrically to all three conches. M01's aerial roof view and M18/M19's modern south-conch views support polygonal rather than pointed ends; G01 only corroborates the broad layout because its roof geometry is generalized. Updated TOP and oblique renders show the cut plan tips. The conch roof crests and joins to adjacent roofs still read as single-point tents with coarse intersections, so the roof form remains unresolved."
+    observed: "Iteration 25 estimates a 4.5 m flat terminal chord from P01's three faceted apse outlines and applies it parametrically to all three conches. M01's aerial roof view and M18/M19's modern south-conch views support polygonal rather than pointed ends; G01 only corroborates the broad layout because its roof geometry is generalized. Iteration 26 replaces the earlier single-point roof fans with longitudinal hip roofs. The current TOP and oblique renders show the cut plan tips and ridge direction; roof pitch, crest profile and connections to adjacent roofs still remain unresolved."
     status: partial
     geometry_change: true
   east_north_conch_historic_order:
@@ -94,7 +94,7 @@ auxiliary_evidence_checks:
     geometry_change: false
   conch_roof_ridges_and_eave_joints:
     evidence_ids: [P08, M01, M02, M18, M19, M20, H06]
-    observed: "Iteration 26 changes the conch roofs to paired faceted slopes meeting at a centerline ridge from spring to the terminal hip chord. The side-conch eaves now meet the transverse-arm gable at z=24 m; the east-conch eaves meet the choir gable at z=23 m. East/SE source views support a continuous ridge and hipped facets, but the exact crest length and height are not metrically calibrated. Blender mesh inspection reports 11 faces per conch roof, zero boundary/non-manifold edges and zero zero-area faces after adding concealed closure faces. The updated oblique renders improve continuity but still diverge in roof proportions and crossing connections."
+    observed: "Iteration 26 changes the conch roofs to paired faceted slopes meeting at a centerline ridge from spring to the terminal hip chord. The side-conch eaves meet the arm gables at z=24 m; the east-conch eaves meet the choir gable at z=23 m. Iteration 28 shortens the high transept-cross gable to the crossing square, eliminating its duplicate coverage of the straight arm roofs. East/SE source views support continuous ridges and hipped facets, but exact crest length and height are not metrically calibrated. Blender reports closed conch-roof meshes with no boundary/non-manifold edges or zero-area faces. Updated oblique renders improve the separation of the roof masses but crossing connections and proportions remain unresolved."
     status: partial
     geometry_change: true
   sacristy_position_and_footprint:
