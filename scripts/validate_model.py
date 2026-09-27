@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Validate quantitative camera evidence and the massing-gate prerequisites.
+"""Validate historical direct 2D-to-3D camera fits.
 
-This is deliberately separate from scripts/validate_dataset.py. Dataset
-validation checks provenance/schema consistency; this script checks whether
-annotated evidence cameras have current numerical fits with acceptable
-reprojection error.
+This is deliberately separate from scripts/validate_dataset.py and from the
+evidence-based coarse-massing gate. Dataset validation checks provenance/schema
+consistency; scripts/validate_massing_evidence.py evaluates Issue #7. This
+script retains the earlier direct-camera diagnostic and its fit thresholds.
 """
 from __future__ import annotations
 
@@ -112,8 +112,9 @@ def main() -> int:
         for error in errors:
             print(" -", error)
         print(
-            "Quantitative camera validation is not complete. Do not pass the massing gate "
-            "or infer geometry from unresolved camera overlays."
+            "Historical direct-camera validation is not complete. Do not infer geometry "
+            "from unresolved camera overlays; use scripts/validate_massing_evidence.py "
+            "for the independent evidence-based coarse-massing gate."
         )
         return 2
 

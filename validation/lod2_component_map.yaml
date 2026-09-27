@@ -1,0 +1,315 @@
+schema_version: 1
+source_id: G01
+analysis_file: validation/lod2_massing_reference.json
+review_status: reviewed
+interpretation: >-
+  Semantic assignments use BuildingPart position, extent, official
+  heightAboveGround, terrain intersections and repeated roof/eave levels.
+  They support coarse comparisons only. No G01 surface or generalized roof
+  geometry is copied into Blender. Components whose segmentation crosses
+  architectural boundaries or whose position alone is not decisive remain
+  unmapped.
+unmapped_parts:
+  - part_id: BuildingPart_GUID_1488958994062_25643326
+    reason: >-
+      Low west-front mass at U=-47..-43 m; overlaps tower/gable footprints and
+      cannot be separated confidently from the west entrance mass.
+  - part_id: BuildingPart_GUID_1488958994062_25643324
+    reason: >-
+      Low west-front mass at U=-47..-43 m; overlaps tower/gable footprints and
+      cannot be separated confidently from the west entrance mass.
+  - part_id: BuildingPart_GUID_1488958994062_25643328
+    reason: >-
+      Low mass between the western tower zone and hall; generalized part
+      segmentation does not establish whether it is tower attachment or west
+      hall roof/wall.
+  - part_id: BuildingPart_GUID_1488958994062_25643322
+    reason: >-
+      Low mass between the western tower zone and hall; generalized part
+      segmentation does not establish whether it is tower attachment or west
+      hall roof/wall.
+  - part_id: BuildingPart_GUID_1488958994062_25643286
+    reason: >-
+      Narrow fragment at the crossing/north-arm junction; too small to assign
+      independently without over-reading generalized segmentation.
+  - part_id: BuildingPart_GUID_1488958994062_25643327
+    reason: >-
+      Narrow fragment at the crossing/south-arm junction; too small to assign
+      independently without over-reading generalized segmentation.
+  - part_id: BuildingPart_GUID_1488958994062_25643317
+    reason: >-
+      Small crossing/side-roof fragment near the south arm; not independently
+      identifiable as a distinct architectural component.
+  - part_id: BuildingPart_GUID_1488958994062_25643318
+    reason: >-
+      Small crossing/side-roof fragment near the south arm; not independently
+      identifiable as a distinct architectural component.
+  - part_id: BuildingPart_GUID_1488958994062_25643304
+    reason: >-
+      Small northern roof fragment adjacent to the sacristy and north conch;
+      footprint is insufficient to assign to either component alone.
+  - part_id: BuildingPart_GUID_1488958994062_25643319
+    reason: >-
+      Narrow edge fragment on the south conch footprint; the major south-conch
+      roof mass is mapped separately, so this fragment is not used for a
+      component comparison.
+  - part_id: BuildingPart_GUID_1488958994062_25643306
+    reason: >-
+      Narrow edge fragment on the north conch footprint; the major north-conch
+      roof mass is mapped separately, so this fragment is not used for a
+      component comparison.
+  - part_id: BuildingPart_GUID_1488958994062_25643320
+    reason: >-
+      Narrow southern edge fragment within the generalized side-arm roof.
+  - part_id: BuildingPart_GUID_1488958994062_25643308
+    reason: >-
+      Narrow northern edge fragment within the generalized side-arm roof.
+  - part_id: BuildingPart_GUID_1488958994062_25643321
+    reason: >-
+      Narrow south-arm outer-edge fragment, not a separate conch mass.
+  - part_id: BuildingPart_GUID_1488958994062_25643323
+    reason: >-
+      Narrow north-arm outer-edge fragment, not a separate conch mass.
+  - part_id: BuildingPart_GUID_1488958994062_25643290
+    reason: >-
+      Narrow crossing/north-arm junction fragment, not independently
+      distinguishable at LoD2 segmentation scale.
+  - part_id: BuildingPart_GUID_1488958994062_25643291
+    reason: >-
+      Narrow crossing/north-arm junction fragment, not independently
+      distinguishable at LoD2 segmentation scale.
+  - part_id: BuildingPart_GUID_1488958994062_25643292
+    reason: >-
+      Roof fragment within the crossing/east-choir transition; architectural
+      boundary is ambiguous at the generalized segmentation scale.
+  - part_id: BuildingPart_GUID_1488958994062_25643315
+    reason: >-
+      Small roof/wall fragment where the east conch and choir transition;
+      cannot be treated as an independent mass.
+  - part_id: BuildingPart_GUID_1488958994062_25643305
+    reason: >-
+      Small roof/wall fragment at the east terminal; terminal geometry is
+      already included in the east choir/conch envelope.
+  - part_id: BuildingPart_GUID_1488958994062_25643314
+    reason: >-
+      Small roof/wall fragment at the east terminal; terminal geometry is
+      already included in the east choir/conch envelope.
+  - part_id: BuildingPart_GUID_1488958994062_25643312
+    reason: >-
+      Small roof/wall fragment at the east terminal; terminal geometry is
+      already included in the east choir/conch envelope.
+  - part_id: BuildingPart_GUID_1488958994062_25643299
+    reason: >-
+      Broad transition roof part extends from crossing into the choir; its
+      generalized extent does not separate these architectural zones cleanly.
+  - part_id: BuildingPart_GUID_1488958994062_25643310
+    reason: >-
+      Small north-east roof fragment adjacent to the side conch and sacristy;
+      part position alone does not establish a unique component.
+  - part_id: BuildingPart_GUID_1488958994062_25643316
+    reason: >-
+      Small south-east roof fragment at the choir/conch transition; it is not a
+      distinct coarse architectural mass.
+components:
+  west_towers:
+    part_ids:
+      - BuildingPart_GUID_1488958994062_25643301
+      - BuildingPart_GUID_1488958994062_25643302
+    identification: unambiguous_pair
+    reason: >-
+      Two westmost parts occupy opposite transverse sides, span the west-tower
+      zone, and carry the 80.118 m official heightAboveGround value.
+    comparison:
+      model_parameter: documented_anchors.tower_height
+      lod2_metric: max_measured_height_above_ground_m
+      tolerance_m: 1.5
+      type: vertical_peak
+      model_value_m: 80.0
+      rationale: published approximate tower height independently anchors the model.
+  nave_hall:
+    part_ids:
+      - BuildingPart_GUID_1488958994062_25643329
+      - BuildingPart_GUID_1488958994062_25643325
+      - BuildingPart_UUID_e3627eed-cbd7-4206-a15e-0a5e8d481b95
+    identification: unambiguous_roof_and_wall_zone
+    reason: >-
+      Longitudinal parts occupy the six-bay hall corridor from U=-34 m toward
+      the crossing. Two lower side parts identify wall/eave level and the broad
+      central part identifies the hall roof, although they do not reproduce the
+      whole hall footprint.
+    comparisons:
+      - label: main_hall_eave_wall_level
+        model_parameter: inferred.main_wall_top_height
+        lod2_metric: max_measured_height_above_ground_m
+        part_ids:
+          - BuildingPart_GUID_1488958994062_25643329
+          - BuildingPart_GUID_1488958994062_25643325
+        tolerance_m: 1.5
+        type: vertical_peak
+        model_value_m: 24.0
+        rationale: simple wall/eave level; official part heightAboveGround is about 24.2 m.
+      - label: nave_roof_peak
+        model_parameter: inferred.main_roof_ridge_height
+        lod2_metric: max_measured_height_above_ground_m
+        part_ids:
+          - BuildingPart_UUID_e3627eed-cbd7-4206-a15e-0a5e8d481b95
+        tolerance_m: 2.5
+        type: vertical_peak
+        model_value_m: 34.0
+        rationale: generalized multi-part roof; 2.5 m complex-roof tolerance applies.
+  crossing_transept:
+    part_ids:
+      - BuildingPart_GUID_1488958994062_25643297
+      - BuildingPart_GUID_1488958994062_25643296
+      - BuildingPart_GUID_1488958994062_25643300
+    identification: unambiguous_crossing_and_arm_roof_zone
+    reason: >-
+      The central cluster straddles U=0 and extends toward both transverse arm
+      tips, with repeated roof/eave levels around 23.1 m and generalized roof
+      tops around 32 m.
+    comparisons:
+      - label: crossing_transept_roof_peak
+        model_parameter: derived.transept_roof_ridge_height
+        lod2_metric: max_measured_height_above_ground_m
+        part_ids:
+          - BuildingPart_GUID_1488958994062_25643297
+          - BuildingPart_GUID_1488958994062_25643296
+          - BuildingPart_GUID_1488958994062_25643300
+        tolerance_m: 2.5
+        type: vertical_peak
+        model_value_m: 33.0
+        rationale: generalized intersecting roofs; model transept ridge is nave ridge minus the 1.0 m hierarchy offset.
+      - label: crossing_plan_u_extent
+        model_parameter: derived.crossing_u_extent
+        lod2_metric: extent_u_m
+        part_ids: [BuildingPart_GUID_1488958994062_25643297]
+        tolerance_m: 2.5
+        type: horizontal_extent
+        model_value_m: 12.0
+        rationale: central part is centered on the crossing; its generalized footprint is compared with the parametric crossing square.
+      - label: crossing_plan_v_extent
+        model_parameter: derived.crossing_v_extent
+        lod2_metric: extent_v_m
+        part_ids: [BuildingPart_GUID_1488958994062_25643297]
+        tolerance_m: 2.5
+        type: horizontal_extent
+        model_value_m: 12.0
+        rationale: central part is centered on the crossing; its generalized footprint is compared with the parametric crossing square.
+  east_choir_east_conch:
+    part_ids:
+      - BuildingPart_GUID_1488958994062_25643309
+    identification: unambiguous_east_terminal_roof_zone
+    reason: >-
+      The part lies at the east end (U=12.5..20.0 m), spans the choir/conch
+      width, and terminates at the mapped east extent. It is treated as the
+      combined generalized choir/conch roof, not a surveyed apse surface.
+    comparisons:
+      - label: east_choir_conch_roof_peak
+        model_parameter: inferred.conch_roof_peak_height
+        lod2_metric: max_measured_height_above_ground_m
+        part_ids: [BuildingPart_GUID_1488958994062_25643309]
+        tolerance_m: 2.5
+        type: vertical_peak
+        model_value_m: 30.3
+        rationale: complex generalized choir/conch roof; documented LoD2 caveat permits up to 2.5 m comparison tolerance.
+      - label: east_conch_plan_u_extent
+        model_parameter: derived.east_conch_u_extent
+        lod2_metric: extent_u_m
+        part_ids: [BuildingPart_GUID_1488958994062_25643309]
+        tolerance_m: 2.5
+        type: horizontal_extent
+        model_value_m: 7.75
+        rationale: terminal roof part maps to the east conch length; model extent includes the documented coarse eave overhang parameter.
+      - label: east_conch_plan_v_extent
+        model_parameter: derived.east_conch_v_extent
+        lod2_metric: extent_v_m
+        part_ids: [BuildingPart_GUID_1488958994062_25643309]
+        tolerance_m: 2.5
+        type: horizontal_extent
+        model_value_m: 15.5
+        rationale: terminal roof part maps to the east conch width; model extent includes the coarse eave overhang parameter.
+  north_conch:
+    part_ids:
+      - BuildingPart_GUID_1488958994062_25643313
+    identification: unambiguous_north_arm_roof_zone
+    reason: >-
+      North-side parts extend to V=15..21 m beyond the crossing and share the
+      generalized roof level with the side-arm conch.
+    comparison:
+      model_parameter: inferred.conch_roof_peak_height
+      lod2_metric: max_measured_height_above_ground_m
+      tolerance_m: 2.5
+      type: vertical_peak
+      model_value_m: 30.3
+      rationale: complex generalized side-conch roof; generalized roof tolerance applies.
+  south_conch:
+    part_ids:
+      - BuildingPart_GUID_1488958994062_25643311
+    identification: unambiguous_south_arm_roof_zone
+    reason: >-
+      South-side parts extend to V=-20..-13 m beyond the crossing and share the
+      generalized roof level with the side-arm conch.
+    comparison:
+      model_parameter: inferred.conch_roof_peak_height
+      lod2_metric: max_measured_height_above_ground_m
+      tolerance_m: 2.5
+      type: vertical_peak
+      model_value_m: 30.3
+      rationale: complex generalized side-conch roof; generalized roof tolerance applies.
+  sacristy:
+    part_ids:
+      - BuildingPart_GUID_1488958994062_25643288
+      - BuildingPart_GUID_1488958994062_25643289
+      - BuildingPart_GUID_1488958994062_25643287
+      - BuildingPart_GUID_1488958994062_25643303
+      - BuildingPart_GUID_1488958994062_25643307
+      - BuildingPart_GUID_1488958994062_25643294
+      - BuildingPart_GUID_1488958994062_25643293
+      - BuildingPart_GUID_1488958994062_25643295
+    identification: unambiguous_attached_annex
+    reason: >-
+      The broad parts north-east of the crossing occupy the attached annex
+      footprint; repeated levels include a 14 m eave and approximately 21.2 m
+      roof peak. Slender adjacent fragments are left unmapped because they
+      cannot be separated confidently from the choir transition.
+    comparisons:
+      - label: sacristy_roof_peak
+        model_parameter: inferred.sacristy_roof_peak_height
+        lod2_metric: max_measured_height_above_ground_m
+        part_ids:
+          - BuildingPart_GUID_1488958994062_25643295
+          - BuildingPart_GUID_1488958994062_25643289
+        tolerance_m: 2.5
+        type: vertical_peak
+        model_value_m: 20.0
+        rationale: generalized pyramidal roof peak; complex-roof tolerance applies.
+      - label: sacristy_eave_level
+        model_parameter: inferred.sacristy_eave_height
+        lod2_metric: max_measured_height_above_ground_m
+        part_ids:
+          - BuildingPart_GUID_1488958994062_25643288
+          - BuildingPart_GUID_1488958994062_25643287
+          - BuildingPart_GUID_1488958994062_25643303
+          - BuildingPart_GUID_1488958994062_25643307
+          - BuildingPart_GUID_1488958994062_25643294
+          - BuildingPart_GUID_1488958994062_25643293
+        tolerance_m: 1.5
+        type: vertical_peak
+        model_value_m: 14.0
+        rationale: repeated 14 m LoD2 wall/eave parts around the attached annex.
+      - label: sacristy_roof_plan_u_extent
+        model_parameter: inferred.sacristy_footprint_length_x
+        lod2_metric: extent_u_m
+        part_ids: [BuildingPart_GUID_1488958994062_25643295]
+        tolerance_m: 2.5
+        type: horizontal_extent
+        model_value_m: 10.0
+        rationale: broad roof part and parametric sacristy footprint share the same east-west orientation; LoD2 generalized envelope is compared at coarse tolerance.
+      - label: sacristy_roof_plan_v_extent
+        model_parameter: inferred.sacristy_footprint_width
+        lod2_metric: extent_v_m
+        part_ids: [BuildingPart_GUID_1488958994062_25643295]
+        tolerance_m: 2.5
+        type: horizontal_extent
+        model_value_m: 7.5
+        rationale: broad roof part and parametric sacristy footprint share the same east-west orientation; LoD2 generalized envelope is compared at coarse tolerance.

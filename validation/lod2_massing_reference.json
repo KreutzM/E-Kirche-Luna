@@ -1,0 +1,4376 @@
+{
+  "schema_version": 1,
+  "source_id": "G01",
+  "source_file": "sources\\geodata\\G01_Building_DEHE06210000EgxB.gml",
+  "coordinate_frame": {
+    "origin": "project crossing anchor from validation/camera_parameters.json",
+    "u_longitudinal_axis_degrees_from_east": 7.13,
+    "v_transverse_axis": "90 degrees counter-clockwise from U",
+    "source_vertical_datum": "DHHN2016-NH"
+  },
+  "interpretation": "Generalized official LoD2 massing evidence. Use for coarse envelope, roof/tower height and component-placement cross-checks only. Do not copy generalized roof surfaces into the reconstruction.",
+  "part_count": 44,
+  "global": {
+    "lod2_envelope": {
+      "u_longitudinal_bounds_m": [
+        -49.148,
+        21.239
+      ],
+      "v_transverse_bounds_m": [
+        -21.964,
+        22.42
+      ],
+      "longitudinal_extent_m": 70.387,
+      "transverse_extent_m": 44.384,
+      "absolute_z_bounds_m": [
+        183.435,
+        263.553
+      ],
+      "vertical_extent_m": 80.118
+    },
+    "current_model_parameter_crosscheck": {
+      "overall_exterior_length_m": 70.4,
+      "exterior_transept_span_m": 44.6,
+      "tower_height_m": 80.0,
+      "building_axis_orientation_degrees_from_east": 7.13
+    }
+  },
+  "parts": [
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643326",
+      "measured_height_above_ground_m": 36.715,
+      "geometry_point_count": 58,
+      "terrain_point_count": 28,
+      "centroid_project_xy_m": {
+        "east": -46.988,
+        "north": 10.967
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": -45.264,
+        "v_transverse": 16.714
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          -48.812,
+          -45.155
+        ],
+        "north": [
+          9.907,
+          12.023
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          -47.011,
+          -43.493
+        ],
+        "v_transverse": [
+          15.852,
+          17.63
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 3.518,
+        "transverse": 1.779
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        220.15
+      ],
+      "ground_elevation_m": 185.287,
+      "relative_top_height_m": 34.863,
+      "relative_geometry_min_m": -1.852,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 185.3,
+          "count": 23
+        },
+        {
+          "elevation_m": 220.2,
+          "count": 17
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 13
+        },
+        {
+          "elevation_m": 185.2,
+          "count": 5
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 0.0,
+          "count": 24
+        },
+        {
+          "elevation_m": 34.9,
+          "count": 17
+        },
+        {
+          "elevation_m": -1.9,
+          "count": 13
+        },
+        {
+          "elevation_m": 0.1,
+          "count": 4
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643324",
+      "measured_height_above_ground_m": 36.715,
+      "geometry_point_count": 63,
+      "terrain_point_count": 28,
+      "centroid_project_xy_m": {
+        "east": -42.826,
+        "north": -20.887
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": -45.087,
+        "v_transverse": -15.41
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          -44.733,
+          -40.864
+        ],
+        "north": [
+          -22.041,
+          -19.815
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          -46.929,
+          -43.243
+        ],
+        "v_transverse": [
+          -16.467,
+          -14.52
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 3.686,
+        "transverse": 1.948
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        220.15
+      ],
+      "ground_elevation_m": 185.373,
+      "relative_top_height_m": 34.777,
+      "relative_geometry_min_m": -1.938,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 183.4,
+          "count": 13
+        },
+        {
+          "elevation_m": 185.3,
+          "count": 12
+        },
+        {
+          "elevation_m": 220.2,
+          "count": 12
+        },
+        {
+          "elevation_m": 185.4,
+          "count": 11
+        },
+        {
+          "elevation_m": 220.1,
+          "count": 10
+        },
+        {
+          "elevation_m": 185.5,
+          "count": 5
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 34.8,
+          "count": 22
+        },
+        {
+          "elevation_m": -1.9,
+          "count": 13
+        },
+        {
+          "elevation_m": 0.0,
+          "count": 12
+        },
+        {
+          "elevation_m": 0.1,
+          "count": 10
+        },
+        {
+          "elevation_m": -0.1,
+          "count": 6
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643301",
+      "measured_height_above_ground_m": 80.118,
+      "geometry_point_count": 392,
+      "terrain_point_count": 195,
+      "centroid_project_xy_m": {
+        "east": -43.274,
+        "north": 3.509
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": -42.504,
+        "v_transverse": 8.853
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          -50.5,
+          -33.761
+        ],
+        "north": [
+          -5.009,
+          11.466
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          -49.148,
+          -33.849
+        ],
+        "v_transverse": [
+          0.452,
+          15.933
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 15.299,
+        "transverse": 15.48
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        263.553
+      ],
+      "ground_elevation_m": 185.349,
+      "relative_top_height_m": 78.204,
+      "relative_geometry_min_m": -1.914,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 185.4,
+          "count": 79
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 77
+        },
+        {
+          "elevation_m": 185.2,
+          "count": 45
+        },
+        {
+          "elevation_m": 185.3,
+          "count": 41
+        },
+        {
+          "elevation_m": 220.2,
+          "count": 40
+        },
+        {
+          "elevation_m": 185.5,
+          "count": 15
+        },
+        {
+          "elevation_m": 185.1,
+          "count": 13
+        },
+        {
+          "elevation_m": 220.9,
+          "count": 8
+        },
+        {
+          "elevation_m": 263.6,
+          "count": 8
+        },
+        {
+          "elevation_m": 207.6,
+          "count": 6
+        },
+        {
+          "elevation_m": 216.2,
+          "count": 5
+        },
+        {
+          "elevation_m": 229.6,
+          "count": 5
+        },
+        {
+          "elevation_m": 236.5,
+          "count": 5
+        },
+        {
+          "elevation_m": 220.0,
+          "count": 4
+        },
+        {
+          "elevation_m": 220.4,
+          "count": 4
+        },
+        {
+          "elevation_m": 220.6,
+          "count": 4
+        },
+        {
+          "elevation_m": 229.5,
+          "count": 4
+        },
+        {
+          "elevation_m": 230.1,
+          "count": 4
+        },
+        {
+          "elevation_m": 232.0,
+          "count": 4
+        },
+        {
+          "elevation_m": 232.6,
+          "count": 4
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": -1.9,
+          "count": 77
+        },
+        {
+          "elevation_m": 0.0,
+          "count": 62
+        },
+        {
+          "elevation_m": 0.1,
+          "count": 53
+        },
+        {
+          "elevation_m": -0.1,
+          "count": 49
+        },
+        {
+          "elevation_m": 34.8,
+          "count": 39
+        },
+        {
+          "elevation_m": -0.2,
+          "count": 14
+        },
+        {
+          "elevation_m": 0.2,
+          "count": 11
+        },
+        {
+          "elevation_m": 35.5,
+          "count": 8
+        },
+        {
+          "elevation_m": 78.2,
+          "count": 8
+        },
+        {
+          "elevation_m": -0.3,
+          "count": 6
+        },
+        {
+          "elevation_m": 22.3,
+          "count": 6
+        },
+        {
+          "elevation_m": 30.9,
+          "count": 5
+        },
+        {
+          "elevation_m": 44.2,
+          "count": 5
+        },
+        {
+          "elevation_m": 51.2,
+          "count": 5
+        },
+        {
+          "elevation_m": 34.7,
+          "count": 4
+        },
+        {
+          "elevation_m": 34.9,
+          "count": 4
+        },
+        {
+          "elevation_m": 35.0,
+          "count": 4
+        },
+        {
+          "elevation_m": 35.2,
+          "count": 4
+        },
+        {
+          "elevation_m": 44.1,
+          "count": 4
+        },
+        {
+          "elevation_m": 44.7,
+          "count": 4
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643302",
+      "measured_height_above_ground_m": 80.118,
+      "geometry_point_count": 406,
+      "terrain_point_count": 195,
+      "centroid_project_xy_m": {
+        "east": -41.169,
+        "north": -13.1
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": -42.477,
+        "v_transverse": -7.889
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          -48.32,
+          -32.073
+        ],
+        "north": [
+          -20.26,
+          -3.674
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          -49.079,
+          -33.955
+        ],
+        "v_transverse": [
+          -14.592,
+          0.616
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 15.124,
+        "transverse": 15.208
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        263.553
+      ],
+      "ground_elevation_m": 185.395,
+      "relative_top_height_m": 78.158,
+      "relative_geometry_min_m": -1.96,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 185.4,
+          "count": 96
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 83
+        },
+        {
+          "elevation_m": 185.2,
+          "count": 44
+        },
+        {
+          "elevation_m": 185.5,
+          "count": 29
+        },
+        {
+          "elevation_m": 220.2,
+          "count": 20
+        },
+        {
+          "elevation_m": 185.3,
+          "count": 18
+        },
+        {
+          "elevation_m": 220.1,
+          "count": 15
+        },
+        {
+          "elevation_m": 231.4,
+          "count": 9
+        },
+        {
+          "elevation_m": 207.6,
+          "count": 8
+        },
+        {
+          "elevation_m": 220.5,
+          "count": 8
+        },
+        {
+          "elevation_m": 220.6,
+          "count": 8
+        },
+        {
+          "elevation_m": 221.3,
+          "count": 8
+        },
+        {
+          "elevation_m": 234.8,
+          "count": 8
+        },
+        {
+          "elevation_m": 263.6,
+          "count": 8
+        },
+        {
+          "elevation_m": 185.1,
+          "count": 6
+        },
+        {
+          "elevation_m": 234.6,
+          "count": 5
+        },
+        {
+          "elevation_m": 220.4,
+          "count": 4
+        },
+        {
+          "elevation_m": 220.8,
+          "count": 4
+        },
+        {
+          "elevation_m": 229.1,
+          "count": 4
+        },
+        {
+          "elevation_m": 234.0,
+          "count": 4
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 0.0,
+          "count": 98
+        },
+        {
+          "elevation_m": -2.0,
+          "count": 83
+        },
+        {
+          "elevation_m": -0.2,
+          "count": 45
+        },
+        {
+          "elevation_m": 34.8,
+          "count": 31
+        },
+        {
+          "elevation_m": 0.1,
+          "count": 30
+        },
+        {
+          "elevation_m": -0.1,
+          "count": 15
+        },
+        {
+          "elevation_m": 46.0,
+          "count": 9
+        },
+        {
+          "elevation_m": 22.2,
+          "count": 8
+        },
+        {
+          "elevation_m": 35.1,
+          "count": 8
+        },
+        {
+          "elevation_m": 35.2,
+          "count": 8
+        },
+        {
+          "elevation_m": 35.9,
+          "count": 8
+        },
+        {
+          "elevation_m": 49.4,
+          "count": 8
+        },
+        {
+          "elevation_m": 78.2,
+          "count": 8
+        },
+        {
+          "elevation_m": -0.3,
+          "count": 5
+        },
+        {
+          "elevation_m": 49.2,
+          "count": 5
+        },
+        {
+          "elevation_m": 34.7,
+          "count": 4
+        },
+        {
+          "elevation_m": 35.0,
+          "count": 4
+        },
+        {
+          "elevation_m": 35.4,
+          "count": 4
+        },
+        {
+          "elevation_m": 43.7,
+          "count": 4
+        },
+        {
+          "elevation_m": 48.6,
+          "count": 4
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643328",
+      "measured_height_above_ground_m": 36.715,
+      "geometry_point_count": 60,
+      "terrain_point_count": 30,
+      "centroid_project_xy_m": {
+        "east": -39.72,
+        "north": 11.894
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": -37.937,
+        "v_transverse": 16.733
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          -41.638,
+          -37.77
+        ],
+        "north": [
+          10.798,
+          13.024
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          -39.769,
+          -36.082
+        ],
+        "v_transverse": [
+          15.76,
+          17.647
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 3.687,
+        "transverse": 1.887
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        220.15
+      ],
+      "ground_elevation_m": 185.168,
+      "relative_top_height_m": 34.982,
+      "relative_geometry_min_m": -1.733,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 185.2,
+          "count": 20
+        },
+        {
+          "elevation_m": 220.2,
+          "count": 17
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 13
+        },
+        {
+          "elevation_m": 185.1,
+          "count": 10
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 0.0,
+          "count": 22
+        },
+        {
+          "elevation_m": 35.0,
+          "count": 17
+        },
+        {
+          "elevation_m": -1.7,
+          "count": 13
+        },
+        {
+          "elevation_m": 0.1,
+          "count": 8
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643322",
+      "measured_height_above_ground_m": 36.715,
+      "geometry_point_count": 60,
+      "terrain_point_count": 30,
+      "centroid_project_xy_m": {
+        "east": -35.477,
+        "north": -20.019
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": -37.687,
+        "v_transverse": -15.461
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          -37.418,
+          -33.69
+        ],
+        "north": [
+          -21.262,
+          -18.813
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          -39.519,
+          -36.0
+        ],
+        "v_transverse": [
+          -16.488,
+          -14.39
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 3.519,
+        "transverse": 2.098
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        220.15
+      ],
+      "ground_elevation_m": 185.214,
+      "relative_top_height_m": 34.936,
+      "relative_geometry_min_m": -1.779,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 185.2,
+          "count": 21
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 13
+        },
+        {
+          "elevation_m": 185.3,
+          "count": 9
+        },
+        {
+          "elevation_m": 220.2,
+          "count": 9
+        },
+        {
+          "elevation_m": 220.1,
+          "count": 8
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 0.0,
+          "count": 20
+        },
+        {
+          "elevation_m": 34.9,
+          "count": 17
+        },
+        {
+          "elevation_m": -1.8,
+          "count": 13
+        },
+        {
+          "elevation_m": 0.1,
+          "count": 7
+        },
+        {
+          "elevation_m": -0.1,
+          "count": 3
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643329",
+      "measured_height_above_ground_m": 24.208,
+      "geometry_point_count": 172,
+      "terrain_point_count": 86,
+      "centroid_project_xy_m": {
+        "east": -26.169,
+        "north": -15.343
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": -27.871,
+        "v_transverse": -11.976
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          -32.354,
+          -20.045
+        ],
+        "north": [
+          -16.587,
+          -14.026
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          -34.093,
+          -21.783
+        ],
+        "v_transverse": [
+          -12.65,
+          -11.386
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 12.309,
+        "transverse": 1.265
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        207.643
+      ],
+      "ground_elevation_m": 185.06,
+      "relative_top_height_m": 22.583,
+      "relative_geometry_min_m": -1.625,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 207.6,
+          "count": 48
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 38
+        },
+        {
+          "elevation_m": 185.1,
+          "count": 37
+        },
+        {
+          "elevation_m": 185.0,
+          "count": 27
+        },
+        {
+          "elevation_m": 184.9,
+          "count": 13
+        },
+        {
+          "elevation_m": 185.2,
+          "count": 9
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 22.6,
+          "count": 48
+        },
+        {
+          "elevation_m": 0.0,
+          "count": 44
+        },
+        {
+          "elevation_m": -1.6,
+          "count": 38
+        },
+        {
+          "elevation_m": -0.1,
+          "count": 28
+        },
+        {
+          "elevation_m": 0.1,
+          "count": 14
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643325",
+      "measured_height_above_ground_m": 24.208,
+      "geometry_point_count": 171,
+      "terrain_point_count": 85,
+      "centroid_project_xy_m": {
+        "east": -28.826,
+        "north": 9.31
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": -27.448,
+        "v_transverse": 12.816
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          -35.308,
+          -22.648
+        ],
+        "north": [
+          7.792,
+          10.687
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          -33.928,
+          -21.257
+        ],
+        "v_transverse": [
+          12.036,
+          13.556
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 12.671,
+        "transverse": 1.521
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        207.643
+      ],
+      "ground_elevation_m": 184.984,
+      "relative_top_height_m": 22.659,
+      "relative_geometry_min_m": -1.549,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 207.6,
+          "count": 48
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 38
+        },
+        {
+          "elevation_m": 184.9,
+          "count": 32
+        },
+        {
+          "elevation_m": 185.1,
+          "count": 23
+        },
+        {
+          "elevation_m": 185.0,
+          "count": 20
+        },
+        {
+          "elevation_m": 185.2,
+          "count": 7
+        },
+        {
+          "elevation_m": 184.8,
+          "count": 3
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 22.7,
+          "count": 48
+        },
+        {
+          "elevation_m": -1.5,
+          "count": 38
+        },
+        {
+          "elevation_m": -0.1,
+          "count": 29
+        },
+        {
+          "elevation_m": 0.0,
+          "count": 23
+        },
+        {
+          "elevation_m": 0.1,
+          "count": 21
+        },
+        {
+          "elevation_m": 0.2,
+          "count": 12
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_UUID_e3627eed-cbd7-4206-a15e-0a5e8d481b95",
+      "measured_height_above_ground_m": 32.776,
+      "geometry_point_count": 321,
+      "terrain_point_count": 226,
+      "centroid_project_xy_m": {
+        "east": -19.972,
+        "north": -2.249
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": -20.096,
+        "v_transverse": 0.248
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          -35.167,
+          -6.893
+        ],
+        "north": [
+          -15.696,
+          11.132
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          -34.082,
+          -7.761
+        ],
+        "v_transverse": [
+          -11.559,
+          12.259
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 26.321,
+        "transverse": 23.818
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        216.211
+      ],
+      "ground_elevation_m": 184.873,
+      "relative_top_height_m": 31.338,
+      "relative_geometry_min_m": -1.438,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 185.2,
+          "count": 61
+        },
+        {
+          "elevation_m": 207.6,
+          "count": 42
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 39
+        },
+        {
+          "elevation_m": 184.8,
+          "count": 35
+        },
+        {
+          "elevation_m": 184.9,
+          "count": 31
+        },
+        {
+          "elevation_m": 184.6,
+          "count": 29
+        },
+        {
+          "elevation_m": 184.7,
+          "count": 22
+        },
+        {
+          "elevation_m": 185.1,
+          "count": 19
+        },
+        {
+          "elevation_m": 185.0,
+          "count": 15
+        },
+        {
+          "elevation_m": 184.5,
+          "count": 14
+        },
+        {
+          "elevation_m": 216.2,
+          "count": 14
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 22.8,
+          "count": 42
+        },
+        {
+          "elevation_m": -1.4,
+          "count": 39
+        },
+        {
+          "elevation_m": 0.0,
+          "count": 33
+        },
+        {
+          "elevation_m": 0.3,
+          "count": 33
+        },
+        {
+          "elevation_m": 0.4,
+          "count": 32
+        },
+        {
+          "elevation_m": -0.1,
+          "count": 30
+        },
+        {
+          "elevation_m": -0.2,
+          "count": 29
+        },
+        {
+          "elevation_m": -0.3,
+          "count": 23
+        },
+        {
+          "elevation_m": 0.2,
+          "count": 19
+        },
+        {
+          "elevation_m": 0.1,
+          "count": 18
+        },
+        {
+          "elevation_m": 31.3,
+          "count": 14
+        },
+        {
+          "elevation_m": -0.4,
+          "count": 9
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643286",
+      "measured_height_above_ground_m": 24.208,
+      "geometry_point_count": 140,
+      "terrain_point_count": 68,
+      "centroid_project_xy_m": {
+        "east": -12.082,
+        "north": -13.594
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": -13.676,
+        "v_transverse": -11.989
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          -16.599,
+          -6.822
+        ],
+        "north": [
+          -14.805,
+          -12.245
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          -18.169,
+          -8.359
+        ],
+        "v_transverse": [
+          -12.809,
+          -11.248
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 9.809,
+        "transverse": 1.56
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        207.643
+      ],
+      "ground_elevation_m": 184.82,
+      "relative_top_height_m": 22.823,
+      "relative_geometry_min_m": -1.385,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 184.8,
+          "count": 59
+        },
+        {
+          "elevation_m": 207.6,
+          "count": 41
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 31
+        },
+        {
+          "elevation_m": 184.9,
+          "count": 9
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 0.0,
+          "count": 68
+        },
+        {
+          "elevation_m": 22.8,
+          "count": 41
+        },
+        {
+          "elevation_m": -1.4,
+          "count": 31
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643327",
+      "measured_height_above_ground_m": 24.208,
+      "geometry_point_count": 208,
+      "terrain_point_count": 94,
+      "centroid_project_xy_m": {
+        "east": -13.627,
+        "north": 11.717
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": -12.067,
+        "v_transverse": 13.318
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          -19.272,
+          -9.214
+        ],
+        "north": [
+          9.907,
+          14.583
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          -17.782,
+          -7.682
+        ],
+        "v_transverse": [
+          12.121,
+          15.657
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 10.101,
+        "transverse": 3.537
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        207.643
+      ],
+      "ground_elevation_m": 184.606,
+      "relative_top_height_m": 23.037,
+      "relative_geometry_min_m": -1.171,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 207.6,
+          "count": 65
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 49
+        },
+        {
+          "elevation_m": 184.6,
+          "count": 27
+        },
+        {
+          "elevation_m": 184.7,
+          "count": 21
+        },
+        {
+          "elevation_m": 184.5,
+          "count": 20
+        },
+        {
+          "elevation_m": 184.4,
+          "count": 13
+        },
+        {
+          "elevation_m": 184.8,
+          "count": 13
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 23.0,
+          "count": 65
+        },
+        {
+          "elevation_m": -1.2,
+          "count": 49
+        },
+        {
+          "elevation_m": 0.0,
+          "count": 26
+        },
+        {
+          "elevation_m": -0.1,
+          "count": 21
+        },
+        {
+          "elevation_m": 0.1,
+          "count": 20
+        },
+        {
+          "elevation_m": -0.2,
+          "count": 14
+        },
+        {
+          "elevation_m": 0.2,
+          "count": 13
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643317",
+      "measured_height_above_ground_m": 24.208,
+      "geometry_point_count": 48,
+      "terrain_point_count": 18,
+      "centroid_project_xy_m": {
+        "east": -7.186,
+        "north": -15.107
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": -9.005,
+        "v_transverse": -14.098
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          -7.877,
+          -6.471
+        ],
+        "north": [
+          -15.807,
+          -14.36
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          -9.639,
+          -8.369
+        ],
+        "v_transverse": [
+          -14.821,
+          -13.359
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 1.27,
+        "transverse": 1.462
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        207.643
+      ],
+      "ground_elevation_m": 184.732,
+      "relative_top_height_m": 22.911,
+      "relative_geometry_min_m": -1.297,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 207.6,
+          "count": 17
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 13
+        },
+        {
+          "elevation_m": 184.7,
+          "count": 10
+        },
+        {
+          "elevation_m": 184.8,
+          "count": 8
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 0.0,
+          "count": 18
+        },
+        {
+          "elevation_m": 22.9,
+          "count": 17
+        },
+        {
+          "elevation_m": -1.3,
+          "count": 13
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643318",
+      "measured_height_above_ground_m": 24.208,
+      "geometry_point_count": 50,
+      "terrain_point_count": 20,
+      "centroid_project_xy_m": {
+        "east": -5.409,
+        "north": -19.301
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": -7.763,
+        "v_transverse": -18.48
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          -6.33,
+          -4.431
+        ],
+        "north": [
+          -20.149,
+          -18.368
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          -8.658,
+          -6.801
+        ],
+        "v_transverse": [
+          -19.33,
+          -17.562
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 1.857,
+        "transverse": 1.767
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        207.643
+      ],
+      "ground_elevation_m": 184.672,
+      "relative_top_height_m": 22.971,
+      "relative_geometry_min_m": -1.237,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 207.6,
+          "count": 17
+        },
+        {
+          "elevation_m": 184.7,
+          "count": 14
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 13
+        },
+        {
+          "elevation_m": 184.6,
+          "count": 6
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 23.0,
+          "count": 17
+        },
+        {
+          "elevation_m": 0.0,
+          "count": 16
+        },
+        {
+          "elevation_m": -1.2,
+          "count": 13
+        },
+        {
+          "elevation_m": -0.1,
+          "count": 4
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643304",
+      "measured_height_above_ground_m": 24.208,
+      "geometry_point_count": 59,
+      "terrain_point_count": 22,
+      "centroid_project_xy_m": {
+        "east": -9.321,
+        "north": 18.124
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": -6.999,
+        "v_transverse": 19.141
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          -10.128,
+          -8.37
+        ],
+        "north": [
+          17.143,
+          18.924
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          -7.867,
+          -6.025
+        ],
+        "v_transverse": [
+          18.128,
+          19.965
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 1.841,
+        "transverse": 1.837
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        207.643
+      ],
+      "ground_elevation_m": 184.2,
+      "relative_top_height_m": 23.444,
+      "relative_geometry_min_m": -0.764,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 207.6,
+          "count": 21
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 16
+        },
+        {
+          "elevation_m": 184.2,
+          "count": 16
+        },
+        {
+          "elevation_m": 184.3,
+          "count": 6
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 23.4,
+          "count": 21
+        },
+        {
+          "elevation_m": -0.8,
+          "count": 16
+        },
+        {
+          "elevation_m": 0.0,
+          "count": 16
+        },
+        {
+          "elevation_m": 0.1,
+          "count": 6
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643319",
+      "measured_height_above_ground_m": 24.208,
+      "geometry_point_count": 51,
+      "terrain_point_count": 21,
+      "centroid_project_xy_m": {
+        "east": -1.361,
+        "north": -21.5
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": -4.019,
+        "v_transverse": -21.165
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          -2.18,
+          -0.633
+        ],
+        "north": [
+          -22.153,
+          -20.817
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          -4.872,
+          -3.253
+        ],
+        "v_transverse": [
+          -21.877,
+          -20.411
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 1.618,
+        "transverse": 1.465
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        207.643
+      ],
+      "ground_elevation_m": 184.574,
+      "relative_top_height_m": 23.069,
+      "relative_geometry_min_m": -1.139,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 207.6,
+          "count": 17
+        },
+        {
+          "elevation_m": 184.6,
+          "count": 15
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 13
+        },
+        {
+          "elevation_m": 184.5,
+          "count": 6
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 0.0,
+          "count": 21
+        },
+        {
+          "elevation_m": 23.1,
+          "count": 17
+        },
+        {
+          "elevation_m": -1.1,
+          "count": 13
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643306",
+      "measured_height_above_ground_m": 24.208,
+      "geometry_point_count": 50,
+      "terrain_point_count": 20,
+      "centroid_project_xy_m": {
+        "east": -5.718,
+        "north": 21.144
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": -3.05,
+        "v_transverse": 21.69
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          -6.682,
+          -4.853
+        ],
+        "north": [
+          20.371,
+          21.819
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          -3.95,
+          -2.218
+        ],
+        "v_transverse": [
+          20.965,
+          22.316
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 1.732,
+        "transverse": 1.352
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        207.643
+      ],
+      "ground_elevation_m": 184.061,
+      "relative_top_height_m": 23.582,
+      "relative_geometry_min_m": -0.626,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 207.6,
+          "count": 17
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 13
+        },
+        {
+          "elevation_m": 184.1,
+          "count": 12
+        },
+        {
+          "elevation_m": 184.0,
+          "count": 7
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 23.6,
+          "count": 17
+        },
+        {
+          "elevation_m": -0.6,
+          "count": 13
+        },
+        {
+          "elevation_m": 0.0,
+          "count": 13
+        },
+        {
+          "elevation_m": -0.1,
+          "count": 7
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643311",
+      "measured_height_above_ground_m": 32.776,
+      "geometry_point_count": 229,
+      "terrain_point_count": 98,
+      "centroid_project_xy_m": {
+        "east": 0.31,
+        "north": -16.792
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": -1.777,
+        "v_transverse": -16.7
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          -6.682,
+          6.963
+        ],
+        "north": [
+          -21.151,
+          -12.913
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          -8.413,
+          5.167
+        ],
+        "v_transverse": [
+          -20.935,
+          -13.388
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 13.579,
+        "transverse": 7.547
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        216.211
+      ],
+      "ground_elevation_m": 184.574,
+      "relative_top_height_m": 31.637,
+      "relative_geometry_min_m": -1.139,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 207.6,
+          "count": 63
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 42
+        },
+        {
+          "elevation_m": 216.2,
+          "count": 26
+        },
+        {
+          "elevation_m": 184.6,
+          "count": 24
+        },
+        {
+          "elevation_m": 184.7,
+          "count": 22
+        },
+        {
+          "elevation_m": 184.4,
+          "count": 20
+        },
+        {
+          "elevation_m": 184.5,
+          "count": 17
+        },
+        {
+          "elevation_m": 184.8,
+          "count": 9
+        },
+        {
+          "elevation_m": 184.3,
+          "count": 6
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 23.1,
+          "count": 63
+        },
+        {
+          "elevation_m": -1.1,
+          "count": 42
+        },
+        {
+          "elevation_m": 31.6,
+          "count": 26
+        },
+        {
+          "elevation_m": 0.1,
+          "count": 25
+        },
+        {
+          "elevation_m": 0.0,
+          "count": 23
+        },
+        {
+          "elevation_m": -0.2,
+          "count": 22
+        },
+        {
+          "elevation_m": -0.1,
+          "count": 15
+        },
+        {
+          "elevation_m": 0.2,
+          "count": 13
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643297",
+      "measured_height_above_ground_m": 32.776,
+      "geometry_point_count": 173,
+      "terrain_point_count": 126,
+      "centroid_project_xy_m": {
+        "east": -1.182,
+        "north": -0.128
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": -1.189,
+        "v_transverse": 0.02
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          -8.722,
+          6.33
+        ],
+        "north": [
+          -7.458,
+          6.902
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          -8.254,
+          5.771
+        ],
+        "v_transverse": [
+          -6.861,
+          6.884
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 14.025,
+        "transverse": 13.745
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        216.211
+      ],
+      "ground_elevation_m": 184.392,
+      "relative_top_height_m": 31.819,
+      "relative_geometry_min_m": -0.957,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 184.2,
+          "count": 31
+        },
+        {
+          "elevation_m": 184.6,
+          "count": 28
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 20
+        },
+        {
+          "elevation_m": 184.7,
+          "count": 18
+        },
+        {
+          "elevation_m": 207.6,
+          "count": 16
+        },
+        {
+          "elevation_m": 184.1,
+          "count": 14
+        },
+        {
+          "elevation_m": 184.5,
+          "count": 12
+        },
+        {
+          "elevation_m": 216.2,
+          "count": 11
+        },
+        {
+          "elevation_m": 184.3,
+          "count": 9
+        },
+        {
+          "elevation_m": 184.4,
+          "count": 9
+        },
+        {
+          "elevation_m": 184.0,
+          "count": 5
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": -0.2,
+          "count": 30
+        },
+        {
+          "elevation_m": 0.2,
+          "count": 28
+        },
+        {
+          "elevation_m": -1.0,
+          "count": 20
+        },
+        {
+          "elevation_m": 0.3,
+          "count": 20
+        },
+        {
+          "elevation_m": 23.3,
+          "count": 16
+        },
+        {
+          "elevation_m": -0.3,
+          "count": 14
+        },
+        {
+          "elevation_m": 31.8,
+          "count": 11
+        },
+        {
+          "elevation_m": -0.1,
+          "count": 10
+        },
+        {
+          "elevation_m": 0.0,
+          "count": 10
+        },
+        {
+          "elevation_m": 0.1,
+          "count": 10
+        },
+        {
+          "elevation_m": -0.4,
+          "count": 4
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643296",
+      "measured_height_above_ground_m": 32.776,
+      "geometry_point_count": 170,
+      "terrain_point_count": 100,
+      "centroid_project_xy_m": {
+        "east": -2.169,
+        "north": 10.981
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": -0.789,
+        "v_transverse": 11.166
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          -9.566,
+          4.923
+        ],
+        "north": [
+          0.111,
+          15.807
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          -7.936,
+          5.94
+        ],
+        "v_transverse": [
+          0.206,
+          15.698
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 13.876,
+        "transverse": 15.491
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        216.211
+      ],
+      "ground_elevation_m": 184.204,
+      "relative_top_height_m": 32.007,
+      "relative_geometry_min_m": -0.769,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 207.6,
+          "count": 29
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 22
+        },
+        {
+          "elevation_m": 184.5,
+          "count": 20
+        },
+        {
+          "elevation_m": 184.4,
+          "count": 12
+        },
+        {
+          "elevation_m": 184.0,
+          "count": 11
+        },
+        {
+          "elevation_m": 184.1,
+          "count": 11
+        },
+        {
+          "elevation_m": 184.2,
+          "count": 11
+        },
+        {
+          "elevation_m": 216.2,
+          "count": 11
+        },
+        {
+          "elevation_m": 183.9,
+          "count": 10
+        },
+        {
+          "elevation_m": 184.3,
+          "count": 10
+        },
+        {
+          "elevation_m": 183.8,
+          "count": 9
+        },
+        {
+          "elevation_m": 197.6,
+          "count": 8
+        },
+        {
+          "elevation_m": 183.7,
+          "count": 3
+        },
+        {
+          "elevation_m": 184.6,
+          "count": 3
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 23.4,
+          "count": 29
+        },
+        {
+          "elevation_m": -0.8,
+          "count": 22
+        },
+        {
+          "elevation_m": 0.3,
+          "count": 22
+        },
+        {
+          "elevation_m": 0.2,
+          "count": 13
+        },
+        {
+          "elevation_m": -0.2,
+          "count": 12
+        },
+        {
+          "elevation_m": 0.0,
+          "count": 11
+        },
+        {
+          "elevation_m": 32.0,
+          "count": 11
+        },
+        {
+          "elevation_m": -0.1,
+          "count": 10
+        },
+        {
+          "elevation_m": 0.1,
+          "count": 10
+        },
+        {
+          "elevation_m": -0.4,
+          "count": 9
+        },
+        {
+          "elevation_m": -0.3,
+          "count": 9
+        },
+        {
+          "elevation_m": 13.3,
+          "count": 8
+        },
+        {
+          "elevation_m": -0.5,
+          "count": 4
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643300",
+      "measured_height_above_ground_m": 32.776,
+      "geometry_point_count": 221,
+      "terrain_point_count": 108,
+      "centroid_project_xy_m": {
+        "east": 0.706,
+        "north": -10.113
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": -0.555,
+        "v_transverse": -10.122
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          -7.385,
+          6.822
+        ],
+        "north": [
+          -14.36,
+          0.111
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          -8.427,
+          5.521
+        ],
+        "v_transverse": [
+          -13.66,
+          0.206
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 13.948,
+        "transverse": 13.867
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        216.211
+      ],
+      "ground_elevation_m": 184.507,
+      "relative_top_height_m": 31.704,
+      "relative_geometry_min_m": -1.072,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 207.6,
+          "count": 49
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 41
+        },
+        {
+          "elevation_m": 184.3,
+          "count": 22
+        },
+        {
+          "elevation_m": 184.8,
+          "count": 20
+        },
+        {
+          "elevation_m": 184.7,
+          "count": 17
+        },
+        {
+          "elevation_m": 184.2,
+          "count": 15
+        },
+        {
+          "elevation_m": 216.2,
+          "count": 14
+        },
+        {
+          "elevation_m": 184.6,
+          "count": 13
+        },
+        {
+          "elevation_m": 184.5,
+          "count": 11
+        },
+        {
+          "elevation_m": 184.4,
+          "count": 10
+        },
+        {
+          "elevation_m": 207.9,
+          "count": 9
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 23.1,
+          "count": 49
+        },
+        {
+          "elevation_m": -1.1,
+          "count": 41
+        },
+        {
+          "elevation_m": -0.3,
+          "count": 19
+        },
+        {
+          "elevation_m": -0.2,
+          "count": 19
+        },
+        {
+          "elevation_m": 0.3,
+          "count": 18
+        },
+        {
+          "elevation_m": 0.2,
+          "count": 17
+        },
+        {
+          "elevation_m": 0.1,
+          "count": 14
+        },
+        {
+          "elevation_m": 31.7,
+          "count": 14
+        },
+        {
+          "elevation_m": -0.1,
+          "count": 11
+        },
+        {
+          "elevation_m": 0.0,
+          "count": 10
+        },
+        {
+          "elevation_m": 23.4,
+          "count": 9
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643313",
+      "measured_height_above_ground_m": 32.776,
+      "geometry_point_count": 228,
+      "terrain_point_count": 96,
+      "centroid_project_xy_m": {
+        "east": -2.422,
+        "north": 17.766
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": -0.198,
+        "v_transverse": 17.929
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          -9.566,
+          4.009
+        ],
+        "north": [
+          14.583,
+          21.262
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          -7.682,
+          5.94
+        ],
+        "v_transverse": [
+          15.188,
+          21.386
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 13.622,
+        "transverse": 6.199
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        216.211
+      ],
+      "ground_elevation_m": 184.036,
+      "relative_top_height_m": 32.175,
+      "relative_geometry_min_m": -0.601,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 207.6,
+          "count": 64
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 40
+        },
+        {
+          "elevation_m": 183.7,
+          "count": 26
+        },
+        {
+          "elevation_m": 184.1,
+          "count": 20
+        },
+        {
+          "elevation_m": 216.2,
+          "count": 20
+        },
+        {
+          "elevation_m": 184.2,
+          "count": 13
+        },
+        {
+          "elevation_m": 183.8,
+          "count": 11
+        },
+        {
+          "elevation_m": 184.3,
+          "count": 9
+        },
+        {
+          "elevation_m": 183.9,
+          "count": 8
+        },
+        {
+          "elevation_m": 197.6,
+          "count": 8
+        },
+        {
+          "elevation_m": 184.4,
+          "count": 5
+        },
+        {
+          "elevation_m": 184.0,
+          "count": 4
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 23.6,
+          "count": 64
+        },
+        {
+          "elevation_m": -0.6,
+          "count": 40
+        },
+        {
+          "elevation_m": -0.3,
+          "count": 33
+        },
+        {
+          "elevation_m": 32.2,
+          "count": 20
+        },
+        {
+          "elevation_m": 0.1,
+          "count": 19
+        },
+        {
+          "elevation_m": 0.2,
+          "count": 13
+        },
+        {
+          "elevation_m": 0.0,
+          "count": 9
+        },
+        {
+          "elevation_m": 13.5,
+          "count": 8
+        },
+        {
+          "elevation_m": -0.2,
+          "count": 7
+        },
+        {
+          "elevation_m": 0.3,
+          "count": 7
+        },
+        {
+          "elevation_m": -0.1,
+          "count": 6
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643320",
+      "measured_height_above_ground_m": 24.208,
+      "geometry_point_count": 48,
+      "terrain_point_count": 18,
+      "centroid_project_xy_m": {
+        "east": 3.057,
+        "north": -21.063
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": 0.419,
+        "v_transverse": -21.279
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          2.251,
+          4.009
+        ],
+        "north": [
+          -21.819,
+          -20.26
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          -0.364,
+          1.339
+        ],
+        "v_transverse": [
+          -21.964,
+          -20.54
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 1.703,
+        "transverse": 1.424
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        207.643
+      ],
+      "ground_elevation_m": 184.523,
+      "relative_top_height_m": 23.12,
+      "relative_geometry_min_m": -1.088,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 184.5,
+          "count": 18
+        },
+        {
+          "elevation_m": 207.6,
+          "count": 17
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 13
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 0.0,
+          "count": 18
+        },
+        {
+          "elevation_m": 23.1,
+          "count": 17
+        },
+        {
+          "elevation_m": -1.1,
+          "count": 13
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643308",
+      "measured_height_above_ground_m": 24.208,
+      "geometry_point_count": 48,
+      "terrain_point_count": 18,
+      "centroid_project_xy_m": {
+        "east": -1.181,
+        "north": 21.668
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": 1.518,
+        "v_transverse": 21.647
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          -1.969,
+          -0.422
+        ],
+        "north": [
+          20.928,
+          22.375
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          0.685,
+          2.331
+        ],
+        "v_transverse": [
+          20.836,
+          22.42
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 1.646,
+        "transverse": 1.584
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        207.643
+      ],
+      "ground_elevation_m": 183.782,
+      "relative_top_height_m": 23.861,
+      "relative_geometry_min_m": -0.347,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 207.6,
+          "count": 17
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 13
+        },
+        {
+          "elevation_m": 183.8,
+          "count": 10
+        },
+        {
+          "elevation_m": 183.7,
+          "count": 5
+        },
+        {
+          "elevation_m": 183.9,
+          "count": 3
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 23.9,
+          "count": 17
+        },
+        {
+          "elevation_m": -0.3,
+          "count": 13
+        },
+        {
+          "elevation_m": 0.0,
+          "count": 10
+        },
+        {
+          "elevation_m": -0.1,
+          "count": 4
+        },
+        {
+          "elevation_m": 0.1,
+          "count": 4
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643321",
+      "measured_height_above_ground_m": 24.208,
+      "geometry_point_count": 48,
+      "terrain_point_count": 18,
+      "centroid_project_xy_m": {
+        "east": 6.48,
+        "north": -18.166
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": 4.175,
+        "v_transverse": -18.83
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          5.627,
+          7.385
+        ],
+        "north": [
+          -19.036,
+          -17.255
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          3.303,
+          5.103
+        ],
+        "v_transverse": [
+          -19.709,
+          -17.907
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 1.8,
+        "transverse": 1.802
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        207.643
+      ],
+      "ground_elevation_m": 184.427,
+      "relative_top_height_m": 23.216,
+      "relative_geometry_min_m": -0.992,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 184.4,
+          "count": 18
+        },
+        {
+          "elevation_m": 207.6,
+          "count": 17
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 13
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 0.0,
+          "count": 18
+        },
+        {
+          "elevation_m": 23.2,
+          "count": 17
+        },
+        {
+          "elevation_m": -1.0,
+          "count": 13
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643310",
+      "measured_height_above_ground_m": 24.208,
+      "geometry_point_count": 50,
+      "terrain_point_count": 20,
+      "centroid_project_xy_m": {
+        "east": 3.005,
+        "north": 19.405
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": 5.39,
+        "v_transverse": 18.882
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          1.969,
+          4.009
+        ],
+        "north": [
+          18.368,
+          20.483
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          4.372,
+          6.382
+        ],
+        "v_transverse": [
+          17.868,
+          19.94
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 2.01,
+        "transverse": 2.073
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        207.643
+      ],
+      "ground_elevation_m": 183.645,
+      "relative_top_height_m": 23.998,
+      "relative_geometry_min_m": -0.21,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 207.6,
+          "count": 17
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 13
+        },
+        {
+          "elevation_m": 183.6,
+          "count": 11
+        },
+        {
+          "elevation_m": 183.7,
+          "count": 9
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 24.0,
+          "count": 17
+        },
+        {
+          "elevation_m": 0.0,
+          "count": 16
+        },
+        {
+          "elevation_m": -0.2,
+          "count": 13
+        },
+        {
+          "elevation_m": -0.1,
+          "count": 4
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643323",
+      "measured_height_above_ground_m": 24.208,
+      "geometry_point_count": 61,
+      "terrain_point_count": 24,
+      "centroid_project_xy_m": {
+        "east": 7.393,
+        "north": -13.506
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": 5.66,
+        "v_transverse": -14.319
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          6.822,
+          8.159
+        ],
+        "north": [
+          -14.472,
+          -12.69
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          5.071,
+          6.326
+        ],
+        "v_transverse": [
+          -15.262,
+          -13.576
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 1.255,
+        "transverse": 1.686
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        207.643
+      ],
+      "ground_elevation_m": 184.32,
+      "relative_top_height_m": 23.323,
+      "relative_geometry_min_m": -0.885,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 207.6,
+          "count": 21
+        },
+        {
+          "elevation_m": 184.3,
+          "count": 19
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 16
+        },
+        {
+          "elevation_m": 184.4,
+          "count": 5
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 23.3,
+          "count": 21
+        },
+        {
+          "elevation_m": 0.0,
+          "count": 19
+        },
+        {
+          "elevation_m": -0.9,
+          "count": 16
+        },
+        {
+          "elevation_m": 0.1,
+          "count": 3
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643290",
+      "measured_height_above_ground_m": 24.208,
+      "geometry_point_count": 48,
+      "terrain_point_count": 18,
+      "centroid_project_xy_m": {
+        "east": 7.186,
+        "north": -9.924
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": 5.899,
+        "v_transverse": -10.739
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          6.611,
+          7.807
+        ],
+        "north": [
+          -10.575,
+          -9.24
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          5.387,
+          6.503
+        ],
+        "v_transverse": [
+          -11.436,
+          -10.099
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 1.115,
+        "transverse": 1.337
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        207.643
+      ],
+      "ground_elevation_m": 184.243,
+      "relative_top_height_m": 23.4,
+      "relative_geometry_min_m": -0.808,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 207.6,
+          "count": 17
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 13
+        },
+        {
+          "elevation_m": 184.2,
+          "count": 10
+        },
+        {
+          "elevation_m": 184.3,
+          "count": 8
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 0.0,
+          "count": 18
+        },
+        {
+          "elevation_m": 23.4,
+          "count": 17
+        },
+        {
+          "elevation_m": -0.8,
+          "count": 13
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643291",
+      "measured_height_above_ground_m": 24.208,
+      "geometry_point_count": 79,
+      "terrain_point_count": 28,
+      "centroid_project_xy_m": {
+        "east": 7.033,
+        "north": -6.929
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": 6.118,
+        "v_transverse": -7.748
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          6.33,
+          8.44
+        ],
+        "north": [
+          -8.015,
+          -6.011
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          5.467,
+          7.504
+        ],
+        "v_transverse": [
+          -8.887,
+          -6.838
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 2.038,
+        "transverse": 2.049
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        207.643
+      ],
+      "ground_elevation_m": 184.211,
+      "relative_top_height_m": 23.432,
+      "relative_geometry_min_m": -0.776,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 207.6,
+          "count": 29
+        },
+        {
+          "elevation_m": 184.2,
+          "count": 28
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 22
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 23.4,
+          "count": 29
+        },
+        {
+          "elevation_m": 0.0,
+          "count": 25
+        },
+        {
+          "elevation_m": -0.8,
+          "count": 22
+        },
+        {
+          "elevation_m": -0.1,
+          "count": 3
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643288",
+      "measured_height_above_ground_m": 14.117,
+      "geometry_point_count": 73,
+      "terrain_point_count": 19,
+      "centroid_project_xy_m": {
+        "east": 6.905,
+        "north": 17.605
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": 9.037,
+        "v_transverse": 16.612
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          6.189,
+          7.526
+        ],
+        "north": [
+          17.255,
+          18.368
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          8.394,
+          9.692
+        ],
+        "v_transverse": [
+          16.257,
+          17.318
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 1.298,
+        "transverse": 1.061
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        197.552
+      ],
+      "ground_elevation_m": 183.564,
+      "relative_top_height_m": 13.988,
+      "relative_geometry_min_m": -0.129,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 197.6,
+          "count": 27
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 19
+        },
+        {
+          "elevation_m": 183.6,
+          "count": 12
+        },
+        {
+          "elevation_m": 197.5,
+          "count": 8
+        },
+        {
+          "elevation_m": 183.5,
+          "count": 7
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 14.0,
+          "count": 27
+        },
+        {
+          "elevation_m": -0.1,
+          "count": 19
+        },
+        {
+          "elevation_m": 0.0,
+          "count": 19
+        },
+        {
+          "elevation_m": 13.9,
+          "count": 8
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643299",
+      "measured_height_above_ground_m": 32.776,
+      "geometry_point_count": 178,
+      "terrain_point_count": 102,
+      "centroid_project_xy_m": {
+        "east": 9.254,
+        "north": 0.384
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": 9.23,
+        "v_transverse": -0.768
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          4.923,
+          13.293
+        ],
+        "north": [
+          -6.123,
+          7.57
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          5.479,
+          13.153
+        ],
+        "v_transverse": [
+          -7.062,
+          6.237
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 7.674,
+        "transverse": 13.3
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        216.211
+      ],
+      "ground_elevation_m": 184.073,
+      "relative_top_height_m": 32.138,
+      "relative_geometry_min_m": -0.638,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 184.2,
+          "count": 36
+        },
+        {
+          "elevation_m": 207.6,
+          "count": 31
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 27
+        },
+        {
+          "elevation_m": 184.0,
+          "count": 23
+        },
+        {
+          "elevation_m": 184.1,
+          "count": 23
+        },
+        {
+          "elevation_m": 183.9,
+          "count": 14
+        },
+        {
+          "elevation_m": 216.2,
+          "count": 11
+        },
+        {
+          "elevation_m": 197.6,
+          "count": 7
+        },
+        {
+          "elevation_m": 183.8,
+          "count": 6
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 23.6,
+          "count": 31
+        },
+        {
+          "elevation_m": 0.0,
+          "count": 30
+        },
+        {
+          "elevation_m": 0.1,
+          "count": 28
+        },
+        {
+          "elevation_m": -0.6,
+          "count": 27
+        },
+        {
+          "elevation_m": -0.2,
+          "count": 16
+        },
+        {
+          "elevation_m": -0.1,
+          "count": 16
+        },
+        {
+          "elevation_m": 0.2,
+          "count": 12
+        },
+        {
+          "elevation_m": 32.1,
+          "count": 11
+        },
+        {
+          "elevation_m": 13.5,
+          "count": 7
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643292",
+      "measured_height_above_ground_m": 24.208,
+      "geometry_point_count": 75,
+      "terrain_point_count": 31,
+      "centroid_project_xy_m": {
+        "east": 11.279,
+        "north": -5.989
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": 10.448,
+        "v_transverse": -7.343
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          9.566,
+          13.293
+        ],
+        "north": [
+          -6.902,
+          -5.455
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          8.76,
+          12.513
+        ],
+        "v_transverse": [
+          -8.088,
+          -6.873
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 3.753,
+        "transverse": 1.215
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        207.643
+      ],
+      "ground_elevation_m": 184.142,
+      "relative_top_height_m": 23.501,
+      "relative_geometry_min_m": -0.707,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 207.6,
+          "count": 25
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 19
+        },
+        {
+          "elevation_m": 184.1,
+          "count": 19
+        },
+        {
+          "elevation_m": 184.2,
+          "count": 12
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 0.0,
+          "count": 29
+        },
+        {
+          "elevation_m": 23.5,
+          "count": 25
+        },
+        {
+          "elevation_m": -0.7,
+          "count": 19
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643289",
+      "measured_height_above_ground_m": 21.202,
+      "geometry_point_count": 196,
+      "terrain_point_count": 78,
+      "centroid_project_xy_m": {
+        "east": 9.601,
+        "north": 17.195
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": 11.661,
+        "v_transverse": 15.87
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          3.517,
+          14.559
+        ],
+        "north": [
+          13.47,
+          18.145
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          5.59,
+          16.615
+        ],
+        "v_transverse": [
+          12.135,
+          16.431
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 11.026,
+        "transverse": 4.296
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        204.637
+      ],
+      "ground_elevation_m": 183.541,
+      "relative_top_height_m": 21.096,
+      "relative_geometry_min_m": -0.106,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 183.4,
+          "count": 47
+        },
+        {
+          "elevation_m": 197.6,
+          "count": 43
+        },
+        {
+          "elevation_m": 183.5,
+          "count": 41
+        },
+        {
+          "elevation_m": 183.6,
+          "count": 22
+        },
+        {
+          "elevation_m": 183.7,
+          "count": 15
+        },
+        {
+          "elevation_m": 197.5,
+          "count": 12
+        },
+        {
+          "elevation_m": 197.4,
+          "count": 8
+        },
+        {
+          "elevation_m": 204.6,
+          "count": 8
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": -0.1,
+          "count": 63
+        },
+        {
+          "elevation_m": 14.0,
+          "count": 47
+        },
+        {
+          "elevation_m": 0.0,
+          "count": 36
+        },
+        {
+          "elevation_m": 0.1,
+          "count": 13
+        },
+        {
+          "elevation_m": 0.2,
+          "count": 13
+        },
+        {
+          "elevation_m": 13.8,
+          "count": 8
+        },
+        {
+          "elevation_m": 13.9,
+          "count": 8
+        },
+        {
+          "elevation_m": 21.1,
+          "count": 8
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643303",
+      "measured_height_above_ground_m": 14.117,
+      "geometry_point_count": 71,
+      "terrain_point_count": 22,
+      "centroid_project_xy_m": {
+        "east": 10.311,
+        "north": 18.034
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": 12.47,
+        "v_transverse": 16.614
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          9.636,
+          10.902
+        ],
+        "north": [
+          17.588,
+          18.813
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          11.814,
+          13.083
+        ],
+        "v_transverse": [
+          16.21,
+          17.361
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 1.269,
+        "transverse": 1.151
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        197.552
+      ],
+      "ground_elevation_m": 183.5,
+      "relative_top_height_m": 14.052,
+      "relative_geometry_min_m": -0.065,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 197.6,
+          "count": 27
+        },
+        {
+          "elevation_m": 183.5,
+          "count": 22
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 19
+        },
+        {
+          "elevation_m": 197.4,
+          "count": 3
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 14.1,
+          "count": 27
+        },
+        {
+          "elevation_m": 0.0,
+          "count": 22
+        },
+        {
+          "elevation_m": -0.1,
+          "count": 19
+        },
+        {
+          "elevation_m": 13.9,
+          "count": 3
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643316",
+      "measured_height_above_ground_m": 24.208,
+      "geometry_point_count": 48,
+      "terrain_point_count": 18,
+      "centroid_project_xy_m": {
+        "east": 14.029,
+        "north": -5.939
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": 13.183,
+        "v_transverse": -7.635
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          13.293,
+          14.77
+        ],
+        "north": [
+          -6.457,
+          -5.232
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          12.431,
+          13.909
+        ],
+        "v_transverse": [
+          -8.144,
+          -7.007
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 1.479,
+        "transverse": 1.136
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        207.643
+      ],
+      "ground_elevation_m": 184.054,
+      "relative_top_height_m": 23.589,
+      "relative_geometry_min_m": -0.619,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 207.6,
+          "count": 17
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 13
+        },
+        {
+          "elevation_m": 184.1,
+          "count": 10
+        },
+        {
+          "elevation_m": 184.0,
+          "count": 8
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 0.0,
+          "count": 18
+        },
+        {
+          "elevation_m": 23.6,
+          "count": 17
+        },
+        {
+          "elevation_m": -0.6,
+          "count": 13
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643295",
+      "measured_height_above_ground_m": 21.202,
+      "geometry_point_count": 217,
+      "terrain_point_count": 108,
+      "centroid_project_xy_m": {
+        "east": 11.886,
+        "north": 12.184
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": 13.307,
+        "v_transverse": 10.614
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          4.009,
+          15.544
+        ],
+        "north": [
+          6.902,
+          17.032
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          5.742,
+          17.538
+        ],
+        "v_transverse": [
+          5.788,
+          15.188
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 11.796,
+        "transverse": 9.399
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        204.637
+      ],
+      "ground_elevation_m": 183.685,
+      "relative_top_height_m": 20.952,
+      "relative_geometry_min_m": -0.25,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 197.6,
+          "count": 45
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 44
+        },
+        {
+          "elevation_m": 183.6,
+          "count": 26
+        },
+        {
+          "elevation_m": 183.5,
+          "count": 24
+        },
+        {
+          "elevation_m": 183.7,
+          "count": 17
+        },
+        {
+          "elevation_m": 183.8,
+          "count": 15
+        },
+        {
+          "elevation_m": 183.9,
+          "count": 13
+        },
+        {
+          "elevation_m": 184.0,
+          "count": 13
+        },
+        {
+          "elevation_m": 204.6,
+          "count": 8
+        },
+        {
+          "elevation_m": 197.9,
+          "count": 5
+        },
+        {
+          "elevation_m": 196.1,
+          "count": 4
+        },
+        {
+          "elevation_m": 197.5,
+          "count": 3
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": -0.2,
+          "count": 65
+        },
+        {
+          "elevation_m": 13.9,
+          "count": 48
+        },
+        {
+          "elevation_m": -0.1,
+          "count": 22
+        },
+        {
+          "elevation_m": 0.0,
+          "count": 18
+        },
+        {
+          "elevation_m": 0.1,
+          "count": 18
+        },
+        {
+          "elevation_m": 0.2,
+          "count": 14
+        },
+        {
+          "elevation_m": 0.3,
+          "count": 11
+        },
+        {
+          "elevation_m": 21.0,
+          "count": 8
+        },
+        {
+          "elevation_m": 14.3,
+          "count": 5
+        },
+        {
+          "elevation_m": 0.4,
+          "count": 4
+        },
+        {
+          "elevation_m": 12.5,
+          "count": 4
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643309",
+      "measured_height_above_ground_m": 32.776,
+      "geometry_point_count": 246,
+      "terrain_point_count": 98,
+      "centroid_project_xy_m": {
+        "east": 15.685,
+        "north": 1.706
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": 15.775,
+        "v_transverse": -0.254
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          12.309,
+          19.975
+        ],
+        "north": [
+          -5.566,
+          7.792
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          12.485,
+          19.984
+        ],
+        "v_transverse": [
+          -7.173,
+          5.983
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 7.498,
+        "transverse": 13.156
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        216.211
+      ],
+      "ground_elevation_m": 183.976,
+      "relative_top_height_m": 32.235,
+      "relative_geometry_min_m": -0.541,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 207.6,
+          "count": 67
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 46
+        },
+        {
+          "elevation_m": 184.0,
+          "count": 39
+        },
+        {
+          "elevation_m": 216.2,
+          "count": 28
+        },
+        {
+          "elevation_m": 183.8,
+          "count": 26
+        },
+        {
+          "elevation_m": 184.1,
+          "count": 13
+        },
+        {
+          "elevation_m": 183.7,
+          "count": 11
+        },
+        {
+          "elevation_m": 183.9,
+          "count": 9
+        },
+        {
+          "elevation_m": 197.6,
+          "count": 7
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 23.7,
+          "count": 67
+        },
+        {
+          "elevation_m": -0.5,
+          "count": 46
+        },
+        {
+          "elevation_m": -0.2,
+          "count": 35
+        },
+        {
+          "elevation_m": 0.0,
+          "count": 35
+        },
+        {
+          "elevation_m": 32.2,
+          "count": 28
+        },
+        {
+          "elevation_m": 0.1,
+          "count": 19
+        },
+        {
+          "elevation_m": -0.1,
+          "count": 9
+        },
+        {
+          "elevation_m": 13.6,
+          "count": 7
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643287",
+      "measured_height_above_ground_m": 14.117,
+      "geometry_point_count": 60,
+      "terrain_point_count": 18,
+      "centroid_project_xy_m": {
+        "east": 13.75,
+        "north": 18.44
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": 15.933,
+        "v_transverse": 16.591
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          13.293,
+          14.419
+        ],
+        "north": [
+          18.034,
+          19.036
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          15.499,
+          16.601
+        ],
+        "v_transverse": [
+          16.166,
+          17.16
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 1.102,
+        "transverse": 0.994
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        197.554
+      ],
+      "ground_elevation_m": 183.455,
+      "relative_top_height_m": 14.099,
+      "relative_geometry_min_m": -0.02,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 183.4,
+          "count": 25
+        },
+        {
+          "elevation_m": 197.6,
+          "count": 21
+        },
+        {
+          "elevation_m": 183.5,
+          "count": 9
+        },
+        {
+          "elevation_m": 197.4,
+          "count": 5
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 0.0,
+          "count": 34
+        },
+        {
+          "elevation_m": 14.1,
+          "count": 21
+        },
+        {
+          "elevation_m": 13.9,
+          "count": 5
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643307",
+      "measured_height_above_ground_m": 14.117,
+      "geometry_point_count": 70,
+      "terrain_point_count": 26,
+      "centroid_project_xy_m": {
+        "east": 15.663,
+        "north": 9.855
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": 16.765,
+        "v_transverse": 7.835
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          15.122,
+          16.177
+        ],
+        "north": [
+          8.46,
+          11.132
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          16.32,
+          17.309
+        ],
+        "v_transverse": [
+          6.483,
+          9.064
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 0.989,
+        "transverse": 2.581
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        197.552
+      ],
+      "ground_elevation_m": 183.661,
+      "relative_top_height_m": 13.891,
+      "relative_geometry_min_m": -0.226,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 197.6,
+          "count": 25
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 19
+        },
+        {
+          "elevation_m": 183.7,
+          "count": 18
+        },
+        {
+          "elevation_m": 183.6,
+          "count": 8
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 13.9,
+          "count": 25
+        },
+        {
+          "elevation_m": 0.0,
+          "count": 24
+        },
+        {
+          "elevation_m": -0.2,
+          "count": 19
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643294",
+      "measured_height_above_ground_m": 14.117,
+      "geometry_point_count": 46,
+      "terrain_point_count": 16,
+      "centroid_project_xy_m": {
+        "east": 15.324,
+        "north": 14.094
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": 16.955,
+        "v_transverse": 12.083
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          14.77,
+          15.896
+        ],
+        "north": [
+          13.358,
+          14.805
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          16.453,
+          17.471
+        ],
+        "v_transverse": [
+          11.393,
+          12.747
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 1.018,
+        "transverse": 1.355
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        197.552
+      ],
+      "ground_elevation_m": 183.565,
+      "relative_top_height_m": 13.987,
+      "relative_geometry_min_m": -0.13,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 197.6,
+          "count": 17
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 13
+        },
+        {
+          "elevation_m": 183.6,
+          "count": 13
+        },
+        {
+          "elevation_m": 183.5,
+          "count": 3
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 14.0,
+          "count": 17
+        },
+        {
+          "elevation_m": 0.0,
+          "count": 16
+        },
+        {
+          "elevation_m": -0.1,
+          "count": 13
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643293",
+      "measured_height_above_ground_m": 14.117,
+      "geometry_point_count": 51,
+      "terrain_point_count": 16,
+      "centroid_project_xy_m": {
+        "east": 15.007,
+        "north": 17.503
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": 17.064,
+        "v_transverse": 15.505
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          14.489,
+          15.544
+        ],
+        "north": [
+          17.032,
+          18.145
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          16.546,
+          17.607
+        ],
+        "v_transverse": [
+          14.971,
+          16.154
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 1.061,
+        "transverse": 1.183
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        197.554
+      ],
+      "ground_elevation_m": 183.48,
+      "relative_top_height_m": 14.074,
+      "relative_geometry_min_m": -0.045,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 197.6,
+          "count": 19
+        },
+        {
+          "elevation_m": 183.5,
+          "count": 16
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 13
+        },
+        {
+          "elevation_m": 196.1,
+          "count": 3
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 0.0,
+          "count": 29
+        },
+        {
+          "elevation_m": 14.1,
+          "count": 19
+        },
+        {
+          "elevation_m": 12.7,
+          "count": 3
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643315",
+      "measured_height_above_ground_m": 24.208,
+      "geometry_point_count": 46,
+      "terrain_point_count": 16,
+      "centroid_project_xy_m": {
+        "east": 18.177,
+        "north": -4.056
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": 17.533,
+        "v_transverse": -6.281
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          17.232,
+          19.061
+        ],
+        "north": [
+          -5.009,
+          -3.117
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          16.601,
+          18.416
+        ],
+        "v_transverse": [
+          -7.197,
+          -5.363
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 1.815,
+        "transverse": 1.834
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        207.643
+      ],
+      "ground_elevation_m": 183.995,
+      "relative_top_height_m": 23.648,
+      "relative_geometry_min_m": -0.56,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 207.6,
+          "count": 17
+        },
+        {
+          "elevation_m": 184.0,
+          "count": 16
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 13
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 23.6,
+          "count": 17
+        },
+        {
+          "elevation_m": 0.0,
+          "count": 16
+        },
+        {
+          "elevation_m": -0.6,
+          "count": 13
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643305",
+      "measured_height_above_ground_m": 24.208,
+      "geometry_point_count": 48,
+      "terrain_point_count": 18,
+      "centroid_project_xy_m": {
+        "east": 16.896,
+        "north": 7.862
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": 17.742,
+        "v_transverse": 5.704
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          15.966,
+          17.865
+        ],
+        "north": [
+          7.013,
+          8.906
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          16.796,
+          18.708
+        ],
+        "v_transverse": [
+          4.829,
+          6.776
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 1.912,
+        "transverse": 1.948
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        207.643
+      ],
+      "ground_elevation_m": 183.702,
+      "relative_top_height_m": 23.941,
+      "relative_geometry_min_m": -0.267,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 183.7,
+          "count": 18
+        },
+        {
+          "elevation_m": 207.6,
+          "count": 17
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 13
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 0.0,
+          "count": 18
+        },
+        {
+          "elevation_m": 23.9,
+          "count": 17
+        },
+        {
+          "elevation_m": -0.3,
+          "count": 13
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643314",
+      "measured_height_above_ground_m": 24.208,
+      "geometry_point_count": 48,
+      "terrain_point_count": 18,
+      "centroid_project_xy_m": {
+        "east": 20.431,
+        "north": -0.063
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": 20.265,
+        "v_transverse": -2.598
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          19.694,
+          21.171
+        ],
+        "north": [
+          -0.891,
+          0.779
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          19.472,
+          21.076
+        ],
+        "v_transverse": [
+          -3.476,
+          -1.706
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 1.604,
+        "transverse": 1.77
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        207.643
+      ],
+      "ground_elevation_m": 183.99,
+      "relative_top_height_m": 23.653,
+      "relative_geometry_min_m": -0.555,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 207.6,
+          "count": 17
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 13
+        },
+        {
+          "elevation_m": 184.0,
+          "count": 11
+        },
+        {
+          "elevation_m": 183.9,
+          "count": 7
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 23.7,
+          "count": 17
+        },
+        {
+          "elevation_m": -0.6,
+          "count": 13
+        },
+        {
+          "elevation_m": 0.0,
+          "count": 11
+        },
+        {
+          "elevation_m": -0.1,
+          "count": 7
+        }
+      ]
+    },
+    {
+      "part_id": "BuildingPart_GUID_1488958994062_25643312",
+      "measured_height_above_ground_m": 24.208,
+      "geometry_point_count": 48,
+      "terrain_point_count": 18,
+      "centroid_project_xy_m": {
+        "east": 19.981,
+        "north": 4.444
+      },
+      "centroid_building_uv_m": {
+        "u_longitudinal": 20.378,
+        "v_transverse": 1.929
+      },
+      "project_xy_bounds_m": {
+        "east": [
+          19.131,
+          20.889
+        ],
+        "north": [
+          3.562,
+          5.343
+        ]
+      },
+      "building_uv_bounds_m": {
+        "u_longitudinal": [
+          19.591,
+          21.239
+        ],
+        "v_transverse": [
+          1.09,
+          2.797
+        ]
+      },
+      "building_uv_extent_m": {
+        "longitudinal": 1.648,
+        "transverse": 1.706
+      },
+      "absolute_elevation_bounds_m": [
+        183.435,
+        207.643
+      ],
+      "ground_elevation_m": 183.781,
+      "relative_top_height_m": 23.862,
+      "relative_geometry_min_m": -0.346,
+      "repeated_absolute_z_levels": [
+        {
+          "elevation_m": 183.8,
+          "count": 18
+        },
+        {
+          "elevation_m": 207.6,
+          "count": 17
+        },
+        {
+          "elevation_m": 183.4,
+          "count": 13
+        }
+      ],
+      "repeated_relative_z_levels": [
+        {
+          "elevation_m": 0.0,
+          "count": 18
+        },
+        {
+          "elevation_m": 23.9,
+          "count": 17
+        },
+        {
+          "elevation_m": -0.3,
+          "count": 13
+        }
+      ]
+    }
+  ]
+}

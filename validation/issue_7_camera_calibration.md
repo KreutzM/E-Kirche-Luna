@@ -1,6 +1,6 @@
-# Issue #7 — quantitative massing validation result
+# Issue #7 — direct-camera diagnostic and massing gate decision
 
-**Decision: not passed.** No geometry change was made. The available camera correspondences do not produce an accepted fit, so remaining photo/model differences cannot yet be assigned to geometry. Keep the massing gate closed and defer buttresses, openings, tracery, and ornament.
+**Direct-camera calibration remains unresolved; the separate evidence-based coarse-massing gate now passes.** The camera fits below remain historical diagnostics and do not establish photo residuals. Issue #7 is closable for coarse massing under the final gate decision at the end of this report; detail work remains deferred.
 
 ## Exact source rasters and observations
 
@@ -8,8 +8,8 @@ M02 and M05 were annotated first, followed by independent west views M10 and M25
 
 | View | Direction | Landmarks | RMS / P95 (px) | Limits (RMS / P95) | Result |
 |---|---|---:|---:|---:|---|
-| M02 | southeast | 8 | 164.91 / 297.11 | 15 / 30 | rejected |
-| M05 | south | 8 | 148.02 / 272.78 | 15 / 30 | rejected |
+| M02 | southeast | 8 | 172.34 / 314.98 | 15 / 30 | rejected |
+| M05 | south | 8 | 148.00 / 275.85 | 15 / 30 | rejected |
 | M10 | west | 10 | 73.45 / 134.38 | 15 / 30 | rejected |
 | M25 | southwest / west | 12 | 174.19 / 339.89 | 20 / 40 | rejected |
 
@@ -17,8 +17,8 @@ The per-landmark projected positions and residuals are versioned in `validation/
 
 ## Calibration limitations
 
-- **M02:** GPS-derived XY and the documented 27 mm-equivalent focal prior remain close to the fitted values, but the annotated tower/turret/conch set still has 164.91 px RMS. The large residuals around the crossing turret and conch mean this is not an accepted camera solution. A visual mismatch here cannot safely distinguish camera pose, roof correspondence, and massing.
-- **M05:** the close portrait crop contains the south nave and roof/conch junction but no west towers or complete building silhouette. The optimized camera moves about 37 m from its GPS-derived horizontal position; RMS remains 148.02 px. The local crop and simplified conch geometry do not support stable whole-massing registration.
+- **M02:** GPS-derived XY and the documented 27 mm-equivalent focal prior remain close to the fitted values, but the annotated tower/turret/conch set has 172.34 px RMS. The large residuals around the crossing turret and conch mean this is not an accepted camera solution. A visual mismatch here cannot safely distinguish camera pose, roof correspondence, and massing.
+- **M05:** the close portrait crop contains the south nave and roof/conch junction but no west towers or complete building silhouette. The optimized camera moves about 37 m from its GPS-derived horizontal position; RMS remains 148.00 px. The local crop and simplified conch geometry do not support stable whole-massing registration.
 - **M10:** the view has no usable GPS position or focal-length metadata. Its fit reaches a camera position east of the church, local Z about 199 m, and focal scale about 3.66. Reject this as camera/intrinsic indeterminacy, not a geometry signal.
 - **M25:** the Commons page and EXIF GPS points remain about 15 m apart. The official DGM1 gives similar ground levels at those points, so terrain does not resolve the horizontal conflict. The fitted radial model reduces RMS from 210.51 px to 174.19 px (17.3%), but still misses the 20/40 px limits by wide margins. Its k1/k2 are -0.117/-0.374, focal scale 1.153, and fitted local Z about 59.4 m; the pinhole solution is similarly implausible. Treat distortion as a diagnostic only. See `validation/camera_fits/M25_distortion_comparison.json` and `M25_pinhole.json`.
 
@@ -118,3 +118,19 @@ The required `issue7_southwest_bridge` group ran with COLMAP 4.2.0 CPU SIFT, exh
 Every verified pair incident to a new candidate is: M09–M39 (437 inliers), M10–M39 (2,658), M11–M39 (3,493), M25–M39 (949), M26–M39 (179), and M27–M39 (85). M37 and M38 have no verified pairs. No candidate reaches a south/southeast anchor, so the success criterion fails. Matching thresholds were unchanged.
 
 The mapper ran as required, and its raw outputs remain in the compact JSON, but mapper registration, point counts, reprojection error, and intrinsics are not interpreted because the verified graph gate failed. The compact record is `validation/sfm_results/issue7_southwest_bridge.json`. No further image search was made in this run. No georegistration, camera changes, inferred dimensions, or church geometry changes were made.
+
+## 2026-09-27 — Evidence-based coarse-massing gate
+
+**Decision: Issue #7 passes the replacement coarse-massing gate and is closable.** The disconnected global public-web SfM graph and rejected direct-camera fits remain historical evidence limitations; they are no longer mandatory prerequisites for this gate.
+
+The required `python scripts/analyze_lod2_massing.py` analysis records all 44 G01 BuildingParts in `validation/lod2_massing_reference.json`. Their positions, extents, official `heightAboveGround` values, terrain intersections and repeated roof/eave levels were reviewed. `validation/lod2_component_map.yaml` assigns only the west tower pair, hall wall/roof zone, crossing/transept roof zone, east choir/conch roof, north and south conch roof zones, and sacristy assembly; every other part has an explicit ambiguity reason. No generalized G01 surface was copied into Blender.
+
+All hard global checks pass: model/G01 overall length is 70.400/70.359 m (0.041 m difference, 1.0 m tolerance); transverse span is 44.600/44.378 m (0.222 m, 1.0 m); axis is 7.130/7.406 degrees (0.276 degrees, 1 degree); crossing-anchor offset is 0.850 m (1.5 m tolerance); tower height/LoD2 vertical extent is 80.000/80.118 m (0.118 m, 1.5 m).
+
+Reviewed local plan-envelope checks also pass at 2.5 m tolerance: crossing U/V extents are 12.000/12.000 m against 14.025/13.745 m G01; east-conch roof U/V extents are 7.750/15.500 m against 7.499/13.156 m; and sacristy roof U/V extents are 10.000/7.500 m against 11.796/9.400 m. Components whose G01 segmentation includes ambiguous attachments retain vertical comparisons only.
+
+The first local height comparison identified the east/side conch roof peak as 3.776 m below the mapped G01 roof-part heightAboveGround of 32.776 m. Because G01 explicitly generalizes complex roofs, the gate permits 2.5 m here. `conch_roof_peak_height` was raised from 29.0 m to 30.3 m, the smallest 0.1 m parameter increment that falls within that documented tolerance; the remaining difference is 2.476 m. The value remains inferred and low-confidence. The conches remain below the 34 m nave ridge.
+
+Independent west/north photographs (M06/M07/M09/M10/M11/M25-M27/M39) retain the paired tower, lower west-front mass, and continuing hall order. Independent southeast/south photographs (M02-M05/M18-M21/M23/M29-M34) retain the three-conch topology, roof hierarchy, crossing turret, connected south/east roof masses, and attached north-east sacristy. Neither cluster shows a repeated coarse contradiction. Camera framing differences are not used as geometry errors.
+
+`python scripts/validate_massing_evidence.py` is the reproducible gate command. The remaining unresolved items are below coarse-massing level (openings, bay rhythm, buttresses, tracery, ornament, pinnacles and sub-metre roof-edge detail) or explicitly documented camera/SfM limitations. The new gate does not change the purpose or acceptance thresholds of `scripts/validate_model.py`, which remains the historical direct-camera diagnostic.

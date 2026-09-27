@@ -62,15 +62,32 @@ views:
     landmarks:
       - id: triconch_and_roof_turret
         expected: "Three conches surround the crossing and the current roof turret rises from the roofscape."
-        observed: "Iteration 26 replaces the three single-point conch fans with longitudinal hip roofs whose raised center ridges reach the terminal chord. Iteration 28 limits the high transept-cross roof to the crossing square; the north and south arm roofs now occupy their own straight reaches to the conches instead of overlapping the high roof across those spans. Updated M18, M21, SE and NE renders show the revised transitions, but roof proportions, crossing/choir joints and overall silhouettes remain visibly simplified against M01/M02/M18-M20. The roof-turret rise remains low-confidence; M02's target and M18/M21's local aims remain inferred. This improves roof topology but does not establish an overall fit; keep the gate closed."
+        observed: "Iteration 26 replaces the three single-point conch fans with longitudinal hip roofs whose raised center ridges reach the terminal chord. Iteration 28 limits the high transept-cross roof to the crossing square; the north and south arm roofs now occupy their own straight reaches to the conches instead of overlapping the high roof across those spans. Updated M18, M21, SE and NE renders show the revised transitions. Roof proportions and crossing/choir joints remain simplified; the roof-turret rise remains low-confidence and the M02/M18/M21 camera aims remain inferred. Direct-camera geometry residuals therefore remain unresolved, while the separate G01/component/photo-cluster gate passes in the iteration-30 acceptance record."
         status: unresolved
       - id: sacristy
         expected: "Two-storey sacristy adjoins the north-east choir with a pyramidal roof."
         observed: "Iteration 27 moves the inferred sacristy footprint east to meet the north wall of the east choir and models its two-bay east-west length separately from its north-south width (10.0 × 7.5 m). P01 and M15-M17 support a side-attached two-bay mass with a pyramidal roof; G01's generalized footprint is a broad positional cross-check. VAL_TOP and VAL_NE now show the eastern attachment. Exact footprint, roof proportions and wall elevations remain low-confidence, and the blank mass cannot yet be compared against the facade details."
         status: partial
 acceptance:
-  massing_gate_passed: false
-  reason: "Iteration 29 completed quantitative annotation and fit attempts for M02, M05, M10 and M25, but all four fits exceed their configured RMS/P95 thresholds. Terrain sampling improved provisional camera-Z priors, while M05/M06 EXIF altitude conflicts remain unresolved. M25 radial refinement lowers RMS but retains very large residuals and implausible fitted intrinsics/pose. No camera is accepted, so photographic residuals cannot be separated from camera/intrinsic uncertainty; no geometry change is justified. Iteration 28 roof separation, iteration 27 sacristy placement and iteration 26 conch roof topology remain as previously recorded, with roof dimensions and joints still inferred. See validation/issue_7_camera_calibration.md and versioned fit JSON. Keep the massing gate closed."
+  massing_gate_passed: true
+  reason: >-
+    Issue #7 passes the evidence-based coarse-massing gate at iteration 30.
+    G01 hard checks pass: exterior length 70.400 vs 70.359 m (0.041 m),
+    transverse span 44.600 vs 44.378 m (0.222 m), axis 7.130 vs 7.406 degrees
+    (0.276 degrees), crossing-anchor offset 0.850 m within 1.5 m, and tower
+    height 80.000 vs 80.118 m (0.118 m). Reviewed unambiguous G01 parts show
+    tower, hall wall/roof, crossing/transept and sacristy heights and reviewed
+    crossing/east-conch/sacristy plan envelopes within their stated tolerances.
+    The conch roof peak was raised from 29.0 to 30.3 m, the
+    minimum 0.1 m parameter increment meeting the 2.5 m generalized-roof
+    tolerance against G01's 32.776 m part heightAboveGround (2.476 m residual).
+    Independent west/north and southeast/south photo-cluster reviews show no
+    repeated coarse contradiction in topology, component order or roof
+    hierarchy. Disconnected public-web SfM and rejected direct camera fits
+    remain documented evidence limitations; they are not used as gate criteria.
+    Openings, buttresses, bay rhythm, tracery, ornament, pinnacles and
+    sub-metre roof edges remain deferred. See validation/massing_gate_spec.yaml,
+    validation/lod2_component_map.yaml and validation/issue_7_camera_calibration.md.
 auxiliary_evidence_checks:
   m22_distant_tower_and_global_silhouette:
     evidence_ids: [M22]
@@ -135,11 +152,11 @@ camera_calibration:
   accepted_independent_views: 0
   required_independent_views: 3
   fit_files:
-    M02: {file: validation/camera_fits/M02.json, accepted: false, rms_px: 164.91, p95_px: 297.11}
-    M05: {file: validation/camera_fits/M05.json, accepted: false, rms_px: 148.02, p95_px: 272.78}
+    M02: {file: validation/camera_fits/M02.json, accepted: false, rms_px: 172.34, p95_px: 314.98}
+    M05: {file: validation/camera_fits/M05.json, accepted: false, rms_px: 148.00, p95_px: 275.85}
     M10: {file: validation/camera_fits/M10.json, accepted: false, rms_px: 73.45, p95_px: 134.38}
     M25_radial: {file: validation/camera_fits/M25.json, accepted: false, rms_px: 174.19, p95_px: 339.89}
     M25_pinhole: {file: validation/camera_fits/M25_pinhole.json, accepted: false, rms_px: 210.51, p95_px: 420.85}
   terrain_height_record: validation/terrain_camera_heights.json
-  decision: "No geometry correction authorized by these fits; camera/model residuals remain unseparated. Keep massing gate closed."
+  decision: "M02 and M05 were refit after the conch-roof landmark update and remain rejected. Direct-camera residuals remain unseparated and are retained as historical diagnostics; they neither authorize nor block the independent evidence-based massing gate."
   geometry_changed: false

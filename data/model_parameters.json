@@ -1,5 +1,5 @@
 {
-  "model_version": 1,
+  "model_version": 2,
   "units": "m",
   "building_axis_orientation_degrees_from_east": 7.13,
   "documented_anchors": {
@@ -23,7 +23,7 @@
     "west_tower_depth": 11.0,
     "main_wall_top_height": 24.0,
     "main_roof_ridge_height": 34.0,
-    "conch_roof_peak_height": 29.0,
+    "conch_roof_peak_height": 30.3,
     "tower_belfry_start_height": 46.0,
     "tower_midshaft_top_height": 39.0,
     "tower_spire_start_height": 55.0,

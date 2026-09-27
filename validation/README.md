@@ -56,4 +56,4 @@ The official exterior tour exposes four named panoramas. `scripts/download_virtu
 
 ## Issue #7 camera calibration status
 
-See [issue_7_camera_calibration.md](issue_7_camera_calibration.md) for the current quantitative result and limitation. Landmark correspondences are in `camera_landmarks.yaml`; numbered exact-dimension source review derivatives are in `annotation_overlays/`. Fit JSON and the M25 radial-vs-pinhole comparison are in `camera_fits/`. Camera-height terrain samples are in `terrain_camera_heights.json`. No fit is accepted yet and the massing gate remains closed.
+See [issue_7_camera_calibration.md](issue_7_camera_calibration.md) for the historical direct-camera diagnostic and Issue #7 decision. Landmark correspondences are in `camera_landmarks.yaml`; numbered exact-dimension source review derivatives are in `annotation_overlays/`. Fit JSON and the M25 radial-vs-pinhole comparison are in `camera_fits/`. Camera-height terrain samples are in `terrain_camera_heights.json`. No direct-camera fit is accepted; this does not block the separate gate in `massing_gate_spec.yaml`. Run `python scripts/validate_massing_evidence.py` to reproduce that gate.

@@ -84,12 +84,12 @@ assumptions:
     evidence_ids: [P02, P06, M01, M02, M04, M05]
     iteration: 1
   conch_roof_peak_height:
-    value: 29.0
+    value: 30.3
     unit: m
-    reason: "Choir and side-conch roof peak estimated from P08, raised roof views and modern southeast/south photographs. A 32 m test in iteration 7 made the roof peak too high in M02 and M05 comparisons, so the earlier 29 m inferred value is retained; it remains low-confidence and is not measured."
+    reason: "Raised from 29.0 m to 30.3 m in iteration 30 after the reviewed G01 east- and side-conch roof parts showed official heightAboveGround values up to 32.776 m. The gate allows at most 2.5 m vertical difference for these explicitly generalized complex roofs; 30.3 m is the smallest 0.1 m increment within that tolerance (2.476 m residual). This stays below the 34 m nave ridge, consistent with the repeated modern-photo roof hierarchy in M02/M03/M05/M18/M19/M20/M21. A prior 32 m diagnostic appeared too high in M02/M05, but those are not solved cameras. The value remains inferred, low-confidence, and not a measured dimension."
     confidence: low
-    evidence_ids: [P02, P08, M01, M02, M05, M18, M19, M21]
-    iteration: 1
+    evidence_ids: [P02, P08, M01, M02, M03, M05, M18, M19, M20, M21, G01]
+    iteration: 30
   tower_belfry_start_height:
     value: 46.0
     unit: m

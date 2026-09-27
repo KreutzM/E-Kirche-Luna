@@ -57,7 +57,9 @@ hard_metric_checks:
       not a detail tolerance.
 
 local_lod2_component_checks:
-  status: pending_part_mapping
+  status: reviewed
+  component_map: validation/lod2_component_map.yaml
+  analysis: validation/lod2_massing_reference.json
   required: true
   instruction: >-
     Run scripts/analyze_lod2_massing.py, inspect per-BuildingPart U/V location,
@@ -78,6 +80,17 @@ directional_photo_checks:
       A repeated architectural ordering or coarse silhouette contradiction is
       visible across multiple independent photographs and cannot be explained
       by perspective/crop.
+    review:
+      status: no_repeated_coarse_contradiction
+      reviewed_ids: [M06, M07, M09, M10, M11, M25, M26, M27, M39]
+      findings: >-
+        Independent north and west views consistently show the paired west
+        towers above a lower central west-front mass, then the long hall
+        continuing toward the crossing and east end. The contact sheets and
+        source views show no repeated reversal or missing coarse mass. Tower
+        details, openings and bay rhythm remain outside this gate. The north
+        evidence is viewed within its own direction cluster; framing differences
+        are not treated as geometry residuals.
 
   southeast_south_cluster:
     evidence_ids: [M02, M03, M04, M05, M18, M19, M20, M21, M23, M29, M30, M31, M32, M33, M34]
@@ -88,6 +101,17 @@ directional_photo_checks:
     blocker_if: >-
       A repeated component-order or coarse roof/mass contradiction is visible
       across multiple images and conflicts with plan/LoD2 evidence.
+    review:
+      status: no_repeated_coarse_contradiction
+      reviewed_ids: [M02, M03, M04, M05, M18, M19, M20, M21, M23, M29, M30, M31, M32, M33, M34]
+      findings: >-
+        Independent southeast and south views show the three conches around the
+        crossing, the higher nave/crossing roof hierarchy, the crossing turret,
+        continuous south/east roof masses and the north-east attached sacristy.
+        The conch roof remains below the nave ridge after the small LoD2-driven
+        adjustment. No repeated coarse component-order or topology contradiction
+        is visible. Some roof planes are generalized in G01 and all photo
+        framing/camera uncertainty remains local to this cluster.
 
 non_blocking_for_massing:
   - facade openings
@@ -106,4 +130,15 @@ pass_rule: >-
   or are recorded evidence limitations. A disconnected global photo SfM network
   is not itself a blocker once its evidence limitation is documented.
 
-status: pending_lod2_part_analysis
+gate_decision: passed
+status: reviewed_and_passed
+remaining_limitations:
+  - >-
+    Public-web SfM still lacks a common west/north-to-southeast/south network;
+    this is an evidence limitation and is not a massing blocker under this gate.
+  - >-
+    Direct camera fits remain rejected or unresolved; they are retained as
+    historical diagnostics and do not establish photo residuals.
+  - >-
+    Openings, bay divisions, buttress profiles, tracery, ornament, exact
+    pinnacles, and sub-metre roof-edge shaping remain below coarse-massing scope.
