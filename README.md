@@ -21,7 +21,7 @@ historischen Plänen und explizit dokumentierten geometrischen Annahmen.
 1. Lies zuerst `AGENTS.md`.
 2. Lies `PROJECT.md`.
 3. Prüfe `data/dimensions.yaml`, `data/manifest.json` und `docs/evidence_policy.md`.
-4. Lies in der Massing-Phase zusätzlich `docs/camera_calibration.md`.
+4. Lies in der Massing-Phase zusätzlich `docs/camera_calibration.md` und `docs/sfm_calibration.md`.
 5. Nutze `make validate-data` für Datenkonsistenz; `make validate` verlangt zusätzlich quantitative Kameravalidierung.
 6. Arbeite coarse-to-fine und dokumentiere jede neue Annahme.
 
@@ -39,6 +39,8 @@ python scripts/validate_dataset.py
 # During massing, annotate validation/camera_landmarks.yaml and run:
 # make camera-fit VIEW=M02
 # make validate-model
+# If direct camera/model fits remain coupled, run independent relative SfM:
+# make sfm
 python scripts/fetch_assets.py --priority 1 --max-width 2500
 python scripts/make_contact_sheets.py
 ```
