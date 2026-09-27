@@ -112,6 +112,11 @@ auxiliary_evidence_checks:
     observed: "Commons supplies GPS, 315-degree heading, 18 mm focal length and image dimensions. The heading sweep demonstrates broad overlap improves near 300-302 degrees, but this conflicts with the recorded direction and does not align tower spacing or roof landmarks. The follow-up aim matrix at 300 degrees varies 50/60/70 m and z=15/22/29 m; framing changes, but does not establish a unique pose. Treat the remaining mismatch as camera/model entangled and make no geometry change from M23 alone."
     status: unresolved
     geometry_change: false
+  m24_remote_tower_and_roof:
+    evidence_ids: [M24]
+    observed: "The long-lens view shows the paired west towers and a portion of the crossing/roofscape from a distant elevated vantage. Its unknown camera pose and foreground crop hide lower masses and the east choir, so it supplies qualitative context only. No dimensions or geometry changes are supported."
+    status: qualitative_only
+    geometry_change: false
   sacristy_position_and_footprint:
     evidence_ids: [P01, M15, M16, M17, G01]
     observed: "Iteration 27 places the sacristy north of the east choir with its west edge at the choir-bay start, rather than beside the crossing. The 10.0 × 7.5 m inferred footprint follows the two-bay plan/photo massing; G01's generalized ground lines span a similar east/north area but are not treated as a conservation measurement. Updated TOP and NE renders show the attached volume. Exact roof and facade fit remain open."

@@ -8,16 +8,16 @@ Die festgelegte Orientierung bleibt unverändert: Meter, X nach Osten, Y nach No
 
 ## Ausgangslage
 
-- Repository auf `main`, letzter Geometrie-Commit `f4f29bb` (27.09.2026); Iteration 28 ist gerendert, geprüft und gepusht. Iteration 29 ergänzt M22-, Iteration 30 M23-Kameradiagnosen, ohne Geometrie oder freigegebene Prüfkamera zu ändern.
-- `python scripts/validate_dataset.py` besteht mit 41 Referenzeinträgen, 6 dokumentierten Maßen und 43 protokollierten Geometrieannahmen.
-- Das Manifest führt 22 moderne Fotos, 6 historische Fotos, 8 historische Pläne/Ansichten und 4 virtuelle Touransichten. Der Nutzer hat lokale experimentelle Nutzung gefundener Aufnahmen freigegeben; Lizenzprüfung vor einer Weitergabe bleibt vorgesehen.
+- Repository auf `main`, letzter Geometrie-Commit `f4f29bb` (27.09.2026); Iteration 28 ist gerendert, geprüft und gepusht. Die Iterationen 29–31 ergänzen M22-/M23-Kameradiagnosen, ohne Geometrie oder freigegebene Prüfkamera zu ändern; M24 ergänzt eine qualitative Fernansicht.
+- `python scripts/validate_dataset.py` besteht mit 42 Referenzeinträgen, 6 dokumentierten Maßen und 43 protokollierten Geometrieannahmen.
+- Das Manifest führt 23 moderne Fotos, 6 historische Fotos, 8 historische Pläne/Ansichten und 4 virtuelle Touransichten. Der Nutzer hat lokale experimentelle Nutzung gefundener Aufnahmen freigegeben; Lizenzprüfung vor einer Weitergabe bleibt vorgesehen.
 - `data/assumptions.yaml` enthält die Außenmaß-Inferenzen samt Gründen, Konfidenzen, Evidenz-IDs und Iterationen.
 - Die Blender-Szene, parametrischen Hauptmassen, Türme, Dächer, Evidenzkameras, Landmarken und Prüfrenders sind angelegt. Der Szenenaufbau ist reproduzierbar; die Massing-Silhouette besteht die Evidenzprüfung jedoch noch nicht.
 - Die sechs dokumentierten Maße umfassen auch Innenmaße und dürfen nicht als Außenabmessungen übernommen werden.
 
 ## Umsetzungsstand
 
-Seit der ersten Planfassung wurden 41 Referenzen mit Provenienz erfasst. Der Validator besteht aktuell mit 43 protokollierten Geometrieannahmen. Die parametrische Blender-Szene, Hauptmassen, zwei Westtürme, Dachmassen, Evidenzkameras und Haupt-Prüfansichten sind angelegt. Die Arbeitspakete Referenzen, Evidenz und Grundszene sind abgeschlossen; das Massing-Prüftor bleibt offen.
+Seit der ersten Planfassung wurden 42 Referenzen mit Provenienz erfasst. Der Validator besteht aktuell mit 43 protokollierten Geometrieannahmen. Die parametrische Blender-Szene, Hauptmassen, zwei Westtürme, Dachmassen, Evidenzkameras und Haupt-Prüfansichten sind angelegt. Die Arbeitspakete Referenzen, Evidenz und Grundszene sind abgeschlossen; das Massing-Prüftor bleibt offen.
 
 Iteration 4 richtet die planbasierten Massen mit 7,13° zur geografischen Ostachse aus; der Vierungsursprung und die Weltachsen X=Ost, Y=Nord, Z=Oben bleiben unverändert. Iteration 5 vergrößert die inferierte Außenlänge und Querhausspanne anhand der minimalen OSM-Umrisshülle auf 70,4 × 44,6 m. Iteration 6 kalibriert die horizontale Sensorbreite von M02 anhand seines 3696×3053-Crops auf 28,3 mm äquivalent und verschiebt den dokumentierten Zielpunkt auf [-15, 0, 29] m. Iteration 7 verwendet M05 als separate Südsicht mit dessen GPS, 30-mm-Äquivalentbrennweite und Portraitformat; nur der Blickzielpunkt ist inferiert. Ein Test mit 32 m Konchendachhöhe wurde in M02/M05 zu hoch und auf 29 m zurückgesetzt. Das sind Karten-/Kamerableitungen, keine Vermessungsmaße. Validator und vollständiger Szenenaufbau bestehen; die Prüfrenders lassen sich reproduzieren.
 
@@ -151,4 +151,6 @@ Iteration 30 ergänzt M23, eine hochauflösende Südostansicht mit publiziertem 
 
 Iteration 31 prüft den M23-Winkel unabhängig vom zuerst festgehaltenen Commons-Heading: Vom GPS-Punkt zum angenommenen Vierungsursprung ergibt sich ungefähr 286,6°. Bei unverändertem Standort und 18-mm-Optik verbessern 300–302° die grobe horizontale Bildlage gegenüber 315°. Eine weitere Matrix um 300° variiert Zielabstand 50/60/70 m und Zielhöhe 15/22/29 m. Die Turmabstände, Dachreiterlage und Dachkonturen stimmen weiterhin nicht ausreichend überein; 300°/60 m/z=22 m bleibt ein visueller Kandidat, keine gelöste Kamera. Die Abweichung zwischen publiziertem und visuellem Winkel ist nun ausdrücklich dokumentiert, ohne Geometrie daraus zu ändern.
 
-Nächster Arbeitsschritt: für M23 GPS/Heading-Provenienz, Projektanker und gemeinsame Bildlandmarken verifizieren; anschließend weitere Perspektivkameras gegen mindestens zwei Landmarken gleichzeitig kalibrieren und die Dachanschlüsse an Vierung, Ostchor und Sakristei mit P08, M01/M02/M05/M18–M21 und T01–T04 vergleichen. Geometrie erst ändern, wenn eine verbleibende Abweichung nicht mehr durch Kamera-/Projektionseffekte erklärt werden kann. Jede neue Höhen-/Längeninferenz protokollieren und betroffene Ansichten neu rendern.
+Iteration 32 ergänzt M24, eine 260-mm-Teleaufnahme vom Spiegelslustturm. Sie liefert einen unabhängigen qualitativen Eindruck des Westturmpaars und eines Teils der Dachlandschaft, zeigt wegen Vordergrundüberdeckung aber weder die unteren Massen noch den Ostchor vollständig. Da Standortkoordinaten und Heading fehlen, wird keine Kamera kalibriert und keine Geometrie abgeleitet. Validator, Provenienz und Kontaktbogen werden aktualisiert; das Massing-Gate bleibt offen.
+
+Nächster Arbeitsschritt: weitere Perspektivkameras gegen mindestens zwei Landmarken gleichzeitig kalibrieren und die Dachanschlüsse an Vierung, Ostchor und Sakristei mit P08, M01/M02/M05/M18–M21, M23 und T01–T04 vergleichen. M24 und M22 bleiben qualitative Turm-/Silhouettenchecks. Geometrie erst ändern, wenn eine verbleibende Abweichung nicht mehr durch Kamera-/Projektionseffekte erklärt werden kann. Jede neue Höhen-/Längeninferenz protokollieren und betroffene Ansichten neu rendern.

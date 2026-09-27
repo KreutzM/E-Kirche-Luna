@@ -55,6 +55,11 @@ views:
     evidence: [M23]
     status: gps_focal_supported_visual_bearing_candidate_unresolved
     note: "Commons provides GPS, a 315-degree heading, Canon EOS 550D, 18 mm focal length and 5184x3456 dimensions. The local GPS-derived XY and optics are fixed. The camera-to-crossing bearing from the project anchor is 286.6 degrees. A temporary sweep from 280 to 315 degrees gives better broad horizontal placement near 300-302 than at 315; a 300-degree, 60 m, z=22 m pose is only a visual candidate. Tower-pair spacing, crossing-turret placement and roof silhouette remain inconsistent, so no pose or geometry is accepted. Eye-level Z, aim and fit bearing remain inferred. Commons description and EXIF conflict on capture dates (2021-06-20 and 2025-06-20); retain both."
+  M24:
+    camera: null
+    evidence: [M24]
+    status: qualitative_remote_tower_roof_only
+    note: "The 4957x3298 Nikon D780 image was captured 2021-09-02 with a 260 mm focal length from Spiegelslustturm. No camera coordinates or heading are published. The long-lens frame shows the west tower pair and part of the roofscape, but foreground buildings crop the lower masses and east choir. Use only for qualitative tower/roof context; it cannot validate dimensions, full silhouette or the massing gate."
 auxiliary_panorama_sources:
   T01-T04:
     source: "Official Flying Impressions exterior tour; four named aerial/raised cube panoramas."

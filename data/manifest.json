@@ -360,6 +360,16 @@
     "commons_page": "https://commons.wikimedia.org/wiki/File:Marburg_Elisabethkirche_Deutsches_Haus_Firmaneiplatz_von_SO.jpg"
   },
   {
+    "id": "M24",
+    "group": "modern",
+    "title": "Elisabethkirche, vom Kaiser-Wilhelm-Turm Marburg 20200902 001.jpg",
+    "view": "Distant view from Spiegelslustturm; bearing not published",
+    "role": "tower_and_roof_remote_telephoto_reference",
+    "priority": 1,
+    "metric_use": "qualitative_geometry_reference",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Elisabethkirche,_vom_Kaiser-Wilhelm-Turm_Marburg_20200902_001.jpg"
+  },
+  {
     "id": "T01",
     "group": "virtual_tour",
     "title": "Elisabethkirche Marburg 360° tour — Ostansicht cube face",

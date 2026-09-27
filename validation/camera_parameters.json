@@ -308,6 +308,19 @@
       "candidate_status": "unresolved_visual_bearing_candidate",
       "residual": "The camera-to-crossing bearing from published GPS and the approximate project anchor is about 286.6 degrees, while the Commons page supplies 315 degrees. With GPS, focal length and sensor fixed, a bearing near 300-302 degrees gives a better broad horizontal placement than 315 degrees; the 300-degree, 60 m, z=22 m aim is retained only as a visual candidate. Tower-pair spacing, the crossing-turret projection and roof contours still diverge, and candidate camera height/aim are inferred. The source page and EXIF report conflicting capture dates (2021-06-20 versus 2025-06-20); preserve both. Do not infer geometry or count M23 as a calibrated massing-gate view."
     },
+    "M24": {
+      "source": "https://commons.wikimedia.org/wiki/File:Elisabethkirche,_vom_Kaiser-Wilhelm-Turm_Marburg_20200902_001.jpg",
+      "capture_date": "2021-09-02",
+      "camera": "Nikon D780",
+      "focal_length_mm": 260,
+      "resolution_px": [4957, 3298],
+      "vantage": "Spiegelslustturm (Kaiser-Wilhelm-Turm), Marburg",
+      "camera_position": null,
+      "heading_deg": null,
+      "license": "CC BY-SA 4.0",
+      "status": "qualitative_tower_roof_reference_only",
+      "residual": "The distant long-lens frame shows the west tower pair and part of the roofscape. Camera coordinates and heading are unavailable; foreground buildings crop the lower masses and east choir. Do not solve a camera, infer dimensions, or count M24 as a massing-gate view."
+    },
     "M22": {
       "source_page": "https://commons.wikimedia.org/wiki/File:Marburg_asv2022-02_img14_Elisabethkirche.jpg",
       "source_metadata": {
