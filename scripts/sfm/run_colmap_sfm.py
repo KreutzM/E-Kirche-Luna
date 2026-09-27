@@ -18,6 +18,7 @@ import json
 import math
 import os
 import shutil
+import sqlite3
 import subprocess
 import sys
 from pathlib import Path
@@ -29,6 +30,7 @@ from PIL import Image
 ROOT = Path(__file__).resolve().parents[2]
 CONFIG = ROOT / "validation" / "sfm_config.yaml"
 MANIFEST = ROOT / "data" / "manifest.json"
+MAX_IMAGE_ID = 2_147_483_647
 
 
 def sha256(path: Path) -> str:
@@ -87,6 +89,70 @@ def run_command(
             f"{subprocess.list2cmdline(cmd)}; see {log_path.relative_to(ROOT)}"
         )
     return proc
+
+
+def clear_pose_priors(database: Path) -> int:
+    """Remove EXIF/GPS pose priors so the relative mapper cannot consume them."""
+    with sqlite3.connect(database) as connection:
+        table = connection.execute(
+            "SELECT 1 FROM sqlite_master WHERE type='table' AND name='pose_priors'"
+        ).fetchone()
+        if table is None:
+            return 0
+        count = int(connection.execute("SELECT COUNT(*) FROM pose_priors").fetchone()[0])
+        connection.execute("DELETE FROM pose_priors")
+        connection.commit()
+    return count
+
+
+def summarize_overlap_graph(database: Path, staged: list[dict[str, Any]]) -> dict[str, Any]:
+    """Summarize connected components in COLMAP's verified two-view graph."""
+    name_to_id = {item["staged_name"]: item["id"] for item in staged}
+    with sqlite3.connect(database) as connection:
+        db_images = dict(connection.execute("SELECT image_id, name FROM images"))
+        graph = {image_id: set() for image_id in db_images}
+        edges: list[dict[str, Any]] = []
+        for pair_id, inlier_count in connection.execute(
+            "SELECT pair_id, rows FROM two_view_geometries WHERE rows > 0"
+        ):
+            image_id1, image_id2 = divmod(int(pair_id), MAX_IMAGE_ID)
+            graph[image_id1].add(image_id2)
+            graph[image_id2].add(image_id1)
+            edges.append(
+                {
+                    "images": sorted(
+                        [
+                            name_to_id.get(db_images[image_id1], db_images[image_id1]),
+                            name_to_id.get(db_images[image_id2], db_images[image_id2]),
+                        ]
+                    ),
+                    "geometric_inliers": int(inlier_count),
+                }
+            )
+
+    components: list[list[str]] = []
+    unseen = set(graph)
+    while unseen:
+        seed = unseen.pop()
+        component = {seed}
+        pending = [seed]
+        while pending:
+            current = pending.pop()
+            neighbors = graph[current] & unseen
+            unseen.difference_update(neighbors)
+            component.update(neighbors)
+            pending.extend(neighbors)
+        components.append(
+            sorted(name_to_id.get(db_images[item], db_images[item]) for item in component)
+        )
+    components.sort(key=lambda component: (-len(component), component))
+    edges.sort(key=lambda edge: (edge["images"], edge["geometric_inliers"]))
+    return {
+        "definition": "Connected components of pairwise verified two-view geometries (rows > 0).",
+        "verified_pair_count": len(edges),
+        "connected_components": components,
+        "verified_pairs": edges,
+    }
 
 
 def local_asset_path(record: dict[str, Any]) -> Path:
@@ -368,6 +434,13 @@ def main() -> int:
     ]
     run_command(colmap, feature_args, logs / "01_feature_extractor.txt")
 
+    # Newer COLMAP releases may import GPS metadata into the database while
+    # reading EXIF. The ordinary incremental mapper does not need these rows;
+    # remove them explicitly to keep this reconstruction model-independent.
+    pose_prior_rows_removed = 0
+    if not defaults.get("use_pose_priors", False):
+        pose_prior_rows_removed = clear_pose_priors(database)
+
     matching_args = [
         "exhaustive_matcher",
         "--database_path", str(database),
@@ -380,7 +453,7 @@ def main() -> int:
     # Deliberately use the ordinary mapper rather than pose_prior_mapper. GPS is
     # withheld from the objective so that this reconstruction remains
     # independent of the disputed EXIF/page positions and DGM-derived Z priors.
-    run_command(
+    mapper_proc = run_command(
         colmap,
         [
             "mapper",
@@ -389,12 +462,21 @@ def main() -> int:
             "--output_path", str(sparse),
         ],
         logs / "03_mapper.txt",
+        check=False,
     )
 
     model_dirs = sorted(
         [p for p in sparse.iterdir() if p.is_dir()],
         key=lambda p: p.name,
     )
+    mapper_failure = None
+    if mapper_proc.returncode != 0:
+        mapper_failure = "\n".join((mapper_proc.stdout or "").strip().splitlines()[-3:])
+        if model_dirs:
+            raise RuntimeError(
+                "COLMAP mapper returned nonzero despite producing sparse models; "
+                f"see {(logs / '03_mapper.txt').relative_to(ROOT)}"
+            )
     models: list[dict[str, Any]] = []
     for model_dir in model_dirs:
         txt_dir = workspace / "sparse_txt" / model_dir.name
@@ -437,7 +519,12 @@ def main() -> int:
             f"{defaults.get('camera_model', 'SIMPLE_RADIAL')} per image"
         ),
         "pose_priors_used": False,
+        "pose_prior_rows_removed_before_mapping": pose_prior_rows_removed,
+        "overlap_graph": summarize_overlap_graph(database, staged),
         "blender_geometry_used": False,
+        "reconstruction_status": "success" if best else "no_model",
+        "mapper_exit_code": mapper_proc.returncode,
+        "mapper_failure": mapper_failure,
         "colmap_help_header": first_help_lines,
         "model_count": len(models),
         "models": models,
@@ -477,7 +564,9 @@ def main() -> int:
     else:
         print("no sparse model reconstructed")
     print(result_path.relative_to(ROOT))
-    return 0 if best else 2
+    # A completed diagnostic run with no model is still a successful result;
+    # the status and mapper error are preserved in the JSON summary.
+    return 0
 
 
 if __name__ == "__main__":

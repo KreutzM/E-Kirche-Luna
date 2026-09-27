@@ -1,0 +1,143 @@
+{
+  "schema_version": 1,
+  "group": "north",
+  "input_image_count": 6,
+  "input_images": [
+    {
+      "id": "M01",
+      "source": "references\\images\\modern\\M01_Elisabethkirche Luftbild NNO.jpg",
+      "staged_name": "M01.jpg",
+      "width": 600,
+      "height": 600,
+      "sha256": "ba9d3fe7a2916c2752c8683f4b0c39ff9f8d02ea584bd305fad55db76dca7196",
+      "camera_make": "OLYMPUS IMAGING CORP.  ",
+      "camera_model": "E-410           ",
+      "exif_focal_length": null
+    },
+    {
+      "id": "M06",
+      "source": "references\\images\\modern\\M06_Elisabethkirche (Marburg) Nordseite.jpg",
+      "staged_name": "M06.jpg",
+      "width": 2464,
+      "height": 3696,
+      "sha256": "1825035996fe65701e0de8efe849f98c2828ea5b565bf6f3aa3866fe648c0c17",
+      "camera_make": "NIKON CORPORATION",
+      "camera_model": "NIKON D5100",
+      "exif_focal_length": null
+    },
+    {
+      "id": "M07",
+      "source": "references\\images\\modern\\M07_Elisabethkirche Marburg Nordseite.jpg",
+      "staged_name": "M07.jpg",
+      "width": 2459,
+      "height": 3696,
+      "sha256": "c9bfb4075eb76d5509fc4ddf7029fb4b237706f18a5cac68f5d0c2811f2ac055",
+      "camera_make": "NIKON CORPORATION",
+      "camera_model": "NIKON D5300",
+      "exif_focal_length": null
+    },
+    {
+      "id": "M15",
+      "source": "references\\images\\modern\\M15_Marburg Elisabethkirche Sakristei Au\u00dfenansicht von N.JPG",
+      "staged_name": "M15.jpg",
+      "width": 3456,
+      "height": 5184,
+      "sha256": "32cd27a2b80dbd3757bd17b74b397e0f35981df7d1dc23e85b5e7cbad62ca0c8",
+      "camera_make": "Canon",
+      "camera_model": "Canon EOS 550D",
+      "exif_focal_length": null
+    },
+    {
+      "id": "M16",
+      "source": "references\\images\\modern\\M16_Marburg Elisabethkirche Sakristei Au\u00dfenansicht von NO.JPG",
+      "staged_name": "M16.jpg",
+      "width": 3372,
+      "height": 5058,
+      "sha256": "969b73f83ff1adf4c1a0fd3f48e467f3c2d252cd467246ad7e03649dab90e469",
+      "camera_make": "Canon",
+      "camera_model": "Canon EOS 550D",
+      "exif_focal_length": null
+    },
+    {
+      "id": "M17",
+      "source": "references\\images\\modern\\M17_Marburg Elisabethkirche Sakristeidach Au\u00dfenansicht von NO.JPG",
+      "staged_name": "M17.jpg",
+      "width": 3840,
+      "height": 2633,
+      "sha256": "b3685012784da58a04e41360073c58f3b061d2af0a9b5efb6cf13965bd23d4fe",
+      "camera_make": null,
+      "camera_model": null,
+      "exif_focal_length": null
+    }
+  ],
+  "camera_model_policy": "SIMPLE_RADIAL per image",
+  "pose_priors_used": false,
+  "pose_prior_rows_removed_before_mapping": 4,
+  "blender_geometry_used": false,
+  "reconstruction_status": "no_model",
+  "mapper_exit_code": 1,
+  "mapper_failure": "E20260927 17:44:20.836578 38400 sfm.cc:310] Failed to create any sparse model",
+  "colmap_help_header": [
+    "COLMAP 4.2.0 (Commit be5e291 on 2026-08-31 without GPU support)",
+    "Usage:",
+    "  colmap [command] [options]",
+    "Documentation:",
+    "  https://colmap.github.io/",
+    "Example usage:",
+    "  colmap help [ -h, --help ]",
+    "  colmap gui",
+    "  colmap gui -h [ --help ]",
+    "  colmap automatic_reconstructor -h [ --help ]",
+    "  colmap automatic_reconstructor --image_path IMAGES --workspace_path WORKSPACE",
+    "  colmap feature_extractor --image_path IMAGES --database_path DATABASE"
+  ],
+  "model_count": 0,
+  "models": [],
+  "best_model_index": null,
+  "best_registered_image_count": 0,
+  "best_registered_image_ids": [],
+  "best_sparse_point_count": 0,
+  "best_mean_reprojection_error_px": null,
+  "interpretation": "This result estimates only relative image geometry. Do not change Blender massing from it until the reconstruction is checked for connectivity/intrinsic plausibility and then independently aligned to metric/geospatial evidence.",
+  "overlap_graph": {
+    "definition": "Connected components of pairwise verified two-view geometries (rows > 0).",
+    "verified_pair_count": 3,
+    "connected_components": [
+      [
+        "M15",
+        "M16",
+        "M17"
+      ],
+      [
+        "M06",
+        "M07"
+      ],
+      [
+        "M01"
+      ]
+    ],
+    "verified_pairs": [
+      {
+        "images": [
+          "M06",
+          "M07"
+        ],
+        "geometric_inliers": 523
+      },
+      {
+        "images": [
+          "M15",
+          "M17"
+        ],
+        "geometric_inliers": 109
+      },
+      {
+        "images": [
+          "M16",
+          "M17"
+        ],
+        "geometric_inliers": 278
+      }
+    ]
+  }
+}

@@ -44,7 +44,10 @@ connectivity when the core image graph fragments.
 
 The script copies local evidence rasters into a gitignored workspace and records
 their SHA-256, dimensions and available EXIF make/model/focal metadata. It does
-not edit the source files.
+not edit the source files. Current COLMAP versions may import EXIF GPS data into
+the database as pose-prior rows; when `use_pose_priors` is false, the runner
+explicitly deletes those rows before matching and mapping. The compact JSON also
+records verified two-view overlap-graph components, including isolated images.
 
 ## Run
 
