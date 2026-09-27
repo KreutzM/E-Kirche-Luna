@@ -225,8 +225,11 @@ def parse_images(path: Path) -> list[dict[str, Any]]:
             camera_id = int(parts[8])
         except ValueError:
             continue
-        # Point-observation lines can be long too, but they do not have this
-        # integer/pose/camera layout.
+        # Guard against accidentally interpreting a POINTS2D line as a pose
+        # line. COLMAP pose quaternions are unit length.
+        qnorm = math.sqrt(sum(v * v for v in q))
+        if not 0.99 <= qnorm <= 1.01:
+            continue
         name = " ".join(parts[9:])
         images.append(
             {
