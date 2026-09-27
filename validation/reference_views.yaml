@@ -29,7 +29,7 @@ views:
     camera: VAL_N
     evidence: [M06, M07, M15, M16]
     status: approximate_orthographic_elevation
-    note: "Useful modern north coverage; exact camera pose is unavailable. M06 is an oblique perspective view; its overlay against the orthographic proxy is qualitative and cannot validate a registered silhouette."
+    note: "M06 supplies a point-of-view GPS location and 16 mm focal length (24 mm full-frame equivalent), but no heading. Its absolute EXIF altitude is not translated to project Z because ground elevation at the camera is unknown. The saved VAL_N remains an orthographic proxy. Temporary perspective candidates (bearings 205/215/225°, target distances 55/65/75 m and z=20/30/40 m) show framing sensitivity; H205/D65/z40 is only a broad visual-fit candidate. Tower and wall/roof silhouettes remain unresolved."
   E:
     camera: VAL_E
     evidence: [H01, P08]

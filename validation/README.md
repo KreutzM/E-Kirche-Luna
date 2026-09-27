@@ -34,15 +34,18 @@ validation cameras; `36_render_m21_target_diagnostics.py` compares inferred M21 
 `39_render_m18_registration_diagnostics.py` renders M18 bearing candidates, and
 `41_render_m21_nw_aim_candidate.py` renders an M21 matrix at bearings 325/330/335 degrees and target heights z=17/22/27/32 m. `42_render_dachreiter_height_diagnostics.py`
 and `43_render_dachreiter_m02_diagnostics.py` test temporary in-memory turret heights from M21 and M02 views.
+`45_render_m06_camera_candidates.py` uses M06's Commons point-of-view GPS and recorded 16 mm / 24 mm-equivalent focal lengths to test inferred headings, target distances and heights; its temporary candidates do not replace the saved N elevation proxy or constitute a solved camera.
 The selected 20 m rise remains a low-confidence inferred candidate. `38_render_lod2_overlay_diagnostic.py` overlays G01 `terrainIntersection` ground lines
 on the model from TOP, M21 and SE. TOP is the useful footprint comparison; M21/SE show the same
 ground lines near the image base and do not validate roof silhouettes. The lines are separate
 reference curves, not roof-surface wireframes or project geometry. These temporary diagnostic renders
 are ignored local files and do not change the saved camera or geometry. `44_create_evidence_overlays.py`
-creates photo/render blends for M02, M05, M18 and selected M21 bearing/target candidates; it preserves each full image and letterboxes
-aspect-ratio mismatches. It also makes approximate W/N comparisons using M10/M11 and M06 against
-the orthographic elevation proxies; these views have no solved photo cameras, so framing differences
-cannot be assigned to model geometry. These blends support visual diagnosis only and are not pass/fail
+creates photo/render blends for M02, M05, M18, M21 candidates and the M06 orthographic proxy/perspective candidate; it preserves each full image and letterboxes
+aspect-ratio mismatches. It also makes approximate W comparisons using M10/M11 against the
+orthographic elevation proxy; those photos have no usable camera pose. M06 has a GPS point and focal
+length, but its heading and local camera height remain unknown; both its orthographic proxy and
+temporary perspective candidate are diagnostic only. Framing differences cannot yet be assigned to
+model geometry. These blends are not pass/fail
 metrics or calibrated camera solutions. Cyan model-envelope outlines use zero-alpha letterbox regions
 so aspect-ratio padding is not mistaken for a silhouette edge.
 

@@ -271,5 +271,54 @@
         "M21"
       ]
     }
+  },
+  "diagnostic_candidates": {
+    "M06": {
+      "source_page": "https://commons.wikimedia.org/wiki/File:Elisabethkirche_(Marburg)_Nordseite.jpg",
+      "source_metadata": {
+        "camera_model": "Nikon D5100",
+        "latitude": 50.815377,
+        "longitude": 8.77003,
+        "absolute_altitude_m": 182.0,
+        "focal_length_mm": 16.0,
+        "focal_length_35mm_equivalent_mm": 24.0,
+        "source_image_px": [
+          2464,
+          3696
+        ]
+      },
+      "local_camera_xy_m": [
+        -9.988,
+        50.539
+      ],
+      "camera_z_m": 1.7,
+      "camera_z_basis": "Temporary eye-level approximation only. The absolute 182 m EXIF altitude is not transformed to project Z because ground elevation at the camera point is unknown.",
+      "tested_bearings_degrees": [
+        205,
+        215,
+        225
+      ],
+      "tested_target_distances_m": [
+        55,
+        65,
+        75
+      ],
+      "tested_target_heights_m": [
+        20,
+        30,
+        40
+      ],
+      "visual_fit_candidate": {
+        "bearing_degrees": 205,
+        "target_distance_m": 65,
+        "target_xyz_m": [
+          -37.46,
+          -8.37,
+          40.0
+        ]
+      },
+      "candidate_status": "unresolved_not_saved_camera",
+      "residual": "Broad framing candidate only; tower and coarse wall/roof silhouettes remain displaced. No geometry or camera accepted."
+    }
   }
 }

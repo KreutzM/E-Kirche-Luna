@@ -53,7 +53,7 @@ views:
     landmarks:
       - id: north_side_profile
         expected: "Long hall, crossing/transept, east choir and two-tower west end form a coherent stepped profile."
-        observed: "The long hall, crossing, east end and west tower form a gross profile. The wall is continuous and blank; bay rhythm is deferred to openings. M06 is an oblique perspective photograph, not a calibrated orthographic elevation, so the current N proxy cannot validate its silhouette."
+        observed: "The long hall, crossing, east end and west tower form a gross profile. The wall is continuous and blank; bay rhythm is deferred to openings. M06 supplies GPS and focal metadata, but not heading. Temporary GPS-based perspective tests yield only a broad framing candidate; tower and wall/roof contours remain displaced, while the saved N view is still an orthographic proxy. Keep this landmark unresolved."
         status: partial
   SE:
     camera: VAL_SE

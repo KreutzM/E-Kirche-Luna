@@ -15,7 +15,8 @@ RENDER_DIR = ROOT / "validation" / "renders"
 PAIRS = {
     "M10": ("M10_Elisabethkirche Marburg (03).jpg", "VAL_W.png"),
     "M11": ("M11_Elisabethkirche Marburg (04).jpg", "VAL_W.png"),
-    "M06": ("M06_Elisabethkirche (Marburg) Nordseite.jpg", "VAL_N.png"),
+    "M06_ORTHO_PROXY": ("M06_Elisabethkirche (Marburg) Nordseite.jpg", "VAL_N.png"),
+    "M06_H205_D65_Z40": ("M06_Elisabethkirche (Marburg) Nordseite.jpg", "VAL_M06_DIAG_H205_D65_Z40.png"),
     "M02": ("M02_Elisabethkirche Marburg von SO.jpg", "VAL_SE.png"),
     "M05": ("M05_Elisabethkirche (Marburg) Südseite.jpg", "VAL_S.png"),
     "M18": ("M18_Marburg Elisabethkirche Südchor Dach von SO (1).jpg", "VAL_M18.png"),
