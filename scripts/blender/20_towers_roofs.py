@@ -170,7 +170,8 @@ gable_x("ROOF_EastChoirBay", I["exterior_crossing_width"] / 2 - I["roof_joint_ov
 east_boundary = [
     (choir_base, -choir_half), (choir_base + 2.1, -choir_half * 0.92),
     (choir_base + 4.5, -choir_half * 0.70), (choir_base + 6.5, -choir_half * 0.38),
-    (I["east_extent_from_crossing"], 0.0),
+    (I["east_extent_from_crossing"], -I["conch_end_chord_width"] / 2),
+    (I["east_extent_from_crossing"], I["conch_end_chord_width"] / 2),
     (choir_base + 6.5, choir_half * 0.38), (choir_base + 4.5, choir_half * 0.70),
     (choir_base + 2.1, choir_half * 0.92), (choir_base, choir_half)
 ]
@@ -187,11 +188,13 @@ for sign, label in ((1, "North"), (-1, "South")):
             sign * arm_spring, arm_xhalf + I["roof_overhang"],
             I["main_wall_top_height"], I["conch_roof_peak_height"])
     projection = arm_tip - arm_spring
+    end_half_width = I["conch_end_chord_width"] / 2
     boundary = [
         (-arm_xhalf, sign * arm_spring), (-arm_xhalf * 0.92, sign * (arm_spring + projection * 0.28)),
         (-arm_xhalf * 0.70, sign * (arm_spring + projection * 0.60)),
         (-arm_xhalf * 0.38, sign * (arm_spring + projection * 0.87)),
-        (0.0, sign * arm_tip),
+        (-end_half_width, sign * arm_tip),
+        (end_half_width, sign * arm_tip),
         (arm_xhalf * 0.38, sign * (arm_spring + projection * 0.87)),
         (arm_xhalf * 0.70, sign * (arm_spring + projection * 0.60)),
         (arm_xhalf * 0.92, sign * (arm_spring + projection * 0.28)),

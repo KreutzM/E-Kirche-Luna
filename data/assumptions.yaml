@@ -272,6 +272,13 @@ assumptions:
     confidence: low
     evidence_ids: [P08, M01, M02, M18, M19]
     iteration: 2
+  conch_end_chord_width:
+    value: 4.5
+    unit: m
+    reason: "Terminal facet width for each of the three polygonal conches is estimated from P01's faceted plan outlines as roughly 30% of the 15 m east choir width. M01 independently confirms present-day cut-facet apse outlines; G01 is too generalized for direct metrology, so this remains a low-confidence inferred dimension."
+    confidence: low
+    evidence_ids: [P01, M01, M18, M19, G01]
+    iteration: 25
   dachreiter_roof_embed:
     value: 0.4
     unit: m

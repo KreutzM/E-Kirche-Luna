@@ -50,6 +50,7 @@
     "side_conch_body_top_height": 23.0,
     "east_choir_bay_top_height": 23.0,
     "east_conch_body_top_height": 22.0,
+    "conch_end_chord_width": 4.5,
     "dachreiter_roof_embed": 0.4,
     "dachreiter_body_height": 5.0
   }

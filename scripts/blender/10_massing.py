@@ -77,12 +77,14 @@ def footprint_prism(name, points, z0, z1, collection_name="MASSING", mat=STONE, 
 
 def east_conch_points(base_x, half_width, tip_x):
     projection = tip_x - base_x
+    end_half_width = I["conch_end_chord_width"] / 2.0
     return [
         (base_x, -half_width),
         (base_x + projection * 0.28, -half_width * 0.92),
         (base_x + projection * 0.60, -half_width * 0.70),
         (base_x + projection * 0.87, -half_width * 0.38),
-        (tip_x, 0.0),
+        (tip_x, -end_half_width),
+        (tip_x, end_half_width),
         (base_x + projection * 0.87, half_width * 0.38),
         (base_x + projection * 0.60, half_width * 0.70),
         (base_x + projection * 0.28, half_width * 0.92),
@@ -92,12 +94,14 @@ def east_conch_points(base_x, half_width, tip_x):
 
 def side_conch_points(sign, xhalf, spring_y, tip_y):
     projection = abs(tip_y - spring_y)
+    end_half_width = I["conch_end_chord_width"] / 2.0
     return [
         (-xhalf, sign * spring_y),
         (-xhalf * 0.92, sign * (spring_y + projection * 0.28)),
         (-xhalf * 0.70, sign * (spring_y + projection * 0.60)),
         (-xhalf * 0.38, sign * (spring_y + projection * 0.87)),
-        (0.0, sign * tip_y),
+        (-end_half_width, sign * tip_y),
+        (end_half_width, sign * tip_y),
         (xhalf * 0.38, sign * (spring_y + projection * 0.87)),
         (xhalf * 0.70, sign * (spring_y + projection * 0.60)),
         (xhalf * 0.92, sign * (spring_y + projection * 0.28)),

@@ -62,7 +62,7 @@ views:
     landmarks:
       - id: triconch_and_roof_turret
         expected: "Three conches surround the crossing and the current roof turret rises from the roofscape."
-        observed: "Iteration 18 raises the low-confidence roof-turret rise from 12 to 20 m after fixed-camera height diagnostics in M02 and M18/M21; the standard M02-derived render now places the spire closer to the source's relative roof/tower scale. The wider M18 and close M21 renders still show coarse wall and roof silhouettes, while M02's camera target and M18/M21's local aim remain inferred. M20 independently confirms the southeast ordering. This height change improves one massing landmark but does not establish an overall fit; polygonal conches, roof connections and other view residuals remain unresolved."
+        observed: "Iteration 25 changes all three conch body and roof outlines from a pointed tip to a flat terminal facet, using an inferred 4.5 m chord estimated from P01 and visually cross-checked against M01/M18/M19 and generalized G01. The updated TOP and oblique renders show the faceted plan end, but the conch roofs still converge into overly simple single-point fans and their joints with the crossing/choir roofs remain visibly crude. The roof-turret height candidate from iteration 18 remains low-confidence; M02's target and M18/M21's local aim remain inferred. M20 independently confirms southeast ordering. This improves one footprint detail but does not establish an overall fit; keep the gate closed."
         status: unresolved
       - id: sacristy
         expected: "Two-storey sacristy adjoins the north-east choir with a pyramidal roof."
@@ -70,7 +70,7 @@ views:
         status: partial
 acceptance:
   massing_gate_passed: false
-  reason: "Iteration 18 raises the inferred roof-turret rise to 20 m after fixed-camera diagnostics in M02 and M18/M21 improved that landmark; the rise remains low-confidence, and the M18/M21 images share one camera location. M21 bearing/target diagnostics show strong framing sensitivity and do not establish a unique camera fit. The broad silhouettes still fail: conch and roof connections are simplified, M05 has blank wall masses, M04 remains unresolved, and the M18/M21 camera aims are inferred. The footprint cross-check against G01 is only generalized. Keep the gate closed until dimensional and multi-view silhouette checks pass."
+  reason: "Iteration 25 adds a low-confidence 4.5 m terminal chord to each conch from the faceted P01 plan, with broad shape support from modern M01/M18/M19 and generalized G01. TOP now shows cut polygonal ends; oblique views still show simplified single-point conch roofs and crude connections. The roof-turret rise remains low-confidence; M21 bearing/target diagnostics are framing-sensitive, M05 has blank wall masses, M04 remains unresolved, and the M18/M21 camera aims are inferred. G01 is generalized and cannot provide architectural metrology. Keep the gate closed until joint dimensional and multi-view silhouette checks pass."
 auxiliary_evidence_checks:
   top_down_plan_extent:
     evidence_ids: [P01, M01, T01, T02, T03, T04]
@@ -82,3 +82,8 @@ auxiliary_evidence_checks:
     observed: "The four elevated tour cube faces show the paired west towers, long hall roof, transept/choir roofs and east end together from broad oblique viewpoints. This independently confirms that the tour is useful for checking overall component ordering and the east-choir roof footprint. Because the panorama stations and image pose are unpublished, apparent scales cannot identify a metric geometry residual."
     status: qualitative_only
     geometry_change: false
+  conch_terminal_facets:
+    evidence_ids: [P01, M01, M18, M19, G01]
+    observed: "Iteration 25 estimates a 4.5 m flat terminal chord from P01's three faceted apse outlines and applies it parametrically to all three conches. M01's aerial roof view and M18/M19's modern south-conch views support polygonal rather than pointed ends; G01 only corroborates the broad layout because its roof geometry is generalized. Updated TOP and oblique renders show the cut plan tips. The conch roof crests and joins to adjacent roofs still read as single-point tents with coarse intersections, so the roof form remains unresolved."
+    status: partial
+    geometry_change: true

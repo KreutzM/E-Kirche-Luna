@@ -82,3 +82,7 @@ Evidence: the official church page links the Flying Impressions exterior tour; i
 ## 2026-09-27 — Reframe the top-down plan validation view
 
 Correction: the saved 82 m orthographic TOP frame, centered at x=-8 m, clipped the west end of the current approximate footprint (west/east extents -50.0/+20.4 m). Recenter it at x=-15 m, the midpoint of those recorded extents, and widen to 100 m so the full footprint and roof arrangement have visible margin. This is a coverage correction motivated by the plan/model envelope, not an attempt to improve a photo fit. Regenerate `VAL_TOP` and verify that both ends are in frame before using it for the plan check.
+
+## 2026-09-27 — Flatten the three conch plan termini
+
+Decision: replace each pointed conch footprint tip with a 4.5 m flat terminal chord. The chord is an inferred low-confidence dimension, estimated as about 30% of the 15 m east-choir width in the P01 plan; modern M01 and M18/M19 support faceted present-day apse outlines. G01's generalized LoD2 surfaces are only a broad cross-check, not a measuring source. Record the value in `data/assumptions.yaml` and `data/model_parameters.json`; generate body and roof boundaries from that shared parameter. The iteration 25 TOP and oblique validation renders show the new flat facets. Roof crests remain crude single-point fans and their joints remain unresolved, so do not pass the massing gate.
