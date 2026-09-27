@@ -8,7 +8,7 @@ Die festgelegte Orientierung bleibt unverändert: Meter, X nach Osten, Y nach No
 
 ## Ausgangslage
 
-- Repository auf `main`, letzter gemeinsamer Stand `4d35b3f`.
+- Repository auf `main`, aktueller Stand `75797e1` (27.09.2026).
 - `python scripts/validate_dataset.py` besteht mit 35 Referenzeinträgen, 6 dokumentierten Maßen und 41 protokollierten Geometrieannahmen.
 - Das Manifest führt 22 moderne Fotos, 5 historische Fotos und 8 historische Pläne/Ansichten. M22 ergänzt eine moderne erhöhte Südwestansicht vom Marburger Schlossberg; Bilddateien und Kontaktbögen bleiben gemäß Repository-Regeln lokal und Bildbinärdateien unveröffentlicht.
 - `data/assumptions.yaml` enthält die Außenmaß-Inferenzen samt Gründen, Konfidenzen, Evidenz-IDs und Iterationen.
@@ -17,7 +17,7 @@ Die festgelegte Orientierung bleibt unverändert: Meter, X nach Osten, Y nach No
 
 ## Umsetzungsstand
 
-Seit diesem Plan wurden alle 34 Referenzen mit Provenienz gesichert. Der Validator besteht aktuell mit 41 protokollierten Geometrieannahmen. Die parametrische Blender-Szene, Hauptmassen, zwei Westtürme, Dachmassen, Evidenzkameras und sieben Renderansichten sind angelegt. Die Arbeitspakete Referenzen, Evidenz und Grundszene sind abgeschlossen.
+Seit diesem Plan wurden alle 35 Referenzen mit Provenienz gesichert. Der Validator besteht aktuell mit 41 protokollierten Geometrieannahmen. Die parametrische Blender-Szene, Hauptmassen, zwei Westtürme, Dachmassen, Evidenzkameras und Haupt-Prüfansichten sind angelegt. Die Arbeitspakete Referenzen, Evidenz und Grundszene sind abgeschlossen.
 
 Iteration 4 richtet die planbasierten Massen mit 7,13° zur geografischen Ostachse aus; der Vierungsursprung und die Weltachsen X=Ost, Y=Nord, Z=Oben bleiben unverändert. Iteration 5 vergrößert die inferierte Außenlänge und Querhausspanne anhand der minimalen OSM-Umrisshülle auf 70,4 × 44,6 m. Iteration 6 kalibriert die horizontale Sensorbreite von M02 anhand seines 3696×3053-Crops auf 28,3 mm äquivalent und verschiebt den dokumentierten Zielpunkt auf [-15, 0, 29] m. Iteration 7 verwendet M05 als separate Südsicht mit dessen GPS, 30-mm-Äquivalentbrennweite und Portraitformat; nur der Blickzielpunkt ist inferiert. Ein Test mit 32 m Konchendachhöhe wurde in M02/M05 zu hoch und auf 29 m zurückgesetzt. Das sind Karten-/Kamerableitungen, keine Vermessungsmaße. Validator und vollständiger Szenenaufbau bestehen; die Prüfrenders lassen sich reproduzieren.
 
@@ -44,6 +44,8 @@ Iteration 17 korrigiert die Richtungspräzision der Commons-Angabe: M18/M21 spei
 Iteration 18 erhöht den inferierten Dachreiteranstieg über dem Hauptfirst von 12 auf 20 m. Fixierte M02-Kameradiagnosen sowie M18/M21-Dachvergleiche stützen die Korrektur; 20 m bleibt wegen unsicherer Zielpunkte und Kameraneigungen ein niedrig sicherer Kandidat, keine dokumentierte Messung. Die Standardansichten werden neu aufgebaut und geprüft. Die Korrektur gibt das Massing-Prüftor nicht frei; Dachanschlüsse und übrige Silhouettenabweichungen sind weiterhin zu bewerten.
 
 Iteration 19 erzeugt reproduzierbare, unveränderte Quellbild-Render-Überlagerungen für M02, M05, M18 und M21. Die vollständigen Bildfelder bleiben erhalten; bei Formatabweichung wird der Bereich eingerahmt statt beschnitten. M18/M21 zeigen die Dachreiterhöhe und die grobe Turm-/Dachfolge näher an der Quelle; M02 stützt die Höhenkorrektur, M05 bleibt mit seinem nur visuellen Zielpunkt schlecht registriert. Die Überlagerungen belegen keine Kamerakalibrierung und liefern keine neue Maßangabe. Als Nächstes die Dachanschlüsse gezielt mit P01/P08 und der allgemeinen Draufsicht abgleichen, bevor weitere Höhenwerte geändert werden.
+
+Iteration 20 korrigiert die M21-Vergleichszuordnung: Die frühere Überlagerung benutzte einen temporären Render bei 325°/z=32 m, nicht die gespeicherte `VAL_M21`-Kamera. Das diagnostische Raster variiert nun 325/330/335° und Zielhöhen z=17/22/27/32 m. Die Bildlage reagiert stark auf die inferierte Zielneigung; kein eindeutiger Kamerafit und kein daraus ableitbarer Geometriefehler sind belegt. Keine Geometrie geändert. Die Dokumentation von Kamera, Landmarken und Referenzansichten wurde berichtigt; Validator besteht mit 35 Referenzen, 6 dokumentierten Maßen und 41 Annahmen.
 
 Iterationsnotiz: Die offizielle Kirchenseite verlinkt einen Außenrundgang und bestätigt eine beauftragte professionelle 3D-Aufnahme. Ein Vermessungsanbieter führt separat einen vollständigen Kirchenscan/-modellierungsauftrag mit geforderter 3-mm-Genauigkeit für Sanierungsunterlagen auf. Ob beide Referenzen dasselbe Projekt bezeichnen, ist nicht belegt; Rohpunktwolke oder Mesh sind öffentlich nicht verlinkt und Nutzungsrechte für Tour/Scan sind nicht angegeben. Als potenziell entscheidende Evidenzquelle registriert, aber nicht heruntergeladen oder zur Geometrieableitung verwendet. Ein hochauflösender Export wäre der stärkste nächste Abgleich, wenn Rechteinhaber ihn freigeben.
 
