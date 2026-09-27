@@ -143,6 +143,15 @@ def main():
     ok = 0
     for i, rec in enumerate(rows, 1):
         print(f'[{i}/{len(rows)}] {rec["id"]} {rec["title"]}', flush=True)
+        if rec.get("local_file"):
+            local_path = ROOT / rec["local_file"]
+            if local_path.is_file() and local_path.stat().st_size:
+                report.append(f'{rec["id"]},local_only,,"{local_path.relative_to(ROOT)}",')
+                ok += 1
+            else:
+                report.append(f'{rec["id"]},ERROR,,,"missing local reference: {local_path.relative_to(ROOT)}"')
+                print(f'  ERROR: missing local reference {local_path}', flush=True)
+            continue
         dest = destination(rec)
         if rec["id"] in metadata_by_id and dest.is_file() and dest.stat().st_size:
             meta = metadata_by_id[rec["id"]]

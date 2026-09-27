@@ -87,3 +87,8 @@ auxiliary_evidence_checks:
     observed: "Iteration 25 estimates a 4.5 m flat terminal chord from P01's three faceted apse outlines and applies it parametrically to all three conches. M01's aerial roof view and M18/M19's modern south-conch views support polygonal rather than pointed ends; G01 only corroborates the broad layout because its roof geometry is generalized. Updated TOP and oblique renders show the cut plan tips. The conch roof crests and joins to adjacent roofs still read as single-point tents with coarse intersections, so the roof form remains unresolved."
     status: partial
     geometry_change: true
+  east_north_conch_historic_order:
+    evidence_ids: [H06, H01, M16, M17]
+    observed: "H06 adds a low-resolution historical view from the east that shows the east and north conches together with the sacristy. It helps check broad overlap and component order against the existing east historic view and modern sacristy details, but its small preview, unknown capture date and uncalibrated perspective do not validate dimensions or present-day roof form. The current VAL_E orthographic proxy remains qualitative."
+    status: qualitative_partial
+    geometry_change: false

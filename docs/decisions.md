@@ -86,3 +86,7 @@ Correction: the saved 82 m orthographic TOP frame, centered at x=-8 m, clipped t
 ## 2026-09-27 — Flatten the three conch plan termini
 
 Decision: replace each pointed conch footprint tip with a 4.5 m flat terminal chord. The chord is an inferred low-confidence dimension, estimated as about 30% of the 15 m east-choir width in the P01 plan; modern M01 and M18/M19 support faceted present-day apse outlines. G01's generalized LoD2 surfaces are only a broad cross-check, not a measuring source. Record the value in `data/assumptions.yaml` and `data/model_parameters.json`; generate body and roof boundaries from that shared parameter. The iteration 25 TOP and oblique validation renders show the new flat facets. Roof crests remain crude single-point fans and their joints remain unresolved, so do not pass the massing gate.
+
+## 2026-09-27 — Add the LAGIS eastern conch preview
+
+Evidence: add H06, the LAGIS/CVMA preview captioned “Blick von Osten auf Ost- und Nordkonche mit Sakristei” (CVMA III/3, p. 337, fig. 412). Cache the 250 × 333 image locally and record its page, direct image URL, SHA-256 and known limitations in `sources/lagis_reference_metadata.yaml`. The capture date and image reuse rights are not stated; local experimental use is authorized by the user and redistribution remains deferred. Use it only for broad historical component ordering, not for present-day geometry or dimensions. Add an explicit historic contact sheet.

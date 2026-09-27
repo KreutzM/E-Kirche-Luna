@@ -4,6 +4,7 @@ policy:
   - "Unexpected or missing licence metadata causes a skip/error."
   - "Keep commons_download_metadata.jsonl with redistributed reference sets."
   - "User-authorized experiment exception: virtual-tour panorama tiles may be cached locally for visual geometry checks while licence review is deferred; do not redistribute them until reuse terms are resolved."
+  - "User-authorized experiment exception: H06 from the LAGIS/CVMA image preview may be cached locally for visual geometry checks while capture-date and reuse-rights review is deferred; do not redistribute it before resolving reuse terms."
 
 accepted_families:
   - CC0

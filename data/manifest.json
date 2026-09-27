@@ -396,5 +396,17 @@
     "source_page": "https://flyingimpressions.de/360%C2%B0/elisabethkirche/index.htm",
     "local_file": "references/images/virtual_tour/T04_Südansicht_front_L2.jpg",
     "provenance_record": "sources/virtual_tour_metadata.json"
+  },
+  {
+    "id": "H06",
+    "group": "historic",
+    "title": "Blick von Osten auf Ost- und Nordkonche mit Sakristei (CVMA III/3, Fig. 412)",
+    "view": "E/NE historical",
+    "role": "conch_and_sacristy_roof_order",
+    "priority": 2,
+    "metric_use": "qualitative_historical_geometry_reference",
+    "source_page": "https://www.lagis-hessen.de/de/subjects/lookup/sn/cvmahessen/id/321-1",
+    "local_file": "references/images/historic/H06_LAGIS_Ost_und_Nordkonche_Sakristei.jpg",
+    "provenance_record": "sources/lagis_reference_metadata.yaml"
   }
 ]
