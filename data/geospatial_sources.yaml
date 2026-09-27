@@ -3,6 +3,11 @@ sources:
     title: "3D-Gebäudemodell Hessen LoD2 — Elisabethkirche"
     provider: "Hessisches Landesamt für Bodenmanagement und Geoinformation"
     product: "INSPIRE-WFS HE Gebäude — 3D LoD2"
+    lod2_quality:
+      official_product_page: "https://hvbg.hessen.de/landesvermessung/geotopographie/3d-daten/3d-gebaeudemodelle"
+      vertical_accuracy_m_approx: 1.0
+      horizontal_accuracy: "Corresponds to underlying ALKIS/ATKIS object geometry."
+      caveat: "Complex or unrecognized roof forms may have larger deviations; LoD2 roofs are standardized/generalized."
     feature_type: "bu-core3d:Building"
     feature_id: "Building_DEHE06210000EgxB"
     source_url: "https://inspire-hessen.de/ows/services/org.2.ef07833e-78a6-4c2c-a895-e31de788aac3_wfs"
