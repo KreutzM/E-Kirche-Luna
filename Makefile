@@ -1,7 +1,7 @@
 PYTHON ?= python
 BLENDER ?= blender
 
-.PHONY: setup test validate validate-data validate-model fetch fetch-priority1 contacts scene camera-fit
+.PHONY: setup test validate validate-data validate-model fetch fetch-priority1 contacts scene camera-fit sfm-prepare sfm
 
 setup:
 	$(PYTHON) -m pip install -r requirements.txt
@@ -37,3 +37,9 @@ scene:
 	$(BLENDER) -b blender/scene/elisabethkirche.blend --python-exit-code 1 --python scripts/blender/30_import_lod2_reference.py
 	$(BLENDER) -b blender/scene/elisabethkirche.blend --python-exit-code 1 --python scripts/blender/40_validation_cameras.py
 	$(BLENDER) -b blender/scene/elisabethkirche.blend --python-exit-code 1 --python scripts/blender/90_validation.py
+
+sfm-prepare:
+	$(PYTHON) scripts/sfm/run_colmap_sfm.py --group $(or $(GROUP),core) --force --prepare-only
+
+sfm:
+	$(PYTHON) scripts/sfm/run_colmap_sfm.py --group $(or $(GROUP),core) --force

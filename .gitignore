@@ -26,3 +26,5 @@ blender/exports/
 Thumbs.db
 .vscode/
 .idea/
+# Local COLMAP databases, staged images, logs and sparse binaries
+validation/sfm_work/
