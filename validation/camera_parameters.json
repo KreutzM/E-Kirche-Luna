@@ -273,6 +273,25 @@
     }
   },
   "diagnostic_candidates": {
+    "M22": {
+      "source_page": "https://commons.wikimedia.org/wiki/File:Marburg_asv2022-02_img14_Elisabethkirche.jpg",
+      "source_metadata": {
+        "camera_model": "Sony ILCE-7RM3",
+        "latitude": 50.810361,
+        "longitude": 8.767583,
+        "focal_length_35mm_equivalent_mm": 86.0,
+        "source_image_px": [7642, 5095],
+        "license": "Free Art License"
+      },
+      "local_camera_xy_m": [-182.1, -507.8],
+      "camera_xy_basis": "Commons file-page camera coordinates converted to local east/north from the approximate crossing anchor in data/coordinate_system.yaml.",
+      "sensor_width_mm": 36.0,
+      "tested_bearings_degrees": [15, 20, 25],
+      "tested_local_camera_z_m": [75, 100, 125],
+      "tested_aim_elevation_z_m": 40,
+      "candidate_status": "unresolved_qualitative_geometry_reference",
+      "residual": "With published XY and 86 mm focal length fixed, an intermediate heading near 18-19 degrees visually places the tower pair closer horizontally than the 15- or 20-degree endpoints. Candidate local camera height and heading are not uniquely solved; the current simplified church outline remains mismatched and foreground occlusion hides the lower masses. Use only for broad tower/global ordering, not for geometry dimensions or the massing gate."
+    },
     "M06": {
       "source_page": "https://commons.wikimedia.org/wiki/File:Elisabethkirche_(Marburg)_Nordseite.jpg",
       "source_metadata": {

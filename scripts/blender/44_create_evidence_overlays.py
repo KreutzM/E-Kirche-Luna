@@ -26,6 +26,9 @@ PAIRS = {
     "M21_H330_Z17": ("M21_Marburg Elisabethkirche Südchor Dach von SO (2).jpg", "VAL_M21_DIAG_H330_Z17.png"),
     "M21_H330_Z27": ("M21_Marburg Elisabethkirche Südchor Dach von SO (2).jpg", "VAL_M21_DIAG_H330_Z27.png"),
     "M21_H330_Z32": ("M21_Marburg Elisabethkirche Südchor Dach von SO (2).jpg", "VAL_M21_DIAG_H330_Z32.png"),
+    "M22_H15_ZCAM100": ("M22_Marburg asv2022-02 img14 Elisabethkirche.jpg", "VAL_M22_DIAG_H15_ZCAM100.png"),
+    "M22_H20_ZCAM100": ("M22_Marburg asv2022-02 img14 Elisabethkirche.jpg", "VAL_M22_DIAG_H20_ZCAM100.png"),
+    "M22_H25_ZCAM100": ("M22_Marburg asv2022-02 img14 Elisabethkirche.jpg", "VAL_M22_DIAG_H25_ZCAM100.png"),
 }
 
 

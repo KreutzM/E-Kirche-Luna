@@ -72,6 +72,11 @@ acceptance:
   massing_gate_passed: false
   reason: "Iteration 28 limits the high transept-cross roof to the crossing square so it no longer duplicates the lower straight-arm roofs. Iteration 27 repositions the north-east sacristy against the east choir and separates its inferred 10.0 m east-west length from its 7.5 m north-south width, using the plan/photos with G01 only as a broad check. Iteration 26 adds continuous longitudinal hips to the three conch roofs and aligns conch eaves with adjoining gable roofs; the TOP footprint retains its low-confidence 4.5 m terminal facets. Conch body heights remain inferred and oblique silhouettes/roof intersections remain simplified against modern photos. The roof-turret rise remains low-confidence; M21 bearing/target diagnostics are framing-sensitive, M05 has blank wall masses, and M18/M21 camera aims are inferred. M04 is a close facade/tower view without a full silhouette and is not a massing gate camera. G01 is generalized and cannot provide architectural metrology. Keep the gate closed until joint dimensional and multi-view silhouette checks pass."
 auxiliary_evidence_checks:
+  m22_distant_tower_and_global_silhouette:
+    evidence_ids: [M22]
+    observed: "Commons gives a southwest viewpoint and 86 mm focal length. Diagnostic renders retain the page GPS-derived camera XY and test bearings 15/20/25 degrees plus local camera heights 75/100/125 m. A heading near 18-19 degrees moves the projected tower pair closer to the source horizontally, but the local height/aim remains inferred, the lower church is hidden by foreground, and the simplified outline still differs. This source extends qualitative tower-order coverage only; no dimensions or geometry are accepted from it."
+    status: qualitative_only
+    geometry_change: false
   top_down_plan_extent:
     evidence_ids: [P01, M01, T01, T02, T03, T04]
     observed: "Iteration 24 reframes VAL_TOP around x=-15 m and widens it to 100 m; the complete current model extent is now visible. The render reads as the expected west-tower pair, long hall, crossing/transept arms and eastern choir/conch sequence. P01 supplies plan topology and proportions, while the elevated tour views give oblique roof context. The views do not establish a metric scale match or resolve conch facet dimensions."

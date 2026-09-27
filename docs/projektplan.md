@@ -8,7 +8,7 @@ Die festgelegte Orientierung bleibt unverändert: Meter, X nach Osten, Y nach No
 
 ## Ausgangslage
 
-- Repository auf `main`, letzter Commit `27784d0` (27.09.2026); Iteration 28 ist gerendert und visuell geprüft, der Commit folgt nach der Abschlusskontrolle.
+- Repository auf `main`, letzter Geometrie-Commit `f4f29bb` (27.09.2026); Iteration 28 ist gerendert, geprüft und gepusht. Iteration 29 ergänzt M22-Kameradiagnosen, ohne Geometrie oder freigegebene Prüfkamera zu ändern.
 - `python scripts/validate_dataset.py` besteht mit 40 Referenzeinträgen, 6 dokumentierten Maßen und 43 protokollierten Geometrieannahmen.
 - Das Manifest führt 22 moderne Fotos, 6 historische Fotos, 8 historische Pläne/Ansichten und 4 virtuelle Touransichten. Der Nutzer hat lokale experimentelle Nutzung gefundener Aufnahmen freigegeben; Lizenzprüfung vor einer Weitergabe bleibt vorgesehen.
 - `data/assumptions.yaml` enthält die Außenmaß-Inferenzen samt Gründen, Konfidenzen, Evidenz-IDs und Iterationen.
@@ -143,4 +143,8 @@ Objekte getrennt in `OPENINGS`, `TRACERY` und `DETAIL` organisieren. Nach jedem 
 
 ## Nächster konkreter Arbeitsschritt
 
-Iteration 27 verschiebt die Sakristei an die Nordseite des Ostchors und bildet ihre aus P01 sowie M15–M17 inferierte Zweibay-Länge getrennt von der Breite ab (10,0 × 7,5 m); die generalisierte G01-Grundlinie dient nur als Lagequerscheck. TOP- und NE-Render zeigen den neuen Anschluss. Iteration 28 begrenzt das hohe Querhausdach auf das Vierungsquadrat; die geraden Seitenarme bekommen keine überlagerten zweiten Dachkörper mehr. Die aktualisierten TOP-, NE-, SE- und M18-Ansichten zeigen weiterhin vereinfachte Firststufen und Dachanschlüsse, daher bleibt das Massing-Gate geschlossen. M04 ist eine qualitative Fassaden-/Turmreferenz ohne vollständige Silhouette; seine GPS-/Fußabdruckabweichung bleibt offen, ist aber kein Ganzmassen-Kameraprüfpunkt. Als Nächstes die Firststufen und Dachanschlüsse an Vierung, Ostchor und Sakristei anhand P08, M01/M02/M05/M18–M21 und T01–T04 weiter vergleichen. Kamerastandorte und belegte Brennweiten beibehalten; jede neue Höhen-/Längeninferenz protokollieren und betroffene Ansichten neu rendern.
+Iteration 27 verschiebt die Sakristei an die Nordseite des Ostchors und bildet ihre aus P01 sowie M15–M17 inferierte Zweibay-Länge getrennt von der Breite ab (10,0 × 7,5 m); die generalisierte G01-Grundlinie dient nur als Lagequerscheck. TOP- und NE-Render zeigen den neuen Anschluss. Iteration 28 begrenzt das hohe Querhausdach auf das Vierungsquadrat; die geraden Seitenarme bekommen keine überlagerten zweiten Dachkörper mehr. Die aktualisierten TOP-, NE-, SE- und M18-Ansichten zeigen weiterhin vereinfachte Firststufen und Dachanschlüsse, daher bleibt das Massing-Gate geschlossen. M04 ist eine qualitative Fassaden-/Turmreferenz ohne vollständige Silhouette; seine GPS-/Fußabdruckabweichung bleibt offen, ist aber kein Ganzmassen-Kameraprüfpunkt.
+
+Iteration 29 ergänzt einen reproduzierbaren M22-Kameratest auf Basis des veröffentlichten Commons-Standorts und 86-mm-KB-Brennweite. Die neun temporären Posen prüfen Blickrichtungen 15°/20°/25° und relative Kamerahöhen 75/100/125 m; keine Pose wird als gelöst übernommen. Ein Zwischenwinkel nahe 18–19° verbessert die horizontale Turmpaarlage, aber Gesamtumriss und untere Massen bleiben wegen vereinfachter Geometrie und Vordergrundüberdeckung unbestätigt. Es entstehen keine neuen Gebäudeabmessungen. Das Massing-Gate bleibt offen.
+
+Als nächstes die Firststufen und Dachanschlüsse an Vierung, Ostchor und Sakristei anhand P08, M01/M02/M05/M18–M21 und T01–T04 weiter vergleichen. Kamerastandorte und belegte Brennweiten beibehalten; jede neue Höhen-/Längeninferenz protokollieren und betroffene Ansichten neu rendern.
