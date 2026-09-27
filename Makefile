@@ -1,19 +1,36 @@
-.PHONY: setup validate fetch fetch-priority1 contacts scene
+PYTHON ?= python
+BLENDER ?= blender
+
+.PHONY: setup validate validate-data validate-model fetch fetch-priority1 contacts scene camera-fit
 
 setup:
-	python -m pip install -r requirements.txt
+	$(PYTHON) -m pip install -r requirements.txt
 
-validate:
-	python scripts/validate_dataset.py
+validate: validate-data validate-model
+
+validate-data:
+	$(PYTHON) scripts/validate_dataset.py
+
+validate-model:
+	$(PYTHON) scripts/validate_model.py
+
+camera-fit:
+	@test -n "$(VIEW)" || (echo "Usage: make camera-fit VIEW=M02" && exit 2)
+	$(PYTHON) scripts/calibration/fit_camera.py --view $(VIEW)
 
 fetch:
-	python scripts/fetch_assets.py --max-width 2500
+	$(PYTHON) scripts/fetch_assets.py --max-width 2500
 
 fetch-priority1:
-	python scripts/fetch_assets.py --priority 1 --max-width 2500
+	$(PYTHON) scripts/fetch_assets.py --priority 1 --max-width 2500
 
 contacts:
-	python scripts/make_contact_sheets.py
+	$(PYTHON) scripts/make_contact_sheets.py
 
 scene:
-	blender --background --python scripts/blender/00_scene_setup.py
+	$(BLENDER) -b --python-exit-code 1 --python scripts/blender/00_scene_setup.py
+	$(BLENDER) -b blender/scene/elisabethkirche.blend --python-exit-code 1 --python scripts/blender/10_massing.py
+	$(BLENDER) -b blender/scene/elisabethkirche.blend --python-exit-code 1 --python scripts/blender/20_towers_roofs.py
+	$(BLENDER) -b blender/scene/elisabethkirche.blend --python-exit-code 1 --python scripts/blender/30_import_lod2_reference.py
+	$(BLENDER) -b blender/scene/elisabethkirche.blend --python-exit-code 1 --python scripts/blender/40_validation_cameras.py
+	$(BLENDER) -b blender/scene/elisabethkirche.blend --python-exit-code 1 --python scripts/blender/90_validation.py
