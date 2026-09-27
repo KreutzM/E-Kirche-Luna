@@ -80,3 +80,51 @@ groups:
       - M15
       - M16
       - M17
+
+  bridge:
+    description: >-
+      Targeted connectivity test using only the strongest existing southeast,
+      west and north anchors plus three newly curated broad exterior images.
+      Success means verified overlap edges connect the formerly separate
+      components; a low reprojection error alone is not sufficient.
+    image_ids:
+      - M02
+      - M03
+      - M20
+      - M23
+      - M09
+      - M10
+      - M11
+      - M25
+      - M06
+      - M07
+      - M26
+      - M27
+      - M28
+
+  core_plus_bridges:
+    description: >-
+      Full present-day core plus M26-M28. Run only after the bridge group shows
+      verified pairwise connectivity across previously separate directions.
+    image_ids:
+      - M01
+      - M02
+      - M03
+      - M05
+      - M06
+      - M07
+      - M08
+      - M09
+      - M10
+      - M11
+      - M15
+      - M16
+      - M18
+      - M19
+      - M20
+      - M21
+      - M23
+      - M25
+      - M26
+      - M27
+      - M28
