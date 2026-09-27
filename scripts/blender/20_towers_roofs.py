@@ -222,14 +222,15 @@ for sign, label in ((1, "North"), (-1, "South")):
                           "P01,P08,M01,M02,M03,M19,M20,H06")
 
 # Two-storey north-east sacristy with a steep pyramidal roof (Dehio, M15-M17).
-sac = I["sacristy_footprint_width"]
+sx_length = I["sacristy_footprint_length_x"]
+sy_width = I["sacristy_footprint_width"]
 sx0 = I["sacristy_x_min"]
 sy0 = I["sacristy_y_min"]
 eave = I["sacristy_eave_height"]
 apex = I["sacristy_roof_peak_height"]
-roof_vertices = [(sx0, sy0, eave), (sx0 + sac, sy0, eave),
-                 (sx0 + sac, sy0 + sac, eave), (sx0, sy0 + sac, eave),
-                 (sx0 + sac / 2, sy0 + sac / 2, apex)]
+roof_vertices = [(sx0, sy0, eave), (sx0 + sx_length, sy0, eave),
+                 (sx0 + sx_length, sy0 + sy_width, eave), (sx0, sy0 + sy_width, eave),
+                 (sx0 + sx_length / 2, sy0 + sy_width / 2, apex)]
 roof_faces = [(3, 2, 1, 0), (0, 1, 4), (1, 2, 4), (2, 3, 4), (3, 0, 4)]
 add_mesh("ROOF_SacristyPyramid", roof_vertices, roof_faces, "ROOFS", SLATE,
          "P01,P02,M15,M16,M17", "inferred pyramidal roof mass")

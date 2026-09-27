@@ -107,10 +107,17 @@ assumptions:
   sacristy_footprint_width:
     value: 7.5
     unit: m
-    reason: "Two-bay sacristy exterior footprint estimated from P01 and M15/M16; its present roof form is checked against M17."
+    reason: "North-south outside width of the sacristy estimated from P01; M15/M16 support its two-bay massing and M17 its present roof form. G01 broadly cross-checks the footprint but is generalized."
     confidence: low
     evidence_ids: [P01, M15, M16, M17]
     iteration: 1
+  sacristy_footprint_length_x:
+    value: 10.0
+    unit: m
+    reason: "East-west outside length estimated from the two-bay sacristy plan in P01 and facade proportions in M15/M16; G01's generalized ground outline is a broad cross-check, not the controlling dimension."
+    confidence: low
+    evidence_ids: [P01, M15, M16, M17, G01]
+    iteration: 27
   sacristy_roof_peak_height:
     value: 20.0
     unit: m
@@ -140,12 +147,12 @@ assumptions:
     evidence_ids: [P07, M09, M10, M11]
     iteration: 1
   sacristy_x_min:
-    value: 2.5
+    value: 6.0
     unit: m
-    reason: "Sacristy position east of the crossing estimated from P01 and present-day views M15-M17."
+    reason: "Sacristy west edge placed at the east choir bay start so its north wall meets the choir's north wall; P01 and M15-M17 support the side attachment, while the generalized G01 footprint independently cross-checks this eastward position."
     confidence: low
-    evidence_ids: [P01, M15, M16, M17]
-    iteration: 1
+    evidence_ids: [P01, M15, M16, M17, G01]
+    iteration: 27
   sacristy_y_min:
     value: 7.5
     unit: m

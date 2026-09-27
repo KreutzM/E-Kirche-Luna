@@ -66,11 +66,11 @@ views:
         status: unresolved
       - id: sacristy
         expected: "Two-storey sacristy adjoins the north-east choir with a pyramidal roof."
-        observed: "A separate sacristy body and pyramid roof are present; attachment and footprint need refinement against M15-M17."
+        observed: "Iteration 27 moves the inferred sacristy footprint east to meet the north wall of the east choir and models its two-bay east-west length separately from its north-south width (10.0 × 7.5 m). P01 and M15-M17 support a side-attached two-bay mass with a pyramidal roof; G01's generalized footprint is a broad positional cross-check. VAL_TOP and VAL_NE now show the eastern attachment. Exact footprint, roof proportions and wall elevations remain low-confidence, and the blank mass cannot yet be compared against the facade details."
         status: partial
 acceptance:
   massing_gate_passed: false
-  reason: "Iteration 26 adds continuous longitudinal hips to the three conch roofs and aligns conch eaves with adjoining gable roofs; the TOP footprint retains its low-confidence 4.5 m terminal facets. The conch body heights are still inferred and oblique silhouettes/roof intersections remain simplified against modern photos. The roof-turret rise remains low-confidence; M21 bearing/target diagnostics are framing-sensitive, M05 has blank wall masses, M04 remains unresolved, and M18/M21 camera aims are inferred. G01 is generalized and cannot provide architectural metrology. Keep the gate closed until joint dimensional and multi-view silhouette checks pass."
+  reason: "Iteration 27 repositions the north-east sacristy against the east choir and separates its inferred 10.0 m east-west length from its 7.5 m north-south width, using the plan/photos with G01 only as a broad check. Iteration 26 adds continuous longitudinal hips to the three conch roofs and aligns conch eaves with adjoining gable roofs; the TOP footprint retains its low-confidence 4.5 m terminal facets. Conch body heights remain inferred and oblique silhouettes/roof intersections remain simplified against modern photos. The roof-turret rise remains low-confidence; M21 bearing/target diagnostics are framing-sensitive, M05 has blank wall masses, and M18/M21 camera aims are inferred. G01 is generalized and cannot provide architectural metrology. Keep the gate closed until joint dimensional and multi-view silhouette checks pass."
 auxiliary_evidence_checks:
   top_down_plan_extent:
     evidence_ids: [P01, M01, T01, T02, T03, T04]
@@ -95,5 +95,10 @@ auxiliary_evidence_checks:
   conch_roof_ridges_and_eave_joints:
     evidence_ids: [P08, M01, M02, M18, M19, M20, H06]
     observed: "Iteration 26 changes the conch roofs to paired faceted slopes meeting at a centerline ridge from spring to the terminal hip chord. The side-conch eaves now meet the transverse-arm gable at z=24 m; the east-conch eaves meet the choir gable at z=23 m. East/SE source views support a continuous ridge and hipped facets, but the exact crest length and height are not metrically calibrated. Blender mesh inspection reports 11 faces per conch roof, zero boundary/non-manifold edges and zero zero-area faces after adding concealed closure faces. The updated oblique renders improve continuity but still diverge in roof proportions and crossing connections."
+    status: partial
+    geometry_change: true
+  sacristy_position_and_footprint:
+    evidence_ids: [P01, M15, M16, M17, G01]
+    observed: "Iteration 27 places the sacristy north of the east choir with its west edge at the choir-bay start, rather than beside the crossing. The 10.0 × 7.5 m inferred footprint follows the two-bay plan/photo massing; G01's generalized ground lines span a similar east/north area but are not treated as a conservation measurement. Updated TOP and NE renders show the attached volume. Exact roof and facade fit remain open."
     status: partial
     geometry_change: true
