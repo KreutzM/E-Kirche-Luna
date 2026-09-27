@@ -142,3 +142,27 @@ Decision: the CPU COLMAP 4.2.0 core run registers only M02/M03/M20/M23 (4/18), w
 ## 2026-09-27 — Test three targeted images as SfM graph bridges
 
 Decision: the first independent SfM pass shows a disconnected evidence graph rather than a single camera network. Do not solve that by adding many undirected references or by reintroducing model/GPS pose constraints. Add exactly three present-day Commons candidates, M26-M28, chosen to test specific missing transitions: west-to-south, west-to-north and west-to-southeast. Fetch their original rasters with live licence/provenance verification and first run the compact `bridge` group. Promote them into `core_plus_bridges` only if verified two-view geometries actually connect previously separate directional components. Connectivity is the primary criterion; a low reprojection error in another isolated local model is not sufficient. No georegistration or church geometry changes during this test.
+
+## 2026-09-27 — Targeted bridge SfM result (M26–M28)
+
+**Decision: west↔north connectivity is verified; west↔southeast/south remains missing. Issue #7 stays open and the massing gate stays closed. Do not run `core_plus_bridges`, georegister, compare to Blender, or change church geometry in this stage.** The bridge run used COLMAP 4.2.0 CPU SIFT, exhaustive matching, ordinary incremental mapper, per-image `SIMPLE_RADIAL`, and no pose priors; the runner removed imported pose-prior rows before matching/mapping.
+
+Commons originals were fetched and checked against the live source metadata: M26 is 7644×5207 (CC BY-SA 2.5; SHA-1 `98f6bba9912ef25542bf65f1532bc65794970b1b`), M27 is 3072×4096 (CC BY-SA 4.0; SHA-1 `b9c10bc428ad5092686e045b661ba7599637a6d7`), and M28 is 5081×3387 (CC BY-SA 4.0; SHA-1 `01e93407ea8b0b3b5bdc2d3b86edcf452f9e4788`). Actual raster dimensions match Commons metadata. Full current licence, source URL, contributor, original URL, source dimensions, and SHA-1 are recorded in `sources/commons_download_metadata.jsonl`; local originals are retained outside Git.
+
+The verified graph contains 18 pair edges and these components:
+
+- `{M06, M07, M09, M10, M11, M25, M26, M27}` — formerly separate north and west directions are now connected.
+- `{M02, M03, M20, M23}` — southeast/south remains separate.
+- `{M28}` — isolated.
+
+| Bridge image | Verified pairs and geometric inliers | Component spans prior directions? | Registered in sparse model? | Fitted `SIMPLE_RADIAL` |
+|---|---|---|---|---|
+| M26 | M11: 71; M25: 189 | Yes: west + north, through the existing west/north anchors | No | Not fitted; image unregistered |
+| M27 | M06: 182; M10: 86; M11: 99 | Yes: north + west | No | Not fitted; image unregistered |
+| M28 | None | No; singleton | No | Not fitted; image unregistered |
+
+No M26–M28 pair links the west/north component to M02/M03/M20/M23. Therefore the exact missing transition is **west ↔ southeast/south**. M27 satisfies the west↔north hypothesis; M26 strengthens the same combined component but does not bridge to south/southeast; M28 does not verify an overlap edge.
+
+The incremental mapper produced one southeast-only model with M23, M02 and M20 registered (3/13 images), 917 points and 0.865 px mean reprojection error. Its fitted focal lengths are 33.54 px for M23 (`k1=-9.84e-7`), 27.37 px for M02 (`k1=-2.56e-6`) and 28.74 px for M20 (`k1=5.78e-6`); these implausibly low focal lengths do not validate the model globally. None of M26–M28 registered. The low mapper error is confined to the separate southeast cluster and is not evidence of cross-direction connectivity.
+
+The compact graph/model summary is `validation/sfm_results/bridge.json`. Because the west↔southeast/south edge is absent, `core_plus_bridges` was not run. No georegistration, Blender comparison, geometry change, or new inferred dimension was introduced.

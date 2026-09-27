@@ -1,0 +1,464 @@
+{
+  "schema_version": 1,
+  "group": "bridge",
+  "input_image_count": 13,
+  "input_images": [
+    {
+      "id": "M02",
+      "source": "references\\images\\modern\\M02_Elisabethkirche Marburg von SO.jpg",
+      "staged_name": "M02.jpg",
+      "width": 3696,
+      "height": 3053,
+      "sha256": "a8dd29c4c02f708ca2873b9bdbfb173b21cbe9ae7660637055320a10d923bf57",
+      "camera_make": "NIKON CORPORATION",
+      "camera_model": "NIKON D5100",
+      "exif_focal_length": null
+    },
+    {
+      "id": "M03",
+      "source": "references\\images\\modern\\M03_Elisabethkirche MR von SO.jpg",
+      "staged_name": "M03.jpg",
+      "width": 3384,
+      "height": 2524,
+      "sha256": "bce0020ba16c6af7e36f2917d7d446a7f32517855ba81a71f81ed67fd4962cc3",
+      "camera_make": null,
+      "camera_model": null,
+      "exif_focal_length": null
+    },
+    {
+      "id": "M20",
+      "source": "references\\images\\modern\\M20_Elisabethkirche, von S\u00fcdosten Marburg 20200902 005.jpg",
+      "staged_name": "M20.jpg",
+      "width": 3840,
+      "height": 2555,
+      "sha256": "dc6c1c0cf24a214c105b8ff6d6cac604cf4902ab3665c698feab7bad0e1fc09b",
+      "camera_make": null,
+      "camera_model": null,
+      "exif_focal_length": null
+    },
+    {
+      "id": "M23",
+      "source": "references\\images\\modern\\M23_Marburg Elisabethkirche Deutsches Haus Firmaneiplatz von SO.jpg",
+      "staged_name": "M23.jpg",
+      "width": 5184,
+      "height": 3456,
+      "sha256": "73a70bdd526577355a736326f5c09defad87b7c3361cc1ac8aeb3c0f2edcd8ff",
+      "camera_make": "Canon",
+      "camera_model": "Canon EOS 550D",
+      "exif_focal_length": null
+    },
+    {
+      "id": "M09",
+      "source": "references\\images\\modern\\M09_Elisabethkirche (Marburg) T\u00fcrme aus SW.jpg",
+      "staged_name": "M09.jpg",
+      "width": 2448,
+      "height": 3696,
+      "sha256": "7800ff68631e8ac5eca0b71f4ef760864aed7c799cc0c14d531b57e16fcc6ba4",
+      "camera_make": "NIKON CORPORATION",
+      "camera_model": "NIKON D5100",
+      "exif_focal_length": null
+    },
+    {
+      "id": "M10",
+      "source": "references\\images\\modern\\M10_Elisabethkirche Marburg (03).jpg",
+      "staged_name": "M10.jpg",
+      "width": 3448,
+      "height": 5172,
+      "sha256": "d20264f687271ae95d23c34ef5cd1493643120b7d4c0de8b7a49063aae83b03d",
+      "camera_make": null,
+      "camera_model": null,
+      "exif_focal_length": null
+    },
+    {
+      "id": "M11",
+      "source": "references\\images\\modern\\M11_Elisabethkirche Marburg (04).jpg",
+      "staged_name": "M11.jpg",
+      "width": 3573,
+      "height": 4764,
+      "sha256": "0aefe87caf87cebe4a4d81ca3094ca428bbd58846acc82f470b1f977a916370c",
+      "camera_make": null,
+      "camera_model": null,
+      "exif_focal_length": null
+    },
+    {
+      "id": "M25",
+      "source": "references\\images\\modern\\M25_Marburg asv2022-02 img25 Elisabethkirche.jpg",
+      "staged_name": "M25.jpg",
+      "width": 3795,
+      "height": 4744,
+      "sha256": "0582b2c89deb43623f5dcc644fe285168ec0f2ff098e2dd787589544c90813e6",
+      "camera_make": "SONY",
+      "camera_model": "ILCE-7RM3",
+      "exif_focal_length": null
+    },
+    {
+      "id": "M06",
+      "source": "references\\images\\modern\\M06_Elisabethkirche (Marburg) Nordseite.jpg",
+      "staged_name": "M06.jpg",
+      "width": 2464,
+      "height": 3696,
+      "sha256": "1825035996fe65701e0de8efe849f98c2828ea5b565bf6f3aa3866fe648c0c17",
+      "camera_make": "NIKON CORPORATION",
+      "camera_model": "NIKON D5100",
+      "exif_focal_length": null
+    },
+    {
+      "id": "M07",
+      "source": "references\\images\\modern\\M07_Elisabethkirche Marburg Nordseite.jpg",
+      "staged_name": "M07.jpg",
+      "width": 2459,
+      "height": 3696,
+      "sha256": "c9bfb4075eb76d5509fc4ddf7029fb4b237706f18a5cac68f5d0c2811f2ac055",
+      "camera_make": "NIKON CORPORATION",
+      "camera_model": "NIKON D5300",
+      "exif_focal_length": null
+    },
+    {
+      "id": "M26",
+      "source": "references\\images\\modern\\M26_Elisabeth-Kirche-Marburg.jpg",
+      "staged_name": "M26.jpg",
+      "width": 7644,
+      "height": 5207,
+      "sha256": "b7b91d53a57dabbf5112e672a6eb2f9654f8d914f6a6c02a45ebe4f3937e3627",
+      "camera_make": null,
+      "camera_model": null,
+      "exif_focal_length": null
+    },
+    {
+      "id": "M27",
+      "source": "references\\images\\modern\\M27_Elisabethkirche (Marburg) 01.jpg",
+      "staged_name": "M27.jpg",
+      "width": 3072,
+      "height": 4096,
+      "sha256": "9612a87f92e834607e1279481fcf7f898e909e87c45817fd4c0bc0e56d5783fb",
+      "camera_make": "OnePlus",
+      "camera_model": "OnePlus 13",
+      "exif_focal_length": null
+    },
+    {
+      "id": "M28",
+      "source": "references\\images\\modern\\M28_Marburg Stadtansicht Elisabethkirche und Bahnhof von S.jpg",
+      "staged_name": "M28.jpg",
+      "width": 5081,
+      "height": 3387,
+      "sha256": "5d65395c92fc62f3514f4ec8cbb2c9ab1a1e365eb4b8e51e0bb23a8acf4f3ee5",
+      "camera_make": "Canon",
+      "camera_model": "Canon EOS 550D",
+      "exif_focal_length": null
+    }
+  ],
+  "camera_model_policy": "SIMPLE_RADIAL per image",
+  "pose_priors_used": false,
+  "pose_prior_rows_removed_before_mapping": 9,
+  "overlap_graph": {
+    "definition": "Connected components of pairwise verified two-view geometries (rows > 0).",
+    "verified_pair_count": 18,
+    "connected_components": [
+      [
+        "M06",
+        "M07",
+        "M09",
+        "M10",
+        "M11",
+        "M25",
+        "M26",
+        "M27"
+      ],
+      [
+        "M02",
+        "M03",
+        "M20",
+        "M23"
+      ],
+      [
+        "M28"
+      ]
+    ],
+    "verified_pairs": [
+      {
+        "images": [
+          "M02",
+          "M03"
+        ],
+        "geometric_inliers": 981
+      },
+      {
+        "images": [
+          "M02",
+          "M20"
+        ],
+        "geometric_inliers": 1045
+      },
+      {
+        "images": [
+          "M02",
+          "M23"
+        ],
+        "geometric_inliers": 1221
+      },
+      {
+        "images": [
+          "M03",
+          "M20"
+        ],
+        "geometric_inliers": 467
+      },
+      {
+        "images": [
+          "M03",
+          "M23"
+        ],
+        "geometric_inliers": 1205
+      },
+      {
+        "images": [
+          "M06",
+          "M07"
+        ],
+        "geometric_inliers": 523
+      },
+      {
+        "images": [
+          "M06",
+          "M27"
+        ],
+        "geometric_inliers": 182
+      },
+      {
+        "images": [
+          "M09",
+          "M10"
+        ],
+        "geometric_inliers": 508
+      },
+      {
+        "images": [
+          "M09",
+          "M11"
+        ],
+        "geometric_inliers": 499
+      },
+      {
+        "images": [
+          "M09",
+          "M25"
+        ],
+        "geometric_inliers": 147
+      },
+      {
+        "images": [
+          "M10",
+          "M11"
+        ],
+        "geometric_inliers": 4071
+      },
+      {
+        "images": [
+          "M10",
+          "M25"
+        ],
+        "geometric_inliers": 1050
+      },
+      {
+        "images": [
+          "M10",
+          "M27"
+        ],
+        "geometric_inliers": 86
+      },
+      {
+        "images": [
+          "M11",
+          "M25"
+        ],
+        "geometric_inliers": 1196
+      },
+      {
+        "images": [
+          "M11",
+          "M26"
+        ],
+        "geometric_inliers": 71
+      },
+      {
+        "images": [
+          "M11",
+          "M27"
+        ],
+        "geometric_inliers": 99
+      },
+      {
+        "images": [
+          "M20",
+          "M23"
+        ],
+        "geometric_inliers": 1178
+      },
+      {
+        "images": [
+          "M25",
+          "M26"
+        ],
+        "geometric_inliers": 189
+      }
+    ]
+  },
+  "blender_geometry_used": false,
+  "reconstruction_status": "success",
+  "mapper_exit_code": 0,
+  "mapper_failure": null,
+  "colmap_help_header": [
+    "COLMAP 4.2.0 (Commit be5e291 on 2026-08-31 without GPU support)",
+    "Usage:",
+    "  colmap [command] [options]",
+    "Documentation:",
+    "  https://colmap.github.io/",
+    "Example usage:",
+    "  colmap help [ -h, --help ]",
+    "  colmap gui",
+    "  colmap gui -h [ --help ]",
+    "  colmap automatic_reconstructor -h [ --help ]",
+    "  colmap automatic_reconstructor --image_path IMAGES --workspace_path WORKSPACE",
+    "  colmap feature_extractor --image_path IMAGES --database_path DATABASE"
+  ],
+  "model_count": 1,
+  "models": [
+    {
+      "registered_image_count": 3,
+      "registered_image_ids": [
+        "M23",
+        "M02",
+        "M20"
+      ],
+      "unregistered_image_ids": [
+        "M03",
+        "M09",
+        "M10",
+        "M11",
+        "M25",
+        "M06",
+        "M07",
+        "M26",
+        "M27",
+        "M28"
+      ],
+      "camera_count": 3,
+      "cameras": {
+        "1": {
+          "model": "SIMPLE_RADIAL",
+          "width": 3696,
+          "height": 3053,
+          "params": [
+            27.37034335734883,
+            1848.0,
+            1526.5,
+            -2.561938799884444e-06
+          ]
+        },
+        "8": {
+          "model": "SIMPLE_RADIAL",
+          "width": 3840,
+          "height": 2555,
+          "params": [
+            28.735822056812662,
+            1920.0,
+            1277.5,
+            5.7786633889168395e-06
+          ]
+        },
+        "9": {
+          "model": "SIMPLE_RADIAL",
+          "width": 5184,
+          "height": 3456,
+          "params": [
+            33.542617745846044,
+            2592.0,
+            1728.0,
+            -9.84065206784565e-07
+          ]
+        }
+      },
+      "images": [
+        {
+          "image_id": 2,
+          "camera_id": 9,
+          "name": "M23.jpg",
+          "qvec_world_to_camera": [
+            0.9994936611142972,
+            0.009118931960810796,
+            -0.008546670820255623,
+            -0.02926125236764064
+          ],
+          "tvec_world_to_camera": [
+            -4.727234749560714,
+            -0.5056886914561,
+            -0.010663006150274898
+          ],
+          "center_sfm_units": [
+            4.688967504326781,
+            0.7807110245409223,
+            -0.08159147840814615
+          ]
+        },
+        {
+          "image_id": 10,
+          "camera_id": 1,
+          "name": "M02.jpg",
+          "qvec_world_to_camera": [
+            0.9999206660518665,
+            0.00925830676511033,
+            -0.008433620185018115,
+            0.001348854628849465
+          ],
+          "tvec_world_to_camera": [
+            5.072033187538249,
+            -0.6019251468677834,
+            -0.00630362773099252
+          ],
+          "center_sfm_units": [
+            -5.069657058841948,
+            0.6164101808582144,
+            0.08056096022357187
+          ]
+        },
+        {
+          "image_id": 13,
+          "camera_id": 8,
+          "name": "M20.jpg",
+          "qvec_world_to_camera": [
+            0.9999113227823019,
+            0.009300388044525465,
+            -0.008345060551897663,
+            -0.004605357570676275
+          ],
+          "tvec_world_to_camera": [
+            -0.3679526207741237,
+            1.4004045392454019,
+            0.018741845878908894
+          ],
+          "center_sfm_units": [
+            0.3806895545151666,
+            -1.3971212053991366,
+            0.0010305181845743257
+          ]
+        }
+      ],
+      "points3D": {
+        "count": 917,
+        "mean_reprojection_error_px": 0.865019989479927
+      },
+      "model_index": "0",
+      "analyzer_output": "I20260927 18:49:40.969835 10388 model.cc:440] Rigs: 3\nI20260927 18:49:40.970838 10388 model.cc:441] Cameras: 3\nI20260927 18:49:40.970858 10388 model.cc:442] Frames: 3\nI20260927 18:49:40.970868 10388 model.cc:443] Registered frames: 3\nI20260927 18:49:40.970878 10388 model.cc:445] Images: 3\nI20260927 18:49:40.970887 10388 model.cc:446] Registered images: 3\nI20260927 18:49:40.970896 10388 model.cc:448] Points: 917\nI20260927 18:49:40.970904 10388 model.cc:449] Observations: 1946\nI20260927 18:49:40.970919 10388 model.cc:451] Mean track length: 2.122137\nI20260927 18:49:40.970937 10388 model.cc:453] Mean observations per image: 648.666667\nI20260927 18:49:40.970947 10388 model.cc:456] Mean reprojection error: 0.865020px"
+    }
+  ],
+  "best_model_index": "0",
+  "best_registered_image_count": 3,
+  "best_registered_image_ids": [
+    "M23",
+    "M02",
+    "M20"
+  ],
+  "best_sparse_point_count": 917,
+  "best_mean_reprojection_error_px": 0.865019989479927,
+  "interpretation": "This result estimates only relative image geometry. Do not change Blender massing from it until the reconstruction is checked for connectivity/intrinsic plausibility and then independently aligned to metric/geospatial evidence."
+}
