@@ -90,7 +90,7 @@
       "gps_longitude": 8.770428,
       "camera_height_basis": "1.7 m above nominal project grade is an eye-level approximation; Commons does not provide camera altitude usable as project Z.",
       "sensor_width_basis": "The Commons image is 3344x4770 from a Canon EOS 550D with 29 mm recorded focal length. Canon specifies a 22.3x14.9 mm sensor; the portrait image's short sensor dimension adjusted by 3344/3456 gives an approximate 14.42 mm active width. The crop/sensor fit is inferred.",
-      "local_position_basis": "Commons camera coordinates converted into local east/north using the approximate crossing anchor in data/coordinate_system.yaml. The source records cardinal NW (315 degrees nominal only). The saved target uses a 32 m inferred horizontal distance with z=17 m; local camera height, target distance, height and pitch are visual-fit inferences, not supplied metadata.",
+      "local_position_basis": "Commons camera coordinates converted into local east/north using the approximate crossing anchor in data/coordinate_system.yaml. The source records cardinal NW (315 degrees nominal only). The saved target uses a 32 m inferred horizontal distance with z=17 m; local camera height, target distance, height and pitch are visual-fit inferences, not supplied metadata. Temporary diagnostics separately vary bearing 325/330/335 degrees and target z=17/22/27/32 m; they do not modify this saved camera or establish a unique camera solution.",
       "source_page": "https://commons.wikimedia.org/wiki/File:Marburg_Elisabethkirche_S%C3%BCdchor_Dach_von_SO_(2).jpg",
       "sensor_spec_source": "https://files.canon-europe.com/files/soft38013/manual/EOS%20550D_HG_EN_Flat.pdf",
       "evidence_ids": [

@@ -32,15 +32,16 @@ architectural dimension. `35_render_lod2_diagnostic.py` can render G01 alone fro
 validation cameras; `36_render_m21_target_diagnostics.py` compares inferred M21 target heights,
 `37_render_m21_heading_diagnostics.py` compares bearings inside the recorded cardinal NW sector,
 `39_render_m18_registration_diagnostics.py` renders M18 bearing candidates, and
-`41_render_m21_nw_aim_candidate.py` renders the M21 visual-fit candidate. `42_render_dachreiter_height_diagnostics.py`
+`41_render_m21_nw_aim_candidate.py` renders an M21 matrix at bearings 325/330/335 degrees and target heights z=17/22/27/32 m. `42_render_dachreiter_height_diagnostics.py`
 and `43_render_dachreiter_m02_diagnostics.py` test temporary in-memory turret heights from M21 and M02 views.
 The selected 20 m rise remains a low-confidence inferred candidate. `38_render_lod2_overlay_diagnostic.py` overlays G01 `terrainIntersection` ground lines
 on the model from TOP, M21 and SE. TOP is the useful footprint comparison; M21/SE show the same
 ground lines near the image base and do not validate roof silhouettes. The lines are separate
 reference curves, not roof-surface wireframes or project geometry. These temporary diagnostic renders
 are ignored local files and do not change the saved camera or geometry. `44_create_evidence_overlays.py`
-creates photo/render blends for M02, M05, M18 and M21; it preserves each full image and letterboxes
+creates photo/render blends for M02, M05, M18 and selected M21 bearing/target candidates; it preserves each full image and letterboxes
 aspect-ratio mismatches. These blends support visual diagnosis only and are not pass/fail metrics or
-calibrated camera solutions.
+calibrated camera solutions. It also overlays cyan model-envelope outlines on the source photos to
+inspect the exterior mass silhouette while reducing facade-detail noise.
 
 Do not create visually convenient cameras and then claim agreement. Camera changes should be motivated by image evidence or documented calibration assumptions.
