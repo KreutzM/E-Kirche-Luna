@@ -79,7 +79,7 @@ auxiliary_evidence_checks:
     geometry_change: false
   m23_southeast_camera_and_silhouette:
     evidence_ids: [M23]
-    observed: "Commons provides a mapped southeast viewpoint, explicit 315-degree heading, 18 mm focal length and high-resolution source image. Nine diagnostic renders fix XY, heading and optics while varying eye-level Z, aim distance and target height. Selected overlays remain visibly displaced from the church; target-height changes do not explain the offset. The pose cannot be solved from this comparison yet, and the two published capture dates conflict. No geometry change is justified."
+    observed: "Commons provides a mapped southeast viewpoint, 315-degree heading, 18 mm focal length and high-resolution source. With GPS and optics fixed, a bearing sweep from 280 to 315 degrees shows better broad horizontal placement around 300-302 degrees; the 300-degree/60 m/z=22 m candidate is not a solved camera. The project-anchor bearing to the crossing is 286.6 degrees. Tower spacing, crossing-turret placement and roof contours remain inconsistent. No geometry change is justified; the source page and EXIF capture dates also conflict."
     status: unresolved
     geometry_change: false
   top_down_plan_extent:
@@ -109,7 +109,7 @@ auxiliary_evidence_checks:
     geometry_change: true
   m23_southeast_whole_church:
     evidence_ids: [M23]
-    observed: "Commons supplies GPS, explicit 315-degree heading, 18 mm focal length and image dimensions. Five selected overlays from the nine-pose diagnostic set show the modeled outline visibly displaced from the photo; changing target z shifts framing without resolving alignment. Camera Z and aim remain inferred, while the page description and EXIF disagree on capture year. This comparison establishes no geometric residual."
+    observed: "Commons supplies GPS, 315-degree heading, 18 mm focal length and image dimensions. The heading sweep demonstrates broad overlap improves near 300-302 degrees, but this conflicts with the recorded direction and does not align tower spacing or roof landmarks. The follow-up aim matrix at 300 degrees varies 50/60/70 m and z=15/22/29 m; framing changes, but does not establish a unique pose. Treat the remaining mismatch as camera/model entangled and make no geometry change from M23 alone."
     status: unresolved
     geometry_change: false
   sacristy_position_and_footprint:

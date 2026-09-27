@@ -53,8 +53,8 @@ views:
   M23:
     camera: null
     evidence: [M23]
-    status: gps_heading_focal_supported_pose_unresolved
-    note: "Commons provides GPS, explicit 315-degree heading, Canon EOS 550D, 18 mm focal length and 5184x3456 dimensions. The local GPS-derived XY is fixed; nine renders test eye-level camera Z=1.7 m, aim distances 45/60/75 m and target z=15/22/29 m. The overlays remain visibly displaced, and target-height changes do not resolve the mismatch. No pose or geometry is accepted. Commons description and EXIF provide conflicting dates (2021-06-20 and 2025-06-20); retain both."
+    status: gps_focal_supported_visual_bearing_candidate_unresolved
+    note: "Commons provides GPS, a 315-degree heading, Canon EOS 550D, 18 mm focal length and 5184x3456 dimensions. The local GPS-derived XY and optics are fixed. The camera-to-crossing bearing from the project anchor is 286.6 degrees. A temporary sweep from 280 to 315 degrees gives better broad horizontal placement near 300-302 than at 315; a 300-degree, 60 m, z=22 m pose is only a visual candidate. Tower-pair spacing, crossing-turret placement and roof silhouette remain inconsistent, so no pose or geometry is accepted. Eye-level Z, aim and fit bearing remain inferred. Commons description and EXIF conflict on capture dates (2021-06-20 and 2025-06-20); retain both."
 auxiliary_panorama_sources:
   T01-T04:
     source: "Official Flying Impressions exterior tour; four named aerial/raised cube panoramas."

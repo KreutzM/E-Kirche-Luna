@@ -292,12 +292,21 @@
       "camera_xy_heading_basis": "The file page gives an explicit 315 degree heading and names the view as from the southeast. The heading is held fixed for diagnostics.",
       "camera_z_m_candidate": 1.7,
       "camera_z_basis": "Eye-level approximation; no usable camera altitude is published.",
-      "tested_heading_degrees": [315],
-      "tested_aim_distances_m": [45, 60, 75],
+      "camera_to_crossing_bearing_degrees": 286.6,
+      "tested_heading_degrees": [280, 285, 290, 295, 300, 305, 310, 315, 298, 302, 304, 306],
+      "visual_fit_bearing_candidate_degrees": [300, 302],
+      "visual_fit_bearing_candidate_basis": "Broad horizontal landmark placement improves near 300-302 degrees compared with the published 315-degree direction. This is a visual candidate only; the two tower spacing and crossing-turret/roof outline still diverge, and the camera aim and distance are inferred.",
+      "tested_aim_distances_m": [45, 50, 60, 70, 75],
       "tested_target_heights_m": [15, 22, 29],
       "sensor_basis": "Canon EOS 550D APS-C horizontal sensor width 22.3 mm; source is 5184x3456 and EXIF focal length is 18 mm.",
-      "candidate_status": "unresolved_camera_and_silhouette",
-      "residual": "Across the tested eye-level, target-distance and target-height candidates, the model outline does not align with the photographed church; raising or lowering the aim shifts framing but does not resolve the displacement. The downloaded source page and EXIF report conflicting capture dates (2021-06-20 versus 2025-06-20); preserve both. Do not infer geometry or count M23 as a calibrated massing-gate view until camera pose and visible-model alignment are resolved."
+      "visual_fit_pose_candidate": {
+        "heading_degrees_inferred": 300,
+        "aim_distance_m_inferred": 60,
+        "target_xyz_m_inferred": [10.7, 11.3, 22.0],
+        "camera_z_m_inferred": 1.7
+      },
+      "candidate_status": "unresolved_visual_bearing_candidate",
+      "residual": "The camera-to-crossing bearing from published GPS and the approximate project anchor is about 286.6 degrees, while the Commons page supplies 315 degrees. With GPS, focal length and sensor fixed, a bearing near 300-302 degrees gives a better broad horizontal placement than 315 degrees; the 300-degree, 60 m, z=22 m aim is retained only as a visual candidate. Tower-pair spacing, the crossing-turret projection and roof contours still diverge, and candidate camera height/aim are inferred. The source page and EXIF report conflicting capture dates (2021-06-20 versus 2025-06-20); preserve both. Do not infer geometry or count M23 as a calibrated massing-gate view."
     },
     "M22": {
       "source_page": "https://commons.wikimedia.org/wiki/File:Marburg_asv2022-02_img14_Elisabethkirche.jpg",
