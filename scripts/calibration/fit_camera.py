@@ -139,11 +139,10 @@ def _project(points: np.ndarray, values, intrinsics):
     rotation = Rotation.from_rotvec(np.asarray(values["rotation"], dtype=float))
     pc = rotation.apply(points - np.asarray(values["position"], dtype=float))
     z = pc[:, 2]
-    if np.any(z <= 1e-6):
-        return None, pc
+    z_safe = np.where(np.abs(z) < 1e-6, np.where(z >= 0.0, 1e-6, -1e-6), z)
 
-    x = pc[:, 0] / z
-    y = pc[:, 1] / z
+    x = pc[:, 0] / z_safe
+    y = pc[:, 1] / z_safe
     r2 = x * x + y * y
     radial = 1.0 + k1 * r2 + k2 * r2 * r2
     xd, yd = x * radial, y * radial
@@ -176,12 +175,11 @@ def _fit_view(view_id: str, view: dict[str, Any]) -> dict[str, Any]:
     def residual(x):
         values = _unpack(base, fields, x)
         uv, pc = _project(object_points, values, intrinsics)
-        if uv is None:
-            bad = np.maximum(1e-3, -pc[:, 2] + 1e-3)
-            pixel = np.full((len(landmarks), 2), 1e4)
-            return np.concatenate([pixel.ravel(), bad * 1e4])
         res = ((uv - image_points) / sigma_px[:, None]).ravel()
-        extra = []
+        # Keep residual dimensionality constant while strongly penalizing
+        # poses that move evidence landmarks onto/behind the camera plane.
+        depth_penalty = np.maximum(0.0, 0.05 - pc[:, 2]) / 0.05
+        extra = list(depth_penalty * 100.0)
 
         if "position_m" in priors:
             p_ref = _vec(priors["position_m"], 3, "priors.position_m")
@@ -243,7 +241,7 @@ def _fit_view(view_id: str, view: dict[str, Any]) -> dict[str, Any]:
         nfev = 0
 
     uv, pc = _project(object_points, values, intrinsics)
-    if uv is None:
+    if np.any(pc[:, 2] <= 0.0):
         raise RuntimeError(f"{view_id}: fitted pose leaves landmarks behind camera")
     errors = np.linalg.norm(uv - image_points, axis=1)
     rms = float(np.sqrt(np.mean(errors**2)))
