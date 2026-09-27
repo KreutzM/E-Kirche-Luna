@@ -183,3 +183,27 @@ groups:
       - M26
       - M27
       - M28
+
+  issue7_southwest_bridge:
+    description: >-
+      Final targeted graph-connectivity test for the remaining Issue #7 break.
+      Uses established west/north anchors, representative south/southeast
+      anchors, and exactly three newly curated single-frame south/southwest
+      photographs M37-M39. Connectivity is evaluated before mapper quality.
+    image_ids:
+      - M09
+      - M10
+      - M11
+      - M25
+      - M26
+      - M27
+      - M04
+      - M05
+      - M02
+      - M20
+      - M23
+      - M29
+      - M34
+      - M37
+      - M38
+      - M39

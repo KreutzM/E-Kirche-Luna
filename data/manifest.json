@@ -548,5 +548,35 @@
     "priority": 1,
     "metric_use": "feature_matching_candidate",
     "commons_page": "https://commons.wikimedia.org/wiki/File:Elisabethkirche,_S%C3%BCdportal_Marburg_20200902_016.jpg"
+  },
+  {
+    "id": "M37",
+    "group": "modern",
+    "title": "Elisabeth Kirche von S HQ.jpg",
+    "view": "S broad exterior",
+    "role": "sfm_bridge_south_to_west_candidate",
+    "priority": 1,
+    "metric_use": "feature_matching_bridge_candidate",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Elisabeth_Kirche_von_S_HQ.jpg"
+  },
+  {
+    "id": "M38",
+    "group": "modern",
+    "title": "Marburg Unterer Steinweg mit Elisabethkirche von SW.jpg",
+    "view": "SW street-to-church exterior",
+    "role": "sfm_bridge_west_to_south_candidate",
+    "priority": 1,
+    "metric_use": "feature_matching_bridge_candidate",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Marburg_Unterer_Steinweg_mit_Elisabethkirche_von_SW.jpg"
+  },
+  {
+    "id": "M39",
+    "group": "modern",
+    "title": "Elisabethkirche Marburg (01).jpg",
+    "view": "SW/W oblique exterior candidate",
+    "role": "sfm_bridge_west_to_south_candidate",
+    "priority": 1,
+    "metric_use": "feature_matching_bridge_candidate",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Elisabethkirche_Marburg_(01).jpg"
   }
 ]

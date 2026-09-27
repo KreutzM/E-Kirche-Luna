@@ -1,0 +1,52 @@
+schema_version: 1
+purpose: >-
+  Final targeted attempt to close the only remaining verified SfM graph break:
+  combined west/north versus southeast/south. These are bridge hypotheses, not
+  accepted cameras or geometry evidence.
+
+candidates:
+  - id: M37
+    source_page: https://commons.wikimedia.org/wiki/File:Elisabeth_Kirche_von_S_HQ.jpg
+    expected_bridge: south_to_west
+    known_source_geometry: >-
+      Commons labels the image as a direct view from south with heading 0
+      degrees. It is a single directly photographed image, not a panorama.
+    acceptance_test: >-
+      Must verify against at least one existing west/north anchor and at least
+      one south/southeast anchor, either directly or by joining their component.
+
+  - id: M38
+    source_page: https://commons.wikimedia.org/wiki/File:Marburg_Unterer_Steinweg_mit_Elisabethkirche_von_SW.jpg
+    expected_bridge: west_to_south
+    known_source_geometry: >-
+      Commons labels it as a southwest view from Unterer Steinweg with heading
+      45 degrees and an 18 mm focal length.
+    acceptance_test: >-
+      Must add a verified path between the existing west/north component and a
+      south/southeast anchor. Matching only west images is not sufficient.
+
+  - id: M39
+    source_page: https://commons.wikimedia.org/wiki/File:Elisabethkirche_Marburg_(01).jpg
+    expected_bridge: west_to_south
+    known_source_geometry: >-
+      Commons records a Nikon D5300 single photograph at 2600x3900 with a
+      20 mm physical focal length and a camera point southwest of the church.
+    acceptance_test: >-
+      Must add a verified path between the existing west/north component and a
+      south/southeast anchor. A local west-only cluster is not sufficient.
+
+exclusions:
+  - >-
+    Do not substitute Elisabethkirche Marburg 01.jpg without parentheses: that
+    separate file is documented as a Hugin-stitched image and is unsuitable for
+    the ordinary single-camera SIMPLE_RADIAL assumption.
+  - Do not use M08 as a SIMPLE_RADIAL bridge because it is a stitched panorama.
+  - Do not add unrelated images in the same run.
+
+rules:
+  - Fetch M37-M39 as exact Commons originals with live licence/provenance checks.
+  - Use no GPS/DGM pose priors, Blender geometry, or hand-authored 3D landmarks.
+  - Evaluate verified two-view graph connectivity before mapper output.
+  - A low reprojection error in an isolated component is not success.
+  - Stop if M37-M39 fail to close the west/north to southeast/south graph break.
+  - No georegistration or church geometry changes in this test.
