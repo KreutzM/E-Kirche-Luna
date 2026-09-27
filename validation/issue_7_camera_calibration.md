@@ -96,3 +96,25 @@ The final verified graph has three components:
 Frames M29–M34 verified many edges within the southeast/south component, including M20–M29 (5,792 inliers), M31–M33 (7,085), and M32–M34 (6,372). None has a verified edge to M09, M10, M11, M25, M26, or M27. M35–M36 has 2,599 inliers and neither frame connects to either other component. Thus the exact remaining graph break is **the complete west/north component versus the southeast/south + M29–M34 component**; the south-portal pair is an additional disconnected component.
 
 The mapper produced a 13-image model, but it contains no west/north anchor. Because verified graph connectivity did not succeed, that model is not evidence of a common cross-direction reconstruction and no intrinsic-plausibility conclusion is drawn from it. Do not accept it as solving the calibration gap. Stop at this graph result before changing camera initialization. No geometry, assumptions, validation cameras, or georegistration changed.
+
+## 2026-09-27 — Final targeted southwest bridge attempt (M37–M39)
+
+**Decision: the verified graph remains disconnected. Issue #7 stays open and the massing gate remains closed. This exhausts the current curated freely available web-image corpus for a single cross-direction SfM network; stop this public-web acquisition path.** M37–M39 did not add a verified path between the established west/north and southeast/south components. No church geometry changed. No georegistration, Blender comparison, or pose priors were used.
+
+The exact Commons originals were fetched with live page/image metadata and retained locally. Downloaded rasters match the current Commons source dimensions and SHA-1; SHA-256 values below are computed from the local originals. The complete original URLs, file pages, licence links, artist, source metadata, and paths are recorded in `sources/commons_download_metadata.jsonl`.
+
+| ID | Source dimensions | Licence / artist | Commons SHA-1 | Local SHA-256 |
+|---|---:|---|---|---|
+| M37 | 1263×1489 | CC BY-SA 3.0 / Heinrich Stürzl | `11febbdfa6d28f6f971f1b729714a7c9b886da2a` | `caf7bf914680547a8cb4353dc28efdcc56c659d24338af3cb9e37af9714b097d` |
+| M38 | 5171×4414 | CC BY-SA 4.0 / Heinrich Stürzl | `214179f64dc7cfdcb026a65fec58a7274a2c769b` | `709acc1819ae3f31aad54cb20ba7b202136083fa6150068f6c8a02fc93967f0e` |
+| M39 | 2600×3900 | CC BY-SA 4.0 / Hydro | `af5263629b90e065fb60205651f606a169194791` | `b23024b59c0d9282e0d58e24bb0d0e93686bd29687beb7f4c0a45556a8c03173` |
+
+The required `issue7_southwest_bridge` group ran with COLMAP 4.2.0 CPU SIFT, exhaustive matching, guided geometric verification, per-image `SIMPLE_RADIAL`, and ordinary incremental mapper. Ten imported pose-prior rows were removed before matching/mapping. First evaluating its verified two-view graph, the group has 31 verified pairs and four components:
+
+- `{M09, M10, M11, M25, M26, M27, M39}` — established west/north anchors; M39 joins this component only.
+- `{M02, M04, M05, M20, M23, M29, M34}` — established south/southeast anchors; still disconnected from west/north.
+- `{M37}` and `{M38}` — no verified pair for either candidate.
+
+Every verified pair incident to a new candidate is: M09–M39 (437 inliers), M10–M39 (2,658), M11–M39 (3,493), M25–M39 (949), M26–M39 (179), and M27–M39 (85). M37 and M38 have no verified pairs. No candidate reaches a south/southeast anchor, so the success criterion fails. Matching thresholds were unchanged.
+
+The mapper ran as required, and its raw outputs remain in the compact JSON, but mapper registration, point counts, reprojection error, and intrinsics are not interpreted because the verified graph gate failed. The compact record is `validation/sfm_results/issue7_southwest_bridge.json`. No further image search was made in this run. No georegistration, camera changes, inferred dimensions, or church geometry changes were made.

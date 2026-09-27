@@ -1,0 +1,983 @@
+{
+  "schema_version": 1,
+  "group": "issue7_southwest_bridge",
+  "input_image_count": 16,
+  "input_images": [
+    {
+      "id": "M09",
+      "source": "references\\images\\modern\\M09_Elisabethkirche (Marburg) T\u00fcrme aus SW.jpg",
+      "staged_name": "M09.jpg",
+      "width": 2448,
+      "height": 3696,
+      "sha256": "7800ff68631e8ac5eca0b71f4ef760864aed7c799cc0c14d531b57e16fcc6ba4",
+      "camera_make": "NIKON CORPORATION",
+      "camera_model": "NIKON D5100",
+      "exif_focal_length": null
+    },
+    {
+      "id": "M10",
+      "source": "references\\images\\modern\\M10_Elisabethkirche Marburg (03).jpg",
+      "staged_name": "M10.jpg",
+      "width": 3448,
+      "height": 5172,
+      "sha256": "d20264f687271ae95d23c34ef5cd1493643120b7d4c0de8b7a49063aae83b03d",
+      "camera_make": null,
+      "camera_model": null,
+      "exif_focal_length": null
+    },
+    {
+      "id": "M11",
+      "source": "references\\images\\modern\\M11_Elisabethkirche Marburg (04).jpg",
+      "staged_name": "M11.jpg",
+      "width": 3573,
+      "height": 4764,
+      "sha256": "0aefe87caf87cebe4a4d81ca3094ca428bbd58846acc82f470b1f977a916370c",
+      "camera_make": null,
+      "camera_model": null,
+      "exif_focal_length": null
+    },
+    {
+      "id": "M25",
+      "source": "references\\images\\modern\\M25_Marburg asv2022-02 img25 Elisabethkirche.jpg",
+      "staged_name": "M25.jpg",
+      "width": 3795,
+      "height": 4744,
+      "sha256": "0582b2c89deb43623f5dcc644fe285168ec0f2ff098e2dd787589544c90813e6",
+      "camera_make": "SONY",
+      "camera_model": "ILCE-7RM3",
+      "exif_focal_length": null
+    },
+    {
+      "id": "M26",
+      "source": "references\\images\\modern\\M26_Elisabeth-Kirche-Marburg.jpg",
+      "staged_name": "M26.jpg",
+      "width": 7644,
+      "height": 5207,
+      "sha256": "b7b91d53a57dabbf5112e672a6eb2f9654f8d914f6a6c02a45ebe4f3937e3627",
+      "camera_make": null,
+      "camera_model": null,
+      "exif_focal_length": null
+    },
+    {
+      "id": "M27",
+      "source": "references\\images\\modern\\M27_Elisabethkirche (Marburg) 01.jpg",
+      "staged_name": "M27.jpg",
+      "width": 3072,
+      "height": 4096,
+      "sha256": "9612a87f92e834607e1279481fcf7f898e909e87c45817fd4c0bc0e56d5783fb",
+      "camera_make": "OnePlus",
+      "camera_model": "OnePlus 13",
+      "exif_focal_length": null
+    },
+    {
+      "id": "M04",
+      "source": "references\\images\\modern\\M04_Elisabethkirche Marburg S\u00fcdseite.jpg",
+      "staged_name": "M04.jpg",
+      "width": 2600,
+      "height": 3900,
+      "sha256": "c0b817759ea07b13493181506ab0bee08a66c62d40d90e8af25e727b2d54e57f",
+      "camera_make": "NIKON CORPORATION",
+      "camera_model": "NIKON D5300",
+      "exif_focal_length": null
+    },
+    {
+      "id": "M05",
+      "source": "references\\images\\modern\\M05_Elisabethkirche (Marburg) S\u00fcdseite.jpg",
+      "staged_name": "M05.jpg",
+      "width": 2464,
+      "height": 3696,
+      "sha256": "04ab3d0a47e07c3afaa78a946a1d513262c08a2a3ae7878aea2376314dcd119a",
+      "camera_make": "NIKON CORPORATION",
+      "camera_model": "NIKON D5100",
+      "exif_focal_length": null
+    },
+    {
+      "id": "M02",
+      "source": "references\\images\\modern\\M02_Elisabethkirche Marburg von SO.jpg",
+      "staged_name": "M02.jpg",
+      "width": 3696,
+      "height": 3053,
+      "sha256": "a8dd29c4c02f708ca2873b9bdbfb173b21cbe9ae7660637055320a10d923bf57",
+      "camera_make": "NIKON CORPORATION",
+      "camera_model": "NIKON D5100",
+      "exif_focal_length": null
+    },
+    {
+      "id": "M20",
+      "source": "references\\images\\modern\\M20_Elisabethkirche, von S\u00fcdosten Marburg 20200902 005.jpg",
+      "staged_name": "M20.jpg",
+      "width": 3840,
+      "height": 2555,
+      "sha256": "dc6c1c0cf24a214c105b8ff6d6cac604cf4902ab3665c698feab7bad0e1fc09b",
+      "camera_make": null,
+      "camera_model": null,
+      "exif_focal_length": null
+    },
+    {
+      "id": "M23",
+      "source": "references\\images\\modern\\M23_Marburg Elisabethkirche Deutsches Haus Firmaneiplatz von SO.jpg",
+      "staged_name": "M23.jpg",
+      "width": 5184,
+      "height": 3456,
+      "sha256": "73a70bdd526577355a736326f5c09defad87b7c3361cc1ac8aeb3c0f2edcd8ff",
+      "camera_make": "Canon",
+      "camera_model": "Canon EOS 550D",
+      "exif_focal_length": null
+    },
+    {
+      "id": "M29",
+      "source": "references\\images\\modern\\M29_Elisabethkirche, von S\u00fcdosten Marburg 20200902 006.jpg",
+      "staged_name": "M29.jpg",
+      "width": 5519,
+      "height": 3672,
+      "sha256": "51762be74769379cc25486fabb815666a8c402b0fd5932f2ee626d235165cbcd",
+      "camera_make": "NIKON CORPORATION",
+      "camera_model": "NIKON D780",
+      "exif_focal_length": null
+    },
+    {
+      "id": "M34",
+      "source": "references\\images\\modern\\M34_Elisabethkirche, von S\u00fcdosten Marburg 20200902 011.jpg",
+      "staged_name": "M34.jpg",
+      "width": 5770,
+      "height": 3839,
+      "sha256": "ab940d051df121acd73e43dfb7161c24559197f44caad235db0d12fb1615099f",
+      "camera_make": "NIKON CORPORATION",
+      "camera_model": "NIKON D780",
+      "exif_focal_length": null
+    },
+    {
+      "id": "M37",
+      "source": "references\\images\\modern\\M37_Elisabeth Kirche von S HQ.jpg",
+      "staged_name": "M37.jpg",
+      "width": 1263,
+      "height": 1489,
+      "sha256": "caf7bf914680547a8cb4353dc28efdcc56c659d24338af3cb9e37af9714b097d",
+      "camera_make": "Panasonic",
+      "camera_model": "DMC-TZ3",
+      "exif_focal_length": null
+    },
+    {
+      "id": "M38",
+      "source": "references\\images\\modern\\M38_Marburg Unterer Steinweg mit Elisabethkirche von SW.jpg",
+      "staged_name": "M38.jpg",
+      "width": 5171,
+      "height": 4414,
+      "sha256": "709acc1819ae3f31aad54cb20ba7b202136083fa6150068f6c8a02fc93967f0e",
+      "camera_make": "Canon",
+      "camera_model": "Canon EOS 550D",
+      "exif_focal_length": null
+    },
+    {
+      "id": "M39",
+      "source": "references\\images\\modern\\M39_Elisabethkirche Marburg (01).jpg",
+      "staged_name": "M39.jpg",
+      "width": 2600,
+      "height": 3900,
+      "sha256": "b23024b59c0d9282e0d58e24bb0d0e93686bd29687beb7f4c0a45556a8c03173",
+      "camera_make": "NIKON CORPORATION",
+      "camera_model": "NIKON D5300",
+      "exif_focal_length": null
+    }
+  ],
+  "camera_model_policy": "SIMPLE_RADIAL per image",
+  "pose_priors_used": false,
+  "pose_prior_rows_removed_before_mapping": 10,
+  "overlap_graph": {
+    "definition": "Connected components of pairwise verified two-view geometries (rows > 0).",
+    "verified_pair_count": 31,
+    "connected_components": [
+      [
+        "M02",
+        "M04",
+        "M05",
+        "M20",
+        "M23",
+        "M29",
+        "M34"
+      ],
+      [
+        "M09",
+        "M10",
+        "M11",
+        "M25",
+        "M26",
+        "M27",
+        "M39"
+      ],
+      [
+        "M37"
+      ],
+      [
+        "M38"
+      ]
+    ],
+    "verified_pairs": [
+      {
+        "images": [
+          "M02",
+          "M04"
+        ],
+        "geometric_inliers": 311
+      },
+      {
+        "images": [
+          "M02",
+          "M20"
+        ],
+        "geometric_inliers": 1045
+      },
+      {
+        "images": [
+          "M02",
+          "M23"
+        ],
+        "geometric_inliers": 1221
+      },
+      {
+        "images": [
+          "M02",
+          "M29"
+        ],
+        "geometric_inliers": 1055
+      },
+      {
+        "images": [
+          "M02",
+          "M34"
+        ],
+        "geometric_inliers": 665
+      },
+      {
+        "images": [
+          "M04",
+          "M05"
+        ],
+        "geometric_inliers": 82
+      },
+      {
+        "images": [
+          "M04",
+          "M20"
+        ],
+        "geometric_inliers": 72
+      },
+      {
+        "images": [
+          "M04",
+          "M23"
+        ],
+        "geometric_inliers": 99
+      },
+      {
+        "images": [
+          "M04",
+          "M29"
+        ],
+        "geometric_inliers": 99
+      },
+      {
+        "images": [
+          "M09",
+          "M10"
+        ],
+        "geometric_inliers": 508
+      },
+      {
+        "images": [
+          "M09",
+          "M11"
+        ],
+        "geometric_inliers": 499
+      },
+      {
+        "images": [
+          "M09",
+          "M25"
+        ],
+        "geometric_inliers": 147
+      },
+      {
+        "images": [
+          "M09",
+          "M39"
+        ],
+        "geometric_inliers": 437
+      },
+      {
+        "images": [
+          "M10",
+          "M11"
+        ],
+        "geometric_inliers": 4071
+      },
+      {
+        "images": [
+          "M10",
+          "M25"
+        ],
+        "geometric_inliers": 1050
+      },
+      {
+        "images": [
+          "M10",
+          "M27"
+        ],
+        "geometric_inliers": 86
+      },
+      {
+        "images": [
+          "M10",
+          "M39"
+        ],
+        "geometric_inliers": 2658
+      },
+      {
+        "images": [
+          "M11",
+          "M25"
+        ],
+        "geometric_inliers": 1196
+      },
+      {
+        "images": [
+          "M11",
+          "M26"
+        ],
+        "geometric_inliers": 75
+      },
+      {
+        "images": [
+          "M11",
+          "M27"
+        ],
+        "geometric_inliers": 99
+      },
+      {
+        "images": [
+          "M11",
+          "M39"
+        ],
+        "geometric_inliers": 3493
+      },
+      {
+        "images": [
+          "M20",
+          "M23"
+        ],
+        "geometric_inliers": 1192
+      },
+      {
+        "images": [
+          "M20",
+          "M29"
+        ],
+        "geometric_inliers": 5792
+      },
+      {
+        "images": [
+          "M20",
+          "M34"
+        ],
+        "geometric_inliers": 1388
+      },
+      {
+        "images": [
+          "M23",
+          "M29"
+        ],
+        "geometric_inliers": 1043
+      },
+      {
+        "images": [
+          "M23",
+          "M34"
+        ],
+        "geometric_inliers": 357
+      },
+      {
+        "images": [
+          "M25",
+          "M26"
+        ],
+        "geometric_inliers": 189
+      },
+      {
+        "images": [
+          "M25",
+          "M39"
+        ],
+        "geometric_inliers": 949
+      },
+      {
+        "images": [
+          "M26",
+          "M39"
+        ],
+        "geometric_inliers": 179
+      },
+      {
+        "images": [
+          "M27",
+          "M39"
+        ],
+        "geometric_inliers": 85
+      },
+      {
+        "images": [
+          "M29",
+          "M34"
+        ],
+        "geometric_inliers": 1812
+      }
+    ]
+  },
+  "bridge_evaluation": {
+    "verified_graph_success": false,
+    "criteria": {
+      "west_north_anchor_ids": ["M09", "M10", "M11", "M25", "M26", "M27"],
+      "south_southeast_anchor_ids": ["M04", "M05", "M02", "M20", "M23", "M29", "M34"]
+    },
+    "verified_components": [
+      ["M02", "M04", "M05", "M20", "M23", "M29", "M34"],
+      ["M09", "M10", "M11", "M25", "M26", "M27", "M39"],
+      ["M37"],
+      ["M38"]
+    ],
+    "candidate_verified_pairs": [
+      {"images": ["M09", "M39"], "geometric_inliers": 437},
+      {"images": ["M10", "M39"], "geometric_inliers": 2658},
+      {"images": ["M11", "M39"], "geometric_inliers": 3493},
+      {"images": ["M25", "M39"], "geometric_inliers": 949},
+      {"images": ["M26", "M39"], "geometric_inliers": 179},
+      {"images": ["M27", "M39"], "geometric_inliers": 85}
+    ],
+    "candidate_without_verified_pairs": ["M37", "M38"],
+    "candidate_component_effect": {
+      "M37": "isolated; joins neither established component",
+      "M38": "isolated; joins neither established component",
+      "M39": "joins the established west/north component only; no verified path to south/southeast"
+    },
+    "mapper_interpreted": false,
+    "decision": "Graph gate failed. Do not interpret mapper output or intrinsics; stop this acquisition path. The current curated freely available web-image corpus is insufficient for a single cross-direction SfM network."
+  },
+  "blender_geometry_used": false,
+  "reconstruction_status": "success",
+  "mapper_exit_code": 0,
+  "mapper_failure": null,
+  "colmap_help_header": [
+    "COLMAP 4.2.0 (Commit be5e291 on 2026-08-31 without GPU support)",
+    "Usage:",
+    "  colmap [command] [options]",
+    "Documentation:",
+    "  https://colmap.github.io/",
+    "Example usage:",
+    "  colmap help [ -h, --help ]",
+    "  colmap gui",
+    "  colmap gui -h [ --help ]",
+    "  colmap automatic_reconstructor -h [ --help ]",
+    "  colmap automatic_reconstructor --image_path IMAGES --workspace_path WORKSPACE",
+    "  colmap feature_extractor --image_path IMAGES --database_path DATABASE"
+  ],
+  "model_count": 2,
+  "models": [
+    {
+      "registered_image_count": 7,
+      "registered_image_ids": [
+        "M10",
+        "M25",
+        "M11",
+        "M09",
+        "M39",
+        "M27",
+        "M26"
+      ],
+      "unregistered_image_ids": [
+        "M04",
+        "M05",
+        "M02",
+        "M20",
+        "M23",
+        "M29",
+        "M34",
+        "M37",
+        "M38"
+      ],
+      "camera_count": 7,
+      "cameras": {
+        "4": {
+          "model": "SIMPLE_RADIAL",
+          "width": 2448,
+          "height": 3696,
+          "params": [
+            2620.7842627298655,
+            1224.0,
+            1848.0,
+            0.06433969063506931
+          ]
+        },
+        "5": {
+          "model": "SIMPLE_RADIAL",
+          "width": 3448,
+          "height": 5172,
+          "params": [
+            3638.6331052976248,
+            1724.0,
+            2586.0,
+            -0.022303442536879985
+          ]
+        },
+        "6": {
+          "model": "SIMPLE_RADIAL",
+          "width": 3573,
+          "height": 4764,
+          "params": [
+            3803.613144727169,
+            1786.5,
+            2382.0,
+            -0.03011707079471547
+          ]
+        },
+        "9": {
+          "model": "SIMPLE_RADIAL",
+          "width": 3795,
+          "height": 4744,
+          "params": [
+            3558.9241376510013,
+            1897.5,
+            2372.0,
+            -0.1249635100212989
+          ]
+        },
+        "10": {
+          "model": "SIMPLE_RADIAL",
+          "width": 7644,
+          "height": 5207,
+          "params": [
+            4117.417928886078,
+            3822.0,
+            2603.5,
+            -0.15449565458943565
+          ]
+        },
+        "11": {
+          "model": "SIMPLE_RADIAL",
+          "width": 3072,
+          "height": 4096,
+          "params": [
+            1942.6441869560579,
+            1536.0,
+            2048.0,
+            -0.037291392177671585
+          ]
+        },
+        "16": {
+          "model": "SIMPLE_RADIAL",
+          "width": 2600,
+          "height": 3900,
+          "params": [
+            3151.547595654842,
+            1300.0,
+            1950.0,
+            0.07018230306119468
+          ]
+        }
+      },
+      "images": [
+        {
+          "image_id": 3,
+          "camera_id": 5,
+          "name": "M10.jpg",
+          "qvec_world_to_camera": [
+            0.9969331906632148,
+            0.005216506135786683,
+            -0.07103119954152315,
+            0.03242792175718354
+          ],
+          "tvec_world_to_camera": [
+            1.7707554895111248,
+            -0.3775133735062267,
+            -0.5598025895339861
+          ],
+          "center_sfm_units": [
+            -1.6455613970105234,
+            0.49574637739509575,
+            0.7986447946535472
+          ]
+        },
+        {
+          "image_id": 4,
+          "camera_id": 9,
+          "name": "M25.jpg",
+          "qvec_world_to_camera": [
+            0.9990914102816839,
+            0.036364486173737595,
+            0.001471266340793036,
+            -0.022176866821771238
+          ],
+          "tvec_world_to_camera": [
+            -0.2576100798157341,
+            1.4048440058114602,
+            1.7656102788616637
+          ],
+          "center_sfm_units": [
+            0.327497111032731,
+            -1.5164826786502814,
+            -1.6584194940749772
+          ]
+        },
+        {
+          "image_id": 5,
+          "camera_id": 6,
+          "name": "M11.jpg",
+          "qvec_world_to_camera": [
+            0.9994792729980684,
+            0.031479299483107466,
+            0.003706986269916096,
+            0.006041092955767424
+          ],
+          "tvec_world_to_camera": [
+            0.9240722964595292,
+            1.0214688417405002,
+            2.489971383989163
+          ],
+          "center_sfm_units": [
+            -0.919049065165633,
+            -1.1652215103394041,
+            -2.427936025614371
+          ]
+        },
+        {
+          "image_id": 6,
+          "camera_id": 4,
+          "name": "M09.jpg",
+          "qvec_world_to_camera": [
+            0.9783381377646782,
+            -0.17497629216141988,
+            0.09539732194005342,
+            -0.05601014500292706
+          ],
+          "tvec_world_to_camera": [
+            -1.5519290612155179,
+            -4.485637166220063,
+            -3.5271700531727417
+          ],
+          "center_sfm_units": [
+            0.28334432306611357,
+            3.055796461481298,
+            5.054916138038615
+          ]
+        },
+        {
+          "image_id": 7,
+          "camera_id": 16,
+          "name": "M39.jpg",
+          "qvec_world_to_camera": [
+            0.9994772374605906,
+            0.02096556132550531,
+            -0.0240230321290962,
+            0.0053470518771561735
+          ],
+          "tvec_world_to_camera": [
+            0.7129108141968455,
+            0.49345407524159424,
+            1.4304751249658376
+          ],
+          "center_sfm_units": [
+            -0.7858379209278745,
+            -0.5442365535319099,
+            -1.3726846587431647
+          ]
+        },
+        {
+          "image_id": 10,
+          "camera_id": 11,
+          "name": "M27.jpg",
+          "qvec_world_to_camera": [
+            0.9901533614459644,
+            -0.003185437195826767,
+            0.11370024011418715,
+            -0.081599198556757
+          ],
+          "tvec_world_to_camera": [
+            -0.0695264427017301,
+            -0.2334264772357862,
+            -2.0037046014555693
+          ],
+          "center_sfm_units": [
+            -0.4212010698356608,
+            0.19167795807826268,
+            1.9646890836872717
+          ]
+        },
+        {
+          "image_id": 14,
+          "camera_id": 10,
+          "name": "M26.jpg",
+          "qvec_world_to_camera": [
+            0.9510621465914681,
+            -0.033352388442492636,
+            0.2839809700273678,
+            -0.11714614875583944
+          ],
+          "tvec_world_to_camera": [
+            -1.1659793139632695,
+            1.2588186762589246,
+            3.588875147711309
+          ],
+          "center_sfm_units": [
+            3.1608080188408474,
+            -0.5172800544330614,
+            -2.3592098379469197
+          ]
+        }
+      ],
+      "points3D": {
+        "count": 3121,
+        "mean_reprojection_error_px": 1.0308514276470302
+      },
+      "model_index": "1",
+      "analyzer_output": "I20260927 19:42:07.161388 30636 model.cc:440] Rigs: 7\nI20260927 19:42:07.162274 30636 model.cc:441] Cameras: 7\nI20260927 19:42:07.162290 30636 model.cc:442] Frames: 7\nI20260927 19:42:07.162298 30636 model.cc:443] Registered frames: 7\nI20260927 19:42:07.162305 30636 model.cc:445] Images: 7\nI20260927 19:42:07.162315 30636 model.cc:446] Registered images: 7\nI20260927 19:42:07.162322 30636 model.cc:448] Points: 3121\nI20260927 19:42:07.162331 30636 model.cc:449] Observations: 9235\nI20260927 19:42:07.162348 30636 model.cc:451] Mean track length: 2.958988\nI20260927 19:42:07.162366 30636 model.cc:453] Mean observations per image: 1319.285714\nI20260927 19:42:07.162377 30636 model.cc:456] Mean reprojection error: 1.030851px"
+    },
+    {
+      "registered_image_count": 6,
+      "registered_image_ids": [
+        "M02",
+        "M04",
+        "M23",
+        "M34",
+        "M29",
+        "M20"
+      ],
+      "unregistered_image_ids": [
+        "M09",
+        "M10",
+        "M11",
+        "M25",
+        "M26",
+        "M27",
+        "M05",
+        "M37",
+        "M38",
+        "M39"
+      ],
+      "camera_count": 6,
+      "cameras": {
+        "1": {
+          "model": "SIMPLE_RADIAL",
+          "width": 3696,
+          "height": 3053,
+          "params": [
+            4573.813962354861,
+            1848.0,
+            1526.5,
+            -0.28042258797404296
+          ]
+        },
+        "2": {
+          "model": "SIMPLE_RADIAL",
+          "width": 2600,
+          "height": 3900,
+          "params": [
+            2502.0924179605295,
+            1300.0,
+            1950.0,
+            -0.13425605594122328
+          ]
+        },
+        "7": {
+          "model": "SIMPLE_RADIAL",
+          "width": 3840,
+          "height": 2555,
+          "params": [
+            4415.093195301272,
+            1920.0,
+            1277.5,
+            -0.011570712333411988
+          ]
+        },
+        "8": {
+          "model": "SIMPLE_RADIAL",
+          "width": 5184,
+          "height": 3456,
+          "params": [
+            5017.644235630671,
+            2592.0,
+            1728.0,
+            0.053488265551705515
+          ]
+        },
+        "12": {
+          "model": "SIMPLE_RADIAL",
+          "width": 5519,
+          "height": 3672,
+          "params": [
+            7619.433011352101,
+            2759.5,
+            1836.0,
+            -0.0905904233738892
+          ]
+        },
+        "13": {
+          "model": "SIMPLE_RADIAL",
+          "width": 5770,
+          "height": 3839,
+          "params": [
+            9774.942919733985,
+            2885.0,
+            1919.5,
+            0.11808114681020819
+          ]
+        }
+      },
+      "images": [
+        {
+          "image_id": 8,
+          "camera_id": 1,
+          "name": "M02.jpg",
+          "qvec_world_to_camera": [
+            0.9933945428040748,
+            -0.09394023070782002,
+            -0.06589639083900933,
+            -0.0004255068007781186
+          ],
+          "tvec_world_to_camera": [
+            0.5357387519421595,
+            0.17998496774417969,
+            2.001504071623784
+          ],
+          "center_sfm_units": [
+            -0.7953634020496803,
+            0.1895533752924244,
+            -1.9123011594067
+          ]
+        },
+        {
+          "image_id": 9,
+          "camera_id": 2,
+          "name": "M04.jpg",
+          "qvec_world_to_camera": [
+            0.9817333127302122,
+            -0.14630824364688377,
+            -0.11737796738529205,
+            0.03187496336037081
+          ],
+          "tvec_world_to_camera": [
+            2.7864896178393166,
+            -2.1072473512734686,
+            -5.900622483305008
+          ],
+          "center_sfm_units": [
+            -1.1949180735050602,
+            0.3522031019382781,
+            6.743180648095965
+          ]
+        },
+        {
+          "image_id": 11,
+          "camera_id": 8,
+          "name": "M23.jpg",
+          "qvec_world_to_camera": [
+            0.992514017538033,
+            -0.08867214396564053,
+            -0.07288512752891003,
+            -0.04172450191607393
+          ],
+          "tvec_world_to_camera": [
+            -1.6707520854366904,
+            0.3599584922798859,
+            0.9542080229429794
+          ],
+          "center_sfm_units": [
+            1.527229800981529,
+            -0.03091714969571216,
+            -1.2239725744692238
+          ]
+        },
+        {
+          "image_id": 12,
+          "camera_id": 13,
+          "name": "M34.jpg",
+          "qvec_world_to_camera": [
+            0.9756065135698879,
+            -0.10102743798277118,
+            -0.19477330480936453,
+            0.00698191866781664
+          ],
+          "tvec_world_to_camera": [
+            0.8684686194853993,
+            -0.5379966769216419,
+            -1.4052573168186757
+          ],
+          "center_sfm_units": [
+            -0.2419108734574279,
+            0.22378006835323128,
+            1.7058217680030106
+          ]
+        },
+        {
+          "image_id": 15,
+          "camera_id": 12,
+          "name": "M29.jpg",
+          "qvec_world_to_camera": [
+            0.9929158222780913,
+            -0.11126699424181341,
+            -0.035857460649197065,
+            -0.02126189968007043
+          ],
+          "tvec_world_to_camera": [
+            -0.5408665312522145,
+            0.9506995795374362,
+            2.6735834078282856
+          ],
+          "center_sfm_units": [
+            0.36851393983828695,
+            -0.3124757424784105,
+            -2.8479766361899106
+          ]
+        },
+        {
+          "image_id": 16,
+          "camera_id": 7,
+          "name": "M20.jpg",
+          "qvec_world_to_camera": [
+            0.9935016242170317,
+            -0.08451946631953482,
+            -0.07341595095268127,
+            -0.020520249435485173
+          ],
+          "tvec_world_to_camera": [
+            -0.6610900482661567,
+            0.8466577930810907,
+            2.283097919054681
+          ],
+          "center_sfm_units": [
+            0.3364486081923537,
+            -0.4221436534098112,
+            -2.4647520460331402
+          ]
+        }
+      ],
+      "points3D": {
+        "count": 1961,
+        "mean_reprojection_error_px": 1.0787168313983437
+      },
+      "model_index": "0",
+      "analyzer_output": "I20260927 19:42:06.597009 30196 model.cc:440] Rigs: 6\nI20260927 19:42:06.597836 30196 model.cc:441] Cameras: 6\nI20260927 19:42:06.597851 30196 model.cc:442] Frames: 6\nI20260927 19:42:06.597858 30196 model.cc:443] Registered frames: 6\nI20260927 19:42:06.597867 30196 model.cc:445] Images: 6\nI20260927 19:42:06.597874 30196 model.cc:446] Registered images: 6\nI20260927 19:42:06.597882 30196 model.cc:448] Points: 1961\nI20260927 19:42:06.597888 30196 model.cc:449] Observations: 5781\nI20260927 19:42:06.597902 30196 model.cc:451] Mean track length: 2.947986\nI20260927 19:42:06.597918 30196 model.cc:453] Mean observations per image: 963.500000\nI20260927 19:42:06.597926 30196 model.cc:456] Mean reprojection error: 1.078717px"
+    }
+  ],
+  "best_model_index": "1",
+  "best_registered_image_count": 7,
+  "best_registered_image_ids": [
+    "M10",
+    "M25",
+    "M11",
+    "M09",
+    "M39",
+    "M27",
+    "M26"
+  ],
+  "best_sparse_point_count": 3121,
+  "best_mean_reprojection_error_px": 1.0308514276470302,
+  "interpretation": "This result estimates only relative image geometry. Do not change Blender massing from it until the reconstruction is checked for connectivity/intrinsic plausibility and then independently aligned to metric/geospatial evidence."
+}
