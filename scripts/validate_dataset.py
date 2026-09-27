@@ -87,10 +87,10 @@ if params_path.exists():
             fail(f"assumption {name} is not represented in data/model_parameters.json")
 
 if errors:
-    print("VALIDATION FAILED")
+    print("DATASET VALIDATION FAILED")
     for e in errors:
         print(" -", e)
     sys.exit(1)
 
-print(f"VALIDATION OK: {len(rows)} reference records, {len(dims)} documented dimensions, "
+print(f"DATASET VALIDATION OK: {len(rows)} reference records, {len(dims)} documented dimensions, "
       f"{len(assumptions.get('assumptions', {}))} recorded geometry assumptions")
