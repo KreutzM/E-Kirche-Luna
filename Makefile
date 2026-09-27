@@ -1,7 +1,7 @@
 PYTHON ?= python
 BLENDER ?= blender
 
-.PHONY: setup test validate validate-data validate-model fetch fetch-priority1 contacts scene camera-fit sfm-prepare sfm
+.PHONY: setup test validate validate-data validate-model fetch fetch-priority1 contacts scene camera-fit sfm-prepare sfm lod2-massing
 
 setup:
 	$(PYTHON) -m pip install -r requirements.txt
@@ -43,3 +43,6 @@ sfm-prepare:
 
 sfm:
 	$(PYTHON) scripts/sfm/run_colmap_sfm.py --group $(or $(GROUP),core) --force
+
+lod2-massing:
+	$(PYTHON) scripts/analyze_lod2_massing.py

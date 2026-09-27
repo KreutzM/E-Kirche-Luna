@@ -1,0 +1,109 @@
+schema_version: 1
+
+purpose: >-
+  Alternative Issue #7 massing gate after the curated public-web photo corpus
+  proved insufficient for a single connected SfM reconstruction. This gate
+  validates coarse massing with independent metric/geospatial evidence and
+  uses photographs only as local directional silhouette/topology checks.
+
+source_quality:
+  G01:
+    dataset: Hessian official 3D building model LoD2
+    intended_use: coarse_massing_reference
+    vertical_accuracy_m_approx: 1.0
+    caveat: >-
+      Roof forms are standardized/generalized; complex roofs may deviate more.
+      Do not treat LoD2 roof facets as conservation-grade architectural survey.
+    horizontal_accuracy: >-
+      Follows the underlying ALKIS/ATKIS object geometry.
+    official_quality_url: https://hvbg.hessen.de/landesvermessung/geotopographie/3d-daten/3d-gebaeudemodelle
+
+hard_metric_checks:
+  global_length:
+    model_parameter: inferred.overall_exterior_length
+    evidence: G01 minimum-area rectangle long axis
+    evidence_value_m: 70.359
+    tolerance_m: 1.0
+    rationale: coarse envelope check
+
+  global_transverse_span:
+    model_parameter: inferred.exterior_transept_span
+    evidence: G01 minimum-area rectangle short axis
+    evidence_value_m: 44.378
+    tolerance_m: 1.0
+    rationale: coarse envelope check
+
+  building_axis:
+    model_parameter: building_axis_orientation_degrees_from_east
+    evidence: G01 minimum-area rectangle long-axis orientation
+    evidence_value_deg: 7.406
+    tolerance_deg: 1.0
+    rationale: plan alignment check
+
+  crossing_anchor:
+    evidence: G01 rectangle center shifted by P01 west/east asymmetry
+    evidence_offset_from_project_anchor_m: 0.85
+    tolerance_m: 1.5
+    rationale: geospatial origin cross-check
+
+  total_vertical_extent:
+    model_parameter: documented_anchors.tower_height
+    evidence: G01 absolute vertical extent
+    evidence_value_m: 80.118
+    tolerance_m: 1.5
+    rationale: >-
+      Tower height is also independently documented as approximately 80 m.
+      LoD2 vertical accuracy is approximately 1 m; use 1.5 m as a coarse gate,
+      not a detail tolerance.
+
+local_lod2_component_checks:
+  status: pending_part_mapping
+  required: true
+  instruction: >-
+    Run scripts/analyze_lod2_massing.py, inspect per-BuildingPart U/V location,
+    measured heightAboveGround, terrain intersection and roof/eave Z levels,
+    then map only unambiguous LoD2 parts to architectural massing components.
+    At minimum review west towers, main hall roof, crossing/transept roof,
+    east/side conches and sacristy. Use approximately 1.5 m vertical tolerance
+    for simple roof/tower levels and up to 2.5 m only where a complex generalized
+    roof is explicitly documented. Do not force a semantic mapping.
+
+directional_photo_checks:
+  west_north_cluster:
+    evidence_ids: [M06, M07, M09, M10, M11, M25, M26, M27, M39]
+    role: >-
+      Check tower pair, west facade mass order and north-side continuation.
+      Do not infer global metric camera coordinates from this cluster.
+    blocker_if: >-
+      A repeated architectural ordering or coarse silhouette contradiction is
+      visible across multiple independent photographs and cannot be explained
+      by perspective/crop.
+
+  southeast_south_cluster:
+    evidence_ids: [M02, M03, M04, M05, M18, M19, M20, M21, M23, M29, M30, M31, M32, M33, M34]
+    role: >-
+      Check triconch topology, roof hierarchy, crossing turret, south/east roof
+      continuity and sacristy placement. Do not require connection to the west
+      cluster.
+    blocker_if: >-
+      A repeated component-order or coarse roof/mass contradiction is visible
+      across multiple images and conflicts with plan/LoD2 evidence.
+
+non_blocking_for_massing:
+  - facade openings
+  - buttress profiles
+  - tracery
+  - ornament
+  - exact pinnacle geometry
+  - sub-metre roof-edge detail
+  - camera-pose disagreement unsupported by independent metric evidence
+
+pass_rule: >-
+  Massing may pass only when all hard_metric_checks pass, the reviewed local
+  LoD2 component mapping contains no material coarse-massing contradiction,
+  both directional photo checks contain no repeated coarse contradiction, and
+  all remaining unresolved items are explicitly below the coarse-massing level
+  or are recorded evidence limitations. A disconnected global photo SfM network
+  is not itself a blocker once its evidence limitation is documented.
+
+status: pending_lod2_part_analysis
