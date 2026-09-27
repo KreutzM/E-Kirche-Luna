@@ -122,3 +122,7 @@ Correction: the previous camera matrix fixed the Commons 315-degree heading and 
 ## 2026-09-27 — Add M24 as a remote tower and roof reference
 
 Evidence: add the 4957×3298 Commons photograph taken 2021-09-02 from Spiegelslustturm with a Nikon D780 and 260 mm focal length. The file page documents CC BY-SA 4.0, but publishes no camera coordinates or heading. The long-lens frame shows the west tower pair and part of the roofscape; foreground buildings crop the lower church and east choir. Record M24 for qualitative tower/roof context only. It cannot calibrate a camera, support dimensions, validate the full silhouette or pass the massing gate. No geometry changes; no geometry iteration is added.
+
+## 2026-09-27 — Add M25 and test both published west-view positions
+
+Evidence: add A. Savin's 3795×4744 southwest west-facade photograph from 2022-02-22. Commons records a Sony ILCE-7RM3, 15 mm lens and Free Art License. The page camera point (50.8144167, 8.7688611) differs by about 15 m from embedded EXIF GPS (50.8145331, 8.7689711); preserve both. EXIF's 5304×7952 portrait frame and the cropped raster provisionally imply a 17.02 mm active horizontal sensor width. Diagnostic renders sweep headings around each point's bearing to the west-facade center, camera Z=2/7 m and target Z=30/45 m. No candidate aligns tower tips, facade extent and nave roof together. Do not infer a tower-height change or accept M25 as a calibrated camera until its GPS and pose are resolved. No geometry changes.

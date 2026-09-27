@@ -321,6 +321,34 @@
       "status": "qualitative_tower_roof_reference_only",
       "residual": "The distant long-lens frame shows the west tower pair and part of the roofscape. Camera coordinates and heading are unavailable; foreground buildings crop the lower masses and east choir. Do not solve a camera, infer dimensions, or count M24 as a massing-gate view."
     },
+    "M25": {
+      "source_page": "https://commons.wikimedia.org/wiki/File:Marburg_asv2022-02_img25_Elisabethkirche.jpg",
+      "source_metadata": {
+        "camera_model": "Sony ILCE-7RM3",
+        "capture_date": "2022-02-22",
+        "focal_length_mm": 15.0,
+        "source_image_px": [3795, 4744],
+        "embedded_exif_frame_px": [5304, 7952],
+        "exif_gps": [50.814533055, 8.768971111666666],
+        "commons_page_camera_location": [50.8144166667, 8.7688611111],
+        "license": "Free Art License"
+      },
+      "effective_sensor_width_mm_inferred": 17.02,
+      "sensor_width_basis": "Assuming the 23.8 mm short dimension of the Sony full-frame sensor is horizontal in the embedded portrait frame, the Commons raster width 3795 px relative to the embedded 5304 px frame implies an active horizontal width of 23.8*3795/5304 = 17.02 mm. This crop interpretation is provisional and must be checked against the source processing history.",
+      "gps_candidate_local_xy_m": {
+        "commons_page": [-93.1, -56.3],
+        "embedded_exif": [-84.5, -43.4]
+      },
+      "tested_headings_deg": {
+        "commons_page_center_40_3": [32.3, 36.3, 40.3, 44.3, 48.3],
+        "embedded_exif_center_43_1": [35.1, 39.1, 43.1, 47.1, 51.1]
+      },
+      "tested_camera_z_m": [2.0, 7.0],
+      "tested_target_z_m": [30.0, 45.0],
+      "aim_distance_basis": "Per GPS candidate, aim distance is the local horizontal distance to the rotated west-facade center at plan point (-50,0).",
+      "status": "unresolved_two_gps_pose_candidates",
+      "residual": "The source shows the complete west facade, both towers and part of the nave/south-side roof. Commons page camera coordinates and embedded EXIF GPS disagree by about 15 m. A non-destructive sweep renders both locations, headings around the west-facade direction, candidate local heights and target heights. No tested overlay aligns both tower tips, facade extent and nave/roof silhouette together; view framing remains sensitive to pose, and the coarse tower geometry remains a confound. Do not change tower dimensions or count M25 as a calibrated massing-gate camera until the GPS discrepancy and pose are resolved."
+    },
     "M22": {
       "source_page": "https://commons.wikimedia.org/wiki/File:Marburg_asv2022-02_img14_Elisabethkirche.jpg",
       "source_metadata": {

@@ -35,6 +35,7 @@ validation cameras; `36_render_m21_target_diagnostics.py` compares inferred M21 
 `41_render_m21_nw_aim_candidate.py` renders an M21 matrix at bearings 325/330/335 degrees and target heights z=17/22/27/32 m. `42_render_dachreiter_height_diagnostics.py`
 and `43_render_dachreiter_m02_diagnostics.py` test temporary in-memory turret heights from M21 and M02 views.
 `45_render_m06_camera_candidates.py` uses M06's Commons point-of-view GPS and recorded 16 mm / 24 mm-equivalent focal lengths to test inferred headings, target distances and heights; its temporary candidates do not replace the saved N elevation proxy or constitute a solved camera.
+`50_render_m25_camera_candidates.py` compares the M25 Commons-page camera point with embedded EXIF GPS. It tests headings around the west-facade bearing, inferred local camera heights and target heights while retaining the 15 mm lens. The two locations differ by about 15 m; the active sensor crop is provisional. No candidate is accepted as a camera solve or used to change tower geometry.
 The selected 20 m rise remains a low-confidence inferred candidate. `38_render_lod2_overlay_diagnostic.py` overlays G01 `terrainIntersection` ground lines
 on the model from TOP, M21 and SE. TOP is the useful footprint comparison; M21/SE show the same
 ground lines near the image base and do not validate roof silhouettes. The lines are separate

@@ -60,6 +60,11 @@ views:
     evidence: [M24]
     status: qualitative_remote_tower_roof_only
     note: "The 4957x3298 Nikon D780 image was captured 2021-09-02 with a 260 mm focal length from Spiegelslustturm. No camera coordinates or heading are published. The long-lens frame shows the west tower pair and part of the roofscape, but foreground buildings crop the lower masses and east choir. Use only for qualitative tower/roof context; it cannot validate dimensions, full silhouette or the massing gate."
+  M25:
+    camera: null
+    evidence: [M25]
+    status: two_gps_candidates_focal_supported_pose_unresolved
+    note: "M25 is a 3795x4744 southwest view of the west facade and nave from a Sony ILCE-7RM3 at 15 mm. The file page lists 50.8144167, 8.7688611, while embedded EXIF records 50.8145331, 8.7689711 (about 15 m apart). EXIF reports a 5304x7952 portrait frame, from which 17.02 mm active horizontal sensor width is provisionally inferred for the cropped Commons raster. Diagnostics test both GPS points and headings around the west-facade bearing, with camera Z=2/7 m and target Z=30/45 m. No unique pose or simultaneous tower/facade/nave silhouette fit is established. Keep M25 unresolved and do not use it to infer tower dimensions yet."
 auxiliary_panorama_sources:
   T01-T04:
     source: "Official Flying Impressions exterior tour; four named aerial/raised cube panoramas."

@@ -1,6 +1,6 @@
 west:
   status: strong
-  notes: "Multiple modern facade/portal/tower views."
+  notes: "Multiple modern facade/portal/tower views. M25 adds a 3795x4744 southwest west-facade view with 15 mm lens metadata, but the Commons page location and embedded EXIF GPS differ by about 15 m; diagnostic overlays do not yet establish a solved camera or a full silhouette pass."
 south:
   status: strong
   notes: "Several modern and historic views."
@@ -23,8 +23,8 @@ remote_tower_roof:
   status: qualitative_only
   notes: "M22 provides a distant southwest tower/global-order view; M24 adds a 260 mm telephoto view from Spiegelslustturm. M24 shows the west tower pair and part of the roofscape, while foreground buildings crop lower masses and the east choir. Neither remote view has a usable camera pose; use them only as qualitative silhouette references."
 dataset:
-  manifest_records: 42
-  downloaded_records: 42
+  manifest_records: 43
+  downloaded_records: 43
   contact_sheets: [overview, west, south, north, remote, plans, historic, virtual_tour]
   provenance_file: sources/commons_download_metadata.jsonl
   additional_provenance_file: sources/virtual_tour_metadata.json

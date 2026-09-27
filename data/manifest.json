@@ -370,6 +370,16 @@
     "commons_page": "https://commons.wikimedia.org/wiki/File:Elisabethkirche,_vom_Kaiser-Wilhelm-Turm_Marburg_20200902_001.jpg"
   },
   {
+    "id": "M25",
+    "group": "modern",
+    "title": "Marburg asv2022-02 img25 Elisabethkirche.jpg",
+    "view": "SW west-facade overall view; heading not published",
+    "role": "west_facade_primary_gps_focal",
+    "priority": 1,
+    "metric_use": "gps_focal_camera_solve_candidate",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Marburg_asv2022-02_img25_Elisabethkirche.jpg"
+  },
+  {
     "id": "T01",
     "group": "virtual_tour",
     "title": "Elisabethkirche Marburg 360° tour — Ostansicht cube face",
