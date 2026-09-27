@@ -56,13 +56,14 @@ Use: MASSING, TOWERS, ROOFS, BUTTRESSES, OPENINGS, TRACERY, DETAIL, CAMERAS, REF
 Dataset consistency and model/photo validation are separate.
 
 Before using a photographic mismatch to change massing:
-1. read `docs/camera_calibration.md`;
-2. annotate distributed 2D<->3D landmarks in `validation/camera_landmarks.yaml`;
-3. run `make camera-fit VIEW=<ID>`;
-4. require an accepted numerical fit and inspect per-landmark reprojection residuals;
-5. only then classify persistent residuals as possible geometry errors.
+1. read `docs/camera_calibration.md` and `docs/sfm_calibration.md`;
+2. direct 2D<->3D camera fits may be used when the corresponding 3D landmarks are independently trustworthy;
+3. if multiple direct fits are rejected or camera/model uncertainty is coupled, run the model-independent SfM workflow first with `make sfm`;
+4. require a coherent relative image reconstruction before georegistration;
+5. align the relative reconstruction to independent metric/geospatial evidence before comparing it to Blender;
+6. only then classify persistent residuals as possible geometry errors.
 
-Manual heading / target-height grids are diagnostic initialization tools only. Do not keep expanding them as the primary calibration method. A visually improved overlay is not a solved camera.
+Manual heading / target-height grids are diagnostic initialization tools only. Do not keep expanding them as the primary calibration method. A visually improved overlay is not a solved camera. Do not tune camera intrinsics against disputed Blender geometry merely to force a fit.
 
 After a material geometry change:
 1. update affected 3D landmark coordinates;
