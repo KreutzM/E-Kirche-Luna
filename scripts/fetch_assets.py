@@ -122,12 +122,20 @@ def main():
     ap.add_argument("--priority", type=int, choices=(1,2,3))
     ap.add_argument("--max-width", type=int, default=2500)
     ap.add_argument("--originals", action="store_true")
+    ap.add_argument("--ids", nargs="+", help="Only fetch selected manifest IDs (space- or comma-separated)")
     args = ap.parse_args()
 
     all_rows = json.loads(MANIFEST.read_text(encoding="utf-8"))
     rows = all_rows
     if args.priority:
         rows = [r for r in rows if int(r["priority"]) <= args.priority]
+    if args.ids:
+        requested = {item.strip() for token in args.ids for item in token.split(",") if item.strip()}
+        known = {r["id"] for r in all_rows}
+        unknown = sorted(requested - known)
+        if unknown:
+            ap.error("unknown manifest IDs: " + ", ".join(unknown))
+        rows = [r for r in rows if r["id"] in requested]
 
     metadata_by_id = {}
     if META.exists():
