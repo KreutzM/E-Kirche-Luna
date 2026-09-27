@@ -13,6 +13,9 @@ ROOT = Path.cwd()
 IMAGE_DIR = ROOT / "references" / "images" / "modern"
 RENDER_DIR = ROOT / "validation" / "renders"
 PAIRS = {
+    "M10": ("M10_Elisabethkirche Marburg (03).jpg", "VAL_W.png"),
+    "M11": ("M11_Elisabethkirche Marburg (04).jpg", "VAL_W.png"),
+    "M06": ("M06_Elisabethkirche (Marburg) Nordseite.jpg", "VAL_N.png"),
     "M02": ("M02_Elisabethkirche Marburg von SO.jpg", "VAL_SE.png"),
     "M05": ("M05_Elisabethkirche (Marburg) Südseite.jpg", "VAL_S.png"),
     "M18": ("M18_Marburg Elisabethkirche Südchor Dach von SO (1).jpg", "VAL_M18.png"),
@@ -51,6 +54,14 @@ def main():
             canvas.paste(resized, ((width - size[0]) // 2, (height - size[1]) // 2))
             return canvas
 
+        def fit_mask(image):
+            scale = min(width / image.width, height / image.height)
+            size = (round(image.width * scale), round(image.height * scale))
+            resized = image.resize(size, Image.Resampling.LANCZOS)
+            canvas = Image.new("L", (width, height), 0)
+            canvas.paste(resized, ((width - size[0]) // 2, (height - size[1]) // 2))
+            return canvas
+
         overlay = Image.blend(fit(source), fit(render), 0.5)
         overlay.thumbnail((1600, 1600), Image.Resampling.LANCZOS)
         output = RENDER_DIR / f"OVERLAY_{evidence_id}.png"
@@ -66,8 +77,7 @@ def main():
         eroded = mask.filter(ImageFilter.MinFilter(5))
         outline = ImageChops.subtract(dilated, eroded)
         source_canvas = fit(source)
-        outline_canvas = fit(outline.convert("RGB"))
-        alpha = outline_canvas.getchannel("R")
+        alpha = fit_mask(outline)
         cyan = Image.new("RGB", (width, height), (0, 230, 255))
         source_canvas.paste(cyan, (0, 0), alpha)
         source_canvas.thumbnail((1600, 1600), Image.Resampling.LANCZOS)

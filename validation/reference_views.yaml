@@ -4,7 +4,7 @@ views:
     camera: VAL_W
     evidence: [M10, M11, P07]
     status: approximate_frontal_elevation
-    note: "Modern west photographs support the silhouette, but downloaded metadata has no usable camera position; this is not an exact photo solve."
+    note: "Modern west photographs support the silhouette, but downloaded metadata has no usable camera position; this is not an exact photo solve. M10/M11 overlays against the orthographic proxy expose perspective-dependent tower-height and framing differences, so they support gross mass only and do not isolate geometric residuals."
   S:
     camera: VAL_S
     evidence: [M05]
@@ -29,7 +29,7 @@ views:
     camera: VAL_N
     evidence: [M06, M07, M15, M16]
     status: approximate_orthographic_elevation
-    note: "Useful modern north coverage; exact camera pose is unavailable."
+    note: "Useful modern north coverage; exact camera pose is unavailable. M06 is an oblique perspective view; its overlay against the orthographic proxy is qualitative and cannot validate a registered silhouette."
   E:
     camera: VAL_E
     evidence: [H01, P08]

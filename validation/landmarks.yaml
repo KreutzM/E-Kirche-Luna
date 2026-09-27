@@ -9,7 +9,7 @@ views:
     landmarks:
       - id: west_tower_pair
         expected: "Two towers flank a lower central west-front mass; the documented tower height is approximately 80 m."
-        observed: "The pair reads and reaches the documented approximate 80 m height after applying the mapped 7.13 degree building alignment; shafts and belfry remain plain blocks. Pinnacles were removed until the massing gate passes."
+        observed: "The pair reads and reaches the documented approximate 80 m height after applying the mapped 7.13 degree building alignment; shafts and belfry remain plain blocks. M10/M11 overlays against the orthographic proxy show different apparent tower heights and perspective displacement, so they do not isolate a tower-geometry error. Pinnacles were removed until the massing gate passes."
         status: partial
       - id: central_west_gable
         expected: "Central gable remains below the tower shafts and meets the nave roof."
@@ -53,7 +53,7 @@ views:
     landmarks:
       - id: north_side_profile
         expected: "Long hall, crossing/transept, east choir and two-tower west end form a coherent stepped profile."
-        observed: "The long hall, crossing, east end and west tower form a gross profile. The wall is continuous and blank; bay rhythm is deferred to openings."
+        observed: "The long hall, crossing, east end and west tower form a gross profile. The wall is continuous and blank; bay rhythm is deferred to openings. M06 is an oblique perspective photograph, not a calibrated orthographic elevation, so the current N proxy cannot validate its silhouette."
         status: partial
   SE:
     camera: VAL_SE

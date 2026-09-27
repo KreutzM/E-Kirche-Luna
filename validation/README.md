@@ -40,8 +40,10 @@ ground lines near the image base and do not validate roof silhouettes. The lines
 reference curves, not roof-surface wireframes or project geometry. These temporary diagnostic renders
 are ignored local files and do not change the saved camera or geometry. `44_create_evidence_overlays.py`
 creates photo/render blends for M02, M05, M18 and selected M21 bearing/target candidates; it preserves each full image and letterboxes
-aspect-ratio mismatches. These blends support visual diagnosis only and are not pass/fail metrics or
-calibrated camera solutions. It also overlays cyan model-envelope outlines on the source photos to
-inspect the exterior mass silhouette while reducing facade-detail noise.
+aspect-ratio mismatches. It also makes approximate W/N comparisons using M10/M11 and M06 against
+the orthographic elevation proxies; these views have no solved photo cameras, so framing differences
+cannot be assigned to model geometry. These blends support visual diagnosis only and are not pass/fail
+metrics or calibrated camera solutions. Cyan model-envelope outlines use zero-alpha letterbox regions
+so aspect-ratio padding is not mistaken for a silhouette edge.
 
 Do not create visually convenient cameras and then claim agreement. Camera changes should be motivated by image evidence or documented calibration assumptions.
