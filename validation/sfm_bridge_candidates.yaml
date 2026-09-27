@@ -1,0 +1,46 @@
+schema_version: 1
+purpose: >-
+  Minimal targeted acquisition to test whether new broad exterior photographs
+  can connect the disconnected southeast, west and north SfM components. These
+  are hypotheses until verified by COLMAP two-view geometry.
+
+candidates:
+  - id: M26
+    source_page: https://commons.wikimedia.org/wiki/File:Elisabeth-Kirche-Marburg.jpg
+    expected_bridge: west_to_south
+    selection_reason: >-
+      Broad west/southwest exterior composition showing the west tower pair and
+      a substantial side elevation in one frame.
+    acceptance_test: >-
+      Must produce verified pair edges into the existing west cluster and at
+      least one south/southeast anchor. Otherwise keep as ordinary qualitative
+      evidence only.
+
+  - id: M27
+    source_page: https://commons.wikimedia.org/wiki/File:Elisabethkirche_(Marburg)_01.jpg
+    expected_bridge: west_to_north
+    selection_reason: >-
+      Broad northwest oblique composition showing both west towers together
+      with the north-side church mass.
+    acceptance_test: >-
+      Must produce verified pair edges into both the west cluster and the
+      M06/M07 north-side evidence, or otherwise materially strengthen a north
+      component that can be mapped.
+
+  - id: M28
+    source_page: https://commons.wikimedia.org/wiki/File:Marburg_Stadtansicht_Elisabethkirche_und_Bahnhof_von_S.jpg
+    expected_bridge: west_to_southeast
+    selection_reason: >-
+      Broad south view intended to contain west towers and longitudinal /
+      eastern roof masses in a common frame.
+    acceptance_test: >-
+      Must produce verified pair edges linking a west anchor to at least one
+      southeast/south anchor.
+
+rules:
+  - Fetch exact originals, not downscaled thumbnails.
+  - Let scripts/fetch_assets.py verify the current Commons licence metadata at download time.
+  - Do not use GPS or altitude as pose constraints in the bridge SfM test.
+  - Do not promote a candidate to the normal core merely because it downloads or matches one image.
+  - Connectivity across previously separate components is the primary criterion.
+  - No Blender geometry changes or georegistration during this test.
