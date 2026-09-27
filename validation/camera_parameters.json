@@ -273,6 +273,32 @@
     }
   },
   "diagnostic_candidates": {
+    "M23": {
+      "source_page": "https://commons.wikimedia.org/wiki/File:Marburg_Elisabethkirche_Deutsches_Haus_Firmaneiplatz_von_SO.jpg",
+      "source_metadata": {
+        "camera_model": "Canon EOS 550D",
+        "latitude": 50.814755,
+        "longitude": 8.771063,
+        "heading_degrees": 315.0,
+        "focal_length_mm": 18.0,
+        "sensor_width_mm": 22.3,
+        "source_image_px": [5184, 3456],
+        "license": "CC BY-SA 4.0",
+        "image_description_date": "2021-06-20",
+        "exif_date": "2025-06-20"
+      },
+      "local_camera_xy_m": [62.7, -18.7],
+      "camera_xy_basis": "Commons file-page point-of-view coordinates converted to local east/north from the approximate crossing anchor in data/coordinate_system.yaml.",
+      "camera_xy_heading_basis": "The file page gives an explicit 315 degree heading and names the view as from the southeast. The heading is held fixed for diagnostics.",
+      "camera_z_m_candidate": 1.7,
+      "camera_z_basis": "Eye-level approximation; no usable camera altitude is published.",
+      "tested_heading_degrees": [315],
+      "tested_aim_distances_m": [45, 60, 75],
+      "tested_target_heights_m": [15, 22, 29],
+      "sensor_basis": "Canon EOS 550D APS-C horizontal sensor width 22.3 mm; source is 5184x3456 and EXIF focal length is 18 mm.",
+      "candidate_status": "unresolved_camera_and_silhouette",
+      "residual": "Across the tested eye-level, target-distance and target-height candidates, the model outline does not align with the photographed church; raising or lowering the aim shifts framing but does not resolve the displacement. The downloaded source page and EXIF report conflicting capture dates (2021-06-20 versus 2025-06-20); preserve both. Do not infer geometry or count M23 as a calibrated massing-gate view until camera pose and visible-model alignment are resolved."
+    },
     "M22": {
       "source_page": "https://commons.wikimedia.org/wiki/File:Marburg_asv2022-02_img14_Elisabethkirche.jpg",
       "source_metadata": {

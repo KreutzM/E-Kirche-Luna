@@ -77,6 +77,11 @@ auxiliary_evidence_checks:
     observed: "Commons gives a southwest viewpoint and 86 mm focal length. Diagnostic renders retain the page GPS-derived camera XY and test bearings 15/20/25 degrees plus local camera heights 75/100/125 m. A heading near 18-19 degrees moves the projected tower pair closer to the source horizontally, but the local height/aim remains inferred, the lower church is hidden by foreground, and the simplified outline still differs. This source extends qualitative tower-order coverage only; no dimensions or geometry are accepted from it."
     status: qualitative_only
     geometry_change: false
+  m23_southeast_camera_and_silhouette:
+    evidence_ids: [M23]
+    observed: "Commons provides a mapped southeast viewpoint, explicit 315-degree heading, 18 mm focal length and high-resolution source image. Nine diagnostic renders fix XY, heading and optics while varying eye-level Z, aim distance and target height. Selected overlays remain visibly displaced from the church; target-height changes do not explain the offset. The pose cannot be solved from this comparison yet, and the two published capture dates conflict. No geometry change is justified."
+    status: unresolved
+    geometry_change: false
   top_down_plan_extent:
     evidence_ids: [P01, M01, T01, T02, T03, T04]
     observed: "Iteration 24 reframes VAL_TOP around x=-15 m and widens it to 100 m; the complete current model extent is now visible. The render reads as the expected west-tower pair, long hall, crossing/transept arms and eastern choir/conch sequence. P01 supplies plan topology and proportions, while the elevated tour views give oblique roof context. The views do not establish a metric scale match or resolve conch facet dimensions."
@@ -102,6 +107,11 @@ auxiliary_evidence_checks:
     observed: "Iteration 26 changes the conch roofs to paired faceted slopes meeting at a centerline ridge from spring to the terminal hip chord. The side-conch eaves meet the arm gables at z=24 m; the east-conch eaves meet the choir gable at z=23 m. Iteration 28 shortens the high transept-cross gable to the crossing square, eliminating its duplicate coverage of the straight arm roofs. East/SE source views support continuous ridges and hipped facets, but exact crest length and height are not metrically calibrated. Blender reports closed conch-roof meshes with no boundary/non-manifold edges or zero-area faces. Updated oblique renders improve the separation of the roof masses but crossing connections and proportions remain unresolved."
     status: partial
     geometry_change: true
+  m23_southeast_whole_church:
+    evidence_ids: [M23]
+    observed: "Commons supplies GPS, explicit 315-degree heading, 18 mm focal length and image dimensions. Five selected overlays from the nine-pose diagnostic set show the modeled outline visibly displaced from the photo; changing target z shifts framing without resolving alignment. Camera Z and aim remain inferred, while the page description and EXIF disagree on capture year. This comparison establishes no geometric residual."
+    status: unresolved
+    geometry_change: false
   sacristy_position_and_footprint:
     evidence_ids: [P01, M15, M16, M17, G01]
     observed: "Iteration 27 places the sacristy north of the east choir with its west edge at the choir-bay start, rather than beside the crossing. The 10.0 × 7.5 m inferred footprint follows the two-bay plan/photo massing; G01's generalized ground lines span a similar east/north area but are not treated as a conservation measurement. Updated TOP and NE renders show the attached volume. Exact roof and facade fit remain open."

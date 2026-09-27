@@ -50,6 +50,11 @@ views:
     evidence: [M08, M09, M22]
     status: geometry_reference_only
     note: "M08 is explicitly marked do_not_camera_solve; M09 is a steep tower detail. M22 has Commons camera coordinates and 86 mm equivalent focal length. Diagnostic renders retain its GPS-derived XY and test headings 15/20/25 degrees with candidate local heights 75/100/125 m; an intermediate heading near 18-19 degrees improves the horizontal tower-group placement, but no unique pose is established. Its distant foreground hides lower masses and the current global outline remains mismatched. Keep it as a qualitative tower/global-order check, not a metric camera solve or massing-gate view."
+  M23:
+    camera: null
+    evidence: [M23]
+    status: gps_heading_focal_supported_pose_unresolved
+    note: "Commons provides GPS, explicit 315-degree heading, Canon EOS 550D, 18 mm focal length and 5184x3456 dimensions. The local GPS-derived XY is fixed; nine renders test eye-level camera Z=1.7 m, aim distances 45/60/75 m and target z=15/22/29 m. The overlays remain visibly displaced, and target-height changes do not resolve the mismatch. No pose or geometry is accepted. Commons description and EXIF provide conflicting dates (2021-06-20 and 2025-06-20); retain both."
 auxiliary_panorama_sources:
   T01-T04:
     source: "Official Flying Impressions exterior tour; four named aerial/raised cube panoramas."

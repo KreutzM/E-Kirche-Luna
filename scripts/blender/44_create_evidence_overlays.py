@@ -29,6 +29,11 @@ PAIRS = {
     "M22_H15_ZCAM100": ("M22_Marburg asv2022-02 img14 Elisabethkirche.jpg", "VAL_M22_DIAG_H15_ZCAM100.png"),
     "M22_H20_ZCAM100": ("M22_Marburg asv2022-02 img14 Elisabethkirche.jpg", "VAL_M22_DIAG_H20_ZCAM100.png"),
     "M22_H25_ZCAM100": ("M22_Marburg asv2022-02 img14 Elisabethkirche.jpg", "VAL_M22_DIAG_H25_ZCAM100.png"),
+    "M23_D45_ZT22": ("M23_Marburg Elisabethkirche Deutsches Haus Firmaneiplatz von SO.jpg", "VAL_M23_DIAG_D45_ZT22.png"),
+    "M23_D60_ZT15": ("M23_Marburg Elisabethkirche Deutsches Haus Firmaneiplatz von SO.jpg", "VAL_M23_DIAG_D60_ZT15.png"),
+    "M23_D60_ZT22": ("M23_Marburg Elisabethkirche Deutsches Haus Firmaneiplatz von SO.jpg", "VAL_M23_DIAG_D60_ZT22.png"),
+    "M23_D60_ZT29": ("M23_Marburg Elisabethkirche Deutsches Haus Firmaneiplatz von SO.jpg", "VAL_M23_DIAG_D60_ZT29.png"),
+    "M23_D75_ZT22": ("M23_Marburg Elisabethkirche Deutsches Haus Firmaneiplatz von SO.jpg", "VAL_M23_DIAG_D75_ZT22.png"),
 }
 
 
