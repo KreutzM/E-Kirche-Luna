@@ -102,6 +102,61 @@ groups:
       - M27
       - M28
 
+  issue7_south_transition_existing:
+    description: >-
+      Temporary Issue #7 transition test using the established west/north
+      anchors, M04/M05 as south intermediates, and the complete existing
+      southeast/south component. M04 is feature-matching evidence only and is
+      explicitly excluded as a whole-building geometry constraint.
+    image_ids:
+      - M09
+      - M10
+      - M11
+      - M25
+      - M26
+      - M27
+      - M04
+      - M05
+      - M02
+      - M03
+      - M18
+      - M19
+      - M20
+      - M21
+      - M23
+
+  issue7_south_transition:
+    description: >-
+      Issue #7 controlled south-transition run: the west/north anchors, M04/M05
+      as feature-matching intermediates, the complete existing southeast/south
+      component, and only Tilman2007's 2021-09-02 frames 006-011 and 015-016.
+      M04 is not a whole-building geometry constraint. No stitched panoramas,
+      pose priors, Blender geometry, or georegistration are used.
+    image_ids:
+      - M09
+      - M10
+      - M11
+      - M25
+      - M26
+      - M27
+      - M04
+      - M05
+      - M02
+      - M03
+      - M18
+      - M19
+      - M20
+      - M21
+      - M23
+      - M29
+      - M30
+      - M31
+      - M32
+      - M33
+      - M34
+      - M35
+      - M36
+
   core_plus_bridges:
     description: >-
       Full present-day core plus M26-M28. Run only after the bridge group shows

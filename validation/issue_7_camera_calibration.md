@@ -71,3 +71,28 @@ No M26–M28 pair links the west/north component to M02/M03/M20/M23. Therefore t
 The incremental mapper produced one southeast-only model with M23, M02 and M20 registered (3/13 images), 917 points and 0.865 px mean reprojection error. Its fitted focal lengths are 33.54 px for M23 (`k1=-9.84e-7`), 27.37 px for M02 (`k1=-2.56e-6`) and 28.74 px for M20 (`k1=5.78e-6`); these implausibly low focal lengths do not validate the model globally. None of M26–M28 registered. The low mapper error is confined to the separate southeast cluster and is not evidence of cross-direction connectivity.
 
 The compact graph/model summary is `validation/sfm_results/bridge.json`. Because the west↔southeast/south edge is absent, `core_plus_bridges` was not run. No georegistration, Blender comparison, geometry change, or new inferred dimension was introduced.
+
+## 2026-09-27 — Controlled south-transition SfM result
+
+**Decision: the controlled sequence did not connect west/north to southeast/south. Issue #7 remains open and the massing gate remains closed. Stop before changing camera initialization. Do not georegister or change church geometry.**
+
+First, the existing-image-only group contained the requested anchors and south references: M09/M10/M11/M25/M26/M27; M04/M05; and M02/M03/M18/M19/M20/M21/M23. Its verified two-view graph had two components:
+
+- `{M09, M10, M11, M25, M26, M27}` — west/north;
+- `{M02, M03, M04, M05, M18, M19, M20, M21, M23}` — southeast/south.
+
+There was no verified pair edge between these components. M04 participated in feature matching, including M02–M04 (303 inliers), M03–M04 (80), M04–M19 (174), M04–M20 (72), and M04–M23 (83); it was not used as a geometry constraint.
+
+The eight requested originals were then added as M29–M36. Live Commons image metadata identified Tilman2007, the 2021-09-02 capture date, and CC BY-SA 4.0 for all eight. The exact original downloads match Commons SHA-1 and dimensions; original URLs, page URLs, licence metadata, hashes, and local paths are recorded in `sources/commons_download_metadata.jsonl`. These are individual photographs, not stitched panoramas.
+
+The controlled run used COLMAP 4.2.0 CPU SIFT feature extraction, exhaustive matching, guided matching, per-image `SIMPLE_RADIAL`, and ordinary incremental `mapper`. It had 23 input images. No GPS/DGM pose priors or Blender constraints entered the run; 9 imported pose-prior rows were removed before matching/mapping. The compact results are `validation/sfm_results/issue7_south_transition_existing.json` and `validation/sfm_results/issue7_south_transition.json`.
+
+The final verified graph has three components:
+
+- `{M09, M10, M11, M25, M26, M27}` — west/north remains disconnected;
+- `{M02, M03, M04, M05, M18, M19, M20, M21, M23, M29, M30, M31, M32, M33, M34}` — southeast/south and the 006–011 transition sequence;
+- `{M35, M36}` — the two south-portal frames connect only to each other.
+
+Frames M29–M34 verified many edges within the southeast/south component, including M20–M29 (5,792 inliers), M31–M33 (7,085), and M32–M34 (6,372). None has a verified edge to M09, M10, M11, M25, M26, or M27. M35–M36 has 2,599 inliers and neither frame connects to either other component. Thus the exact remaining graph break is **the complete west/north component versus the southeast/south + M29–M34 component**; the south-portal pair is an additional disconnected component.
+
+The mapper produced a 13-image model, but it contains no west/north anchor. Because verified graph connectivity did not succeed, that model is not evidence of a common cross-direction reconstruction and no intrinsic-plausibility conclusion is drawn from it. Do not accept it as solving the calibration gap. Stop at this graph result before changing camera initialization. No geometry, assumptions, validation cameras, or georegistration changed.

@@ -468,5 +468,85 @@
     "priority": 1,
     "metric_use": "sfm_bridge_candidate",
     "commons_page": "https://commons.wikimedia.org/wiki/File:Marburg_Stadtansicht_Elisabethkirche_und_Bahnhof_von_S.jpg"
+  },
+  {
+    "id": "M29",
+    "group": "modern",
+    "title": "Elisabethkirche, von Südosten Marburg 20200902 006.jpg",
+    "view": "SE south transition",
+    "role": "same_session_sfm_transition_candidate",
+    "priority": 1,
+    "metric_use": "feature_matching_candidate",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Elisabethkirche,_von_S%C3%BCdosten_Marburg_20200902_006.jpg"
+  },
+  {
+    "id": "M30",
+    "group": "modern",
+    "title": "Elisabethkirche, von Südosten Marburg 20200902 007.jpg",
+    "view": "SE south transition",
+    "role": "same_session_sfm_transition_candidate",
+    "priority": 1,
+    "metric_use": "feature_matching_candidate",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Elisabethkirche,_von_S%C3%BCdosten_Marburg_20200902_007.jpg"
+  },
+  {
+    "id": "M31",
+    "group": "modern",
+    "title": "Elisabethkirche, von Südosten Marburg 20200902 008.jpg",
+    "view": "SE south transition",
+    "role": "same_session_sfm_transition_candidate",
+    "priority": 1,
+    "metric_use": "feature_matching_candidate",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Elisabethkirche,_von_S%C3%BCdosten_Marburg_20200902_008.jpg"
+  },
+  {
+    "id": "M32",
+    "group": "modern",
+    "title": "Elisabethkirche, von Südosten Marburg 20200902 009.jpg",
+    "view": "SE to S transition",
+    "role": "same_session_sfm_transition_candidate",
+    "priority": 1,
+    "metric_use": "feature_matching_candidate",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Elisabethkirche,_von_S%C3%BCdosten_Marburg_20200902_009.jpg"
+  },
+  {
+    "id": "M33",
+    "group": "modern",
+    "title": "Elisabethkirche, von Südosten Marburg 20200902 010.jpg",
+    "view": "SE to S transition",
+    "role": "same_session_sfm_transition_candidate",
+    "priority": 1,
+    "metric_use": "feature_matching_candidate",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Elisabethkirche,_von_S%C3%BCdosten_Marburg_20200902_010.jpg"
+  },
+  {
+    "id": "M34",
+    "group": "modern",
+    "title": "Elisabethkirche, von Südosten Marburg 20200902 011.jpg",
+    "view": "SE to S transition",
+    "role": "same_session_sfm_transition_candidate",
+    "priority": 1,
+    "metric_use": "feature_matching_candidate",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Elisabethkirche,_von_S%C3%BCdosten_Marburg_20200902_011.jpg"
+  },
+  {
+    "id": "M35",
+    "group": "modern",
+    "title": "Elisabethkirche, Südportal Marburg 20200902 015.jpg",
+    "view": "S south portal",
+    "role": "same_session_sfm_transition_candidate",
+    "priority": 1,
+    "metric_use": "feature_matching_candidate",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Elisabethkirche,_S%C3%BCdportal_Marburg_20200902_015.jpg"
+  },
+  {
+    "id": "M36",
+    "group": "modern",
+    "title": "Elisabethkirche, Südportal Marburg 20200902 016.jpg",
+    "view": "S south portal",
+    "role": "same_session_sfm_transition_candidate",
+    "priority": 1,
+    "metric_use": "feature_matching_candidate",
+    "commons_page": "https://commons.wikimedia.org/wiki/File:Elisabethkirche,_S%C3%BCdportal_Marburg_20200902_016.jpg"
   }
 ]
