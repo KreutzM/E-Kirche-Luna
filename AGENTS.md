@@ -56,12 +56,15 @@ Use: MASSING, TOWERS, ROOFS, BUTTRESSES, OPENINGS, TRACERY, DETAIL, CAMERAS, REF
 Dataset consistency and model/photo validation are separate.
 
 Before using a photographic mismatch to change massing:
-1. read `docs/camera_calibration.md` and `docs/sfm_calibration.md`;
+1. read `docs/camera_calibration.md`, `docs/sfm_calibration.md`, and `docs/massing_evidence_gate.md`;
 2. direct 2D<->3D camera fits may be used when the corresponding 3D landmarks are independently trustworthy;
 3. if multiple direct fits are rejected or camera/model uncertainty is coupled, run the model-independent SfM workflow first with `make sfm`;
 4. require a coherent relative image reconstruction before georegistration;
 5. align the relative reconstruction to independent metric/geospatial evidence before comparing it to Blender;
 6. only then classify persistent residuals as possible geometry errors.
+
+
+The curated public-web photo corpus is documented as insufficient for one connected cross-direction SfM network. Do not resume broad web-image acquisition or relax matching thresholds to force connectivity. For Issue #7, use the evidence-based massing gate in `validation/massing_gate_spec.yaml`: hard metric/geospatial checks plus reviewed local LoD2 component checks and directional photo-cluster checks. A disconnected global photo network is no longer itself a massing blocker once the limitation remains documented.
 
 Manual heading / target-height grids are diagnostic initialization tools only. Do not keep expanding them as the primary calibration method. A visually improved overlay is not a solved camera. Do not tune camera intrinsics against disputed Blender geometry merely to force a fit.
 
