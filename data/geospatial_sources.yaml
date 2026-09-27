@@ -52,3 +52,17 @@ sources:
     use: "visual_exterior_geometry_reference_only"
     action: "Use the four published tour panorama front faces locally for visual roof and mass checks as instructed by the user. Keep source page, panorama IDs and tile hashes in sources/virtual_tour_metadata.json; resolve reuse terms before distributing the imagery."
     limitations: "The public tour exposes four partial-frame cube panoramas, but no world camera positions or survey export. They are not metrically calibrated photo sets. The provider's project page documents service scope and required accuracy, not access to detailed survey deliverables. The relation between the tour and the separately described 3 mm scan is unconfirmed."
+  G03:
+    title: "Hessian DGM1 terrain samples for evidence-camera height priors"
+    provider: "Hessisches Landesamt für Bodenmanagement und Geoinformation"
+    source_url: "https://inspire-hessen.de/raster/dgm1/ows"
+    product_page: "https://hvbg.hessen.de/landesvermessung/geotopographie/3d-daten/digitale-gelaendemodelle"
+    coverage_id: "he_dgm1"
+    retrieved_at: "2026-09-27"
+    local_file: "sources/geodata/DGM1_camera_sites_20260927.tif"
+    source_crs: "ETRS89 / UTM zone 32N, DHHN2016_NH"
+    resolution_m: 1
+    published_vertical_accuracy: "up to ±0.3 m; actual accuracy depends on terrain, vegetation and acquisition date"
+    sha256: "0efd2104e7a09fa4fd04259848951844af2d74fb5b8adb8a679212f4b7931f43"
+    use: "Camera-site terrain-ground samples for soft local-Z priors only; not church-floor survey evidence."
+    limitations: "The approximate project-origin ground sample is not a measured interior floor datum. M05/M06 EXIF absolute altitudes conflict with sampled ground, so those tags are not treated as camera-Z constraints. Actual photographer eye heights remain unknown."

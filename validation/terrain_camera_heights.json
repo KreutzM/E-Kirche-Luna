@@ -1,0 +1,88 @@
+{
+  "source": "Hessisches Landesamt f\u00fcr Bodenmanagement und Geoinformation, INSPIRE-WCS HE DGM1",
+  "source_page": "https://hvbg.hessen.de/landesvermessung/geotopographie/3d-daten/digitale-gelaendemodelle",
+  "service_url": "https://inspire-hessen.de/raster/dgm1/ows",
+  "coverage_id": "he_dgm1",
+  "retrieved_at": "2026-09-27",
+  "source_crs": "ETRS89 / UTM zone 32N; DHHN2016_NH",
+  "official_product_accuracy": "up to \u00b10.3 m for DGM1; local accuracy depends on terrain and acquisition",
+  "request_bbox_utm32_m": [
+    483500,
+    5629000,
+    484200,
+    5629500
+  ],
+  "raster_resolution_m": 1,
+  "raster_sha256": "0efd2104e7a09fa4fd04259848951844af2d74fb5b8adb8a679212f4b7931f43",
+  "sample_method": "Nearest 1 m raster cell from exact GPS coordinate transformed WGS84 to EPSG:25832; project origin ground elevation is provisionally represented by the raster sample at approximate crossing anchor. Camera local-Z prior = sampled site terrain - crossing sample + 1.7 m assumed eye height. This is a prior, not camera altitude measurement.",
+  "crossing_ground_elevation_reference_m": 184.457,
+  "samples": {
+    "crossing_floor_reference": {
+      "utm32_e_m": 483808.997,
+      "utm32_n_m": 5629269.125,
+      "raster_row": 230,
+      "raster_col": 308,
+      "elevation_dhhn2016_nh_m": 184.457,
+      "local_camera_z_if_1_7m_eye_height_m": 1.7
+    },
+    "M02_exif_gps": {
+      "utm32_e_m": 483867.887,
+      "utm32_n_m": 5629222.089,
+      "raster_row": 277,
+      "raster_col": 367,
+      "elevation_dhhn2016_nh_m": 183.953,
+      "local_camera_z_if_1_7m_eye_height_m": 1.196
+    },
+    "M05_exif_gps": {
+      "utm32_e_m": 483773.636,
+      "utm32_n_m": 5629232.946,
+      "raster_row": 267,
+      "raster_col": 273,
+      "elevation_dhhn2016_nh_m": 185.918,
+      "local_camera_z_if_1_7m_eye_height_m": 3.161
+    },
+    "M06_exif_gps": {
+      "utm32_e_m": 483799.15,
+      "utm32_n_m": 5629319.604,
+      "raster_row": 180,
+      "raster_col": 299,
+      "elevation_dhhn2016_nh_m": 183.504,
+      "local_camera_z_if_1_7m_eye_height_m": 0.747
+    },
+    "M25_commons_page_gps": {
+      "utm32_e_m": 483716.471,
+      "utm32_n_m": 5629213.108,
+      "raster_row": 286,
+      "raster_col": 216,
+      "elevation_dhhn2016_nh_m": 188.128,
+      "local_camera_z_if_1_7m_eye_height_m": 5.371
+    },
+    "M25_exif_gps": {
+      "utm32_e_m": 483724.261,
+      "utm32_n_m": 5629226.027,
+      "raster_row": 273,
+      "raster_col": 224,
+      "elevation_dhhn2016_nh_m": 187.764,
+      "local_camera_z_if_1_7m_eye_height_m": 5.007
+    }
+  },
+  "exif_altitude_comparison_m": {
+    "M02_exif_altitude_m": 189.0,
+    "M02_dem_ground_m": 183.953,
+    "M02_exif_height_above_site_ground_m": 5.047,
+    "M05_exif_altitude_m": 180.0,
+    "M05_dem_ground_m": 185.918,
+    "M05_exif_altitude_below_dem_ground_m": 5.918,
+    "M06_exif_altitude_m": 182.0,
+    "M06_dem_ground_m": 183.504,
+    "M06_exif_altitude_below_dem_ground_m": 1.504
+  },
+  "limitations": [
+    "The crossing raster sample is local ground, not a surveyed church floor elevation.",
+    "The project floor-to-ground vertical offset is not directly surveyed; 184.457 m is provisional.",
+    "M05 and M06 EXIF absolute altitude tags conflict with the DGM1 surface, so they are not used as hard camera Z values.",
+    "The 1.7 m eye-height term is still an assumption; actual camera heights/poses are not published.",
+    "DGM1 sites are point samples and the 1 m product accuracy is not the uncertainty of all GPS/vertical datum transformations."
+  ],
+  "local_raster_file": "sources/geodata/DGM1_camera_sites_20260927.tif"
+}

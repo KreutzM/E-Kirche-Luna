@@ -1,0 +1,562 @@
+{
+  "M02": {
+    "source_raster": "references/images/modern/M02_Elisabethkirche Marburg von SO.jpg",
+    "source_raster_sha256": "a8dd29c4c02f708ca2873b9bdbfb173b21cbe9ae7660637055320a10d923bf57",
+    "overlay_file": "M02_landmarks.jpg",
+    "landmarks": [
+      {
+        "index": 1,
+        "id": "M02_tower_south_tip",
+        "image_xy_px": [
+          1160,
+          130
+        ],
+        "model_xyz_m": [
+          -43.26,
+          -12.62,
+          80.0
+        ],
+        "sigma_px": 18.0
+      },
+      {
+        "index": 2,
+        "id": "M02_tower_north_tip",
+        "image_xy_px": [
+          1645,
+          400
+        ],
+        "model_xyz_m": [
+          -45.04,
+          1.57,
+          80.0
+        ],
+        "sigma_px": 18.0
+      },
+      {
+        "index": 3,
+        "id": "M02_crossing_turret_tip",
+        "image_xy_px": [
+          2250,
+          470
+        ],
+        "model_xyz_m": [
+          0.0,
+          0.0,
+          54.0
+        ],
+        "sigma_px": 20.0
+      },
+      {
+        "index": 4,
+        "id": "M02_east_conch_ridge_tip",
+        "image_xy_px": [
+          2760,
+          1100
+        ],
+        "model_xyz_m": [
+          20.24,
+          2.54,
+          29.0
+        ],
+        "sigma_px": 24.0
+      },
+      {
+        "index": 5,
+        "id": "M02_east_conch_terminal_south_eave",
+        "image_xy_px": [
+          2580,
+          1470
+        ],
+        "model_xyz_m": [
+          20.52,
+          0.31,
+          23.0
+        ],
+        "sigma_px": 30.0
+      },
+      {
+        "index": 6,
+        "id": "M02_east_conch_terminal_north_eave",
+        "image_xy_px": [
+          2960,
+          1460
+        ],
+        "model_xyz_m": [
+          19.96,
+          4.77,
+          23.0
+        ],
+        "sigma_px": 30.0
+      },
+      {
+        "index": 7,
+        "id": "M02_east_conch_south_eave_diagonal",
+        "image_xy_px": [
+          2390,
+          1360
+        ],
+        "model_xyz_m": [
+          19.67,
+          -0.66,
+          23.0
+        ],
+        "sigma_px": 30.0
+      },
+      {
+        "index": 8,
+        "id": "M02_east_conch_north_eave_diagonal",
+        "image_xy_px": [
+          3180,
+          1490
+        ],
+        "model_xyz_m": [
+          18.9,
+          5.49,
+          23.0
+        ],
+        "sigma_px": 30.0
+      }
+    ]
+  },
+  "M05": {
+    "source_raster": "references/images/modern/M05_Elisabethkirche (Marburg) S\u00fcdseite.jpg",
+    "source_raster_sha256": "04ab3d0a47e07c3afaa78a946a1d513262c08a2a3ae7878aea2376314dcd119a",
+    "overlay_file": "M05_landmarks.jpg",
+    "landmarks": [
+      {
+        "index": 1,
+        "id": "M05_crossing_turret_tip",
+        "image_xy_px": [
+          1300,
+          620
+        ],
+        "model_xyz_m": [
+          0.0,
+          0.0,
+          54.0
+        ],
+        "sigma_px": 25.0
+      },
+      {
+        "index": 2,
+        "id": "M05_crossing_roof_ridge",
+        "image_xy_px": [
+          1300,
+          1320
+        ],
+        "model_xyz_m": [
+          0.0,
+          0.0,
+          33.0
+        ],
+        "sigma_px": 35.0
+      },
+      {
+        "index": 3,
+        "id": "M05_east_conch_ridge_tip",
+        "image_xy_px": [
+          1690,
+          1510
+        ],
+        "model_xyz_m": [
+          20.242,
+          2.532,
+          29.0
+        ],
+        "sigma_px": 30.0
+      },
+      {
+        "index": 4,
+        "id": "M05_east_conch_terminal_south_eave",
+        "image_xy_px": [
+          1510,
+          1700
+        ],
+        "model_xyz_m": [
+          20.801,
+          0.082,
+          23.0
+        ],
+        "sigma_px": 40.0
+      },
+      {
+        "index": 5,
+        "id": "M05_east_conch_terminal_north_eave",
+        "image_xy_px": [
+          1930,
+          1700
+        ],
+        "model_xyz_m": [
+          20.18,
+          5.044,
+          23.0
+        ],
+        "sigma_px": 40.0
+      },
+      {
+        "index": 6,
+        "id": "M05_nave_south_eave_west",
+        "image_xy_px": [
+          150,
+          1020
+        ],
+        "model_xyz_m": [
+          -36.198,
+          -16.773,
+          24.0
+        ],
+        "sigma_px": 45.0
+      },
+      {
+        "index": 7,
+        "id": "M05_nave_south_eave_middle",
+        "image_xy_px": [
+          650,
+          1270
+        ],
+        "model_xyz_m": [
+          -23.299,
+          -15.159,
+          24.0
+        ],
+        "sigma_px": 45.0
+      },
+      {
+        "index": 8,
+        "id": "M05_nave_south_eave_east",
+        "image_xy_px": [
+          1100,
+          1510
+        ],
+        "model_xyz_m": [
+          -10.399,
+          -13.545,
+          24.0
+        ],
+        "sigma_px": 45.0
+      }
+    ]
+  },
+  "M10": {
+    "source_raster": "references/images/modern/M10_Elisabethkirche Marburg (03).jpg",
+    "source_raster_sha256": "d20264f687271ae95d23c34ef5cd1493643120b7d4c0de8b7a49063aae83b03d",
+    "overlay_file": "M10_landmarks.jpg",
+    "landmarks": [
+      {
+        "index": 1,
+        "id": "M10_south_tower_z80",
+        "image_xy_px": [
+          1215,
+          455
+        ],
+        "model_xyz_m": [
+          -43.268,
+          -12.618,
+          80.0
+        ],
+        "sigma_px": 22.0
+      },
+      {
+        "index": 2,
+        "id": "M10_south_tower_z55",
+        "image_xy_px": [
+          1215,
+          1660
+        ],
+        "model_xyz_m": [
+          -43.268,
+          -12.618,
+          55.0
+        ],
+        "sigma_px": 35.0
+      },
+      {
+        "index": 3,
+        "id": "M10_south_tower_z46",
+        "image_xy_px": [
+          1215,
+          2000
+        ],
+        "model_xyz_m": [
+          -43.268,
+          -12.618,
+          46.0
+        ],
+        "sigma_px": 35.0
+      },
+      {
+        "index": 4,
+        "id": "M10_south_tower_z39",
+        "image_xy_px": [
+          1215,
+          2300
+        ],
+        "model_xyz_m": [
+          -43.268,
+          -12.618,
+          39.0
+        ],
+        "sigma_px": 35.0
+      },
+      {
+        "index": 5,
+        "id": "M10_south_tower_z24",
+        "image_xy_px": [
+          1215,
+          3000
+        ],
+        "model_xyz_m": [
+          -43.268,
+          -12.618,
+          24.0
+        ],
+        "sigma_px": 35.0
+      },
+      {
+        "index": 6,
+        "id": "M10_north_tower_z80",
+        "image_xy_px": [
+          2010,
+          90
+        ],
+        "model_xyz_m": [
+          -45.043,
+          1.571,
+          80.0
+        ],
+        "sigma_px": 22.0
+      },
+      {
+        "index": 7,
+        "id": "M10_north_tower_z55",
+        "image_xy_px": [
+          2020,
+          1300
+        ],
+        "model_xyz_m": [
+          -45.043,
+          1.571,
+          55.0
+        ],
+        "sigma_px": 35.0
+      },
+      {
+        "index": 8,
+        "id": "M10_north_tower_z46",
+        "image_xy_px": [
+          2020,
+          1660
+        ],
+        "model_xyz_m": [
+          -45.043,
+          1.571,
+          46.0
+        ],
+        "sigma_px": 35.0
+      },
+      {
+        "index": 9,
+        "id": "M10_north_tower_z39",
+        "image_xy_px": [
+          2020,
+          1960
+        ],
+        "model_xyz_m": [
+          -45.043,
+          1.571,
+          39.0
+        ],
+        "sigma_px": 35.0
+      },
+      {
+        "index": 10,
+        "id": "M10_north_tower_z24",
+        "image_xy_px": [
+          2020,
+          2720
+        ],
+        "model_xyz_m": [
+          -45.043,
+          1.571,
+          24.0
+        ],
+        "sigma_px": 35.0
+      }
+    ]
+  },
+  "M25": {
+    "source_raster": "references/images/modern/M25_Marburg asv2022-02 img25 Elisabethkirche.jpg",
+    "source_raster_sha256": "0582b2c89deb43623f5dcc644fe285168ec0f2ff098e2dd787589544c90813e6",
+    "overlay_file": "M25_landmarks.jpg",
+    "landmarks": [
+      {
+        "index": 1,
+        "id": "M25_south_tower_z80",
+        "image_xy_px": [
+          1310,
+          750
+        ],
+        "model_xyz_m": [
+          -43.268,
+          -12.618,
+          80.0
+        ],
+        "sigma_px": 20.0
+      },
+      {
+        "index": 2,
+        "id": "M25_south_tower_z55",
+        "image_xy_px": [
+          1310,
+          1410
+        ],
+        "model_xyz_m": [
+          -43.268,
+          -12.618,
+          55.0
+        ],
+        "sigma_px": 32.0
+      },
+      {
+        "index": 3,
+        "id": "M25_south_tower_z46",
+        "image_xy_px": [
+          1310,
+          1900
+        ],
+        "model_xyz_m": [
+          -43.268,
+          -12.618,
+          46.0
+        ],
+        "sigma_px": 32.0
+      },
+      {
+        "index": 4,
+        "id": "M25_south_tower_z39",
+        "image_xy_px": [
+          1310,
+          2250
+        ],
+        "model_xyz_m": [
+          -43.268,
+          -12.618,
+          39.0
+        ],
+        "sigma_px": 32.0
+      },
+      {
+        "index": 5,
+        "id": "M25_south_tower_z24",
+        "image_xy_px": [
+          1310,
+          3000
+        ],
+        "model_xyz_m": [
+          -43.268,
+          -12.618,
+          24.0
+        ],
+        "sigma_px": 32.0
+      },
+      {
+        "index": 6,
+        "id": "M25_north_tower_z80",
+        "image_xy_px": [
+          1820,
+          300
+        ],
+        "model_xyz_m": [
+          -45.043,
+          1.571,
+          80.0
+        ],
+        "sigma_px": 20.0
+      },
+      {
+        "index": 7,
+        "id": "M25_north_tower_z55",
+        "image_xy_px": [
+          1800,
+          1030
+        ],
+        "model_xyz_m": [
+          -45.043,
+          1.571,
+          55.0
+        ],
+        "sigma_px": 32.0
+      },
+      {
+        "index": 8,
+        "id": "M25_north_tower_z46",
+        "image_xy_px": [
+          1800,
+          1540
+        ],
+        "model_xyz_m": [
+          -45.043,
+          1.571,
+          46.0
+        ],
+        "sigma_px": 32.0
+      },
+      {
+        "index": 9,
+        "id": "M25_north_tower_z39",
+        "image_xy_px": [
+          1800,
+          1850
+        ],
+        "model_xyz_m": [
+          -45.043,
+          1.571,
+          39.0
+        ],
+        "sigma_px": 32.0
+      },
+      {
+        "index": 10,
+        "id": "M25_north_tower_z24",
+        "image_xy_px": [
+          1800,
+          2600
+        ],
+        "model_xyz_m": [
+          -45.043,
+          1.571,
+          24.0
+        ],
+        "sigma_px": 32.0
+      },
+      {
+        "index": 11,
+        "id": "M25_south_tower_ground",
+        "image_xy_px": [
+          1310,
+          4280
+        ],
+        "model_xyz_m": [
+          -43.26,
+          -12.62,
+          0.0
+        ],
+        "sigma_px": 45.0
+      },
+      {
+        "index": 12,
+        "id": "M25_north_tower_ground",
+        "image_xy_px": [
+          1800,
+          4090
+        ],
+        "model_xyz_m": [
+          -45.04,
+          1.57,
+          0.0
+        ],
+        "sigma_px": 45.0
+      }
+    ]
+  }
+}

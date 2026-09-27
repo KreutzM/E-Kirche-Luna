@@ -1,0 +1,48 @@
+{
+  "view_id": "M25",
+  "source_raster": "references/images/modern/M25_Marburg asv2022-02 img25 Elisabethkirche.jpg",
+  "source_raster_sha256": "0582b2c89deb43623f5dcc644fe285168ec0f2ff098e2dd787589544c90813e6",
+  "method": "Same 12 annotated correspondences, source raster, initialization and priors. One fit optimized k1/k2; comparison disabled radial_distortion. Both are diagnostic fits and both fail configured acceptance.",
+  "radial_fit_file": "M25.json",
+  "pinhole_fit_file": "M25_pinhole.json",
+  "rms_px": {
+    "pinhole": 210.51104610401006,
+    "radial": 174.1878127930205
+  },
+  "p95_px": {
+    "pinhole": 420.84936704487495,
+    "radial": 339.88586787527504
+  },
+  "distortion_k1_k2": [
+    -0.11702815916233869,
+    -0.37425803184110895
+  ],
+  "focal_scale": {
+    "pinhole": 0.837365060287385,
+    "radial": 1.1529762619458475
+  },
+  "principal_point_px": {
+    "pinhole": [
+      1969.9707243323728,
+      709.3854404801721
+    ],
+    "radial": [
+      1478.9411902613401,
+      2509.211273153625
+    ]
+  },
+  "camera_position_m": {
+    "pinhole": [
+      10.706508114647157,
+      -41.76177737556742,
+      63.355436180437955
+    ],
+    "radial": [
+      -4.404925239160241,
+      -49.685159763874196,
+      59.38255724648352
+    ]
+  },
+  "accepted": false,
+  "interpretation": "Radial refinement reduces RMS by 36.32 px (17.3%) but remains far above RMS/P95 thresholds 20/40 px. The large fitted radial terms, focal shifts, pose and principal-point changes cannot be accepted as lens-only correction. Geometry must not be changed from this fit."
+}
